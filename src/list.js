@@ -4,10 +4,10 @@
 
 */
 
-const awsListObjects = async (bucket, path, next) => {
+const awsListObjects = async (that, bucket, path, next) => {
 	try {
 		// load list from aws, pass next token (nullable)
-		let files = await this.sdk.s3
+		let files = await that.sdk.s3
 			.listObjectsV2({
 				Bucket: bucket,
 				Prefix: path,
@@ -30,9 +30,9 @@ const awsListObjects = async (bucket, path, next) => {
 	}
 };
 
-const listLocalFiles = (uri) =>
+const listLocalFiles = (that, uri) =>
 	new Promise((resolve, reject) => {
-		this.sdk.fs.readdir(uri, 'utf8', (err, data) => {
+		that.sdk.fs.readdir(uri, 'utf8', (err, data) => {
 			if (err) reject(err);
 			else resolve(data);
 		});
@@ -57,7 +57,7 @@ module.exports = async function (uri) {
 
 			do {
 				// load data
-				let awsReturn = await awsListObjects(bucket, path, next ? next : null);
+				let awsReturn = await awsListObjects(this, bucket, path, next ? next : null);
 
 				// set next token
 				next = awsReturn.next;
@@ -89,7 +89,7 @@ module.exports = async function (uri) {
 			this.log('log', ['storage.list.local >', uri]);
 
 			// local file
-			let file = await listLocalFiles(uri);
+			let file = await listLocalFiles(this, uri);
 
 			// return list
 			return Promise.resolve(file);

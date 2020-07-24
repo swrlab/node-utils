@@ -4,9 +4,9 @@
 
 */
 
-const deleteLocalFile = (filePath) =>
+const deleteLocalFile = (that, filePath) =>
 	new Promise((resolve, reject) => {
-		this.sdk.fs.unlink(filePath, (err) => {
+		that.sdk.fs.unlink(filePath, (err) => {
 			if (err) reject(err);
 			else resolve();
 		});
@@ -54,7 +54,7 @@ module.exports = async function (uri) {
 			this.log('log', ['storage.delete.local >', uri]);
 
 			// delete file
-			await deleteLocalFile(uri);
+			await deleteLocalFile(this, uri);
 
 			// return ok
 			return Promise.resolve();

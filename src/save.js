@@ -9,17 +9,17 @@ const os = require('os');
 const pathUtil = require('path');
 const { v4: uuidv4 } = require('uuid');
 
-const saveLocalFile = (uri, buffer) =>
+const saveLocalFile = (that, uri, buffer) =>
 	new Promise((resolve, reject) => {
-		this.sdk.fs.writeFile(uri, buffer, (err) => {
+		that.sdk.fs.writeFile(uri, buffer, (err) => {
 			if (err) reject(err);
 			else resolve();
 		});
 	});
 
-const deleteLocalFile = (filePath) =>
+const deleteLocalFile = (that, filePath) =>
 	new Promise((resolve, reject) => {
-		this.sdk.fs.unlink(filePath, (err) => {
+		that.sdk.fs.unlink(filePath, (err) => {
 			if (err) reject(err);
 			else resolve();
 		});
@@ -57,7 +57,7 @@ module.exports = async function (uri, buffer) {
 
 			// save to local file
 			let tempFilePath = pathUtil.resolve(os.tmpdir(), uuidv4());
-			await saveLocalFile(tempFilePath, buffer);
+			await saveLocalFile(this, tempFilePath, buffer);
 
 			// log progress
 			this.log('log', ['storage.save.gs >', uri]);
@@ -70,7 +70,7 @@ module.exports = async function (uri, buffer) {
 			});
 
 			// delete local temp file
-			await deleteLocalFile(tempFilePath);
+			await deleteLocalFile(this, tempFilePath);
 
 			// return ok
 			return Promise.resolve();
@@ -81,7 +81,7 @@ module.exports = async function (uri, buffer) {
 			this.log('log', ['storage.save.local >', uri]);
 			
 			// save file
-			let file = await saveLocalFile(uri);
+			let file = await saveLocalFile(this, uri, buffer);
 			
 			// return ok
 			return Promise.resolve(file);

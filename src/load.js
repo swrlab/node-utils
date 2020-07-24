@@ -5,12 +5,11 @@
 */
 
 // load node utils
-const fs = require('fs');
 const fetch = require('node-fetch');
 
-const loadLocalFile = (uri) =>
+const loadLocalFile = (that, uri) =>
 	new Promise((resolve, reject) => {
-		fs.readFile(uri, 'utf8', (err, data) => {
+		that.sdk.fs.readFile(uri, 'utf8', (err, data) => {
 			if (err) reject(err);
 			else resolve(data);
 		});
@@ -70,7 +69,7 @@ module.exports = async function (uri) {
 			}
 		} else {
 			// local file
-			let file = await loadLocalFile(uri);
+			let file = await loadLocalFile(this, uri);
 
 			this.log('log', ['storage.load.local >', uri]);
 
