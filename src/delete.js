@@ -60,7 +60,6 @@ module.exports = async function (uri) {
 			return Promise.resolve();
 		}
 	} catch (err) {
-		this.log('error', ['storage.delete', JSON.stringify({ uri, message: err.message, stack: err.stack })]);
 		return Promise.reject(err);
 	}
 };

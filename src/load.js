@@ -76,7 +76,6 @@ module.exports = async function (uri) {
 			return Promise.resolve(file);
 		}
 	} catch (err) {
-		this.log('error', ['storage.load', JSON.stringify({ uri, message: err.message, stack: err.stack })]);
 		return Promise.reject(err);
 	}
 };

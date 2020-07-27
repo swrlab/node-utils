@@ -58,11 +58,13 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal) {
 			this.log('log', ['storage.move.aws2aws copying >', sourceUri, destinationUri]);
 
 			// copy file
-			await this.sdk.s3.copyObject({
-				Bucket: bucket,
-				Key: path,
-				CopySource: sourceUri.replace('s3://', '/'),
-			}).promise();
+			await this.sdk.s3
+				.copyObject({
+					Bucket: bucket,
+					Key: path,
+					CopySource: sourceUri.replace('s3://', '/'),
+				})
+				.promise();
 
 			// move file within gcs
 			if (keepOriginal != true) {
@@ -75,10 +77,12 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal) {
 				path = structure.join('/');
 
 				// move file
-				await this.sdk.s3.deleteObject({
-					Bucket: bucket,
-					Key: path,
-				}).promise();
+				await this.sdk.s3
+					.deleteObject({
+						Bucket: bucket,
+						Key: path,
+					})
+					.promise();
 			}
 
 			// return ok
@@ -97,23 +101,17 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal) {
 			if (keepOriginal != true) {
 				await storage.delete(sourceUri);
 			} else {
-				this.log('log', ['storage.move.any2any not deleting sourceUri >', keepOriginal, sourceUri]);
+				this.log('log', [
+					'storage.move.any2any not deleting sourceUri >',
+					keepOriginal,
+					sourceUri,
+				]);
 			}
 
 			// return ok
 			return Promise.resolve();
 		}
 	} catch (err) {
-		this.log('error', [
-			'storage.move',
-			JSON.stringify({
-				sourceUri,
-				destinationUri,
-				keepOriginal,
-				message: err.message,
-				stack: err.stack,
-			}),
-		]);
 		return Promise.reject(err);
 	}
 };

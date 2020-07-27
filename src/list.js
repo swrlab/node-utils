@@ -24,7 +24,7 @@ const awsListObjects = async (that, bucket, path, next) => {
 	} catch (err) {
 		this.error('error', [
 			'storage.list.awsListObjects',
-			JSON.stringify({ bucket, path, next, message: err.message, stack: err.stack })
+			JSON.stringify({ bucket, path, next, message: err.message, stack: err.stack }),
 		]);
 		return Promise.reject(err);
 	}
@@ -95,7 +95,6 @@ module.exports = async function (uri) {
 			return Promise.resolve(file);
 		}
 	} catch (err) {
-		this.log('error', ['storage.list', JSON.stringify({ uri, message: err.message, stack: err.stack })]);
 		return Promise.reject(err);
 	}
 };

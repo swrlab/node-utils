@@ -76,18 +76,17 @@ module.exports = async function (uri, buffer) {
 			return Promise.resolve();
 		} else {
 			// local file
-			
+
 			// log progress
 			this.log('log', ['storage.save.local >', uri]);
-			
+
 			// save file
 			let file = await saveLocalFile(this, uri, buffer);
-			
+
 			// return ok
 			return Promise.resolve(file);
 		}
 	} catch (err) {
-		this.log('error', ['storage.save', JSON.stringify({ uri, message: err.message, stack: err.stack })]);
 		return Promise.reject(err);
 	}
 };
