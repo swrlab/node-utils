@@ -35,7 +35,7 @@ function StorageWrapper(config) {
 	};
 
 	// set logging
-	this.sdk.log = (that, level, message) => {
+	this.sdk.log = function (that, level, message) {
 		if (message instanceof Array) {
 			message = message.join(' ');
 		}
@@ -49,16 +49,17 @@ function StorageWrapper(config) {
 		}
 	};
 
+	// import functions
+	this.createUri = require('./createUri');
+	this.delete = require('./delete');
+	this.list = require('./list');
+	this.load = require('./load');
+	this.move = require('./move');
+	this.save = require('./save');
+
+	// log progress
 	this.sdk.log(this, 'log', ['storage.index', 'loaded config >', JSON.stringify({ config })]);
 }
-
-// enable utils
-StorageWrapper.prototype.createUri = require('./createUri');
-StorageWrapper.prototype.delete = require('./delete');
-StorageWrapper.prototype.list = require('./list');
-StorageWrapper.prototype.load = require('./load');
-StorageWrapper.prototype.move = require('./move');
-StorageWrapper.prototype.save = require('./save');
 
 // export
 module.exports = StorageWrapper;

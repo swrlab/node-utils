@@ -25,8 +25,6 @@ module.exports = async function (uri) {
 			bucket = structure.shift();
 			path = structure.join('/');
 
-			console.log(this);
-
 			// log progress
 			this.sdk.log(this, 'log', ['storage.load.aws >', uri]);
 

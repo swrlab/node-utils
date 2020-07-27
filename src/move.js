@@ -4,13 +4,6 @@
 
 */
 
-// load own sub-utils
-const storage = {
-	delete: require('./delete'),
-	load: require('./load'),
-	save: require('./save'),
-};
-
 module.exports = async function (sourceUri, destinationUri, keepOriginal) {
 	try {
 		let structure, bucket, path, blob;
@@ -96,14 +89,14 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal) {
 			this.sdk.log(this, 'log', ['storage.move.any2any >', keepOriginal, sourceUri, destinationUri]);
 
 			// download file
-			blob = await storage.load(sourceUri);
+			blob = await this.load(sourceUri);
 
 			// save file to destination
-			await storage.save(destinationUri, blob);
+			await this.save(destinationUri, blob);
 
 			// delete file if in production
 			if (keepOriginal != true) {
-				await storage.delete(sourceUri);
+				await this.delete(sourceUri);
 			} else {
 				this.sdk.log(this, 'log', [
 					'storage.move.any2any not deleting sourceUri >',
