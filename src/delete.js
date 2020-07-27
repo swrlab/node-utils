@@ -23,7 +23,7 @@ module.exports = async function (uri) {
 			path = structure.join('/');
 
 			// log progress
-			this.log('log', ['storage.delete.s3 >', uri]);
+			this.sdk.log(this, 'log', ['storage.delete.s3 >', uri]);
 
 			// delete from aws
 			await this.sdk.s3
@@ -42,7 +42,7 @@ module.exports = async function (uri) {
 			path = structure.join('/');
 
 			// log progress
-			this.log('log', ['storage.delete.gs >', uri]);
+			this.sdk.log(this, 'log', ['storage.delete.gs >', uri]);
 
 			// delete from gcp
 			await this.sdk.gs.bucket(bucket).file(path).delete(path);
@@ -51,7 +51,7 @@ module.exports = async function (uri) {
 			return Promise.resolve();
 		} else {
 			// log progress
-			this.log('log', ['storage.delete.local >', uri]);
+			this.sdk.log(this, 'log', ['storage.delete.local >', uri]);
 
 			// delete file
 			await deleteLocalFile(this, uri);

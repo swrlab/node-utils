@@ -36,7 +36,7 @@ module.exports = async function (uri, buffer) {
 			path = structure.join('/');
 
 			// log progress
-			this.log('log', ['storage.save.s3 >', uri]);
+			this.sdk.log(this, 'log', ['storage.save.s3 >', uri]);
 
 			// upload to aws
 			await this.sdk.s3
@@ -60,7 +60,7 @@ module.exports = async function (uri, buffer) {
 			await saveLocalFile(this, tempFilePath, buffer);
 
 			// log progress
-			this.log('log', ['storage.save.gs >', uri]);
+			this.sdk.log(this, 'log', ['storage.save.gs >', uri]);
 
 			// upload file to gcs
 			await this.sdk.gs.bucket(bucket).upload(tempFilePath, {
@@ -78,7 +78,7 @@ module.exports = async function (uri, buffer) {
 			// local file
 
 			// log progress
-			this.log('log', ['storage.save.local >', uri]);
+			this.sdk.log(this, 'log', ['storage.save.local >', uri]);
 
 			// save file
 			let file = await saveLocalFile(this, uri, buffer);

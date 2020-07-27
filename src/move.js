@@ -29,13 +29,17 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal) {
 			// move file within gcs
 			if (keepOriginal != true) {
 				// move is productive/ destructive
-				this.log('log', ['storage.move.gcp2gcp >', sourceUri, destinationUri]);
+				this.sdk.log(this, 'log', ['storage.move.gcp2gcp >', sourceUri, destinationUri]);
 
 				// move file
 				await this.sdk.gs.bucket(bucket).file(path).move(destinationUri);
 			} else {
 				// mode is dev, only copy file
-				this.log('log', ['storage.move.gcp2gcp (only copying) >', sourceUri, destinationUri]);
+				this.sdk.log(this, 'log', [
+					'storage.move.gcp2gcp (only copying) >',
+					sourceUri,
+					destinationUri,
+				]);
 
 				// copy file
 				await this.sdk.gs.bucket(bucket).file(path).copy(destinationUri);
@@ -55,7 +59,7 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal) {
 			path = structure.join('/');
 
 			// always copying
-			this.log('log', ['storage.move.aws2aws copying >', sourceUri, destinationUri]);
+			this.sdk.log(this, 'log', ['storage.move.aws2aws copying >', sourceUri, destinationUri]);
 
 			// copy file
 			await this.sdk.s3
@@ -69,7 +73,7 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal) {
 			// move file within gcs
 			if (keepOriginal != true) {
 				// move is productive/ destructive
-				this.log('log', ['storage.move.aws2aws deleting source >', sourceUri]);
+				this.sdk.log(this, 'log', ['storage.move.aws2aws deleting source >', sourceUri]);
 
 				// parse source
 				structure = sourceUri.substr(5).split('/');
@@ -89,7 +93,7 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal) {
 			return Promise.resolve();
 		} else {
 			// any to any transfer
-			this.log('log', ['storage.move.any2any >', keepOriginal, sourceUri, destinationUri]);
+			this.sdk.log(this, 'log', ['storage.move.any2any >', keepOriginal, sourceUri, destinationUri]);
 
 			// download file
 			blob = await storage.load(sourceUri);
@@ -101,7 +105,7 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal) {
 			if (keepOriginal != true) {
 				await storage.delete(sourceUri);
 			} else {
-				this.log('log', [
+				this.sdk.log(this, 'log', [
 					'storage.move.any2any not deleting sourceUri >',
 					keepOriginal,
 					sourceUri,

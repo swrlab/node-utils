@@ -49,7 +49,7 @@ module.exports = async function (uri) {
 			path = structure.join('/');
 
 			// log progress
-			this.log('log', ['storage.list.aws >', uri]);
+			this.sdk.log(this, 'log', ['storage.list.aws >', uri]);
 
 			// load file
 			var next;
@@ -75,7 +75,7 @@ module.exports = async function (uri) {
 			path = structure.join('/');
 
 			// log request
-			this.log('log', ['storage.list.gcp >', uri]);
+			this.sdk.log(this, 'log', ['storage.list.gcp >', uri]);
 
 			// load file
 			file = await this.sdk.gs.bucket(bucket).getFiles({
@@ -86,7 +86,7 @@ module.exports = async function (uri) {
 			return Promise.resolve(file[0]);
 		} else {
 			// log request
-			this.log('log', ['storage.list.local >', uri]);
+			this.sdk.log(this, 'log', ['storage.list.local >', uri]);
 
 			// local file
 			let file = await listLocalFiles(this, uri);

@@ -29,24 +29,27 @@ function StorageWrapper(config) {
 	AWS.config.loadFromPath(config.s3);
 	this.sdk.s3 = new AWS.S3();
 
-	// enable logging
-	this.log = config.logging
-		? (level, message) => {
-				if (message instanceof Array) {
-					message = message.join(' ');
-				}
+	// configure logging
+	this.config = {
+		logging: config.logging,
+	};
 
-				if (level == 'log') {
-					console.log(message);
-				} else if (level == 'warn') {
-					console.warn(message);
-				} else if (level == 'error') {
-					console.error(message);
-				}
+	// set logging
+	this.sdk.log = (that, level, message) => {
+		if (message instanceof Array) {
+			message = message.join(' ');
 		}
-		: null;
 
-	this.log('log', ['storage.index', 'loaded config >', JSON.stringify({ config })]);
+		if (level == 'log') {
+			that.config.logging ? console.log(message) : null;
+		} else if (level == 'warn') {
+			that.config.logging ? console.warn(message) : null;
+		} else if (level == 'error') {
+			that.config.logging ? console.error(message) : null;
+		}
+	};
+
+	this.sdk.log(this, 'log', ['storage.index', 'loaded config >', JSON.stringify({ config })]);
 }
 
 // enable utils
