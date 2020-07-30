@@ -9,7 +9,7 @@ const fetch = require('node-fetch');
 
 const loadLocalFile = (that, uri) =>
 	new Promise((resolve, reject) => {
-		that.sdk.fs.readFile(uri, 'utf8', (err, data) => {
+		that.sdk.fs.readFile(uri, (err, data) => {
 			if (err) reject(err);
 			else resolve(data);
 		});
@@ -68,11 +68,13 @@ module.exports = async function (uri) {
 				return Promise.reject('fetching url failed with status > ' + file.status);
 			}
 		} else {
+			// log progress
+			this.sdk.log(this, 'log', ['storage.load.local >', uri]);
+
 			// local file
 			let file = await loadLocalFile(this, uri);
 
-			this.sdk.log(this, 'log', ['storage.load.local >', uri]);
-
+			// return file
 			return Promise.resolve(file);
 		}
 	} catch (err) {
