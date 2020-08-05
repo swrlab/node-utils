@@ -12,7 +12,7 @@ const { Storage } = require('@google-cloud/storage');
 // create wrapper
 function StorageWrapper(config) {
 	// check config
-	if (!config || !config.gs || !config.s3) {
+	if (!config || !config.gs) {
 		return Promise.reject('storage config invalid');
 	}
 
@@ -26,8 +26,10 @@ function StorageWrapper(config) {
 	this.sdk.gs = new Storage(config.gs);
 
 	// load aws sdk
-	AWS.config.loadFromPath(config.s3);
-	this.sdk.s3 = new AWS.S3();
+	if (config.s3) {
+		AWS.config.loadFromPath(config.s3);
+		this.sdk.s3 = new AWS.S3();
+	}
 
 	// configure logging
 	this.config = {
