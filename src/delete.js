@@ -49,6 +49,15 @@ module.exports = async function (uri) {
 
 			// return ok
 			return Promise.resolve();
+		} else if (
+			uri.substr(0, 7).toLowerCase() == 'http://' ||
+			uri.substr(0, 8).toLowerCase() == 'https://'
+		) {
+			// log progress
+			this.sdk.log(this, 'log', ['storage.delete.https (not possible) >', uri]);
+
+			// return ok
+			return Promise.resolve();
 		} else {
 			// log progress
 			this.sdk.log(this, 'log', ['storage.delete.local >', uri]);
