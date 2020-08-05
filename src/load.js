@@ -6,6 +6,16 @@
 
 // load node utils
 const fetch = require('node-fetch');
+const http = require('http');
+const https = require('https');
+
+// enable keepalive
+const httpAgent = new http.Agent({
+	keepAlive: true,
+});
+const httpsAgent = new https.Agent({
+	keepAlive: true,
+});
 
 const loadLocalFile = (that, uri) =>
 	new Promise((resolve, reject) => {
@@ -59,7 +69,22 @@ module.exports = async function (uri) {
 			this.sdk.log(this, 'log', ['storage.load.https >', uri]);
 
 			// public http(s) endpoint
-			let file = await fetch(uri);
+			let file = await fetch(uri, {
+				method: 'get',
+
+				headers: {
+					'User-Agent': 'node-storage-wrapper',
+					Connection: 'keep-alive',
+				},
+
+				agent: function (_parsedURL) {
+					if (_parsedURL.protocol == 'http:') {
+						return httpAgent;
+					} else {
+						return httpsAgent;
+					}
+				},
+			});
 
 			if (file.ok) {
 				file = await file.buffer();
