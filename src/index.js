@@ -27,8 +27,7 @@ function StorageWrapper(config) {
 
 	// load aws sdk
 	if (config.s3) {
-		AWS.config.loadFromPath(config.s3);
-		this.sdk.s3 = new AWS.S3();
+		this.sdk.s3 = new AWS.S3(config.s3);
 	}
 
 	// configure logging
@@ -60,7 +59,14 @@ function StorageWrapper(config) {
 	this.save = require('./save');
 
 	// log progress
-	this.sdk.log(this, 'log', ['storage.index', 'loaded config >', JSON.stringify({ config })]);
+	this.sdk.log(this, 'log', [
+		'storage.index',
+		'loaded config',
+		JSON.stringify({
+			gs: config.gs ? config.gs.projectId : null,
+			s3: config.s3 ? { accessKeyId: config.s3.accessKeyId, region: config.s3.region } : null,
+		}),
+	]);
 }
 
 // export
