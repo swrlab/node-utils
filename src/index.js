@@ -52,6 +52,7 @@ function StorageWrapper(config) {
 
 	// import functions
 	this.createUri = require('./createUri');
+	this.createUrl = require('./createUrl');
 	this.delete = require('./delete');
 	this.list = require('./list');
 	this.load = require('./load');
