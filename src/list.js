@@ -11,7 +11,7 @@ const awsListObjects = async (that, bucket, path, next) => {
 			.listObjectsV2({
 				Bucket: bucket,
 				Prefix: path,
-				MaxKeys: 200,
+				MaxKeys: 500,
 				ContinuationToken: next,
 			})
 			.promise();
@@ -22,7 +22,7 @@ const awsListObjects = async (that, bucket, path, next) => {
 			next: files.IsTruncated ? files.NextContinuationToken : null,
 		});
 	} catch (err) {
-		this.error('error', [
+		that.sdk.log('error', [
 			'storage.list.awsListObjects',
 			JSON.stringify({ bucket, path, next, message: err.message, stack: err.stack }),
 		]);
@@ -38,7 +38,7 @@ const listLocalFiles = (that, uri) =>
 		});
 	});
 
-module.exports = async function (uri) {
+module.exports = async function (uri, max, next) {
 	try {
 		let structure, bucket, path, file;
 
@@ -49,25 +49,28 @@ module.exports = async function (uri) {
 			path = structure.join('/');
 
 			// log progress
-			this.sdk.log(this, 'log', ['storage.list.aws >', uri]);
+			this.sdk.log(this, 'log', ['storage.list.aws >', uri, max]);
 
 			// load file
-			var next;
+			let maxNotReached = true;
 			let fileList = [];
 
 			do {
 				// load data
 				let awsReturn = await awsListObjects(this, bucket, path, next ? next : null);
 
+				// add to return list
+				fileList = fileList.concat(awsReturn.list);
+
 				// set next token
 				next = awsReturn.next;
 
-				// add to return list
-				fileList = fileList.concat(awsReturn.list);
-			} while (next);
+				// calculate max reached
+				maxNotReached = max && fileList.length < max ? true : false;
+			} while (next && maxNotReached);
 
 			// return list
-			return Promise.resolve(fileList);
+			return Promise.resolve({ list: fileList, next });
 		} else if (uri.substr(0, 5).toLowerCase() == 'gs://') {
 			// google cloud storage
 			structure = uri.substr(5).split('/');
