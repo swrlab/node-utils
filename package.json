@@ -1,6 +1,6 @@
 {
 	"name": "@swrlab/node-storage-wrapper",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"description": "Wrapping AWS S3, GCP GCS, file storage",
 	"main": "./src/index.js",
 	"engines": {
