@@ -4,8 +4,9 @@
 
 */
 
-module.exports = async function (sourceUri, destinationUri, keepOriginal) {
+module.exports = async function (sourceUri, destinationUri, keepOriginal, logPrefix) {
 	try {
+		logPrefix = logPrefix ? [logPrefix, '>'] : [];
 		let structure, bucket, path, blob;
 
 		if (
@@ -22,17 +23,25 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal) {
 			// move file within gcs
 			if (keepOriginal != true) {
 				// move is productive/ destructive
-				this.sdk.log(this, 'log', ['storage.move.gcp2gcp >', sourceUri, destinationUri]);
+				this.sdk.log(
+					this,
+					'log',
+					logPrefix.concat(['storage.move.gcp2gcp >', sourceUri, destinationUri])
+				);
 
 				// move file
 				await this.sdk.gs.bucket(bucket).file(path).move(destinationUri);
 			} else {
 				// mode is dev, only copy file
-				this.sdk.log(this, 'log', [
-					'storage.move.gcp2gcp (only copying) >',
-					sourceUri,
-					destinationUri,
-				]);
+				this.sdk.log(
+					this,
+					'log',
+					logPrefix.concat([
+						'storage.move.gcp2gcp (only copying) >',
+						sourceUri,
+						destinationUri,
+					])
+				);
 
 				// copy file
 				await this.sdk.gs.bucket(bucket).file(path).copy(destinationUri);
@@ -52,7 +61,11 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal) {
 			path = structure.join('/');
 
 			// always copying
-			this.sdk.log(this, 'log', ['storage.move.aws2aws copying >', sourceUri, destinationUri]);
+			this.sdk.log(
+				this,
+				'log',
+				logPrefix.concat(['storage.move.aws2aws copying >', sourceUri, destinationUri])
+			);
 
 			// copy file
 			await this.sdk.s3
@@ -66,7 +79,11 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal) {
 			// move file within gcs
 			if (keepOriginal != true) {
 				// move is productive/ destructive
-				this.sdk.log(this, 'log', ['storage.move.aws2aws deleting source >', sourceUri]);
+				this.sdk.log(
+					this,
+					'log',
+					logPrefix.concat(['storage.move.aws2aws deleting source >', sourceUri])
+				);
 
 				// parse source
 				structure = sourceUri.substr(5).split('/');
@@ -86,7 +103,11 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal) {
 			return Promise.resolve();
 		} else {
 			// any to any transfer
-			this.sdk.log(this, 'log', ['storage.move.any2any >', keepOriginal, sourceUri, destinationUri]);
+			this.sdk.log(
+				this,
+				'log',
+				logPrefix.concat(['storage.move.any2any >', keepOriginal, sourceUri, destinationUri])
+			);
 
 			// download file
 			blob = await this.load(sourceUri);
@@ -98,11 +119,15 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal) {
 			if (keepOriginal != true) {
 				await this.delete(sourceUri);
 			} else {
-				this.sdk.log(this, 'log', [
-					'storage.move.any2any not deleting sourceUri >',
-					keepOriginal,
-					sourceUri,
-				]);
+				this.sdk.log(
+					this,
+					'log',
+					logPrefix.concat([
+						'storage.move.any2any not deleting sourceUri >',
+						keepOriginal,
+						sourceUri,
+					])
+				);
 			}
 
 			// return ok

@@ -25,8 +25,9 @@ const loadLocalFile = (that, uri) =>
 		});
 	});
 
-module.exports = async function (uri) {
+module.exports = async function (uri, logPrefix) {
 	try {
+		logPrefix = logPrefix ? [logPrefix, '>'] : [];
 		let structure, bucket, path, file;
 
 		if (uri.substr(0, 5).toLowerCase() == 's3://') {
@@ -36,7 +37,7 @@ module.exports = async function (uri) {
 			path = structure.join('/');
 
 			// log progress
-			this.sdk.log(this, 'log', ['storage.load.aws >', uri]);
+			this.sdk.log(this, 'log', logPrefix.concat(['storage.load.aws >', uri]));
 
 			// load file
 			let file = await this.sdk.s3
@@ -54,7 +55,7 @@ module.exports = async function (uri) {
 			bucket = structure.shift();
 			path = structure.join('/');
 
-			this.sdk.log(this, 'log', ['storage.load gcp >', uri]);
+			this.sdk.log(this, 'log', logPrefix.concat(['storage.load gcp >', uri]));
 
 			// load file
 			file = await this.sdk.gs.bucket(bucket).file(path).download();
@@ -66,7 +67,7 @@ module.exports = async function (uri) {
 			uri.substr(0, 8).toLowerCase() == 'https://'
 		) {
 			// log progress
-			this.sdk.log(this, 'log', ['storage.load.https >', uri]);
+			this.sdk.log(this, 'log', logPrefix.concat(['storage.load.https >', uri]));
 
 			// public http(s) endpoint
 			let file = await fetch(uri, {
@@ -94,7 +95,7 @@ module.exports = async function (uri) {
 			}
 		} else {
 			// log progress
-			this.sdk.log(this, 'log', ['storage.load.local >', uri]);
+			this.sdk.log(this, 'log', logPrefix.concat(['storage.load.local >', uri]));
 
 			// local file
 			let file = await loadLocalFile(this, uri);

@@ -6,11 +6,13 @@
 
 */
 
-module.exports = async function (uri, ttl) {
+module.exports = async function (uri, ttl, logPrefix) {
 	try {
+		logPrefix = logPrefix ? [logPrefix, '>'] : [];
+
 		if (uri.substr(0, 5).toLowerCase() == 's3://') {
 			// log progress
-			this.sdk.log(this, 'log', ['storage.createUrl.aws >', uri]);
+			this.sdk.log(this, 'log', logPrefix.concat(['storage.createUrl.aws >', uri]));
 
 			return Promise.reject('not implemented');
 		} else if (uri.substr(0, 5).toLowerCase() == 'gs://') {
@@ -20,7 +22,7 @@ module.exports = async function (uri, ttl) {
 			let path = structure.join('/');
 
 			// log progress
-			this.sdk.log(this, 'log', ['storage.createUrl.gcp >', uri]);
+			this.sdk.log(this, 'log', logPrefix.concat(['storage.createUrl.gcp >', uri]));
 
 			// set config
 			const config = {
@@ -38,13 +40,13 @@ module.exports = async function (uri, ttl) {
 			uri.substr(0, 8).toLowerCase() == 'https://'
 		) {
 			// log progress
-			this.sdk.log(this, 'log', ['storage.createUrl.https >', uri]);
+			this.sdk.log(this, 'log', logPrefix.concat(['storage.createUrl.https >', uri]));
 
 			// return link
 			return Promise.resolve(uri);
 		} else {
 			// log progress
-			this.sdk.log(this, 'log', ['storage.createUrl.local >', uri]);
+			this.sdk.log(this, 'log', logPrefix.concat(['storage.createUrl.local >', uri]));
 
 			return Promise.reject('not implemented');
 		}
