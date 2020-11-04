@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: 👀 Checkout repo
-      uses: actions/checkout@v2.3.3
+      uses: actions/checkout@v2.3.4
     - name: 🛠 Setup Node
       uses: actions/setup-node@v2.1.2
       with:
@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: 👀 Checkout repo
-      uses: actions/checkout@v2.3.3
+      uses: actions/checkout@v2.3.4
     - name: 🛠 Setup Node
       uses: actions/setup-node@v2.1.2
       with:
