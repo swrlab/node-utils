@@ -4,4 +4,7 @@ by [**SWR audio lab**](https://lab.swr.de/)
 
 ## Changelog
 
-t.b.c.  
+- 2021-06-22 - v0.2.2
+  - updated dependencies
+  - updated github actions
+  - changed dependabot interval
