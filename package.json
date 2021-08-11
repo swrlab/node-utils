@@ -16,14 +16,14 @@
 	"scripts": {
 	},
 	"dependencies": {
-		"@google-cloud/storage": "5.8.5",
-		"aws-sdk": "2.934.0",
+		"@google-cloud/storage": "5.13.0",
+		"aws-sdk": "2.965.0",
 		"node-fetch": "2.6.1",
 		"uuid": "8.3.2"
 	},
 	"devDependencies": {
 		"@swrlab/swr-prettier-config": "0.1.2",
-		"eslint": "7.29.0",
+		"eslint": "7.32.0",
 		"eslint-plugin-swr": "0.0.5"
 	},
 	"prettier": "@swrlab/swr-prettier-config"
