@@ -2,11 +2,11 @@
 
 This module allows easy unified access to the most common storage operations in the local file storage, AWS S3 and Google Cloud Storage.  
 
-Please note: This project is still under development!  
+*Please note: This project is still under development!*  
 
 ## Installation
 
-t.b.c.  
+Install dependencies with `yarn`.
 
 ## Changelog
 

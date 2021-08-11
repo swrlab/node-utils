@@ -25,7 +25,7 @@ const deleteLocalFile = (that, filePath) =>
 		});
 	});
 
-module.exports = async function (uri, buffer, logPrefix) {
+module.exports = async function (uri, buffer, logPrefix, resumable) {
 	try {
 		logPrefix = logPrefix ? [logPrefix, '>'] : [];
 		let structure, bucket, path;
@@ -63,12 +63,20 @@ module.exports = async function (uri, buffer, logPrefix) {
 			// log progress
 			this.sdk.log(this, 'log', logPrefix.concat(['storage.save.gs >', uri]));
 
-			// upload file to gcs
-			await this.sdk.gs.bucket(bucket).upload(tempFilePath, {
+			// create default bucket config
+			let bucketConfig = {
 				gzip: false,
 				destination: path,
 				metadata: {},
-			});
+			}
+
+			// update bucket config with resumable flag if set
+			if (resumable !== undefined && resumable !== null) {
+				bucketConfig.resumable = resumable
+			}
+
+			// upload file to gcs
+			await this.sdk.gs.bucket(bucket).upload(tempFilePath, bucketConfig);
 
 			// delete local temp file
 			await deleteLocalFile(this, tempFilePath);
