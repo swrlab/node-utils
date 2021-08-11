@@ -1,6 +1,6 @@
 {
 	"name": "@swrlab/node-storage-wrapper",
-	"version": "0.2.2",
+	"version": "0.2.3",
 	"description": "Wrapping AWS S3, GCP GCS, file storage",
 	"main": "./src/index.js",
 	"engines": {
@@ -8,13 +8,12 @@
 	},
 	"repository": {
 		"type": "git",
-    		"url": "https://github.com/swrlab/node-storage-wrapper"
+		"url": "https://github.com/swrlab/node-storage-wrapper"
 	},
 	"author": "SWR audio lab <lab@swr.de>",
-	"license": "SEE LICENSE in LICENSE.md",
+	"license": "Hippocratic-2.0",
 	"private": false,
-	"scripts": {
-	},
+	"scripts": {},
 	"dependencies": {
 		"@google-cloud/storage": "5.13.0",
 		"aws-sdk": "2.965.0",
