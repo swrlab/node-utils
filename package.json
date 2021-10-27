@@ -1,6 +1,6 @@
 {
 	"name": "@swrlab/node-storage-wrapper",
-	"version": "0.2.3",
+	"version": "0.3.0",
 	"description": "Wrapping AWS S3, GCP GCS, file storage",
 	"main": "./src/index.js",
 	"engines": {
@@ -15,14 +15,14 @@
 	"private": false,
 	"scripts": {},
 	"dependencies": {
-		"@google-cloud/storage": "5.13.0",
-		"aws-sdk": "2.965.0",
-		"node-fetch": "2.6.1",
+		"@google-cloud/storage": "5.15.3",
+		"aws-sdk": "2.1015.0",
+		"undici-wrapper": "frytg/undici-wrapper",
 		"uuid": "8.3.2"
 	},
 	"devDependencies": {
 		"@swrlab/swr-prettier-config": "0.1.2",
-		"eslint": "7.32.0",
+		"eslint": "8.1.0",
 		"eslint-plugin-swr": "0.0.5"
 	},
 	"prettier": "@swrlab/swr-prettier-config"
