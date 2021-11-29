@@ -16,7 +16,7 @@
 	"scripts": {},
 	"dependencies": {
 		"@google-cloud/storage": "5.13.0",
-		"aws-sdk": "2.965.0",
+		"aws-sdk": "2.1037.0",
 		"node-fetch": "2.6.1",
 		"uuid": "8.3.2"
 	},
