@@ -22,7 +22,7 @@
 	},
 	"devDependencies": {
 		"@swrlab/swr-prettier-config": "0.1.2",
-		"eslint": "7.32.0",
+		"eslint": "8.6.0",
 		"eslint-plugin-swr": "0.0.5"
 	},
 	"prettier": "@swrlab/swr-prettier-config"
