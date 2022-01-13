@@ -1,7 +1,7 @@
 {
-	"name": "@swrlab/node-storage-wrapper",
-	"version": "0.2.3",
-	"description": "Wrapping AWS S3, GCP GCS, file storage",
+	"name": "@swrlab/utils",
+	"version": "0.3.0",
+	"description": "Providing common SWR Audio Lab utils",
 	"main": "./src/index.js",
 	"engines": {
 		"node": ">=12"
@@ -10,19 +10,21 @@
 		"type": "git",
 		"url": "https://github.com/swrlab/node-storage-wrapper"
 	},
-	"author": "SWR audio lab <lab@swr.de>",
+	"author": "SWR Audio Lab <lab@swr.de>",
 	"license": "Hippocratic-2.0",
 	"private": false,
-	"scripts": {},
+	"scripts": {
+		"reinstall": "rm -rf node_modules && rm yarn.lock && yarn"
+	},
 	"dependencies": {
-		"@google-cloud/storage": "5.13.0",
-		"aws-sdk": "2.965.0",
+		"@google-cloud/storage": "5.17.0",
+		"aws-sdk": "2.1056.0",
 		"node-fetch": "2.6.1",
 		"uuid": "8.3.2"
 	},
 	"devDependencies": {
 		"@swrlab/swr-prettier-config": "0.1.2",
-		"eslint": "7.32.0",
+		"eslint": "8.6.0",
 		"eslint-plugin-swr": "0.0.5"
 	},
 	"prettier": "@swrlab/swr-prettier-config"
