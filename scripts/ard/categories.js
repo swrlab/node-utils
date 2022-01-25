@@ -42,7 +42,7 @@ const crawl = async () => {
 
 	const tree = categories.map(remapItem)
 
-	await storage.save('data/ard-categories.json', JSON.stringify({ tree, list }, null, '\t'))
+	await storage.save('data/ard/categories.json', JSON.stringify({ tree, list }, null, '\t'))
 }
 
 crawl()
