@@ -5,7 +5,7 @@
 */
 
 // load node utils
-const undici = require('../utils/undici')
+const undici = require('../../utils/undici')
 
 const loadLocalFile = (that, uri) =>
 	new Promise((resolve, reject) => {
@@ -29,7 +29,7 @@ module.exports = async function (uri, logPrefix, options) {
 		this.sdk.log(this, 'log', logPrefix.concat(['storage.load.aws >', uri]))
 
 		// load file
-		let file = await this.sdk.s3
+		file = await this.sdk.s3
 			.getObject({
 				Bucket: bucket,
 				Key: path,
@@ -77,7 +77,7 @@ module.exports = async function (uri, logPrefix, options) {
 	this.sdk.log(this, 'log', logPrefix.concat(['storage.load.local >', uri]))
 
 	// local file
-	let file = await loadLocalFile(this, uri)
+	file = await loadLocalFile(this, uri)
 
 	// return file
 	return Promise.resolve(file)

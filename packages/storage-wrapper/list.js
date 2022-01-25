@@ -98,7 +98,7 @@ module.exports = async function (uri, max, next, logPrefix) {
 	this.sdk.log(this, 'log', logPrefix.concat(['storage.list.local >', uri]))
 
 	// local file
-	let file = await listLocalFiles(this, uri)
+	file = await listLocalFiles(this, uri)
 
 	// return list
 	return Promise.resolve(file)
