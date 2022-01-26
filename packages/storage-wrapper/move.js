@@ -5,10 +5,10 @@
 */
 
 module.exports = async function (sourceUri, destinationUri, keepOriginal, logPrefix) {
-	logPrefix = logPrefix ? [logPrefix, '>'] : []
-	let structure, bucket, path, blob
+	const thisLogPrefix = logPrefix ? [logPrefix, '>'] : []
+	let structure, bucket, path
 
-	if (sourceUri.substr(0, 5).toLowerCase() == 'gs://' && destinationUri.substr(0, 5).toLowerCase() == 'gs://') {
+	if (sourceUri.substr(0, 5).toLowerCase() === 'gs://' && destinationUri.substr(0, 5).toLowerCase() === 'gs://') {
 		// google to google transfer
 
 		// parse source
@@ -17,12 +17,12 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal, logPre
 		path = structure.join('/')
 
 		// move file within gcs
-		if (keepOriginal != true) {
+		if (keepOriginal !== true) {
 			// move is productive/ destructive
 			this.sdk.log(
 				this,
 				'log',
-				logPrefix.concat(['storage.move.gcp2gcp >', sourceUri, destinationUri])
+				thisLogPrefix.concat(['storage.move.gcp2gcp >', sourceUri, destinationUri])
 			)
 
 			// move file
@@ -32,7 +32,11 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal, logPre
 			this.sdk.log(
 				this,
 				'log',
-				logPrefix.concat(['storage.move.gcp2gcp (only copying) >', sourceUri, destinationUri])
+				thisLogPrefix.concat([
+					'storage.move.gcp2gcp (only copying) >',
+					sourceUri,
+					destinationUri,
+				])
 			)
 
 			// copy file
@@ -43,7 +47,7 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal, logPre
 		return Promise.resolve()
 	}
 
-	if (sourceUri.substr(0, 5).toLowerCase() == 's3://' && destinationUri.substr(0, 5).toLowerCase() == 's3://') {
+	if (sourceUri.substr(0, 5).toLowerCase() === 's3://' && destinationUri.substr(0, 5).toLowerCase() === 's3://') {
 		// google to google transfer
 
 		// parse source
@@ -55,7 +59,7 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal, logPre
 		this.sdk.log(
 			this,
 			'log',
-			logPrefix.concat(['storage.move.aws2aws copying >', sourceUri, destinationUri])
+			thisLogPrefix.concat(['storage.move.aws2aws copying >', sourceUri, destinationUri])
 		)
 
 		// copy file
@@ -68,12 +72,12 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal, logPre
 			.promise()
 
 		// move file within gcs
-		if (keepOriginal != true) {
+		if (keepOriginal !== true) {
 			// move is productive/ destructive
 			this.sdk.log(
 				this,
 				'log',
-				logPrefix.concat(['storage.move.aws2aws deleting source >', sourceUri])
+				thisLogPrefix.concat(['storage.move.aws2aws deleting source >', sourceUri])
 			)
 
 			// parse source
@@ -95,22 +99,26 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal, logPre
 	}
 
 	// any to any transfer
-	this.sdk.log(this, 'log', logPrefix.concat(['storage.move.any2any >', keepOriginal, sourceUri, destinationUri]))
+	this.sdk.log(
+		this,
+		'log',
+		thisLogPrefix.concat(['storage.move.any2any >', keepOriginal, sourceUri, destinationUri])
+	)
 
 	// download file
-	blob = await this.load(sourceUri)
+	const blob = await this.load(sourceUri)
 
 	// save file to destination
 	await this.save(destinationUri, blob)
 
 	// delete file if in production
-	if (keepOriginal != true) {
+	if (keepOriginal !== true) {
 		await this.delete(sourceUri)
 	} else {
 		this.sdk.log(
 			this,
 			'log',
-			logPrefix.concat(['storage.move.any2any not deleting sourceUri >', keepOriginal, sourceUri])
+			thisLogPrefix.concat(['storage.move.any2any not deleting sourceUri >', keepOriginal, sourceUri])
 		)
 	}
 

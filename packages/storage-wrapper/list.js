@@ -7,7 +7,7 @@
 const awsListObjects = async (that, bucket, path, next, logPrefix) => {
 	try {
 		// load list from aws, pass next token (nullable)
-		let files = await that.sdk.s3
+		const files = await that.sdk.s3
 			.listObjectsV2({
 				Bucket: bucket,
 				Prefix: path,
@@ -42,25 +42,25 @@ const listLocalFiles = (that, uri) =>
 	})
 
 module.exports = async function (uri, max, next, logPrefix) {
-	logPrefix = logPrefix ? [logPrefix, '>'] : []
+	const thisLogPrefix = logPrefix ? [logPrefix, '>'] : []
 	let structure, bucket, path, file
 
-	if (uri.substr(0, 5).toLowerCase() == 's3://') {
+	if (uri.substr(0, 5).toLowerCase() === 's3://') {
 		// aws s3 file
 		structure = uri.substr(5).split('/')
 		bucket = structure.shift()
 		path = structure.join('/')
 
 		// log progress
-		this.sdk.log(this, 'log', logPrefix.concat(['storage.list.aws >', uri, max]))
+		this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.list.aws >', uri, max]))
 
 		// load file
 		let maxNotReached = true
-		let fileList = []
+		const fileList = []
 
 		do {
 			// load data
-			let awsReturn = await awsListObjects(this, bucket, path, next ? next : null, logPrefix)
+			let awsReturn = await awsListObjects(this, bucket, path, next ? next : null, thisLogPrefix)
 
 			// add to return list
 			fileList = fileList.concat(awsReturn.list)
@@ -76,14 +76,14 @@ module.exports = async function (uri, max, next, logPrefix) {
 		return Promise.resolve({ list: fileList, next })
 	}
 
-	if (uri.substr(0, 5).toLowerCase() == 'gs://') {
+	if (uri.substr(0, 5).toLowerCase() === 'gs://') {
 		// google cloud storage
 		structure = uri.substr(5).split('/')
 		bucket = structure.shift()
 		path = structure.join('/')
 
 		// log request
-		this.sdk.log(this, 'log', logPrefix.concat(['storage.list.gcp >', uri]))
+		this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.list.gcp >', uri]))
 
 		// load file
 		file = await this.sdk.gs.bucket(bucket).getFiles({
@@ -95,7 +95,7 @@ module.exports = async function (uri, max, next, logPrefix) {
 	}
 
 	// log request
-	this.sdk.log(this, 'log', logPrefix.concat(['storage.list.local >', uri]))
+	this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.list.local >', uri]))
 
 	// local file
 	file = await listLocalFiles(this, uri)

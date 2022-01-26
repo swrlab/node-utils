@@ -16,17 +16,17 @@ const loadLocalFile = (that, uri) =>
 	})
 
 module.exports = async function (uri, logPrefix, options) {
-	logPrefix = logPrefix ? [logPrefix, '>'] : []
+	const thisLogPrefix = logPrefix ? [logPrefix, '>'] : []
 	let structure, bucket, path, file
 
-	if (uri.substr(0, 5).toLowerCase() == 's3://') {
+	if (uri.substr(0, 5).toLowerCase() === 's3://') {
 		// aws s3 file
 		structure = uri.substr(5).split('/')
 		bucket = structure.shift()
 		path = structure.join('/')
 
 		// log progress
-		this.sdk.log(this, 'log', logPrefix.concat(['storage.load.aws >', uri]))
+		this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.load.aws >', uri]))
 
 		// load file
 		file = await this.sdk.s3
@@ -40,13 +40,13 @@ module.exports = async function (uri, logPrefix, options) {
 		return Promise.resolve(file.Body)
 	}
 
-	if (uri.substr(0, 5).toLowerCase() == 'gs://') {
+	if (uri.substr(0, 5).toLowerCase() === 'gs://') {
 		// google cloud storage
 		structure = uri.substr(5).split('/')
 		bucket = structure.shift()
 		path = structure.join('/')
 
-		this.sdk.log(this, 'log', logPrefix.concat(['storage.load gcp >', uri]))
+		this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.load gcp >', uri]))
 
 		// load file
 		file = await this.sdk.gs.bucket(bucket).file(path).download()
@@ -55,12 +55,12 @@ module.exports = async function (uri, logPrefix, options) {
 		return Promise.resolve(file[0])
 	}
 
-	if (uri.substr(0, 7).toLowerCase() == 'http://' || uri.substr(0, 8).toLowerCase() == 'https://') {
+	if (uri.substr(0, 7).toLowerCase() === 'http://' || uri.substr(0, 8).toLowerCase() === 'https://') {
 		// log progress
-		this.sdk.log(this, 'log', logPrefix.concat(['storage.load.https >', uri]))
+		this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.load.https >', uri]))
 
 		// public http(s) endpoint
-		let file = await undici(uri, {
+		file = await undici(uri, {
 			timeout: options?.timeout,
 			method: 'GET',
 			headers: { 'User-Agent': 'node-storage-wrapper' },
@@ -74,7 +74,7 @@ module.exports = async function (uri, logPrefix, options) {
 	}
 
 	// log progress
-	this.sdk.log(this, 'log', logPrefix.concat(['storage.load.local >', uri]))
+	this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.load.local >', uri]))
 
 	// local file
 	file = await loadLocalFile(this, uri)

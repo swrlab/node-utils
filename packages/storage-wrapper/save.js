@@ -26,17 +26,17 @@ const deleteLocalFile = (that, filePath) =>
 	})
 
 module.exports = async function (uri, buffer, logPrefix, resumable) {
-	logPrefix = logPrefix ? [logPrefix, '>'] : []
+	const thisLogPrefix = logPrefix ? [logPrefix, '>'] : []
 	let structure, bucket, path
 
-	if (uri.substr(0, 5).toLowerCase() == 's3://') {
+	if (uri.substr(0, 5).toLowerCase() === 's3://') {
 		// aws s3 file
 		structure = uri.substr(5).split('/')
 		bucket = structure.shift()
 		path = structure.join('/')
 
 		// log progress
-		this.sdk.log(this, 'log', logPrefix.concat(['storage.save.s3 >', uri]))
+		this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.save.s3 >', uri]))
 
 		// upload to aws
 		await this.sdk.s3
@@ -51,21 +51,21 @@ module.exports = async function (uri, buffer, logPrefix, resumable) {
 		return Promise.resolve()
 	}
 
-	if (uri.substr(0, 5).toLowerCase() == 'gs://') {
+	if (uri.substr(0, 5).toLowerCase() === 'gs://') {
 		// google cloud storage
 		structure = uri.substr(5).split('/')
 		bucket = structure.shift()
 		path = structure.join('/')
 
 		// save to local file
-		let tempFilePath = pathUtil.resolve(os.tmpdir(), uuidv4())
+		const tempFilePath = pathUtil.resolve(os.tmpdir(), uuidv4())
 		await saveLocalFile(this, tempFilePath, buffer)
 
 		// log progress
-		this.sdk.log(this, 'log', logPrefix.concat(['storage.save.gs >', uri]))
+		this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.save.gs >', uri]))
 
 		// create default bucket config
-		let bucketConfig = {
+		const bucketConfig = {
 			gzip: false,
 			destination: path,
 			metadata: {},
@@ -89,10 +89,10 @@ module.exports = async function (uri, buffer, logPrefix, resumable) {
 	// local file
 
 	// log progress
-	this.sdk.log(this, 'log', logPrefix.concat(['storage.save.local >', uri]))
+	this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.save.local >', uri]))
 
 	// save file
-	let file = await saveLocalFile(this, uri, buffer)
+	const file = await saveLocalFile(this, uri, buffer)
 
 	// return ok
 	return Promise.resolve(file)

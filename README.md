@@ -7,8 +7,6 @@ This repository contains several frequently used packages and scripts for easier
 - [SWR Audio Lab / Node Utils](#swr-audio-lab--node-utils)
   - [Install](#install)
   - [Packages](#packages)
-    - [Storage Wrapper](#storage-wrapper)
-    - [Undici](#undici)
   - [Scripts](#scripts)
     - [ARD Category Remapper](#ard-category-remapper)
     - [ARD Core ID generator](#ard-core-id-generator)
@@ -34,13 +32,8 @@ Then run the desired script.
 
 ## Packages
 
-### [Storage Wrapper](./packages/storage-wrapper)
-
-A utility to wrap file access to local, Google Cloud Storage and AWS S3 file storage.
-
-### [Undici](./packages/undici)
-
-Provides the latest install of [`undici-wrapper`](https://github.com/frytg/undici-wrapper), a wrapper around the [`undici`](https://undici.nodejs.org/) HTTP library.
+- [Storage Wrapper](./packages/storage-wrapper) - A utility to wrap file access to local, Google Cloud Storage and AWS S3 file storage.
+- [Undici](./packages/undici) - Provides the latest install of [`undici-wrapper`](https://github.com/frytg/undici-wrapper), a wrapper around the [`undici`](https://undici.nodejs.org/) HTTP library.
 
 ## Scripts
 
