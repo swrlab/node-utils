@@ -5,14 +5,13 @@ A utility to wrap file access to local, Google Cloud Storage and AWS S3 file sto
 - [SWR Audio Lab / Storage Wrapper](#swr-audio-lab--storage-wrapper)
   - [Install](#install)
   - [Initialization](#initialization)
-  - [Features](#features)
-    - [`createUri`](#createuri)
-    - [`createUrl`](#createurl)
-    - [`delete`](#delete)
-    - [`list`](#list)
-    - [`load`](#load)
-    - [`move`](#move)
-    - [`save`](#save)
+  - [`createUri` - Convert to URI](#createuri---convert-to-uri)
+  - [`createUrl` - Sign a URI for public URL](#createurl---sign-a-uri-for-public-url)
+  - [`delete` - Delete a file](#delete---delete-a-file)
+  - [`list` - List files by prefix](#list---list-files-by-prefix)
+  - [`load` - Download a file](#load---download-a-file)
+  - [`move` - Copy or Move a file](#move---copy-or-move-a-file)
+  - [`save` - Save a file](#save---save-a-file)
 
 ## Install
 
@@ -63,9 +62,7 @@ secrets.get('radiohub-ingest-aws').then(({ json }) => {
 
 The `logging` flag controls whether all file actions by this utility should be logged.
 
-## Features
-
-### `createUri`
+## `createUri` - Convert to URI
 
 - `bucket` (required)
 - `path` (required)
@@ -86,7 +83,7 @@ const fileUri = storage.createUri.s3(bucket, name)
 // s3://bucket/name
 ```
 
-### `createUrl`
+## `createUrl` - Sign a URI for public URL
 
 - `uri` (required) - Source URI to use for signing
 - `ttl` (required) - Time to live in milliseconds for public link, provide as integer or shortform (e.g. `60e3` for `60000`)
@@ -98,7 +95,7 @@ Use this to sign a URI into a (publicly) accessible URL. Currently only implemen
 const sourceUrl = await storage.createUrl(fileUri, 60e3)
 ```
 
-### `delete`
+## `delete` - Delete a file
 
 - `uri` (required) - Source URI to delete
 - `logPrefix` (optional) - Prefix for log lines
@@ -111,7 +108,7 @@ await storage.delete(fileUri)
 
 The proper connector is detected using the prefixes (`s3://`, `gs://`, `http[s]://` or local file). Actions against `http[s]://` are rejected.
 
-### `list`
+## `list` - List files by prefix
 
 - `uri` (required) - Source URI prefix to list
 - `max` (required) - Rough maximum of elements expected
@@ -133,7 +130,7 @@ const { list, next } = await storage.list(fileUriPrefix, 300)
 
 The utility keeps listing more elements until either max is reached or no more items are available. Please note that AWS and GCP provide lists in batches, the maximum of elements might be exceeded.
 
-### `load`
+## `load` - Download a file
 
 - `uri` (required) - Source URI to load
 - `logPrefix` (optional) - Prefix for log lines
@@ -146,7 +143,7 @@ Download a single file and returns the contents buffer.
 const fileBuffer = await storage.list(fileUri)
 ```
 
-### `move`
+## `move` - Copy or Move a file
 
 - `sourceUri` (required) - Source file URI to copy
 - `destinationUri` (required) - Destination URI where to copy the file to
@@ -161,7 +158,7 @@ There are essentially three ways to move files:
 2. `s3` to `s3` - Use the AWS method for copying and deleting an object
 3. `any` to `any` - This uses the internal methods to `load`, `save` and `delete` the files. Please note that this actually downloads the file (incurring bandwidth), rather than using the cloud provider's native methods for moving data.
 
-### `save`
+## `save` - Save a file
 
 - `uri` (required) - Destination URI to use for saving
 - `buffer` (required) - File buffer to save

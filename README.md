@@ -32,8 +32,10 @@ Then run the desired script.
 
 ## Packages
 
-- [Storage Wrapper](./packages/storage-wrapper) - A utility to wrap file access to local, Google Cloud Storage and AWS S3 file storage.
-- [Undici](./packages/undici) - Provides the latest install of [`undici-wrapper`](https://github.com/frytg/undici-wrapper), a wrapper around the [`undici`](https://undici.nodejs.org/) HTTP library.
+- [ARD](./packages/ard) - Common internal ARD tools like ID creation
+- [Storage Wrapper](./packages/storage-wrapper) - A utility to wrap file access to local, Google Cloud Storage and AWS S3 file storage
+- [Strings](./packages/strings) - Common string, array, object encoding and getter helpers
+- [Undici](./packages/undici) - Provides the latest install of [`undici-wrapper`](https://github.com/frytg/undici-wrapper), a wrapper around the [`undici`](https://undici.nodejs.org/) HTTP library
 
 ## Scripts
 
@@ -74,6 +76,10 @@ yarn ard:publishers
 ```
 
 The output is written to a file: `tmp/ard-publishers.json` (the state is not in this repository, but likely still in [`ard-eventhub/.../coreApi.json`](https://github.com/swrlab/ard-eventhub/blob/main/src/data/coreApi.json)).
+
+## Publish to NPM
+
+tbc
 
 ## Changelog
 
