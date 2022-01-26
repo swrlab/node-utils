@@ -11,6 +11,7 @@
 		"url": "https://github.com/swrlab/node-utils"
 	},
 	"scripts": {
+		"ard:coreId": "node ./scripts/ard/coreId.js",
 		"ard:categories": "node -r dotenv/config scripts/ard/categories.js",
 		"ard:publishers": "node -r dotenv/config scripts/ard/publishers.js",
 		"reinstall": "rm -rf node_modules && rm yarn.lock && yarn"
