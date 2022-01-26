@@ -11,6 +11,7 @@ This repository contains several frequently used packages and scripts for easier
     - [ARD Category Remapper](#ard-category-remapper)
     - [ARD Core ID generator](#ard-core-id-generator)
     - [ARD Core Publisher Remapper](#ard-core-publisher-remapper)
+  - [Publish to NPM](#publish-to-npm)
   - [Changelog](#changelog)
   - [License](#license)
 
@@ -79,7 +80,17 @@ The output is written to a file: `tmp/ard-publishers.json` (the state is not in 
 
 ## Publish to NPM
 
-tbc
+Sign in to NPM and provide username, password, and email-address:
+
+```sh
+npm login
+```
+
+Publish updates of this package with:
+
+```sh
+npm publish
+```
 
 ## Changelog
 

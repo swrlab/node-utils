@@ -16,7 +16,7 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
   - updated github actions
   - add optional 'resumable' flag
 
-- 2021-06-22 - v0.2.2
+- 2021-06-21 - v0.2.2
   - updated dependencies
   - updated github actions
   - changed dependabot interval
