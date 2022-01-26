@@ -1,0 +1,6649 @@
+{
+	"tree": [
+		{
+			"id": "urn:ard:category-genre:877523a636bebe4a",
+			"externalId": "vokabel-251973",
+			"title": "Genre",
+			"isAudio": true,
+			"isVideo": true,
+			"children": [
+				{
+					"id": "urn:ard:category-genre:dbb7bf3926b2277a",
+					"externalId": "vokabel-242033",
+					"title": "Dokumentation/Reportage",
+					"isAudio": true,
+					"isVideo": true,
+					"children": [
+						{
+							"id": "urn:ard:category-subgenre:39ac8d318f50317b",
+							"externalId": "vokabel-272072",
+							"title": "Docutainmentserie",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:98f913ef413cd576",
+							"externalId": "vokabel-272249",
+							"title": "Erklärfilm",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:1dc4559b3ab4ff50",
+							"externalId": "vokabel-250945",
+							"title": "Essay",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:e06dc83c6b9de023",
+							"externalId": "vokabel-280992",
+							"title": "Filminterview",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:e816bdfbdecb1a39",
+							"externalId": "vokabel-271929",
+							"title": "Geschichtliche und zeitgeschichtliche Doku",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:9785baf1382a2a1d",
+							"externalId": "vokabel-271930",
+							"title": "Geschichtliche und zeitgeschichtliche Dokuserie",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:cd1962bccdd383ba",
+							"externalId": "vokabel-271949",
+							"title": "Gesellschafts-, Sozial- und Kulturdoku",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:759b478ad10ce82b",
+							"externalId": "vokabel-271953",
+							"title": "Inside-Access- und gesellschaftliche Dokuserie",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:fcca0b4e0e45fc3f",
+							"externalId": "vokabel-272149",
+							"title": "Interview-Serie",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:ae70d08b25c53b1f",
+							"externalId": "vokabel-271970",
+							"title": "Kulinarische Doku",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:ec8031608c2f0d8c",
+							"externalId": "vokabel-271971",
+							"title": "Kulinarische Dokuserie",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:a29d29d7c277d6b0",
+							"externalId": "vokabel-280993",
+							"title": "Lyrik-Show",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:8706dc32ebe2b0bc",
+							"externalId": "vokabel-271989",
+							"title": "Mockumentary",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:658c0beb38498d05",
+							"externalId": "vokabel-280990",
+							"title": "Musikdoku",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:0059e74b92bf2079",
+							"externalId": "vokabel-272032",
+							"title": "Natur - und Tierdoku",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:ba653ad3a4e9b60b",
+							"externalId": "vokabel-271991",
+							"title": "Natur- und Tierdokuserie",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:277cea0091a3bb96",
+							"externalId": "vokabel-280991",
+							"title": "Radiofeature",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:a10c79955cd3c474",
+							"externalId": "vokabel-272209",
+							"title": "Reisedoku",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:83590c44e8a4cc1b",
+							"externalId": "vokabel-272150",
+							"title": "Reportage",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:bdf6cca852244cf5",
+							"externalId": "vokabel-272229",
+							"title": "Sportdoku",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:e030be7300b274be",
+							"externalId": "vokabel-272169",
+							"title": "True-Crime-Doku",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:9fa3b979e653449a",
+							"externalId": "vokabel-272170",
+							"title": "True-Crime-Serie",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:df24fcd13492e4f8",
+							"externalId": "vokabel-272049",
+							"title": "Wissenschafts- und Technikdoku",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:c3de49ec3a656c79",
+							"externalId": "vokabel-272069",
+							"title": "Wissenschafts- und Technikdokuserie",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						}
+					]
+				},
+				{
+					"id": "urn:ard:category-genre:9284d97c28f0cba5",
+					"externalId": "vokabel-242037",
+					"title": "Film",
+					"isAudio": false,
+					"isVideo": true,
+					"children": [
+						{
+							"id": "urn:ard:category-subgenre:63359a0f3a6d4ceb",
+							"externalId": "vokabel-242029",
+							"title": "Action- und Abenteuerfilm",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:696a48d7c22196e6",
+							"externalId": "vokabel-272409",
+							"title": "Animationsfilm",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:17651aab7b24a683",
+							"externalId": "vokabel-242035",
+							"title": "Beziehungsdrama",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:db7b2ca737d4985f",
+							"externalId": "vokabel-271890",
+							"title": "Biopic",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:1c6a0e9bcdeac3ea",
+							"externalId": "vokabel-271893",
+							"title": "Coming-of-Age-Film",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:f4ec08c6d03c92b8",
+							"externalId": "vokabel-271909",
+							"title": "Europäischer Filmklassiker",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:b28a65b62b32b39e",
+							"externalId": "vokabel-271950",
+							"title": "Heimatfilm",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:f07a845d82d8850d",
+							"externalId": "vokabel-271951",
+							"title": "High-Concept-Komödie",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:5409ae368d2a9051",
+							"externalId": "vokabel-272411",
+							"title": "Horrorfilm",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:376ba66178e6deb8",
+							"externalId": "vokabel-271952",
+							"title": "Indie-Komödie",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:51bd4a15662461f0",
+							"externalId": "vokabel-242043",
+							"title": "Krimi",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:df9f0e6c9258d69a",
+							"externalId": "vokabel-242044",
+							"title": "Kultfilm",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:9d6fef873bb2e009",
+							"externalId": "vokabel-242045",
+							"title": "Kurzfilm/Videokunst",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:8706dc32ebe2b0bc",
+							"externalId": "vokabel-271989",
+							"title": "Mockumentary",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:04caa4a3809fe3fb",
+							"externalId": "vokabel-242048",
+							"title": "Märchen",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:7d7418ef5ed7edbe",
+							"externalId": "vokabel-271992",
+							"title": "Politthriller",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:3f84f904f73ddb2d",
+							"externalId": "vokabel-271993",
+							"title": "Programmkino-Film",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:b1a6bd7d03416c47",
+							"externalId": "vokabel-271994",
+							"title": "Psychothriller",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:39a94242cf94e54c",
+							"externalId": "vokabel-242050",
+							"title": "Roadmovie",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:e6d196ab297df5fa",
+							"externalId": "vokabel-272009",
+							"title": "Romantische Komödie",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:0b7a9e23e8efa3b5",
+							"externalId": "vokabel-272392",
+							"title": "Sci-Fi- & Fantasy-Film",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:f1085afe5ddafeb7",
+							"externalId": "vokabel-272389",
+							"title": "Sportfilm",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:42a906a03b5516ea",
+							"externalId": "vokabel-272033",
+							"title": "TV-Komödie",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:fa2b2396278a7d7b",
+							"externalId": "vokabel-272029",
+							"title": "Tatort",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:8e9b5df4bb3bce93",
+							"externalId": "vokabel-272390",
+							"title": "Westernfilm",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:ad75aa6b81ecd654",
+							"externalId": "vokabel-272290",
+							"title": "Zeichentrickfilm",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:bc4d4ee6dc845c5d",
+							"externalId": "vokabel-272070",
+							"title": "Zeitgeschichtliches und historisches Drama",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						}
+					]
+				},
+				{
+					"id": "urn:ard:category-genre:93e611e2cec8483a",
+					"externalId": "vokabel-250942",
+					"title": "Hörspiel",
+					"isAudio": true,
+					"isVideo": false,
+					"children": [
+						{
+							"id": "urn:ard:category-subgenre:a95eae7965df0cfc",
+							"externalId": "vokabel-280996",
+							"title": "Action- und Abenteuer-Hörspiel",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:b51a268a8d266228",
+							"externalId": "vokabel-280999",
+							"title": "Audio Roadmovie",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:ee44b69244ef8ef6",
+							"externalId": "vokabel-281006",
+							"title": "Audio-Soap",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:17651aab7b24a683",
+							"externalId": "vokabel-242035",
+							"title": "Beziehungsdrama",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:b0f0df8a05fcd6b1",
+							"externalId": "vokabel-281008",
+							"title": "Bioaud",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:2296130019790f0f",
+							"externalId": "vokabel-281000",
+							"title": "Coming-of-Age-Hörspiel",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:f2003e61ac16e022",
+							"externalId": "vokabel-281009",
+							"title": "Doku-Hörspiel",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:ebae4f92cc353a6f",
+							"externalId": "vokabel-280997",
+							"title": "Heimat-Hörspiel",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:f07a845d82d8850d",
+							"externalId": "vokabel-271951",
+							"title": "High-Concept-Komödie",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:e587313ce34754ba",
+							"externalId": "vokabel-281003",
+							"title": "Horror-Hörspiel",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:376ba66178e6deb8",
+							"externalId": "vokabel-271952",
+							"title": "Indie-Komödie",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:134dabfecfce5763",
+							"externalId": "vokabel-242042",
+							"title": "Komödie",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:51bd4a15662461f0",
+							"externalId": "vokabel-242043",
+							"title": "Krimi",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:f7eac76124cc54bb",
+							"externalId": "vokabel-280998",
+							"title": "Kult-Hörspiel",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:295594aebed1d543",
+							"externalId": "vokabel-281005",
+							"title": "Kurzgeschichte",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:8706dc32ebe2b0bc",
+							"externalId": "vokabel-271989",
+							"title": "Mockumentary",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:acb45779ed05b865",
+							"externalId": "vokabel-281007",
+							"title": "Mystery-Hörspiel",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:04caa4a3809fe3fb",
+							"externalId": "vokabel-242048",
+							"title": "Märchen",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:7d7418ef5ed7edbe",
+							"externalId": "vokabel-271992",
+							"title": "Politthriller",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:b1a6bd7d03416c47",
+							"externalId": "vokabel-271994",
+							"title": "Psychothriller",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:e6d196ab297df5fa",
+							"externalId": "vokabel-272009",
+							"title": "Romantische Komödie",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:6066f2ebb093399c",
+							"externalId": "vokabel-281001",
+							"title": "Sci-Fi- & Fantasy-Hörspiel",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:a777d0d74aad6229",
+							"externalId": "vokabel-281002",
+							"title": "Sport-Hörspiel",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:fa2b2396278a7d7b",
+							"externalId": "vokabel-272029",
+							"title": "Tatort",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:6ba57545173be3d0",
+							"externalId": "vokabel-281004",
+							"title": "Western-Hörspiel",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:bc4d4ee6dc845c5d",
+							"externalId": "vokabel-272070",
+							"title": "Zeitgeschichtliches und historisches Drama",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						}
+					]
+				},
+				{
+					"id": "urn:ard:category-genre:d116f00967227ea9",
+					"externalId": "vokabel-250943",
+					"title": "Lesung",
+					"isAudio": true,
+					"isVideo": false,
+					"children": [
+						{
+							"id": "urn:ard:category-subgenre:8d93396b4af7d006",
+							"externalId": "vokabel-281010",
+							"title": "Action- und Abenteuer-Lesung",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:b51a268a8d266228",
+							"externalId": "vokabel-280999",
+							"title": "Audio Roadmovie",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:ee44b69244ef8ef6",
+							"externalId": "vokabel-281006",
+							"title": "Audio-Soap",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:17651aab7b24a683",
+							"externalId": "vokabel-242035",
+							"title": "Beziehungsdrama",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:b0f0df8a05fcd6b1",
+							"externalId": "vokabel-281008",
+							"title": "Bioaud",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:4a821b57b0c98bb3",
+							"externalId": "vokabel-281013",
+							"title": "Coming-of-Age-Lesung",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:5d05140aff983f2b",
+							"externalId": "vokabel-281019",
+							"title": "Gedicht",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:cf63d880e31de695",
+							"externalId": "vokabel-281011",
+							"title": "Heimat-Lesung",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:f07a845d82d8850d",
+							"externalId": "vokabel-271951",
+							"title": "High-Concept-Komödie",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:41419cf9176151ff",
+							"externalId": "vokabel-281016",
+							"title": "Horror-Lesung",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:376ba66178e6deb8",
+							"externalId": "vokabel-271952",
+							"title": "Indie-Komödie",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:134dabfecfce5763",
+							"externalId": "vokabel-242042",
+							"title": "Komödie",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:51bd4a15662461f0",
+							"externalId": "vokabel-242043",
+							"title": "Krimi",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:0872fabc1923bd20",
+							"externalId": "vokabel-281012",
+							"title": "Kult-Lesung",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:295594aebed1d543",
+							"externalId": "vokabel-281005",
+							"title": "Kurzgeschichte",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:8706dc32ebe2b0bc",
+							"externalId": "vokabel-271989",
+							"title": "Mockumentary",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:1ff5f5e1567209b8",
+							"externalId": "vokabel-281018",
+							"title": "Mystery-Lesung",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:04caa4a3809fe3fb",
+							"externalId": "vokabel-242048",
+							"title": "Märchen",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:7d7418ef5ed7edbe",
+							"externalId": "vokabel-271992",
+							"title": "Politthriller",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:b1a6bd7d03416c47",
+							"externalId": "vokabel-271994",
+							"title": "Psychothriller",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:e6d196ab297df5fa",
+							"externalId": "vokabel-272009",
+							"title": "Romantische Komödie",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:3e6ca63d178e878e",
+							"externalId": "vokabel-281020",
+							"title": "Sachbuch-Lesung",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:c4a05f2e44b53cd9",
+							"externalId": "vokabel-281014",
+							"title": "Sci-Fi- & Fantasy-Lesung",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:8650bec5ed5f0a4a",
+							"externalId": "vokabel-281015",
+							"title": "Sport-Lesung",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:fa2b2396278a7d7b",
+							"externalId": "vokabel-272029",
+							"title": "Tatort",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:03b17d12be8b676c",
+							"externalId": "vokabel-281017",
+							"title": "Western-Lesung",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:bc4d4ee6dc845c5d",
+							"externalId": "vokabel-272070",
+							"title": "Zeitgeschichtliches und historisches Drama",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						}
+					]
+				},
+				{
+					"id": "urn:ard:category-subgenre:a2041d0aad1fdae1",
+					"externalId": "vokabel-281189",
+					"title": "Live-Ereignis",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-genre:0fb71ec3c139dfe2",
+					"externalId": "vokabel-242062",
+					"title": "Nachrichten/Information",
+					"isAudio": true,
+					"isVideo": true,
+					"children": [
+						{
+							"id": "urn:ard:category-subgenre:d4d8354408c34b46",
+							"externalId": "vokabel-276030",
+							"title": "Bericht-Format",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:ab4b324eee227b62",
+							"externalId": "vokabel-276029",
+							"title": "Interview-Format",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:5139f6935b172660",
+							"externalId": "vokabel-276032",
+							"title": "Nachrichten",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:9628d4afa1297dd5",
+							"externalId": "vokabel-276031",
+							"title": "Nachrichten-Magazin",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						}
+					]
+				},
+				{
+					"id": "urn:ard:category-genre:feb8607e35aabef9",
+					"externalId": "vokabel-242053",
+					"title": "Serie",
+					"isAudio": false,
+					"isVideo": true,
+					"children": [
+						{
+							"id": "urn:ard:category-subgenre:1ca69d05dc8c7ccf",
+							"externalId": "vokabel-242030",
+							"title": "Action- und Abenteuerserie",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:16f94fdd24c0a6c2",
+							"externalId": "vokabel-272410",
+							"title": "Animationsserie",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:a4e82badd135a87b",
+							"externalId": "vokabel-271889",
+							"title": "Beziehungsdramaserie",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:998bcd4c9e3eaecc",
+							"externalId": "vokabel-271891",
+							"title": "Comedyserie & Dramedy",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:8b7f0fcc36dda29c",
+							"externalId": "vokabel-271910",
+							"title": "Familienserie",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:93188c0a7714cbe4",
+							"externalId": "vokabel-272412",
+							"title": "Horrorserie",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:d1e3d781c3240b3b",
+							"externalId": "vokabel-271969",
+							"title": "Krimiserie",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:f895db380d038098",
+							"externalId": "vokabel-271990",
+							"title": "Mystery-Serie",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:04caa4a3809fe3fb",
+							"externalId": "vokabel-242048",
+							"title": "Märchen",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:498a7fc841059526",
+							"externalId": "vokabel-272393",
+							"title": "Sci-Fi- & Fantasy-Serie",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:709a2407c1d60993",
+							"externalId": "vokabel-242054",
+							"title": "Soap/Telenovela",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:85b8249cc16b4d5f",
+							"externalId": "vokabel-272030",
+							"title": "Teenserie",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:c748c57768817bcc",
+							"externalId": "vokabel-272031",
+							"title": "Thriller-Serie",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:cc6bbc1f12d1f800",
+							"externalId": "vokabel-272391",
+							"title": "Westernserie",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:d2e6ad61670de670",
+							"externalId": "vokabel-272289",
+							"title": "Zeichentrickserie",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:febdaf0d756e6ace",
+							"externalId": "vokabel-272071",
+							"title": "Zeitgeschichtliche & historische Dramaserie",
+							"isAudio": false,
+							"isVideo": true,
+							"children": null
+						}
+					]
+				},
+				{
+					"id": "urn:ard:category-genre:efde47fb53348b25",
+					"externalId": "vokabel-242139",
+					"title": "Show/Magazin",
+					"isAudio": true,
+					"isVideo": true,
+					"children": [
+						{
+							"id": "urn:ard:category-subgenre:5e9aef706400f579",
+							"externalId": "vokabel-271892",
+							"title": "Comedy-Show",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:c3e107d7a19c198b",
+							"externalId": "vokabel-276015",
+							"title": "Gottesdienst",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:c82280790634c3c7",
+							"externalId": "vokabel-276010",
+							"title": "Kochshow",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:6e4f8c459fe15749",
+							"externalId": "vokabel-280995",
+							"title": "Kommentar",
+							"isAudio": true,
+							"isVideo": false,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:9580b0e2b469e59c",
+							"externalId": "vokabel-242084",
+							"title": "Konzert",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:8111e63c08762f18",
+							"externalId": "vokabel-276014",
+							"title": "Kultur-Magazin",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:2b91135c76115639",
+							"externalId": "vokabel-271972",
+							"title": "Late-Night-Show",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:04f025eb5ba2423e",
+							"externalId": "vokabel-276016",
+							"title": "Literaturshow",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:a7ed514d751c4530",
+							"externalId": "vokabel-272369",
+							"title": "Musik-Show",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:8ad26192afdef554",
+							"externalId": "vokabel-276011",
+							"title": "Polit-Magazin",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:646affeaddc60930",
+							"externalId": "vokabel-272332",
+							"title": "Polit-Talkshow",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:2cbf6dae360b61da",
+							"externalId": "vokabel-280994",
+							"title": "Reality-Show",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:d87e564793fd7514",
+							"externalId": "vokabel-272370",
+							"title": "Samstagabend-Show",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:7b5c6cda26ba07e8",
+							"externalId": "vokabel-272073",
+							"title": "Satire-Show",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:994291a1cf9cc5de",
+							"externalId": "vokabel-272010",
+							"title": "Sketch-Show",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:82e28e0a6604dcb3",
+							"externalId": "vokabel-272309",
+							"title": "Stand-up-Show",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:abcf8ec8d3113cf2",
+							"externalId": "vokabel-242058",
+							"title": "Talkshow",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:4dc343ae55e0aee1",
+							"externalId": "vokabel-276012",
+							"title": "Verbraucher-Magazin",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:9825964c69609276",
+							"externalId": "vokabel-250947",
+							"title": "Vortrag",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:a37bddd627f85285",
+							"externalId": "vokabel-272331",
+							"title": "Wissens-Show",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "urn:ard:category-genre:095767dfc2c20920",
+			"externalId": "vokabel-251974",
+			"title": "Inhaltskategorien",
+			"isAudio": true,
+			"isVideo": true,
+			"children": [
+				{
+					"id": "urn:ard:category-genre:e93f6f237afb0a61",
+					"externalId": "vokabel-242059",
+					"title": "Aktuelles",
+					"isAudio": true,
+					"isVideo": true,
+					"children": [
+						{
+							"id": "urn:ard:category-subgenre:8a56dd1492edb2c4",
+							"externalId": "vokabel-242060",
+							"title": "Katastrophen",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:c8a63cff3b078457",
+							"externalId": "vokabel-242061",
+							"title": "Krisengebiete",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:7c9c47d6be64b11d",
+							"externalId": "vokabel-281021",
+							"title": "Regionales",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:4d47ff2868d3e971",
+							"externalId": "vokabel-242063",
+							"title": "Terrorismus",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:f4192f4e743ae72a",
+							"externalId": "vokabel-250923",
+							"title": "Verkehrsservice",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:c365bb519caf5e1b",
+							"externalId": "vokabel-242064",
+							"title": "Wahl",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:81955aba35456888",
+							"externalId": "vokabel-242065",
+							"title": "Wetter",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						}
+					]
+				},
+				{
+					"id": "urn:ard:category-genre:2724533cba48fb3c",
+					"externalId": "vokabel-242148",
+					"title": "Geschichte",
+					"isAudio": true,
+					"isVideo": true,
+					"children": [
+						{
+							"id": "urn:ard:category-subgenre:fbf219b56778cc86",
+							"externalId": "vokabel-250951",
+							"title": "ARD Retro",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:65d4b2d713a2cdaf",
+							"externalId": "vokabel-242149",
+							"title": "DDR",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:1a47b5ddf543fd8b",
+							"externalId": "vokabel-242150",
+							"title": "Nationalsozialismus",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:58b754365ca9cb18",
+							"externalId": "vokabel-242151",
+							"title": "Weltkrieg I",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:9fa6760aa69790ad",
+							"externalId": "vokabel-242152",
+							"title": "Weltkrieg II",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						}
+					]
+				},
+				{
+					"id": "urn:ard:category-genre:4ba6d7f0411c6835",
+					"externalId": "vokabel-242103",
+					"title": "Gesellschaft",
+					"isAudio": true,
+					"isVideo": true,
+					"children": [
+						{
+							"id": "urn:ard:category-subgenre:bf64595eb43357b3",
+							"externalId": "vokabel-242096",
+							"title": "Arbeit",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:fd94b8b51dd96120",
+							"externalId": "vokabel-242097",
+							"title": "Ausbildung",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:e1d03046f5200ff4",
+							"externalId": "vokabel-242098",
+							"title": "Bildung",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:1830119e8e686b7a",
+							"externalId": "vokabel-242068",
+							"title": "Digitale Welt/Internet",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:e39e20133b6b53b2",
+							"externalId": "vokabel-250929",
+							"title": "Divers/Inter",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:a320d1ad5cca3967",
+							"externalId": "vokabel-242099",
+							"title": "Erziehung",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:8cb7f5ccbb223380",
+							"externalId": "vokabel-242100",
+							"title": "Familie",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:ce47142712c80513",
+							"externalId": "vokabel-242101",
+							"title": "Frauen",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:0956361be8f65ea6",
+							"externalId": "vokabel-242102",
+							"title": "Freizeit",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:52501f3f0ad4f2d2",
+							"externalId": "vokabel-281044",
+							"title": "Gemeinnützigkeit",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:a16ec1f892816521",
+							"externalId": "vokabel-250928",
+							"title": "Hobby",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:d2bda11a1c3f8d92",
+							"externalId": "vokabel-242121",
+							"title": "Inklusion",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:c5849389b560df5f",
+							"externalId": "vokabel-242104",
+							"title": "Integration",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:877472621c8ae9cc",
+							"externalId": "vokabel-242105",
+							"title": "Islam",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:4065505ee6b4b279",
+							"externalId": "vokabel-242106",
+							"title": "Jugend",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:0295b1b54f5e84ea",
+							"externalId": "vokabel-242107",
+							"title": "Kinder",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:d45c89c235f00cd6",
+							"externalId": "vokabel-242041",
+							"title": "Kinderprogramm",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:1ed13946a7a7ea3e",
+							"externalId": "vokabel-242108",
+							"title": "Kriminalität",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:5c21d8ad0e4ddcad",
+							"externalId": "vokabel-242109",
+							"title": "Liebe",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:23b2dfa7e8acec89",
+							"externalId": "vokabel-242110",
+							"title": "Lifestyle",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:a6531c70bb7881af",
+							"externalId": "vokabel-242112",
+							"title": "Medien",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:e4a3fd9b1292b73c",
+							"externalId": "vokabel-242113",
+							"title": "Migration",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:6a81b9e2e6ee0056",
+							"externalId": "vokabel-242114",
+							"title": "Mode",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:61423e4c4146da1a",
+							"externalId": "vokabel-242111",
+							"title": "Männer",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:bd2a490b7a780bf5",
+							"externalId": "vokabel-250927",
+							"title": "Prominente",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:287158094f0436c5",
+							"externalId": "vokabel-242115",
+							"title": "Religion",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:ef607a35b53a6d70",
+							"externalId": "vokabel-242116",
+							"title": "Religionen der Welt",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:ad909bde1cd05be3",
+							"externalId": "vokabel-242117",
+							"title": "Schicksale",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:b1d4132df4293537",
+							"externalId": "vokabel-242118",
+							"title": "Senioren",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:f324f2c65dc303a4",
+							"externalId": "vokabel-242119",
+							"title": "Sexualität",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:904d40f1b5d5bb01",
+							"externalId": "vokabel-242120",
+							"title": "Weihnachten",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						}
+					]
+				},
+				{
+					"id": "urn:ard:category-genre:f5c5da1e740c82e0",
+					"externalId": "vokabel-242079",
+					"title": "Kultur",
+					"isAudio": true,
+					"isVideo": true,
+					"children": [
+						{
+							"id": "urn:ard:category-subgenre:f97d8401edb0dc3b",
+							"externalId": "vokabel-281023",
+							"title": "Alte Musik",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:dcb3d6a7ba2b0943",
+							"externalId": "vokabel-242080",
+							"title": "Architektur",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:1b63797a04961e0d",
+							"externalId": "vokabel-281040",
+							"title": "Bildende Kunst",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:78757b624e0d0c06",
+							"externalId": "vokabel-242095",
+							"title": "Brauchtum",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:775fc07819cc6b51",
+							"externalId": "vokabel-281024",
+							"title": "Country",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:35af2193b0265dc2",
+							"externalId": "vokabel-281025",
+							"title": "CrossOver",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:f2be03af4a180677",
+							"externalId": "vokabel-281026",
+							"title": "Dance",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:41ffa137f16fb7aa",
+							"externalId": "vokabel-281039",
+							"title": "Darstellende Kunst",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:030f40dc58858139",
+							"externalId": "vokabel-281038",
+							"title": "Design",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:1f4bc82fb07cefed",
+							"externalId": "vokabel-281037",
+							"title": "Elektronische Musik",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:b04ee244e3f230e4",
+							"externalId": "vokabel-281027",
+							"title": "Ernste Musik",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:ac0a6ab70b0b5e30",
+							"externalId": "vokabel-281028",
+							"title": "Ethno/Weltmusik",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:59939891ad7c289e",
+							"externalId": "vokabel-281041",
+							"title": "Film & Serien",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:38cb8adc29ac66d3",
+							"externalId": "vokabel-250925",
+							"title": "Fotografie",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:eefa8b5ca2e168a3",
+							"externalId": "vokabel-281029",
+							"title": "Geistliche Musik",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:91698c5644005887",
+							"externalId": "vokabel-281030",
+							"title": "Hip-Hop",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:d3996dbdedea6e14",
+							"externalId": "vokabel-281031",
+							"title": "Hitparade",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:9e43374c13c13fd0",
+							"externalId": "vokabel-242081",
+							"title": "Jazz",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:14884f8117d435a1",
+							"externalId": "vokabel-281032",
+							"title": "Kammermusik",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:59521570e9ff6465",
+							"externalId": "vokabel-242082",
+							"title": "Kino",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:1ba2f49b401552f6",
+							"externalId": "vokabel-242083",
+							"title": "Klassik",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:d77051091d83d30f",
+							"externalId": "vokabel-242085",
+							"title": "Kunst",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:ffdaa8e0d3923d66",
+							"externalId": "vokabel-250926",
+							"title": "Künstler",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:10617335e7bd88ba",
+							"externalId": "vokabel-242086",
+							"title": "Literatur",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:b902f85ece92fa15",
+							"externalId": "vokabel-250950",
+							"title": "Mundart",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:529192de4e57be29",
+							"externalId": "vokabel-242087",
+							"title": "Musical",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:4ed51a2da6aed0fd",
+							"externalId": "vokabel-242088",
+							"title": "Musik",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:0c25fbc60f44e66e",
+							"externalId": "vokabel-242089",
+							"title": "Musik-Festival",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:5678ae6abe3e0332",
+							"externalId": "vokabel-281033",
+							"title": "Neue Musik",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:d85aea134a42b458",
+							"externalId": "vokabel-281034",
+							"title": "Oldies",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:73b6fccce9a5d64a",
+							"externalId": "vokabel-242090",
+							"title": "Oper",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:463a45482975d568",
+							"externalId": "vokabel-242049",
+							"title": "Porträt/Biografie",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:9aaa0bf8e3a882cb",
+							"externalId": "vokabel-281035",
+							"title": "R&B",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:31461d27404fe0d9",
+							"externalId": "vokabel-242091",
+							"title": "Rock/Pop",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:7a3b6b3780465040",
+							"externalId": "vokabel-250924",
+							"title": "Schlager",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:88a5c5d1d4f563a5",
+							"externalId": "vokabel-276129",
+							"title": "Show",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:5dbb29c41996d97e",
+							"externalId": "vokabel-281036",
+							"title": "Sinfonische Musik",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:84611ebf8199fca2",
+							"externalId": "vokabel-250948",
+							"title": "Soundart",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:9e82baad5742732b",
+							"externalId": "vokabel-281042",
+							"title": "Spiele",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:5f34b470935ec9c3",
+							"externalId": "vokabel-250944",
+							"title": "Sport",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:f6573f1bba71bb6c",
+							"externalId": "vokabel-242092",
+							"title": "Theater",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:dc725b46fea845b8",
+							"externalId": "vokabel-281043",
+							"title": "Videogames/Games",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:b4a7def0139b8dff",
+							"externalId": "vokabel-242093",
+							"title": "Volksmusik",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:3a859a89e7e73a95",
+							"externalId": "vokabel-242094",
+							"title": "Weltmusik",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						}
+					]
+				},
+				{
+					"id": "urn:ard:category-genre:dd5697e10f7da63e",
+					"externalId": "vokabel-242153",
+					"title": "Politik",
+					"isAudio": true,
+					"isVideo": true,
+					"children": [
+						{
+							"id": "urn:ard:category-subgenre:5374d398fb011154",
+							"externalId": "vokabel-242154",
+							"title": "EU",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:1184327352eb27c7",
+							"externalId": "vokabel-242155",
+							"title": "Extremismus",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:d695104fa8d57c72",
+							"externalId": "vokabel-242156",
+							"title": "Krieg",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						}
+					]
+				},
+				{
+					"id": "urn:ard:category-genre:15ac8326e601d627",
+					"externalId": "vokabel-242122",
+					"title": "Ratgeber",
+					"isAudio": true,
+					"isVideo": true,
+					"children": [
+						{
+							"id": "urn:ard:category-subgenre:0474996d669105ae",
+							"externalId": "vokabel-242067",
+							"title": "Auto/Verkehr",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:575c62cd4febe0b4",
+							"externalId": "vokabel-242123",
+							"title": "Ernährung",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:9c0d2719dd8a6396",
+							"externalId": "vokabel-250930",
+							"title": "Fitness",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:10a0fed4a33ec441",
+							"externalId": "vokabel-281045",
+							"title": "Fremdsprachen",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:d97e26b4bb9757de",
+							"externalId": "vokabel-242124",
+							"title": "Geld",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:9b8ec75f127d614d",
+							"externalId": "vokabel-242125",
+							"title": "Gesundheit",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:d7b1dce859009ff4",
+							"externalId": "vokabel-281046",
+							"title": "Handarbeit",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:5c9fe563e8433af8",
+							"externalId": "vokabel-242126",
+							"title": "Haus/Garten",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:defdc6f274605505",
+							"externalId": "vokabel-250931",
+							"title": "Haushalt",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:1e6f048841a90c6b",
+							"externalId": "vokabel-242127",
+							"title": "Kochen",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:022b8c7ba95062bf",
+							"externalId": "vokabel-242128",
+							"title": "Recht",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:6c60913acf218112",
+							"externalId": "vokabel-242074",
+							"title": "Reise",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						}
+					]
+				},
+				{
+					"id": "urn:ard:category-genre:b5429fb6a6cd2282",
+					"externalId": "vokabel-242140",
+					"title": "Umwelt",
+					"isAudio": true,
+					"isVideo": true,
+					"children": [
+						{
+							"id": "urn:ard:category-subgenre:f7b27e5d0f271411",
+							"externalId": "vokabel-242141",
+							"title": "Berge",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:19ece4ce8e5e0eb0",
+							"externalId": "vokabel-250932",
+							"title": "Klima",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:30a35c61f5194fa4",
+							"externalId": "vokabel-242142",
+							"title": "Meer",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:7253bd8a5cf37937",
+							"externalId": "vokabel-242143",
+							"title": "Natur",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:fc71f9f3a88fce5d",
+							"externalId": "vokabel-242144",
+							"title": "Tiere",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:be8118180165f8ce",
+							"externalId": "vokabel-242145",
+							"title": "Zoogeschichten",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:5b1c052527b43823",
+							"externalId": "vokabel-250933",
+							"title": "Ökologie",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						}
+					]
+				},
+				{
+					"id": "urn:ard:category-genre:baa9a94db58f092e",
+					"externalId": "vokabel-242132",
+					"title": "Unterhaltung",
+					"isAudio": true,
+					"isVideo": true,
+					"children": [
+						{
+							"id": "urn:ard:category-subgenre:f85948a61c653fbd",
+							"externalId": "vokabel-242133",
+							"title": "Boulevard",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:767b0cdfe81988d7",
+							"externalId": "vokabel-242134",
+							"title": "Comedy/Satire",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:348bed3441f3be44",
+							"externalId": "vokabel-242135",
+							"title": "Fasching/Karneval",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:f39acf08bbcde5f1",
+							"externalId": "vokabel-242136",
+							"title": "Quiz",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:b16a2ee31227d362",
+							"externalId": "vokabel-242137",
+							"title": "Royalty",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:ad2ea610fadebdb6",
+							"externalId": "vokabel-242138",
+							"title": "Rückblicke",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						}
+					]
+				},
+				{
+					"id": "urn:ard:category-genre:79903a24fb5ba37b",
+					"externalId": "vokabel-242146",
+					"title": "Wirtschaft",
+					"isAudio": true,
+					"isVideo": true,
+					"children": [
+						{
+							"id": "urn:ard:category-subgenre:3b60dbcf52b195e8",
+							"externalId": "vokabel-242147",
+							"title": "Börse",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:97cea0b77a22b9da",
+							"externalId": "vokabel-250935",
+							"title": "Dienstleistungen",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:122f636029f6d4fc",
+							"externalId": "vokabel-250937",
+							"title": "Globalisierung",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:50df828b801ce26f",
+							"externalId": "vokabel-250936",
+							"title": "Handel",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:d53e415cd3c88f49",
+							"externalId": "vokabel-250934",
+							"title": "Industrie",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:5ac0f07527825de9",
+							"externalId": "vokabel-242069",
+							"title": "Landwirtschaft",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						}
+					]
+				},
+				{
+					"id": "urn:ard:category-genre:46847886cf7b333d",
+					"externalId": "vokabel-242066",
+					"title": "Wissen",
+					"isAudio": true,
+					"isVideo": true,
+					"children": [
+						{
+							"id": "urn:ard:category-subgenre:bb8d65ea445aeaa8",
+							"externalId": "vokabel-281022",
+							"title": "Beziehung",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:78766394ef9ea4e9",
+							"externalId": "vokabel-258458",
+							"title": "Luftfahrt/Raumfahrt",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:2553f77fc1636dcd",
+							"externalId": "vokabel-242070",
+							"title": "Medizin",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:67a3169468895b5e",
+							"externalId": "vokabel-242071",
+							"title": "Naturwissenschaft",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:a0b234a892b700eb",
+							"externalId": "vokabel-242072",
+							"title": "Philosophie",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:e242d5433b5d3678",
+							"externalId": "vokabel-242073",
+							"title": "Psychologie",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:2e9070d166cbb781",
+							"externalId": "vokabel-242075",
+							"title": "Technik",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:e98152ed9cf5ec34",
+							"externalId": "vokabel-242076",
+							"title": "Weltraum",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:ab71b306351fdaa7",
+							"externalId": "vokabel-242077",
+							"title": "Wissenschaft",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						},
+						{
+							"id": "urn:ard:category-subgenre:b7353bf5dde6b473",
+							"externalId": "vokabel-242078",
+							"title": "Zukunft",
+							"isAudio": true,
+							"isVideo": true,
+							"children": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "urn:ard:category-genre:4ba786346b283fb3",
+			"externalId": "vokabel-251975",
+			"title": "Ortsangaben",
+			"isAudio": true,
+			"isVideo": true,
+			"children": [
+				{
+					"id": "urn:ard:category-subgenre:9465f1a4013f4ae1",
+					"externalId": "vokabel-242157",
+					"title": "Afghanistan",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:0eb2a143a997291f",
+					"externalId": "vokabel-242214",
+					"title": "Afrika",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:057126ed0e3ff353",
+					"externalId": "vokabel-242211",
+					"title": "Alpen und Berge",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:4c4240a8007d1f8c",
+					"externalId": "vokabel-242215",
+					"title": "Asien",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:8b536294fa434439",
+					"externalId": "vokabel-242216",
+					"title": "Australien",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:50580b53d372ce8d",
+					"externalId": "vokabel-242190",
+					"title": "Baden-Württemberg",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:4c9b0a7868e58cbb",
+					"externalId": "vokabel-250939",
+					"title": "Balkan",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:2be2ecc8ab4d58cf",
+					"externalId": "vokabel-251988",
+					"title": "Baltikum",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:12a8eab87a98f81e",
+					"externalId": "vokabel-242191",
+					"title": "Bayern",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:cad198bc402c12a6",
+					"externalId": "vokabel-242159",
+					"title": "Belgien",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:69120d2302a76e5c",
+					"externalId": "vokabel-251989",
+					"title": "Benelux",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:d5b9c88480a6a3ab",
+					"externalId": "vokabel-242192",
+					"title": "Berlin",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:9749296f294c9538",
+					"externalId": "vokabel-242193",
+					"title": "Brandenburg",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:196b6d16dd302252",
+					"externalId": "vokabel-242194",
+					"title": "Bremen",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:a9b82a8ba83aaa03",
+					"externalId": "vokabel-242160",
+					"title": "Deutschland",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:c9a3837f53a972aa",
+					"externalId": "vokabel-242217",
+					"title": "Europa",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:7e95027e4df6dac4",
+					"externalId": "vokabel-251983",
+					"title": "Frankfurt am Main",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:eb48cb6001d09c90",
+					"externalId": "vokabel-242161",
+					"title": "Frankreich",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:2c59e95cfbeec725",
+					"externalId": "vokabel-242162",
+					"title": "Griechenland",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:6ea908b75204f1b6",
+					"externalId": "vokabel-242163",
+					"title": "Großbritannien",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:5b9b8cfd74da14c1",
+					"externalId": "vokabel-242195",
+					"title": "Hamburg",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:3f486a9ae65b6408",
+					"externalId": "vokabel-242130",
+					"title": "Heimat",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:9c8aaec18ee44f74",
+					"externalId": "vokabel-242196",
+					"title": "Hessen",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:e08b4ccea67846dc",
+					"externalId": "vokabel-242164",
+					"title": "Indien",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:a27bad250f92704f",
+					"externalId": "vokabel-242165",
+					"title": "Irak",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:656a8f19f5ac2bfa",
+					"externalId": "vokabel-242166",
+					"title": "Iran",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:279a6ef25c461d69",
+					"externalId": "vokabel-242167",
+					"title": "Israel",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:3bdee601b4bf73bd",
+					"externalId": "vokabel-242168",
+					"title": "Italien",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:792e07ea1d55452e",
+					"externalId": "vokabel-242169",
+					"title": "Japan",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:06bd00e0fbb4750a",
+					"externalId": "vokabel-242170",
+					"title": "Jemen",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:444de10b525e4399",
+					"externalId": "vokabel-242171",
+					"title": "Kuba",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:7db88b714fb1529b",
+					"externalId": "vokabel-242131",
+					"title": "Land/Leute",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:f0b74607b98a6dae",
+					"externalId": "vokabel-251984",
+					"title": "Leipzig",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:835cc337a860182c",
+					"externalId": "vokabel-242172",
+					"title": "Libyen",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:b247a7ec10605b3d",
+					"externalId": "vokabel-251985",
+					"title": "Mainz",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:de7a4f2a270e79e7",
+					"externalId": "vokabel-242197",
+					"title": "Mecklenburg-Vorpommern",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:c1ac22dc018a2ebf",
+					"externalId": "vokabel-242173",
+					"title": "Mexiko",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:1607d2359d1c251c",
+					"externalId": "vokabel-250940",
+					"title": "Mittelmeer",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:755685d0ea5e0088",
+					"externalId": "vokabel-251986",
+					"title": "München",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:1a809c23f9ffb4e2",
+					"externalId": "vokabel-272489",
+					"title": "Nahost",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:4f8e66a5f5f699d5",
+					"externalId": "vokabel-242174",
+					"title": "Niederlande",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:c23ec7d9cff71733",
+					"externalId": "vokabel-242198",
+					"title": "Niedersachsen",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:0d7e874e5c1caf46",
+					"externalId": "vokabel-242175",
+					"title": "Nigeria",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:d5e70b8cbb501c7e",
+					"externalId": "vokabel-242218",
+					"title": "Nordamerika",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:66a6a9140027ada3",
+					"externalId": "vokabel-242207",
+					"title": "Norddeutschland",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:ca6fa572a622f4f3",
+					"externalId": "vokabel-242176",
+					"title": "Nordkorea",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:80ce2632661d21a0",
+					"externalId": "vokabel-242199",
+					"title": "Nordrhein-Westfalen",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:c26004d1f401a8e6",
+					"externalId": "vokabel-242212",
+					"title": "Nordsee",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:16810a29e4465e78",
+					"externalId": "vokabel-251990",
+					"title": "Orient",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:5471ebc24dac68eb",
+					"externalId": "vokabel-251991",
+					"title": "Ostasien",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:7ae221e7e8dec377",
+					"externalId": "vokabel-242208",
+					"title": "Ostdeutschland",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:8090e53a5deb9e75",
+					"externalId": "vokabel-242213",
+					"title": "Ostsee",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:94dbcc6ae731acb4",
+					"externalId": "vokabel-242178",
+					"title": "Pakistan",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:9360c9feb792335e",
+					"externalId": "vokabel-251992",
+					"title": "Polarkreis",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:d62b2d814edb9a27",
+					"externalId": "vokabel-242179",
+					"title": "Polen",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:ff5d213880fc1184",
+					"externalId": "vokabel-242180",
+					"title": "Portugal",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:e884ed6df45b1ac9",
+					"externalId": "vokabel-242200",
+					"title": "Rheinland-Pfalz",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:bdadc0d329162717",
+					"externalId": "vokabel-242181",
+					"title": "Russland",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:aa740c865db12c5a",
+					"externalId": "vokabel-242201",
+					"title": "Saarland",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:6d652ebaa78f77ef",
+					"externalId": "vokabel-242202",
+					"title": "Sachsen",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:2f95cf510e65417c",
+					"externalId": "vokabel-242203",
+					"title": "Sachsen-Anhalt",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:a1b78b28fa19f616",
+					"externalId": "vokabel-242204",
+					"title": "Schleswig-Holstein",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:7abce2efd3287ca2",
+					"externalId": "vokabel-242182",
+					"title": "Schweden",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:384c03047ac24a31",
+					"externalId": "vokabel-242183",
+					"title": "Schweiz",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:0e6beb93c10fba28",
+					"externalId": "vokabel-250938",
+					"title": "Skandinavien",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:b66e477d8ebefd5b",
+					"externalId": "vokabel-242184",
+					"title": "Somalia",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:f49ea6962754cbc8",
+					"externalId": "vokabel-242185",
+					"title": "Spanien",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:37a6643b43b4361b",
+					"externalId": "vokabel-251987",
+					"title": "Stuttgart",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:338f84aadd6a907d",
+					"externalId": "vokabel-242186",
+					"title": "Syrien",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:9717ea6712ba2aed",
+					"externalId": "vokabel-242219",
+					"title": "Südamerika",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:3812c00c4134f5e4",
+					"externalId": "vokabel-242209",
+					"title": "Süddeutschland",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:e3476ac353f3c085",
+					"externalId": "vokabel-242205",
+					"title": "Thüringen",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:717f65417480a6ee",
+					"externalId": "vokabel-242187",
+					"title": "Türkei",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:2fcb0c593593fea9",
+					"externalId": "vokabel-242189",
+					"title": "USA",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:6d3bedb29c79c83a",
+					"externalId": "vokabel-242188",
+					"title": "Ukraine",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:4781c706a7d5c5c0",
+					"externalId": "vokabel-242210",
+					"title": "Westdeutschland",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:88217957e9c62435",
+					"externalId": "vokabel-242158",
+					"title": "Ägypten",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:889f44990fc8c260",
+					"externalId": "vokabel-242177",
+					"title": "Österreich",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				}
+			]
+		},
+		{
+			"id": "urn:ard:category-genre:8cb6a40891166406",
+			"externalId": "vokabel-251976",
+			"title": "Sportarten",
+			"isAudio": true,
+			"isVideo": true,
+			"children": [
+				{
+					"id": "urn:ard:category-subgenre:f47e5850faac9248",
+					"externalId": "vokabel-242220",
+					"title": "American Football",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:b68eb9bb5346a4db",
+					"externalId": "vokabel-242221",
+					"title": "Badminton",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:719f9b87a978ff6e",
+					"externalId": "vokabel-242222",
+					"title": "Baseball",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:336f7a6c0092c9fd",
+					"externalId": "vokabel-242223",
+					"title": "Basketball",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:bd4d3e15f4ee7e97",
+					"externalId": "vokabel-242224",
+					"title": "Beach Volleyball",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:ffbddffe5d044804",
+					"externalId": "vokabel-242225",
+					"title": "Biathlon",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:38acfdc2a73a13b1",
+					"externalId": "vokabel-242226",
+					"title": "Bob",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:7a5c1c290ed02522",
+					"externalId": "vokabel-242227",
+					"title": "Bogenschießen",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:661894dae6294bf6",
+					"externalId": "vokabel-242228",
+					"title": "Boxen",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:95413d03f0eaa967",
+					"externalId": "vokabel-281047",
+					"title": "Cricket",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:24e875314fc37d65",
+					"externalId": "vokabel-242229",
+					"title": "Curling",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:6ff16cc9a0cf1071",
+					"externalId": "vokabel-258452",
+					"title": "Darts",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:5b7b723ba9224d41",
+					"externalId": "vokabel-242230",
+					"title": "Doping allgemein",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:198b93d000c87bd2",
+					"externalId": "vokabel-242231",
+					"title": "Eishockey",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:de9ab1ecfaf62067",
+					"externalId": "vokabel-242232",
+					"title": "Eiskunstlauf",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:9c6a5007531c16f4",
+					"externalId": "vokabel-242233",
+					"title": "Eisschnellauf",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:1248147ea760a19e",
+					"externalId": "vokabel-242234",
+					"title": "Fechten",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:50b8f5950e8a970d",
+					"externalId": "vokabel-242235",
+					"title": "Flugsport",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:97a9d7a9f4b4ccb8",
+					"externalId": "vokabel-242236",
+					"title": "Fußball Bundesliga",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:d55936425d5efa2b",
+					"externalId": "vokabel-242237",
+					"title": "Fußball Damen",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:c91dbeb1b5a794ff",
+					"externalId": "vokabel-242238",
+					"title": "Fußball Herren",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:8bed5f5a1c4da26c",
+					"externalId": "vokabel-242239",
+					"title": "Gewichtheben",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:d1718717e9b40bcb",
+					"externalId": "vokabel-242240",
+					"title": "Golf",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:938166fc405e3d58",
+					"externalId": "vokabel-242241",
+					"title": "Gymnastik",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:549044c0ba6066ed",
+					"externalId": "vokabel-242242",
+					"title": "Handball",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:1660a52b138a507e",
+					"externalId": "vokabel-242243",
+					"title": "Hockey",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:ea10af1ef31b7d57",
+					"externalId": "vokabel-258450",
+					"title": "Icecross",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:3747cb39b478381d",
+					"externalId": "vokabel-242254",
+					"title": "Inklusionssport",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:9842e152e7f6e714",
+					"externalId": "vokabel-242244",
+					"title": "Judo",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:75b72ad21d920e8e",
+					"externalId": "vokabel-242255",
+					"title": "Jugend Olympische Winterspiele",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:dab200b94e1cd187",
+					"externalId": "vokabel-242245",
+					"title": "Kanu/Kajak",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:26c20a8cae8dfcae",
+					"externalId": "vokabel-258456",
+					"title": "Karate",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:b617534d640c5267",
+					"externalId": "vokabel-272472",
+					"title": "Kitesurfing",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:a323c95bfd599188",
+					"externalId": "vokabel-258454",
+					"title": "Klettern",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:1da32285b4228a32",
+					"externalId": "vokabel-242246",
+					"title": "Leichtathletik",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:5f53c36e1dc8bca1",
+					"externalId": "vokabel-242247",
+					"title": "Moderner Fünfkampf",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:43174b9df531d275",
+					"externalId": "vokabel-242248",
+					"title": "Motorrad",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:01e7aa765cdbe4e6",
+					"externalId": "vokabel-242249",
+					"title": "Motorsport",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:7e74ad7cba3ad4c2",
+					"externalId": "vokabel-242250",
+					"title": "Olympische Sommerspiele",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:3c844c9713d0e251",
+					"externalId": "vokabel-242251",
+					"title": "Olympische Winterspiele",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:d7d0d1c2c78b15e9",
+					"externalId": "vokabel-251016",
+					"title": "Paralympics Special",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:8964b8da86984dae",
+					"externalId": "vokabel-251018",
+					"title": "Paralympische Sportarten",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:b2a608eee7ac553b",
+					"externalId": "vokabel-242256",
+					"title": "Radsport",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:f056e9054e4663a8",
+					"externalId": "vokabel-242257",
+					"title": "Reiten",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:ec1261f6a6bf0d7c",
+					"externalId": "vokabel-242258",
+					"title": "Ringen",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:aee2801d0f553bef",
+					"externalId": "vokabel-242259",
+					"title": "Rodeln",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:cd8b322ae743834a",
+					"externalId": "vokabel-242260",
+					"title": "Rudern",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:8f7bd3c14ea9b5d9",
+					"externalId": "vokabel-242261",
+					"title": "Rugby",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:a8e04ef55af14bc4",
+					"externalId": "vokabel-258451",
+					"title": "Schach",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:bfd97c66f3ae1909",
+					"externalId": "vokabel-258474",
+					"title": "Schießsport",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:486af1fdb497ee6c",
+					"externalId": "vokabel-242262",
+					"title": "Schwimmen",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:0a9a10161d7dd8ff",
+					"externalId": "vokabel-242263",
+					"title": "Segeln",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:84b8546fe9016f95",
+					"externalId": "vokabel-242264",
+					"title": "Short Track",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:2d018d22092526e2",
+					"externalId": "vokabel-258453",
+					"title": "Skateboard",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:c648b58440eb5906",
+					"externalId": "vokabel-242265",
+					"title": "Skeleton",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:015997b8bad502b3",
+					"externalId": "vokabel-242266",
+					"title": "Ski Alpin",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:e76fdb96e7193165",
+					"externalId": "vokabel-242272",
+					"title": "Ski Cross",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:43a97653133f3420",
+					"externalId": "vokabel-242267",
+					"title": "Ski Freestyle",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:5fedfea0fbc65af4",
+					"externalId": "vokabel-242268",
+					"title": "Ski Langlauf",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:628e1841b4cd5c43",
+					"externalId": "vokabel-242270",
+					"title": "Ski Mounteneering",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:1d1d1f4b522c6c67",
+					"externalId": "vokabel-242269",
+					"title": "Ski Nordisch/NoKo",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:207ef9aa1d276ad0",
+					"externalId": "vokabel-242271",
+					"title": "Skisprung/Skiflug",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:a59f3a7d4ef307f6",
+					"externalId": "vokabel-242273",
+					"title": "Snowboard",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:fb956eabe9eeb9e4",
+					"externalId": "vokabel-242252",
+					"title": "Sommer/Winter Paralympics",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:b9658f4040048f77",
+					"externalId": "vokabel-242253",
+					"title": "Special Olympics",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:e1d328b054b3a71b",
+					"externalId": "vokabel-258455",
+					"title": "Surfen",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:6432eb670767ca3d",
+					"externalId": "vokabel-258457",
+					"title": "Taekwondo",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:2bbd7e04ba8fb09c",
+					"externalId": "vokabel-242274",
+					"title": "Tanzen",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:694d9fef1365860f",
+					"externalId": "vokabel-242275",
+					"title": "Tennis",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:ae5cbdd3e95bddba",
+					"externalId": "vokabel-242276",
+					"title": "Tischtennis",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:ecac5c3840b1eb29",
+					"externalId": "vokabel-242277",
+					"title": "Trampolin",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:f0e8d4cba84885fd",
+					"externalId": "vokabel-242278",
+					"title": "Triathlon",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:b218352001a2b36e",
+					"externalId": "vokabel-242279",
+					"title": "Turnen",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:9b6e3999cf8538cd",
+					"externalId": "vokabel-242280",
+					"title": "Volleyball",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:4c659790d1390f65",
+					"externalId": "vokabel-272469",
+					"title": "Wakeboard",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:d99ed872666f0e5e",
+					"externalId": "vokabel-242281",
+					"title": "Wasserball",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:33f6909a37d83f41",
+					"externalId": "vokabel-272470",
+					"title": "Wasserski",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:710671719e3209d2",
+					"externalId": "vokabel-272471",
+					"title": "Wassersport",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:1e8ffa4e9c5155eb",
+					"externalId": "vokabel-242282",
+					"title": "Wintersport",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				},
+				{
+					"id": "urn:ard:category-subgenre:9583a81415fa4d73",
+					"externalId": "vokabel-258449",
+					"title": "eSport",
+					"isAudio": true,
+					"isVideo": true,
+					"children": null
+				}
+			]
+		}
+	],
+	"list": [
+		{
+			"id": "urn:ard:category-subgenre:39ac8d318f50317b",
+			"externalId": "vokabel-272072",
+			"title": "Docutainmentserie",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:98f913ef413cd576",
+			"externalId": "vokabel-272249",
+			"title": "Erklärfilm",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:1dc4559b3ab4ff50",
+			"externalId": "vokabel-250945",
+			"title": "Essay",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:e06dc83c6b9de023",
+			"externalId": "vokabel-280992",
+			"title": "Filminterview",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:e816bdfbdecb1a39",
+			"externalId": "vokabel-271929",
+			"title": "Geschichtliche und zeitgeschichtliche Doku",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:9785baf1382a2a1d",
+			"externalId": "vokabel-271930",
+			"title": "Geschichtliche und zeitgeschichtliche Dokuserie",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:cd1962bccdd383ba",
+			"externalId": "vokabel-271949",
+			"title": "Gesellschafts-, Sozial- und Kulturdoku",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:759b478ad10ce82b",
+			"externalId": "vokabel-271953",
+			"title": "Inside-Access- und gesellschaftliche Dokuserie",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:fcca0b4e0e45fc3f",
+			"externalId": "vokabel-272149",
+			"title": "Interview-Serie",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:ae70d08b25c53b1f",
+			"externalId": "vokabel-271970",
+			"title": "Kulinarische Doku",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:ec8031608c2f0d8c",
+			"externalId": "vokabel-271971",
+			"title": "Kulinarische Dokuserie",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:a29d29d7c277d6b0",
+			"externalId": "vokabel-280993",
+			"title": "Lyrik-Show",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:8706dc32ebe2b0bc",
+			"externalId": "vokabel-271989",
+			"title": "Mockumentary",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:658c0beb38498d05",
+			"externalId": "vokabel-280990",
+			"title": "Musikdoku",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:0059e74b92bf2079",
+			"externalId": "vokabel-272032",
+			"title": "Natur - und Tierdoku",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:ba653ad3a4e9b60b",
+			"externalId": "vokabel-271991",
+			"title": "Natur- und Tierdokuserie",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:277cea0091a3bb96",
+			"externalId": "vokabel-280991",
+			"title": "Radiofeature",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:a10c79955cd3c474",
+			"externalId": "vokabel-272209",
+			"title": "Reisedoku",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:83590c44e8a4cc1b",
+			"externalId": "vokabel-272150",
+			"title": "Reportage",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:bdf6cca852244cf5",
+			"externalId": "vokabel-272229",
+			"title": "Sportdoku",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:e030be7300b274be",
+			"externalId": "vokabel-272169",
+			"title": "True-Crime-Doku",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:9fa3b979e653449a",
+			"externalId": "vokabel-272170",
+			"title": "True-Crime-Serie",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:df24fcd13492e4f8",
+			"externalId": "vokabel-272049",
+			"title": "Wissenschafts- und Technikdoku",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:c3de49ec3a656c79",
+			"externalId": "vokabel-272069",
+			"title": "Wissenschafts- und Technikdokuserie",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-genre:dbb7bf3926b2277a",
+			"externalId": "vokabel-242033",
+			"title": "Dokumentation/Reportage",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:63359a0f3a6d4ceb",
+			"externalId": "vokabel-242029",
+			"title": "Action- und Abenteuerfilm",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:696a48d7c22196e6",
+			"externalId": "vokabel-272409",
+			"title": "Animationsfilm",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:17651aab7b24a683",
+			"externalId": "vokabel-242035",
+			"title": "Beziehungsdrama",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:db7b2ca737d4985f",
+			"externalId": "vokabel-271890",
+			"title": "Biopic",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:1c6a0e9bcdeac3ea",
+			"externalId": "vokabel-271893",
+			"title": "Coming-of-Age-Film",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:f4ec08c6d03c92b8",
+			"externalId": "vokabel-271909",
+			"title": "Europäischer Filmklassiker",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:b28a65b62b32b39e",
+			"externalId": "vokabel-271950",
+			"title": "Heimatfilm",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:f07a845d82d8850d",
+			"externalId": "vokabel-271951",
+			"title": "High-Concept-Komödie",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:5409ae368d2a9051",
+			"externalId": "vokabel-272411",
+			"title": "Horrorfilm",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:376ba66178e6deb8",
+			"externalId": "vokabel-271952",
+			"title": "Indie-Komödie",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:51bd4a15662461f0",
+			"externalId": "vokabel-242043",
+			"title": "Krimi",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:df9f0e6c9258d69a",
+			"externalId": "vokabel-242044",
+			"title": "Kultfilm",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:9d6fef873bb2e009",
+			"externalId": "vokabel-242045",
+			"title": "Kurzfilm/Videokunst",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:04caa4a3809fe3fb",
+			"externalId": "vokabel-242048",
+			"title": "Märchen",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:7d7418ef5ed7edbe",
+			"externalId": "vokabel-271992",
+			"title": "Politthriller",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:3f84f904f73ddb2d",
+			"externalId": "vokabel-271993",
+			"title": "Programmkino-Film",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:b1a6bd7d03416c47",
+			"externalId": "vokabel-271994",
+			"title": "Psychothriller",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:39a94242cf94e54c",
+			"externalId": "vokabel-242050",
+			"title": "Roadmovie",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:e6d196ab297df5fa",
+			"externalId": "vokabel-272009",
+			"title": "Romantische Komödie",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:0b7a9e23e8efa3b5",
+			"externalId": "vokabel-272392",
+			"title": "Sci-Fi- & Fantasy-Film",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:f1085afe5ddafeb7",
+			"externalId": "vokabel-272389",
+			"title": "Sportfilm",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:42a906a03b5516ea",
+			"externalId": "vokabel-272033",
+			"title": "TV-Komödie",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:fa2b2396278a7d7b",
+			"externalId": "vokabel-272029",
+			"title": "Tatort",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:8e9b5df4bb3bce93",
+			"externalId": "vokabel-272390",
+			"title": "Westernfilm",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:ad75aa6b81ecd654",
+			"externalId": "vokabel-272290",
+			"title": "Zeichentrickfilm",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:bc4d4ee6dc845c5d",
+			"externalId": "vokabel-272070",
+			"title": "Zeitgeschichtliches und historisches Drama",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-genre:9284d97c28f0cba5",
+			"externalId": "vokabel-242037",
+			"title": "Film",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:a95eae7965df0cfc",
+			"externalId": "vokabel-280996",
+			"title": "Action- und Abenteuer-Hörspiel",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:b51a268a8d266228",
+			"externalId": "vokabel-280999",
+			"title": "Audio Roadmovie",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:ee44b69244ef8ef6",
+			"externalId": "vokabel-281006",
+			"title": "Audio-Soap",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:b0f0df8a05fcd6b1",
+			"externalId": "vokabel-281008",
+			"title": "Bioaud",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:2296130019790f0f",
+			"externalId": "vokabel-281000",
+			"title": "Coming-of-Age-Hörspiel",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:f2003e61ac16e022",
+			"externalId": "vokabel-281009",
+			"title": "Doku-Hörspiel",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:ebae4f92cc353a6f",
+			"externalId": "vokabel-280997",
+			"title": "Heimat-Hörspiel",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:e587313ce34754ba",
+			"externalId": "vokabel-281003",
+			"title": "Horror-Hörspiel",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:134dabfecfce5763",
+			"externalId": "vokabel-242042",
+			"title": "Komödie",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:f7eac76124cc54bb",
+			"externalId": "vokabel-280998",
+			"title": "Kult-Hörspiel",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:295594aebed1d543",
+			"externalId": "vokabel-281005",
+			"title": "Kurzgeschichte",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:acb45779ed05b865",
+			"externalId": "vokabel-281007",
+			"title": "Mystery-Hörspiel",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:6066f2ebb093399c",
+			"externalId": "vokabel-281001",
+			"title": "Sci-Fi- & Fantasy-Hörspiel",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:a777d0d74aad6229",
+			"externalId": "vokabel-281002",
+			"title": "Sport-Hörspiel",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:6ba57545173be3d0",
+			"externalId": "vokabel-281004",
+			"title": "Western-Hörspiel",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-genre:93e611e2cec8483a",
+			"externalId": "vokabel-250942",
+			"title": "Hörspiel",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:8d93396b4af7d006",
+			"externalId": "vokabel-281010",
+			"title": "Action- und Abenteuer-Lesung",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:4a821b57b0c98bb3",
+			"externalId": "vokabel-281013",
+			"title": "Coming-of-Age-Lesung",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:5d05140aff983f2b",
+			"externalId": "vokabel-281019",
+			"title": "Gedicht",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:cf63d880e31de695",
+			"externalId": "vokabel-281011",
+			"title": "Heimat-Lesung",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:41419cf9176151ff",
+			"externalId": "vokabel-281016",
+			"title": "Horror-Lesung",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:0872fabc1923bd20",
+			"externalId": "vokabel-281012",
+			"title": "Kult-Lesung",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:1ff5f5e1567209b8",
+			"externalId": "vokabel-281018",
+			"title": "Mystery-Lesung",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:3e6ca63d178e878e",
+			"externalId": "vokabel-281020",
+			"title": "Sachbuch-Lesung",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:c4a05f2e44b53cd9",
+			"externalId": "vokabel-281014",
+			"title": "Sci-Fi- & Fantasy-Lesung",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:8650bec5ed5f0a4a",
+			"externalId": "vokabel-281015",
+			"title": "Sport-Lesung",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:03b17d12be8b676c",
+			"externalId": "vokabel-281017",
+			"title": "Western-Lesung",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-genre:d116f00967227ea9",
+			"externalId": "vokabel-250943",
+			"title": "Lesung",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:a2041d0aad1fdae1",
+			"externalId": "vokabel-281189",
+			"title": "Live-Ereignis",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:d4d8354408c34b46",
+			"externalId": "vokabel-276030",
+			"title": "Bericht-Format",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:ab4b324eee227b62",
+			"externalId": "vokabel-276029",
+			"title": "Interview-Format",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:5139f6935b172660",
+			"externalId": "vokabel-276032",
+			"title": "Nachrichten",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:9628d4afa1297dd5",
+			"externalId": "vokabel-276031",
+			"title": "Nachrichten-Magazin",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-genre:0fb71ec3c139dfe2",
+			"externalId": "vokabel-242062",
+			"title": "Nachrichten/Information",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:1ca69d05dc8c7ccf",
+			"externalId": "vokabel-242030",
+			"title": "Action- und Abenteuerserie",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:16f94fdd24c0a6c2",
+			"externalId": "vokabel-272410",
+			"title": "Animationsserie",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:a4e82badd135a87b",
+			"externalId": "vokabel-271889",
+			"title": "Beziehungsdramaserie",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:998bcd4c9e3eaecc",
+			"externalId": "vokabel-271891",
+			"title": "Comedyserie & Dramedy",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:8b7f0fcc36dda29c",
+			"externalId": "vokabel-271910",
+			"title": "Familienserie",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:93188c0a7714cbe4",
+			"externalId": "vokabel-272412",
+			"title": "Horrorserie",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:d1e3d781c3240b3b",
+			"externalId": "vokabel-271969",
+			"title": "Krimiserie",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:f895db380d038098",
+			"externalId": "vokabel-271990",
+			"title": "Mystery-Serie",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:498a7fc841059526",
+			"externalId": "vokabel-272393",
+			"title": "Sci-Fi- & Fantasy-Serie",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:709a2407c1d60993",
+			"externalId": "vokabel-242054",
+			"title": "Soap/Telenovela",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:85b8249cc16b4d5f",
+			"externalId": "vokabel-272030",
+			"title": "Teenserie",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:c748c57768817bcc",
+			"externalId": "vokabel-272031",
+			"title": "Thriller-Serie",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:cc6bbc1f12d1f800",
+			"externalId": "vokabel-272391",
+			"title": "Westernserie",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:d2e6ad61670de670",
+			"externalId": "vokabel-272289",
+			"title": "Zeichentrickserie",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:febdaf0d756e6ace",
+			"externalId": "vokabel-272071",
+			"title": "Zeitgeschichtliche & historische Dramaserie",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-genre:feb8607e35aabef9",
+			"externalId": "vokabel-242053",
+			"title": "Serie",
+			"isAudio": false,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:5e9aef706400f579",
+			"externalId": "vokabel-271892",
+			"title": "Comedy-Show",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:c3e107d7a19c198b",
+			"externalId": "vokabel-276015",
+			"title": "Gottesdienst",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:c82280790634c3c7",
+			"externalId": "vokabel-276010",
+			"title": "Kochshow",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:6e4f8c459fe15749",
+			"externalId": "vokabel-280995",
+			"title": "Kommentar",
+			"isAudio": true,
+			"isVideo": false
+		},
+		{
+			"id": "urn:ard:category-subgenre:9580b0e2b469e59c",
+			"externalId": "vokabel-242084",
+			"title": "Konzert",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:8111e63c08762f18",
+			"externalId": "vokabel-276014",
+			"title": "Kultur-Magazin",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:2b91135c76115639",
+			"externalId": "vokabel-271972",
+			"title": "Late-Night-Show",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:04f025eb5ba2423e",
+			"externalId": "vokabel-276016",
+			"title": "Literaturshow",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:a7ed514d751c4530",
+			"externalId": "vokabel-272369",
+			"title": "Musik-Show",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:8ad26192afdef554",
+			"externalId": "vokabel-276011",
+			"title": "Polit-Magazin",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:646affeaddc60930",
+			"externalId": "vokabel-272332",
+			"title": "Polit-Talkshow",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:2cbf6dae360b61da",
+			"externalId": "vokabel-280994",
+			"title": "Reality-Show",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:d87e564793fd7514",
+			"externalId": "vokabel-272370",
+			"title": "Samstagabend-Show",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:7b5c6cda26ba07e8",
+			"externalId": "vokabel-272073",
+			"title": "Satire-Show",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:994291a1cf9cc5de",
+			"externalId": "vokabel-272010",
+			"title": "Sketch-Show",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:82e28e0a6604dcb3",
+			"externalId": "vokabel-272309",
+			"title": "Stand-up-Show",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:abcf8ec8d3113cf2",
+			"externalId": "vokabel-242058",
+			"title": "Talkshow",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:4dc343ae55e0aee1",
+			"externalId": "vokabel-276012",
+			"title": "Verbraucher-Magazin",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:9825964c69609276",
+			"externalId": "vokabel-250947",
+			"title": "Vortrag",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:a37bddd627f85285",
+			"externalId": "vokabel-272331",
+			"title": "Wissens-Show",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-genre:efde47fb53348b25",
+			"externalId": "vokabel-242139",
+			"title": "Show/Magazin",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-genre:877523a636bebe4a",
+			"externalId": "vokabel-251973",
+			"title": "Genre",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:8a56dd1492edb2c4",
+			"externalId": "vokabel-242060",
+			"title": "Katastrophen",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:c8a63cff3b078457",
+			"externalId": "vokabel-242061",
+			"title": "Krisengebiete",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:7c9c47d6be64b11d",
+			"externalId": "vokabel-281021",
+			"title": "Regionales",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:4d47ff2868d3e971",
+			"externalId": "vokabel-242063",
+			"title": "Terrorismus",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:f4192f4e743ae72a",
+			"externalId": "vokabel-250923",
+			"title": "Verkehrsservice",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:c365bb519caf5e1b",
+			"externalId": "vokabel-242064",
+			"title": "Wahl",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:81955aba35456888",
+			"externalId": "vokabel-242065",
+			"title": "Wetter",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-genre:e93f6f237afb0a61",
+			"externalId": "vokabel-242059",
+			"title": "Aktuelles",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:fbf219b56778cc86",
+			"externalId": "vokabel-250951",
+			"title": "ARD Retro",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:65d4b2d713a2cdaf",
+			"externalId": "vokabel-242149",
+			"title": "DDR",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:1a47b5ddf543fd8b",
+			"externalId": "vokabel-242150",
+			"title": "Nationalsozialismus",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:58b754365ca9cb18",
+			"externalId": "vokabel-242151",
+			"title": "Weltkrieg I",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:9fa6760aa69790ad",
+			"externalId": "vokabel-242152",
+			"title": "Weltkrieg II",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-genre:2724533cba48fb3c",
+			"externalId": "vokabel-242148",
+			"title": "Geschichte",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:bf64595eb43357b3",
+			"externalId": "vokabel-242096",
+			"title": "Arbeit",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:fd94b8b51dd96120",
+			"externalId": "vokabel-242097",
+			"title": "Ausbildung",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:e1d03046f5200ff4",
+			"externalId": "vokabel-242098",
+			"title": "Bildung",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:1830119e8e686b7a",
+			"externalId": "vokabel-242068",
+			"title": "Digitale Welt/Internet",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:e39e20133b6b53b2",
+			"externalId": "vokabel-250929",
+			"title": "Divers/Inter",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:a320d1ad5cca3967",
+			"externalId": "vokabel-242099",
+			"title": "Erziehung",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:8cb7f5ccbb223380",
+			"externalId": "vokabel-242100",
+			"title": "Familie",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:ce47142712c80513",
+			"externalId": "vokabel-242101",
+			"title": "Frauen",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:0956361be8f65ea6",
+			"externalId": "vokabel-242102",
+			"title": "Freizeit",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:52501f3f0ad4f2d2",
+			"externalId": "vokabel-281044",
+			"title": "Gemeinnützigkeit",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:a16ec1f892816521",
+			"externalId": "vokabel-250928",
+			"title": "Hobby",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:d2bda11a1c3f8d92",
+			"externalId": "vokabel-242121",
+			"title": "Inklusion",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:c5849389b560df5f",
+			"externalId": "vokabel-242104",
+			"title": "Integration",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:877472621c8ae9cc",
+			"externalId": "vokabel-242105",
+			"title": "Islam",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:4065505ee6b4b279",
+			"externalId": "vokabel-242106",
+			"title": "Jugend",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:0295b1b54f5e84ea",
+			"externalId": "vokabel-242107",
+			"title": "Kinder",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:d45c89c235f00cd6",
+			"externalId": "vokabel-242041",
+			"title": "Kinderprogramm",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:1ed13946a7a7ea3e",
+			"externalId": "vokabel-242108",
+			"title": "Kriminalität",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:5c21d8ad0e4ddcad",
+			"externalId": "vokabel-242109",
+			"title": "Liebe",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:23b2dfa7e8acec89",
+			"externalId": "vokabel-242110",
+			"title": "Lifestyle",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:a6531c70bb7881af",
+			"externalId": "vokabel-242112",
+			"title": "Medien",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:e4a3fd9b1292b73c",
+			"externalId": "vokabel-242113",
+			"title": "Migration",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:6a81b9e2e6ee0056",
+			"externalId": "vokabel-242114",
+			"title": "Mode",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:61423e4c4146da1a",
+			"externalId": "vokabel-242111",
+			"title": "Männer",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:bd2a490b7a780bf5",
+			"externalId": "vokabel-250927",
+			"title": "Prominente",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:287158094f0436c5",
+			"externalId": "vokabel-242115",
+			"title": "Religion",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:ef607a35b53a6d70",
+			"externalId": "vokabel-242116",
+			"title": "Religionen der Welt",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:ad909bde1cd05be3",
+			"externalId": "vokabel-242117",
+			"title": "Schicksale",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:b1d4132df4293537",
+			"externalId": "vokabel-242118",
+			"title": "Senioren",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:f324f2c65dc303a4",
+			"externalId": "vokabel-242119",
+			"title": "Sexualität",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:904d40f1b5d5bb01",
+			"externalId": "vokabel-242120",
+			"title": "Weihnachten",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-genre:4ba6d7f0411c6835",
+			"externalId": "vokabel-242103",
+			"title": "Gesellschaft",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:f97d8401edb0dc3b",
+			"externalId": "vokabel-281023",
+			"title": "Alte Musik",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:dcb3d6a7ba2b0943",
+			"externalId": "vokabel-242080",
+			"title": "Architektur",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:1b63797a04961e0d",
+			"externalId": "vokabel-281040",
+			"title": "Bildende Kunst",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:78757b624e0d0c06",
+			"externalId": "vokabel-242095",
+			"title": "Brauchtum",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:775fc07819cc6b51",
+			"externalId": "vokabel-281024",
+			"title": "Country",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:35af2193b0265dc2",
+			"externalId": "vokabel-281025",
+			"title": "CrossOver",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:f2be03af4a180677",
+			"externalId": "vokabel-281026",
+			"title": "Dance",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:41ffa137f16fb7aa",
+			"externalId": "vokabel-281039",
+			"title": "Darstellende Kunst",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:030f40dc58858139",
+			"externalId": "vokabel-281038",
+			"title": "Design",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:1f4bc82fb07cefed",
+			"externalId": "vokabel-281037",
+			"title": "Elektronische Musik",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:b04ee244e3f230e4",
+			"externalId": "vokabel-281027",
+			"title": "Ernste Musik",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:ac0a6ab70b0b5e30",
+			"externalId": "vokabel-281028",
+			"title": "Ethno/Weltmusik",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:59939891ad7c289e",
+			"externalId": "vokabel-281041",
+			"title": "Film & Serien",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:38cb8adc29ac66d3",
+			"externalId": "vokabel-250925",
+			"title": "Fotografie",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:eefa8b5ca2e168a3",
+			"externalId": "vokabel-281029",
+			"title": "Geistliche Musik",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:91698c5644005887",
+			"externalId": "vokabel-281030",
+			"title": "Hip-Hop",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:d3996dbdedea6e14",
+			"externalId": "vokabel-281031",
+			"title": "Hitparade",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:9e43374c13c13fd0",
+			"externalId": "vokabel-242081",
+			"title": "Jazz",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:14884f8117d435a1",
+			"externalId": "vokabel-281032",
+			"title": "Kammermusik",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:59521570e9ff6465",
+			"externalId": "vokabel-242082",
+			"title": "Kino",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:1ba2f49b401552f6",
+			"externalId": "vokabel-242083",
+			"title": "Klassik",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:d77051091d83d30f",
+			"externalId": "vokabel-242085",
+			"title": "Kunst",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:ffdaa8e0d3923d66",
+			"externalId": "vokabel-250926",
+			"title": "Künstler",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:10617335e7bd88ba",
+			"externalId": "vokabel-242086",
+			"title": "Literatur",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:b902f85ece92fa15",
+			"externalId": "vokabel-250950",
+			"title": "Mundart",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:529192de4e57be29",
+			"externalId": "vokabel-242087",
+			"title": "Musical",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:4ed51a2da6aed0fd",
+			"externalId": "vokabel-242088",
+			"title": "Musik",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:0c25fbc60f44e66e",
+			"externalId": "vokabel-242089",
+			"title": "Musik-Festival",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:5678ae6abe3e0332",
+			"externalId": "vokabel-281033",
+			"title": "Neue Musik",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:d85aea134a42b458",
+			"externalId": "vokabel-281034",
+			"title": "Oldies",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:73b6fccce9a5d64a",
+			"externalId": "vokabel-242090",
+			"title": "Oper",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:463a45482975d568",
+			"externalId": "vokabel-242049",
+			"title": "Porträt/Biografie",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:9aaa0bf8e3a882cb",
+			"externalId": "vokabel-281035",
+			"title": "R&B",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:31461d27404fe0d9",
+			"externalId": "vokabel-242091",
+			"title": "Rock/Pop",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:7a3b6b3780465040",
+			"externalId": "vokabel-250924",
+			"title": "Schlager",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:88a5c5d1d4f563a5",
+			"externalId": "vokabel-276129",
+			"title": "Show",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:5dbb29c41996d97e",
+			"externalId": "vokabel-281036",
+			"title": "Sinfonische Musik",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:84611ebf8199fca2",
+			"externalId": "vokabel-250948",
+			"title": "Soundart",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:9e82baad5742732b",
+			"externalId": "vokabel-281042",
+			"title": "Spiele",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:5f34b470935ec9c3",
+			"externalId": "vokabel-250944",
+			"title": "Sport",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:f6573f1bba71bb6c",
+			"externalId": "vokabel-242092",
+			"title": "Theater",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:dc725b46fea845b8",
+			"externalId": "vokabel-281043",
+			"title": "Videogames/Games",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:b4a7def0139b8dff",
+			"externalId": "vokabel-242093",
+			"title": "Volksmusik",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:3a859a89e7e73a95",
+			"externalId": "vokabel-242094",
+			"title": "Weltmusik",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-genre:f5c5da1e740c82e0",
+			"externalId": "vokabel-242079",
+			"title": "Kultur",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:5374d398fb011154",
+			"externalId": "vokabel-242154",
+			"title": "EU",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:1184327352eb27c7",
+			"externalId": "vokabel-242155",
+			"title": "Extremismus",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:d695104fa8d57c72",
+			"externalId": "vokabel-242156",
+			"title": "Krieg",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-genre:dd5697e10f7da63e",
+			"externalId": "vokabel-242153",
+			"title": "Politik",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:0474996d669105ae",
+			"externalId": "vokabel-242067",
+			"title": "Auto/Verkehr",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:575c62cd4febe0b4",
+			"externalId": "vokabel-242123",
+			"title": "Ernährung",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:9c0d2719dd8a6396",
+			"externalId": "vokabel-250930",
+			"title": "Fitness",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:10a0fed4a33ec441",
+			"externalId": "vokabel-281045",
+			"title": "Fremdsprachen",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:d97e26b4bb9757de",
+			"externalId": "vokabel-242124",
+			"title": "Geld",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:9b8ec75f127d614d",
+			"externalId": "vokabel-242125",
+			"title": "Gesundheit",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:d7b1dce859009ff4",
+			"externalId": "vokabel-281046",
+			"title": "Handarbeit",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:5c9fe563e8433af8",
+			"externalId": "vokabel-242126",
+			"title": "Haus/Garten",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:defdc6f274605505",
+			"externalId": "vokabel-250931",
+			"title": "Haushalt",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:1e6f048841a90c6b",
+			"externalId": "vokabel-242127",
+			"title": "Kochen",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:022b8c7ba95062bf",
+			"externalId": "vokabel-242128",
+			"title": "Recht",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:6c60913acf218112",
+			"externalId": "vokabel-242074",
+			"title": "Reise",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-genre:15ac8326e601d627",
+			"externalId": "vokabel-242122",
+			"title": "Ratgeber",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:f7b27e5d0f271411",
+			"externalId": "vokabel-242141",
+			"title": "Berge",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:19ece4ce8e5e0eb0",
+			"externalId": "vokabel-250932",
+			"title": "Klima",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:30a35c61f5194fa4",
+			"externalId": "vokabel-242142",
+			"title": "Meer",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:7253bd8a5cf37937",
+			"externalId": "vokabel-242143",
+			"title": "Natur",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:fc71f9f3a88fce5d",
+			"externalId": "vokabel-242144",
+			"title": "Tiere",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:be8118180165f8ce",
+			"externalId": "vokabel-242145",
+			"title": "Zoogeschichten",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:5b1c052527b43823",
+			"externalId": "vokabel-250933",
+			"title": "Ökologie",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-genre:b5429fb6a6cd2282",
+			"externalId": "vokabel-242140",
+			"title": "Umwelt",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:f85948a61c653fbd",
+			"externalId": "vokabel-242133",
+			"title": "Boulevard",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:767b0cdfe81988d7",
+			"externalId": "vokabel-242134",
+			"title": "Comedy/Satire",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:348bed3441f3be44",
+			"externalId": "vokabel-242135",
+			"title": "Fasching/Karneval",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:f39acf08bbcde5f1",
+			"externalId": "vokabel-242136",
+			"title": "Quiz",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:b16a2ee31227d362",
+			"externalId": "vokabel-242137",
+			"title": "Royalty",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:ad2ea610fadebdb6",
+			"externalId": "vokabel-242138",
+			"title": "Rückblicke",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-genre:baa9a94db58f092e",
+			"externalId": "vokabel-242132",
+			"title": "Unterhaltung",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:3b60dbcf52b195e8",
+			"externalId": "vokabel-242147",
+			"title": "Börse",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:97cea0b77a22b9da",
+			"externalId": "vokabel-250935",
+			"title": "Dienstleistungen",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:122f636029f6d4fc",
+			"externalId": "vokabel-250937",
+			"title": "Globalisierung",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:50df828b801ce26f",
+			"externalId": "vokabel-250936",
+			"title": "Handel",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:d53e415cd3c88f49",
+			"externalId": "vokabel-250934",
+			"title": "Industrie",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:5ac0f07527825de9",
+			"externalId": "vokabel-242069",
+			"title": "Landwirtschaft",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-genre:79903a24fb5ba37b",
+			"externalId": "vokabel-242146",
+			"title": "Wirtschaft",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:bb8d65ea445aeaa8",
+			"externalId": "vokabel-281022",
+			"title": "Beziehung",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:78766394ef9ea4e9",
+			"externalId": "vokabel-258458",
+			"title": "Luftfahrt/Raumfahrt",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:2553f77fc1636dcd",
+			"externalId": "vokabel-242070",
+			"title": "Medizin",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:67a3169468895b5e",
+			"externalId": "vokabel-242071",
+			"title": "Naturwissenschaft",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:a0b234a892b700eb",
+			"externalId": "vokabel-242072",
+			"title": "Philosophie",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:e242d5433b5d3678",
+			"externalId": "vokabel-242073",
+			"title": "Psychologie",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:2e9070d166cbb781",
+			"externalId": "vokabel-242075",
+			"title": "Technik",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:e98152ed9cf5ec34",
+			"externalId": "vokabel-242076",
+			"title": "Weltraum",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:ab71b306351fdaa7",
+			"externalId": "vokabel-242077",
+			"title": "Wissenschaft",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:b7353bf5dde6b473",
+			"externalId": "vokabel-242078",
+			"title": "Zukunft",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-genre:46847886cf7b333d",
+			"externalId": "vokabel-242066",
+			"title": "Wissen",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-genre:095767dfc2c20920",
+			"externalId": "vokabel-251974",
+			"title": "Inhaltskategorien",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:9465f1a4013f4ae1",
+			"externalId": "vokabel-242157",
+			"title": "Afghanistan",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:0eb2a143a997291f",
+			"externalId": "vokabel-242214",
+			"title": "Afrika",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:057126ed0e3ff353",
+			"externalId": "vokabel-242211",
+			"title": "Alpen und Berge",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:4c4240a8007d1f8c",
+			"externalId": "vokabel-242215",
+			"title": "Asien",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:8b536294fa434439",
+			"externalId": "vokabel-242216",
+			"title": "Australien",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:50580b53d372ce8d",
+			"externalId": "vokabel-242190",
+			"title": "Baden-Württemberg",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:4c9b0a7868e58cbb",
+			"externalId": "vokabel-250939",
+			"title": "Balkan",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:2be2ecc8ab4d58cf",
+			"externalId": "vokabel-251988",
+			"title": "Baltikum",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:12a8eab87a98f81e",
+			"externalId": "vokabel-242191",
+			"title": "Bayern",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:cad198bc402c12a6",
+			"externalId": "vokabel-242159",
+			"title": "Belgien",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:69120d2302a76e5c",
+			"externalId": "vokabel-251989",
+			"title": "Benelux",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:d5b9c88480a6a3ab",
+			"externalId": "vokabel-242192",
+			"title": "Berlin",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:9749296f294c9538",
+			"externalId": "vokabel-242193",
+			"title": "Brandenburg",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:196b6d16dd302252",
+			"externalId": "vokabel-242194",
+			"title": "Bremen",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:a9b82a8ba83aaa03",
+			"externalId": "vokabel-242160",
+			"title": "Deutschland",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:c9a3837f53a972aa",
+			"externalId": "vokabel-242217",
+			"title": "Europa",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:7e95027e4df6dac4",
+			"externalId": "vokabel-251983",
+			"title": "Frankfurt am Main",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:eb48cb6001d09c90",
+			"externalId": "vokabel-242161",
+			"title": "Frankreich",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:2c59e95cfbeec725",
+			"externalId": "vokabel-242162",
+			"title": "Griechenland",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:6ea908b75204f1b6",
+			"externalId": "vokabel-242163",
+			"title": "Großbritannien",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:5b9b8cfd74da14c1",
+			"externalId": "vokabel-242195",
+			"title": "Hamburg",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:3f486a9ae65b6408",
+			"externalId": "vokabel-242130",
+			"title": "Heimat",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:9c8aaec18ee44f74",
+			"externalId": "vokabel-242196",
+			"title": "Hessen",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:e08b4ccea67846dc",
+			"externalId": "vokabel-242164",
+			"title": "Indien",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:a27bad250f92704f",
+			"externalId": "vokabel-242165",
+			"title": "Irak",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:656a8f19f5ac2bfa",
+			"externalId": "vokabel-242166",
+			"title": "Iran",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:279a6ef25c461d69",
+			"externalId": "vokabel-242167",
+			"title": "Israel",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:3bdee601b4bf73bd",
+			"externalId": "vokabel-242168",
+			"title": "Italien",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:792e07ea1d55452e",
+			"externalId": "vokabel-242169",
+			"title": "Japan",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:06bd00e0fbb4750a",
+			"externalId": "vokabel-242170",
+			"title": "Jemen",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:444de10b525e4399",
+			"externalId": "vokabel-242171",
+			"title": "Kuba",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:7db88b714fb1529b",
+			"externalId": "vokabel-242131",
+			"title": "Land/Leute",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:f0b74607b98a6dae",
+			"externalId": "vokabel-251984",
+			"title": "Leipzig",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:835cc337a860182c",
+			"externalId": "vokabel-242172",
+			"title": "Libyen",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:b247a7ec10605b3d",
+			"externalId": "vokabel-251985",
+			"title": "Mainz",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:de7a4f2a270e79e7",
+			"externalId": "vokabel-242197",
+			"title": "Mecklenburg-Vorpommern",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:c1ac22dc018a2ebf",
+			"externalId": "vokabel-242173",
+			"title": "Mexiko",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:1607d2359d1c251c",
+			"externalId": "vokabel-250940",
+			"title": "Mittelmeer",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:755685d0ea5e0088",
+			"externalId": "vokabel-251986",
+			"title": "München",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:1a809c23f9ffb4e2",
+			"externalId": "vokabel-272489",
+			"title": "Nahost",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:4f8e66a5f5f699d5",
+			"externalId": "vokabel-242174",
+			"title": "Niederlande",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:c23ec7d9cff71733",
+			"externalId": "vokabel-242198",
+			"title": "Niedersachsen",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:0d7e874e5c1caf46",
+			"externalId": "vokabel-242175",
+			"title": "Nigeria",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:d5e70b8cbb501c7e",
+			"externalId": "vokabel-242218",
+			"title": "Nordamerika",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:66a6a9140027ada3",
+			"externalId": "vokabel-242207",
+			"title": "Norddeutschland",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:ca6fa572a622f4f3",
+			"externalId": "vokabel-242176",
+			"title": "Nordkorea",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:80ce2632661d21a0",
+			"externalId": "vokabel-242199",
+			"title": "Nordrhein-Westfalen",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:c26004d1f401a8e6",
+			"externalId": "vokabel-242212",
+			"title": "Nordsee",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:16810a29e4465e78",
+			"externalId": "vokabel-251990",
+			"title": "Orient",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:5471ebc24dac68eb",
+			"externalId": "vokabel-251991",
+			"title": "Ostasien",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:7ae221e7e8dec377",
+			"externalId": "vokabel-242208",
+			"title": "Ostdeutschland",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:8090e53a5deb9e75",
+			"externalId": "vokabel-242213",
+			"title": "Ostsee",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:94dbcc6ae731acb4",
+			"externalId": "vokabel-242178",
+			"title": "Pakistan",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:9360c9feb792335e",
+			"externalId": "vokabel-251992",
+			"title": "Polarkreis",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:d62b2d814edb9a27",
+			"externalId": "vokabel-242179",
+			"title": "Polen",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:ff5d213880fc1184",
+			"externalId": "vokabel-242180",
+			"title": "Portugal",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:e884ed6df45b1ac9",
+			"externalId": "vokabel-242200",
+			"title": "Rheinland-Pfalz",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:bdadc0d329162717",
+			"externalId": "vokabel-242181",
+			"title": "Russland",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:aa740c865db12c5a",
+			"externalId": "vokabel-242201",
+			"title": "Saarland",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:6d652ebaa78f77ef",
+			"externalId": "vokabel-242202",
+			"title": "Sachsen",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:2f95cf510e65417c",
+			"externalId": "vokabel-242203",
+			"title": "Sachsen-Anhalt",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:a1b78b28fa19f616",
+			"externalId": "vokabel-242204",
+			"title": "Schleswig-Holstein",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:7abce2efd3287ca2",
+			"externalId": "vokabel-242182",
+			"title": "Schweden",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:384c03047ac24a31",
+			"externalId": "vokabel-242183",
+			"title": "Schweiz",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:0e6beb93c10fba28",
+			"externalId": "vokabel-250938",
+			"title": "Skandinavien",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:b66e477d8ebefd5b",
+			"externalId": "vokabel-242184",
+			"title": "Somalia",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:f49ea6962754cbc8",
+			"externalId": "vokabel-242185",
+			"title": "Spanien",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:37a6643b43b4361b",
+			"externalId": "vokabel-251987",
+			"title": "Stuttgart",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:338f84aadd6a907d",
+			"externalId": "vokabel-242186",
+			"title": "Syrien",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:9717ea6712ba2aed",
+			"externalId": "vokabel-242219",
+			"title": "Südamerika",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:3812c00c4134f5e4",
+			"externalId": "vokabel-242209",
+			"title": "Süddeutschland",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:e3476ac353f3c085",
+			"externalId": "vokabel-242205",
+			"title": "Thüringen",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:717f65417480a6ee",
+			"externalId": "vokabel-242187",
+			"title": "Türkei",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:2fcb0c593593fea9",
+			"externalId": "vokabel-242189",
+			"title": "USA",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:6d3bedb29c79c83a",
+			"externalId": "vokabel-242188",
+			"title": "Ukraine",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:4781c706a7d5c5c0",
+			"externalId": "vokabel-242210",
+			"title": "Westdeutschland",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:88217957e9c62435",
+			"externalId": "vokabel-242158",
+			"title": "Ägypten",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:889f44990fc8c260",
+			"externalId": "vokabel-242177",
+			"title": "Österreich",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-genre:4ba786346b283fb3",
+			"externalId": "vokabel-251975",
+			"title": "Ortsangaben",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:f47e5850faac9248",
+			"externalId": "vokabel-242220",
+			"title": "American Football",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:b68eb9bb5346a4db",
+			"externalId": "vokabel-242221",
+			"title": "Badminton",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:719f9b87a978ff6e",
+			"externalId": "vokabel-242222",
+			"title": "Baseball",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:336f7a6c0092c9fd",
+			"externalId": "vokabel-242223",
+			"title": "Basketball",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:bd4d3e15f4ee7e97",
+			"externalId": "vokabel-242224",
+			"title": "Beach Volleyball",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:ffbddffe5d044804",
+			"externalId": "vokabel-242225",
+			"title": "Biathlon",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:38acfdc2a73a13b1",
+			"externalId": "vokabel-242226",
+			"title": "Bob",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:7a5c1c290ed02522",
+			"externalId": "vokabel-242227",
+			"title": "Bogenschießen",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:661894dae6294bf6",
+			"externalId": "vokabel-242228",
+			"title": "Boxen",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:95413d03f0eaa967",
+			"externalId": "vokabel-281047",
+			"title": "Cricket",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:24e875314fc37d65",
+			"externalId": "vokabel-242229",
+			"title": "Curling",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:6ff16cc9a0cf1071",
+			"externalId": "vokabel-258452",
+			"title": "Darts",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:5b7b723ba9224d41",
+			"externalId": "vokabel-242230",
+			"title": "Doping allgemein",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:198b93d000c87bd2",
+			"externalId": "vokabel-242231",
+			"title": "Eishockey",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:de9ab1ecfaf62067",
+			"externalId": "vokabel-242232",
+			"title": "Eiskunstlauf",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:9c6a5007531c16f4",
+			"externalId": "vokabel-242233",
+			"title": "Eisschnellauf",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:1248147ea760a19e",
+			"externalId": "vokabel-242234",
+			"title": "Fechten",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:50b8f5950e8a970d",
+			"externalId": "vokabel-242235",
+			"title": "Flugsport",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:97a9d7a9f4b4ccb8",
+			"externalId": "vokabel-242236",
+			"title": "Fußball Bundesliga",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:d55936425d5efa2b",
+			"externalId": "vokabel-242237",
+			"title": "Fußball Damen",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:c91dbeb1b5a794ff",
+			"externalId": "vokabel-242238",
+			"title": "Fußball Herren",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:8bed5f5a1c4da26c",
+			"externalId": "vokabel-242239",
+			"title": "Gewichtheben",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:d1718717e9b40bcb",
+			"externalId": "vokabel-242240",
+			"title": "Golf",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:938166fc405e3d58",
+			"externalId": "vokabel-242241",
+			"title": "Gymnastik",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:549044c0ba6066ed",
+			"externalId": "vokabel-242242",
+			"title": "Handball",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:1660a52b138a507e",
+			"externalId": "vokabel-242243",
+			"title": "Hockey",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:ea10af1ef31b7d57",
+			"externalId": "vokabel-258450",
+			"title": "Icecross",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:3747cb39b478381d",
+			"externalId": "vokabel-242254",
+			"title": "Inklusionssport",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:9842e152e7f6e714",
+			"externalId": "vokabel-242244",
+			"title": "Judo",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:75b72ad21d920e8e",
+			"externalId": "vokabel-242255",
+			"title": "Jugend Olympische Winterspiele",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:dab200b94e1cd187",
+			"externalId": "vokabel-242245",
+			"title": "Kanu/Kajak",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:26c20a8cae8dfcae",
+			"externalId": "vokabel-258456",
+			"title": "Karate",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:b617534d640c5267",
+			"externalId": "vokabel-272472",
+			"title": "Kitesurfing",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:a323c95bfd599188",
+			"externalId": "vokabel-258454",
+			"title": "Klettern",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:1da32285b4228a32",
+			"externalId": "vokabel-242246",
+			"title": "Leichtathletik",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:5f53c36e1dc8bca1",
+			"externalId": "vokabel-242247",
+			"title": "Moderner Fünfkampf",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:43174b9df531d275",
+			"externalId": "vokabel-242248",
+			"title": "Motorrad",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:01e7aa765cdbe4e6",
+			"externalId": "vokabel-242249",
+			"title": "Motorsport",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:7e74ad7cba3ad4c2",
+			"externalId": "vokabel-242250",
+			"title": "Olympische Sommerspiele",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:3c844c9713d0e251",
+			"externalId": "vokabel-242251",
+			"title": "Olympische Winterspiele",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:d7d0d1c2c78b15e9",
+			"externalId": "vokabel-251016",
+			"title": "Paralympics Special",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:8964b8da86984dae",
+			"externalId": "vokabel-251018",
+			"title": "Paralympische Sportarten",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:b2a608eee7ac553b",
+			"externalId": "vokabel-242256",
+			"title": "Radsport",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:f056e9054e4663a8",
+			"externalId": "vokabel-242257",
+			"title": "Reiten",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:ec1261f6a6bf0d7c",
+			"externalId": "vokabel-242258",
+			"title": "Ringen",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:aee2801d0f553bef",
+			"externalId": "vokabel-242259",
+			"title": "Rodeln",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:cd8b322ae743834a",
+			"externalId": "vokabel-242260",
+			"title": "Rudern",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:8f7bd3c14ea9b5d9",
+			"externalId": "vokabel-242261",
+			"title": "Rugby",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:a8e04ef55af14bc4",
+			"externalId": "vokabel-258451",
+			"title": "Schach",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:bfd97c66f3ae1909",
+			"externalId": "vokabel-258474",
+			"title": "Schießsport",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:486af1fdb497ee6c",
+			"externalId": "vokabel-242262",
+			"title": "Schwimmen",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:0a9a10161d7dd8ff",
+			"externalId": "vokabel-242263",
+			"title": "Segeln",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:84b8546fe9016f95",
+			"externalId": "vokabel-242264",
+			"title": "Short Track",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:2d018d22092526e2",
+			"externalId": "vokabel-258453",
+			"title": "Skateboard",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:c648b58440eb5906",
+			"externalId": "vokabel-242265",
+			"title": "Skeleton",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:015997b8bad502b3",
+			"externalId": "vokabel-242266",
+			"title": "Ski Alpin",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:e76fdb96e7193165",
+			"externalId": "vokabel-242272",
+			"title": "Ski Cross",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:43a97653133f3420",
+			"externalId": "vokabel-242267",
+			"title": "Ski Freestyle",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:5fedfea0fbc65af4",
+			"externalId": "vokabel-242268",
+			"title": "Ski Langlauf",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:628e1841b4cd5c43",
+			"externalId": "vokabel-242270",
+			"title": "Ski Mounteneering",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:1d1d1f4b522c6c67",
+			"externalId": "vokabel-242269",
+			"title": "Ski Nordisch/NoKo",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:207ef9aa1d276ad0",
+			"externalId": "vokabel-242271",
+			"title": "Skisprung/Skiflug",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:a59f3a7d4ef307f6",
+			"externalId": "vokabel-242273",
+			"title": "Snowboard",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:fb956eabe9eeb9e4",
+			"externalId": "vokabel-242252",
+			"title": "Sommer/Winter Paralympics",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:b9658f4040048f77",
+			"externalId": "vokabel-242253",
+			"title": "Special Olympics",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:e1d328b054b3a71b",
+			"externalId": "vokabel-258455",
+			"title": "Surfen",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:6432eb670767ca3d",
+			"externalId": "vokabel-258457",
+			"title": "Taekwondo",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:2bbd7e04ba8fb09c",
+			"externalId": "vokabel-242274",
+			"title": "Tanzen",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:694d9fef1365860f",
+			"externalId": "vokabel-242275",
+			"title": "Tennis",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:ae5cbdd3e95bddba",
+			"externalId": "vokabel-242276",
+			"title": "Tischtennis",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:ecac5c3840b1eb29",
+			"externalId": "vokabel-242277",
+			"title": "Trampolin",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:f0e8d4cba84885fd",
+			"externalId": "vokabel-242278",
+			"title": "Triathlon",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:b218352001a2b36e",
+			"externalId": "vokabel-242279",
+			"title": "Turnen",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:9b6e3999cf8538cd",
+			"externalId": "vokabel-242280",
+			"title": "Volleyball",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:4c659790d1390f65",
+			"externalId": "vokabel-272469",
+			"title": "Wakeboard",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:d99ed872666f0e5e",
+			"externalId": "vokabel-242281",
+			"title": "Wasserball",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:33f6909a37d83f41",
+			"externalId": "vokabel-272470",
+			"title": "Wasserski",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:710671719e3209d2",
+			"externalId": "vokabel-272471",
+			"title": "Wassersport",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:1e8ffa4e9c5155eb",
+			"externalId": "vokabel-242282",
+			"title": "Wintersport",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-subgenre:9583a81415fa4d73",
+			"externalId": "vokabel-258449",
+			"title": "eSport",
+			"isAudio": true,
+			"isVideo": true
+		},
+		{
+			"id": "urn:ard:category-genre:8cb6a40891166406",
+			"externalId": "vokabel-251976",
+			"title": "Sportarten",
+			"isAudio": true,
+			"isVideo": true
+		}
+	]
+}

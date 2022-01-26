@@ -1,18 +1,16 @@
 {
-	"env": {
-	    "node": true,
-	    "browser": true,
-	    "commonjs": true,
-	    "es6": true
-	},
-	"extends": "eslint:recommended",
-	"globals": {
-	    "Atomics": "readonly",
-	    "SharedArrayBuffer": "readonly"
-	},
 	"parserOptions": {
-	    "ecmaVersion": 2018
+		"ecmaVersion": 2020
 	},
+	"root": true,
+	"plugins": ["@swrlab/eslint-plugin-swr"],
+	"extends": ["plugin:@swrlab/eslint-plugin-swr/recommended"],
 	"rules": {
+		"radix": 0,
+		"no-unused-vars": ["error", { "argsIgnorePattern": "next" }],
+		"no-param-reassign": [2, { "props": false }],
+		"no-restricted-syntax": 0,
+		"no-underscore-dangle": 0,
+		"no-return-assign": ["error", "except-parens"]
 	}
 }
