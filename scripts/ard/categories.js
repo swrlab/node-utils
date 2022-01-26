@@ -4,6 +4,7 @@ const createHashedId = require('../../utils/ard/createHashedId')
 
 // init storage
 const Storage = require('../../packages/storage-wrapper')
+
 const storage = new Storage({
 	gs: { projectId: process.env.GCP_PROJECT_ID },
 	logging: true,
@@ -36,7 +37,9 @@ const crawl = async () => {
 		}
 
 		// add to list and tree
-		if (!list.find((listItem) => listItem.id === category.id)) list.push({...category, children: undefined})
+		if (!list.find((listItem) => listItem.id === category.id)) {
+			list.push({ ...category, children: undefined })
+		}
 		return category
 	}
 
