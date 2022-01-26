@@ -19,7 +19,7 @@ This repository contains several frequently used packages and scripts for easier
 Packages are meant to be imported into other projects:
 
 ```js
-const undici = require('@swrlab/utils/undici')
+const undici = require('@swrlab/utils/packages/undici')
 ```
 
 Scripts are meant to be run locally, therefore clone the repository and first install dependencies. We prefer `yarn` for this:

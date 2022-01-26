@@ -27,7 +27,7 @@ We like to create one local file in a project that provides this initialized uti
 
 ```js
 // load node util
-const Storage = require('@swrlab/utils/storage-wrapper')
+const Storage = require('@swrlab/utils/packages/storage-wrapper')
 
 // load custom keys and storage
 const storage = new Storage({
