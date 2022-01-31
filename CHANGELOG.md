@@ -4,6 +4,10 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 
 ## Changelog
 
+- 2022-01-31 - v1.0.2-beta
+  - fix: ard publisher script
+  - add: script for publisher ordering
+
 - 2022-01-31 - v1.0.1-beta
   - feat: add string helpers
 
