@@ -39,10 +39,10 @@ const { getObjectLength } = require('@swrlab/utils/packages/strings')
 Then use the toolkit:
 
 ```js
-getObjectLength({hello: 'world'})
+getObjectLength({ hello: 'world' })
 // 1
 
-getObjectLength({hello: 'world', foo: 'bar'})
+getObjectLength({ hello: 'world', foo: 'bar' })
 // 2
 ```
 
@@ -102,7 +102,7 @@ Then use the toolkit:
 isEmptyObject({})
 // true
 
-isEmptyObject({hello: 'world'})
+isEmptyObject({ hello: 'world' })
 // false
 ```
 
@@ -220,7 +220,7 @@ const { notEmptyObject } = require('@swrlab/utils/packages/strings')
 Then use the toolkit:
 
 ```js
-notEmptyObject({hello: 'world'})
+notEmptyObject({ hello: 'world' })
 // true
 
 notEmptyObject({})
