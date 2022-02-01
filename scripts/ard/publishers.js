@@ -1,3 +1,11 @@
+/*
+
+	SWR audio lab
+
+	exports an ard-publisher list as json file
+
+*/
+
 // load utils
 const undici = require('../../packages/undici')()
 
@@ -15,36 +23,46 @@ const ARD_API_HEADERS = { Authorization: `Basic ${Buffer.from(process.env.ARD_AU
 const crawl = async () => {
 	const output = []
 
-	const { json: publishers } = await undici(`${ARD_API_URL}publishers?page=0&size=500`, {
-		headers: ARD_API_HEADERS,
-	})
-
-	for await (const publisher of publishers.elements) {
-		const { json: publisherInfo } = await undici(publisher.href, { headers: ARD_API_HEADERS })
-
-		const { json: institutionInfo } = await undici(publisherInfo.institution.href, {
+	try {
+		const { string: publisherString } = await undici(`${ARD_API_URL}publishers?page=0&size=500`, {
 			headers: ARD_API_HEADERS,
 		})
 
-		const details = {
-			_type: publisherInfo._type,
-			id: publisherInfo.id,
-			externalId: publisherInfo.externalId,
-			title: publisherInfo.title,
-			institution: {
-				_type: institutionInfo._type,
-				id: institutionInfo.id,
-				externalId: institutionInfo.externalId,
-				title: institutionInfo.title,
-				acronym: institutionInfo.acronym,
-			},
+		const publishers = JSON.parse(publisherString)
+
+		for await (const publisher of publishers.elements) {
+			const { string: publisherInfoString } = await undici(publisher.href, {
+				headers: ARD_API_HEADERS,
+			})
+			const publisherInfo = JSON.parse(publisherInfoString)
+
+			const { string: institutionInfoString } = await undici(publisherInfo.institution.href, {
+				headers: ARD_API_HEADERS,
+			})
+			const institutionInfo = JSON.parse(institutionInfoString)
+
+			const details = {
+				_type: publisherInfo._type,
+				id: publisherInfo.id,
+				externalId: publisherInfo.externalId,
+				title: publisherInfo.title,
+				institution: {
+					_type: institutionInfo._type,
+					id: institutionInfo.id,
+					externalId: institutionInfo.externalId,
+					title: institutionInfo.title,
+					acronym: institutionInfo.acronym,
+				},
+			}
+
+			output.push(details)
+			console.log(details)
 		}
 
-		output.push(details)
-		console.log(details)
+		await storage.save('tmp/ard-publishers.json', JSON.stringify(output))
+	} catch (error) {
+		console.log(error)
 	}
-
-	await storage.save('tmp/ard-publishers.json', JSON.stringify(output))
 }
 
 crawl()
