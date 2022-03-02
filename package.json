@@ -4,7 +4,7 @@
 	"description": "Wrapping common SWR Audio Lab utils",
 	"main": "./src/index.js",
 	"engines": {
-		"node": ">=12"
+		"node": ">=16"
 	},
 	"repository": {
 		"type": "git",
