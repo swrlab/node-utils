@@ -4,6 +4,10 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 
 ## Changelog
 
+- 2022-03-21 - v1.0.4-beta
+  - update: node-crc to `v2`
+  - add: `rustup` to build chain
+
 - 2022-03-02 - v1.0.3-beta
   - chore: change license to `MIT`
   - chore: required node is `v16`
