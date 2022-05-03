@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 /*
 
 	node-storage-wrapper
@@ -5,16 +6,14 @@
 */
 
 // load node utils
-var AWS = require('aws-sdk')
+const AWS = require('aws-sdk')
 const fs = require('fs')
 const { Storage } = require('@google-cloud/storage')
 
 // create wrapper
 function StorageWrapper(config) {
 	// check config
-	if (!config || !config.gs) {
-		return Promise.reject('storage config invalid')
-	}
+	if (!config || !config.gs) return Promise.reject(new Error('storage config invalid'))
 
 	// enable SDKs
 	this.sdk = {}
@@ -36,18 +35,14 @@ function StorageWrapper(config) {
 	}
 
 	// set logging
-	this.sdk.log = function (that, level, message) {
-		if (message instanceof Array) {
-			message = message.join(' ')
-		}
+	this.sdk.log = (that, level, message) => {
+		let thisMessage
+		if (message instanceof Array) thisMessage = message.join(' ')
+		else thisMessage = message
 
-		if (level == 'log') {
-			that.config.logging ? console.log(message) : null
-		} else if (level == 'warn') {
-			that.config.logging ? console.warn(message) : null
-		} else if (level == 'error') {
-			that.config.logging ? console.error(message) : null
-		}
+		if (level === 'log' && that.config.logging) console.log(thisMessage)
+		else if (level === 'warn' && that.config.logging) console.warn(thisMessage)
+		else if (level === 'error' && that.config.logging) console.error(thisMessage)
 	}
 
 	// import functions

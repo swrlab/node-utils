@@ -1,3 +1,6 @@
+/* eslint-disable one-var */
+/* eslint-disable no-await-in-loop */
+/* eslint-disable func-names */
 /*
 
 	node-storage-wrapper
@@ -56,24 +59,25 @@ module.exports = async function (uri, max, next, logPrefix) {
 
 		// load file
 		let maxNotReached = true
-		const fileList = []
+		let fileList = []
+		let thisNext = next
 
 		do {
 			// load data
-			let awsReturn = await awsListObjects(this, bucket, path, next ? next : null, thisLogPrefix)
+			const awsReturn = await awsListObjects(this, bucket, path, thisNext || null, thisLogPrefix)
 
 			// add to return list
 			fileList = fileList.concat(awsReturn.list)
 
 			// set next token
-			next = awsReturn.next
+			thisNext = awsReturn.next
 
 			// calculate max reached
-			maxNotReached = max && fileList.length < max ? true : false
-		} while (next && maxNotReached)
+			maxNotReached = !!(max && fileList.length < max)
+		} while (thisNext && maxNotReached)
 
 		// return list
-		return Promise.resolve({ list: fileList, next })
+		return Promise.resolve({ list: fileList, next: thisNext })
 	}
 
 	if (uri.substr(0, 5).toLowerCase() === 'gs://') {
