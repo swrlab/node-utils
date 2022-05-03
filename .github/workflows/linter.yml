@@ -4,6 +4,9 @@ on:
   push:
     branches-ignore: [master, main]
 
+env:
+  NODE_VERSION: 16.15
+
 jobs:
   build:
     name: Lint Code Base
