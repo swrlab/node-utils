@@ -9,10 +9,10 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2.4.0
+        uses: actions/checkout@v3.0.2
 
       - name: Lint Code Base
-        uses: docker://github/super-linter:v2.2.0
+        uses: docker://github/super-linter:v4.9.2
         env:
           VALIDATE_ALL_CODEBASE: true
           VALIDATE_ANSIBLE: false

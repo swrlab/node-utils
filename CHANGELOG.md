@@ -4,6 +4,11 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 
 ## Changelog
 
+- 2022-05-03 - v1.0.4-beta
+  - update actions:
+    - /checkout to `v3.0.2`
+    - /super-linter to `v4.9.2`
+
 - 2022-03-02 - v1.0.3-beta
   - chore: change license to `MIT`
   - chore: required node is `v16`
