@@ -21,4 +21,5 @@ jobs:
           IGNORE_GITIGNORED_FILES: true
           JAVASCRIPT_DEFAULT_STYLE: prettier
           JAVASCRIPT_ES_CONFIG_FILE: .eslintrc.json
+          LINTER_RULES_PATH: /
           VALIDATE_ALL_CODEBASE: true
