@@ -1,6 +1,11 @@
 name: Lint code
 
-on: [push]
+on: 
+  push:
+    branches-ignore: [master, main]
+
+env:
+  NODE_VERSION: 16.15
 
 jobs:
   build:
@@ -9,10 +14,25 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2.4.0
+        uses: actions/checkout@v3.0.2
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3.1.1
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "yarn"
+          cache-dependency-path: "**/yarn.lock"
+
+      - name: 📦 Install Dependencies
+        run: yarn
 
       - name: Lint Code Base
-        uses: docker://github/super-linter:v2.2.0
+        uses: docker://github/super-linter:v4.9.2
         env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          IGNORE_GITIGNORED_FILES: true
+          JAVASCRIPT_DEFAULT_STYLE: prettier
+          JAVASCRIPT_ES_CONFIG_FILE: .eslintrc.json
+          LINTER_RULES_PATH: /
           VALIDATE_ALL_CODEBASE: true
-          VALIDATE_ANSIBLE: false
