@@ -11,7 +11,7 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 
 - 2022-03-02 - v1.0.3-beta
   - chore: change license to `MIT`
-  - chore: required node is `v16`
+  - chore: required Node.js is `v16`
 
 - 2022-01-31 - v1.0.2-beta
   - fix: ard publisher script

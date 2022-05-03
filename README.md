@@ -11,7 +11,7 @@ This repository contains several frequently used packages and scripts for easier
     - [ARD Category Remapper](#ard-category-remapper)
     - [ARD Core ID generator](#ard-core-id-generator)
     - [ARD Core Publisher Remapper](#ard-core-publisher-remapper)
-  - [Publish to NPM](#publish-to-npm)
+  - [Publish to npm](#publish-to-npm)
   - [Changelog](#changelog)
   - [License](#license)
 
