@@ -1,10 +1,10 @@
-# SWR Audio Lab / Node Utils
+# SWR Audio Lab / Node.js Utils
 
 This repository contains several frequently used packages and scripts for easier access and maintenance.
 
 *Please note: This project is still under development!*  
 
-- [SWR Audio Lab / Node Utils](#swr-audio-lab--node-utils)
+- [SWR Audio Lab / Node.js Utils](#swr-audio-lab--nodejs-utils)
   - [Install](#install)
   - [Packages](#packages)
   - [Scripts](#scripts)
@@ -78,9 +78,9 @@ yarn ard:publishers
 
 The output is written to a file: `tmp/ard-publishers.json` (the state is not in this repository, but likely still in [`ard-eventhub/.../coreApi.json`](https://github.com/swrlab/ard-eventhub/blob/main/src/data/coreApi.json)).
 
-## Publish to NPM
+## Publish to npm
 
-Sign in to NPM and provide username, password, and email-address:
+Sign in to npm and provide username, password, and email-address:
 
 ```sh
 npm login

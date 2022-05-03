@@ -1,4 +1,4 @@
-# SWR Audio Lab / Node Utils Changelog
+# SWR Audio Lab / Node.js Utils Changelog
 
 by [**SWR Audio Lab**](https://lab.swr.de/)  
 
@@ -28,10 +28,10 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 
 - 2021-08-11 - v0.2.3
   - updated dependencies
-  - updated github actions
+  - updated GitHub actions
   - add optional 'resumable' flag
 
 - 2021-06-21 - v0.2.2
   - updated dependencies
-  - updated github actions
+  - updated GitHub actions
   - changed dependabot interval
