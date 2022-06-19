@@ -33,7 +33,7 @@
 		"dotenv": "^16.0.0",
 		"eslint": "^8.14.0",
 		"eslint-plugin-json": "^3.1.0",
-		"prettier": "^2.6.2"
+		"prettier": "^2.7.1"
 	},
 	"prettier": "@swrlab/swr-prettier-config"
 }
