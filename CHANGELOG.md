@@ -4,6 +4,13 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 
 ## Changelog
 
+- 2022-06-21 - v1.0.5-beta
+  - update:
+    - github-actions to use latest versions
+    - @google-cloud/storage to `v6.1.0`
+    - frytg/undici-wrapper to `v0.0.5`
+    - node-crc to `rafaelmaeuer/node-crc`
+
 - 2022-05-03 - v1.0.4-beta
   - update actions:
     - /checkout to `v3.0.2`
