@@ -14,10 +14,10 @@ jobs:
 
     steps:
       - name: 👀 Checkout Code
-        uses: actions/checkout@v3.0.2
+        uses: actions/checkout@v3
 
       - name: ⛺️ Install Node.js
-        uses: actions/setup-node@v3.1.1
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: "yarn"
@@ -27,7 +27,7 @@ jobs:
         run: yarn
 
       - name: 📚 Lint Code Base
-        uses: docker://github/super-linter:v4.9.2
+        uses: docker://github/super-linter:v4
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
