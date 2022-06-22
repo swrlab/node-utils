@@ -9,7 +9,6 @@ yarn-error.log*
 
 # config
 config.js
-test.js
 
 # Runtime data
 pids
