@@ -22,7 +22,7 @@
 	"private": false,
 	"dependencies": {
 		"@google-cloud/storage": "6.1.0",
-		"aws-sdk": "2.1158.0",
+		"aws-sdk": "2.1162.0",
 		"node-crc": "rafaelmaeuer/node-crc",
 		"undici-wrapper": "frytg/undici-wrapper#v0.0.5",
 		"uuid": "8.3.2"
