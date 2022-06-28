@@ -26,6 +26,9 @@ jobs:
       - name: 📦 Install Dependencies
         run: yarn
 
+      - name: 🧪 Run Test
+        run: yarn test
+
       - name: 📚 Lint Code Base
         uses: docker://github/super-linter:v4
         env:

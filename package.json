@@ -15,14 +15,16 @@
 		"ard:categories": "node -r dotenv/config scripts/ard/categories.js",
 		"ard:publishers": "node -r dotenv/config scripts/ard/publishers.js",
 		"ard:pub-sort": "node -r dotenv/config scripts/ard/sortPubByExtId.js",
+		"test": "mocha test/test.js -r dotenv/config",
 		"reinstall": "rm -rf node_modules && rm yarn.lock && yarn"
 	},
 	"author": "SWR Audio Lab <lab@swr.de>",
 	"license": "MIT",
 	"private": false,
 	"dependencies": {
-		"@google-cloud/storage": "6.1.0",
-		"aws-sdk": "2.1158.0",
+		"@google-cloud/storage": "6.2.0",
+		"aws-sdk": "2.1162.0",
+		"chai": "^4.3.6",
 		"node-crc": "rafaelmaeuer/node-crc",
 		"undici-wrapper": "frytg/undici-wrapper#v0.0.5",
 		"uuid": "8.3.2"
@@ -33,6 +35,7 @@
 		"dotenv": "^16.0.1",
 		"eslint": "^8.18.0",
 		"eslint-plugin-json": "^3.1.0",
+		"mocha": "^10.0.0",
 		"prettier": "^2.7.1"
 	},
 	"prettier": "@swrlab/swr-prettier-config"
