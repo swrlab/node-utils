@@ -25,7 +25,7 @@
 		"@google-cloud/storage": "6.2.1",
 		"aws-sdk": "2.1163.0",
 		"chai": "^4.3.6",
-		"node-crc": "rafaelmaeuer/node-crc",
+		"node-crc": "rafaelmaeuer/node-crc#v2.0.14",
 		"undici-wrapper": "frytg/undici-wrapper#v0.0.5",
 		"uuid": "8.3.2"
 	},
