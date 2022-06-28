@@ -227,10 +227,10 @@
   resolved "https://registry.yarnpkg.com/@google-cloud/promisify/-/promisify-3.0.0.tgz#5cd6941fc30c4acac18051706aa5af96069bd3e3"
   integrity sha512-91ArYvRgXWb73YvEOBMmOcJc0bDRs5yiVHnqkwoG0f3nm7nZuipllz6e7BvFESBvjkDTBC0zMD8QxedUwNLc1A==
 
-"@google-cloud/storage@6.2.0":
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/@google-cloud/storage/-/storage-6.2.0.tgz#811ee37b75dd87f249f570309605d4c171c718cf"
-  integrity sha512-evOiaIXj4Hjyksa0m67bf3PfCC7VEbVXeJ3EhOCpWZc8biZiLHWJqhfkeW1H6ZIbKn2bBA0JrIZRJc/u8YrF9w==
+"@google-cloud/storage@6.2.1":
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/@google-cloud/storage/-/storage-6.2.1.tgz#6f02e44d907e2fcb2b80aeea5cc6e5575dfeefcc"
+  integrity sha512-obLGOFCp25rpRn4CZvZqQkSHhY+dBrK7IjDdFpF5gOXVxE40ilr287uikiGPjflVFbgNwO2qhioJNqMzxoqHZg==
   dependencies:
     "@google-cloud/paginator" "^3.0.7"
     "@google-cloud/projectify" "^3.0.0"
@@ -456,10 +456,10 @@ async-retry@^1.3.3:
   dependencies:
     retry "0.13.1"
 
-aws-sdk@2.1162.0:
-  version "2.1162.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1162.0.tgz#e19ff30f255e5c4021eaf02a80ec0a368a4712a0"
-  integrity sha512-tRDAa5GOqSkphVR/Yhc8eyLcV9ZGTgmZ7kY5ODJDMw52Cd/92kXfe6YDoFWFLyeA/z5H9o/2uZ6+3CjU96Ap/g==
+aws-sdk@2.1163.0:
+  version "2.1163.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1163.0.tgz#2c24b82987c6a842d9bec8a0d61a13cb36b26bba"
+  integrity sha512-vSCPTNduqxv5cGe3al/0V6dxPr+hpDRR7B9AADtVp+iHS+HdLCeNZbGhT66VfFjXVXXEfbAuF4ME9fYSc5/mOg==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"
