@@ -1877,9 +1877,9 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
-node-crc@rafaelmaeuer/node-crc:
+node-crc@rafaelmaeuer/node-crc#v2.0.14:
   version "2.0.14"
-  resolved "https://codeload.github.com/rafaelmaeuer/node-crc/tar.gz/b709266389a2d85dc9b040f551c6777a93d1265f"
+  resolved "https://codeload.github.com/rafaelmaeuer/node-crc/tar.gz/fb90c9e9eaa2117dad982f6b5572ea1843170ed1"
   dependencies:
     "@types/node" "^18.0.0"
 
