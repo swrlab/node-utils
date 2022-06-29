@@ -4,6 +4,9 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 
 ## Changelog
 
+- 2022-06-29 - v1.0.7-beta
+  - fix: node-crc fork (linux-musl binaries)
+
 - 2022-06-28 - v1.0.6-beta
   - add: mocha test for node-crc
   - fix:
