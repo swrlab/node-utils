@@ -8,6 +8,7 @@ Common string, array, object encoding and getter helpers.
   - [`isArray` - check if a value is a proper array](#isarray---check-if-a-value-is-a-proper-array)
   - [`isEmptyArray` - check if a value is an empty array](#isemptyarray---check-if-a-value-is-an-empty-array)
   - [`isEmptyObject` - check if a value is an empty object](#isemptyobject---check-if-a-value-is-an-empty-object)
+  - [`isEven` - check if a value is even](#iseven---check-if-a-value-is-even)
   - [`isIncluded` - check if a value (haystack) includes another value (needle)](#isincluded---check-if-a-value-haystack-includes-another-value-needle)
   - [`isNull` - check if a value is null](#isnull---check-if-a-value-is-null)
   - [`isObject` - check if a value is a proper object](#isobject---check-if-a-value-is-a-proper-object)
@@ -103,6 +104,26 @@ isEmptyObject({})
 // true
 
 isEmptyObject({ hello: 'world' })
+// false
+```
+
+## `isEven` - check if a value is even
+
+- `value` (required) - Value to check
+
+Import the library:
+
+```js
+const { isEven } = require('@swrlab/utils/packages/strings')
+```
+
+Then use the toolkit:
+
+```js
+isEven(2)
+// true
+
+isEven(1)
 // false
 ```
 
