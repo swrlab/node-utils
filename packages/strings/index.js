@@ -3,6 +3,7 @@ const getObjectLength = require('../../utils/strings/getObjectLength')
 const isArray = require('../../utils/strings/isArray')
 const isEmptyArray = require('../../utils/strings/isEmptyArray')
 const isEmptyObject = require('../../utils/strings/isEmptyObject')
+const isEven = require('../../utils/strings/isEven')
 const isIncluded = require('../../utils/strings/isIncluded')
 const isNull = require('../../utils/strings/isNull')
 const isObject = require('../../utils/strings/isObject')
@@ -19,6 +20,7 @@ module.exports = {
 	isArray,
 	isEmptyArray,
 	isEmptyObject,
+	isEven,
 	isIncluded,
 	isNull,
 	isObject,
