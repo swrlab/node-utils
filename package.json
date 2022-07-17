@@ -22,7 +22,7 @@
 	"license": "MIT",
 	"private": false,
 	"dependencies": {
-		"@google-cloud/storage": "6.2.2",
+		"@google-cloud/storage": "6.2.3",
 		"aws-sdk": "2.1168.0",
 		"chai": "^4.3.6",
 		"node-crc": "rafaelmaeuer/node-crc#v2.0.15",
