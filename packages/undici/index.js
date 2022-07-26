@@ -1,5 +1,5 @@
-// load request handler
-const undici = require('undici-wrapper')
+// load utils
+const request = require('./request')
 
-// export handler
-module.exports = undici
+// export handler with tracing, if enabled
+module.exports = (tracer) => tracer?.wrap('undici.request', request) || request
