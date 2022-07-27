@@ -10,11 +10,11 @@ on:
     - feature/*
 
 env:
-  NODE_VERSION: 16.15
+  NODE_VERSION: 18
 
 jobs:
   build:
-    name: Lint Code Base
+    name: Test Code Base
     runs-on: ubuntu-latest
 
     steps:
