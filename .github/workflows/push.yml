@@ -14,7 +14,7 @@ env:
 
 jobs:
   build:
-    name: Lint Code Base
+    name: Test Code Base
     runs-on: ubuntu-latest
 
     steps:
