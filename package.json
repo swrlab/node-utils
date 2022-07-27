@@ -24,9 +24,9 @@
 	"dependencies": {
 		"@google-cloud/storage": "^6.2.3",
 		"abort-controller": "^3.0.0",
-		"aws-sdk": "^2.1181.0",
+		"aws-sdk": "^2.1182.0",
 		"chai": "^4.3.6",
-		"node-crc": "rafaelmaeuer/node-crc#v2.0.15",
+		"node-crc": "swrlab/node-crc#v2.0.15",
 		"undici": "^5.8.0",
 		"uuid": "8.3.2"
 	},
