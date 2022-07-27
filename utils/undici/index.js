@@ -7,7 +7,7 @@
 */
 
 // load request handler
-const undici = require('undici-wrapper')
+const undici = require('../../packages/undici/index')
 
 // export handler
 module.exports = undici()

@@ -4,6 +4,9 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 
 ## Changelog
 
+- 2022-07-26 - v1.0.10-beta
+  - chore: merge `frytg/undici-wrapper` into this package
+
 - 2022-07-06 - v1.0.9-beta
   - chore: update undici to v0.1.0 (with fix for `undici.request` instead of `Pool`)
 
