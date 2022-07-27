@@ -4,6 +4,10 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 
 ## Changelog
 
+- 2022-07-27 - v1.0.0
+  - chore: move node-crc to swrlab account
+  - feat: add mocha tests for strings utils
+
 - 2022-07-26 - v1.0.10-beta
   - chore: merge `frytg/undici-wrapper` into this package
 

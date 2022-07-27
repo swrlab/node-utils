@@ -2,8 +2,6 @@
 
 This repository contains several frequently used packages and scripts for easier access and maintenance.
 
-*Please note: This project is still under development!*  
-
 - [SWR Audio Lab / Node.js Utils](#swr-audio-lab--nodejs-utils)
   - [Install](#install)
   - [Packages](#packages)
