@@ -32,7 +32,7 @@ jobs:
       generate-keys: true
 ```
 
-This uses GitHub's re-usable Actions workflow and call the template using the provided input variables:
+This uses the re-usable GitHub Actions workflow and calls the template from `node-utils` using the provided input variables:
 
 - `install-all` - If `true` it will use `yarn install:all` instead of `yarn install` to trigger a custom script.
   This is useful, if the repository has multiple sub-folders that all need to be installed
