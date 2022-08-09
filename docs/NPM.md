@@ -1,8 +1,8 @@
-# SWR Audio Lab on NPM
+# SWR Audio Lab on npm
 
-This is a quick guide and some notes about SWR Audio Lab packages on [NPMjs.com](https://www.npmjs.com/).
+This is a quick guide and some notes about SWR Audio Lab packages on [npmjs.com](https://www.npmjs.com/).
 
-- [SWR Audio Lab on NPM](#swr-audio-lab-on-npm)
+- [SWR Audio Lab on npm](#swr-audio-lab-on-npm)
   - [Security](#security)
   - [Publishing](#publishing)
 

@@ -4,6 +4,12 @@ name: Linter
 on:
   pull_request:
   workflow_call:
+    inputs:
+      install-all:
+        description: 'Install dependencies using `install-all`'
+        required: false
+        type: boolean
+        default: false
 
 env:
   CSS_FILE_NAME: /.stylelintrc.json
@@ -102,9 +108,10 @@ jobs:
   build:
     name: Lint Code Base
     runs-on: ubuntu-latest
-    timeout-minutes: 70
+    timeout-minutes: 90
     permissions:
       contents: read
+      statuses: write
     steps:
       - name: 👀 Checkout repo
         uses: actions/checkout@v3
@@ -116,7 +123,12 @@ jobs:
           cache: 'yarn'
           cache-dependency-path: '**/yarn.lock'
 
+      - name: 📦 Install Dependencies (install-all)
+        if: inputs.install-all == true
+        run: yarn install-all
+
       - name: 📦 Install Dependencies
+        if: inputs.install-all != true
         run: yarn
 
       - name: 📚 Lint Code Base
