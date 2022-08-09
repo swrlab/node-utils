@@ -20,6 +20,11 @@ on:
         required: false
         type: string
         default: 'VERBOSE'
+      validate-all-codebase:
+        description: 'Whether to run validation on all files'
+        required: false
+        type: boolean
+        default: true
 
 env:
   CSS_FILE_NAME: /.stylelintrc.json
@@ -38,7 +43,7 @@ env:
   MARKDOWN_CONFIG_FILE: /.markdownlint.yaml
   NODE_VERSION: 18
   TERRAFORM_TERRASCAN_CONFIG_FILE: /.utils/.github/linters/terrascan.yaml
-  VALIDATE_ALL_CODEBASE: true
+  VALIDATE_ALL_CODEBASE: ${{ inputs.validate-all-codebase }}
   VALIDATE_ANSIBLE: false
   VALIDATE_ARM: false
   # VALIDATE_BASH: true
