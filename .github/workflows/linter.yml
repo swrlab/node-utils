@@ -29,20 +29,20 @@ on:
 env:
   CSS_FILE_NAME: /.stylelintrc.json
   DEFAULT_BRANCH: main
-  DOCKERFILE_HADOLINT_FILE_NAME: /.github/linters/hadolint.yaml
+  DOCKERFILE_HADOLINT_FILE_NAME: /.utils/.github/linters/hadolint.yaml
   EDITORCONFIG_FILE_NAME: /.editorconfig
   FILTER_REGEX_EXCLUDE: .*(ati-smarttag.js|skycons.js|.github/workflows/*|docs/ARCHITECTURE/*|traffic/sftp-gcs/*|.mp3|.php|.drawio|demo.ejs)
   IGNORE_GITIGNORED_FILES: true
   JAVASCRIPT_DEFAULT_STYLE: prettier
   JAVASCRIPT_ES_CONFIG_FILE: /.eslintrc.json
-  JSCPD_CONFIG_FILE: /.github/linters/jscpd.json
+  JSCPD_CONFIG_FILE: /.utils/.github/linters/jscpd.json
   KUBERNETES_KUBEVAL_OPTIONS: --ignore-missing-schemas
   LINTER_RULES_PATH: /
   # options: ERROR, WARN, NOTICE, VERBOSE, DEBUG or TRACE
   LOG_LEVEL: ${{ inputs.log-level }}
   MARKDOWN_CONFIG_FILE: /.markdownlint.yaml
   NODE_VERSION: 18
-  TERRAFORM_TERRASCAN_CONFIG_FILE: /.github/linters/terrascan.yaml
+  TERRAFORM_TERRASCAN_CONFIG_FILE: /.utils/.github/linters/terrascan.yaml
   VALIDATE_ALL_CODEBASE: true
   VALIDATE_ANSIBLE: false
   VALIDATE_ARM: false
@@ -117,7 +117,7 @@ env:
   # VALIDATE_TYPESCRIPT_STANDARD: true
   # VALIDATE_XML: true
   # VALIDATE_YAML: true
-  YAML_CONFIG_FILE: /.github/linters/yamllint.yaml
+  YAML_CONFIG_FILE: /.utils/.github/linters/yamllint.yaml
 
 jobs:
   build:
@@ -128,11 +128,19 @@ jobs:
       contents: read
       statuses: write
     steps:
-      - name: 👀 Checkout repo
+      - name: 👀 Checkout repository
         if: inputs.skip-checkout != true
         uses: actions/checkout@v3
         with:
           persist-credentials: false
+
+      - name: 👀 Checkout utils into subfolder
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+          repository: swrlab/node-utils
+          ref: 'dev/prettier-upgrade'
+          path: '.utils'
 
       - name: ⛺️ Install Node.js
         uses: actions/setup-node@v3
@@ -141,11 +149,11 @@ jobs:
           cache: 'yarn'
           cache-dependency-path: '**/yarn.lock'
 
-      - name: 📦 Install Dependencies (install-all)
+      - name: 📦 Install Dependencies (if `install:all`)
         if: inputs.install-all == true
         run: yarn install:all
 
-      - name: 📦 Install Dependencies
+      - name: 📦 Install Dependencies (if `install`)
         if: inputs.install-all != true
         run: yarn
 
