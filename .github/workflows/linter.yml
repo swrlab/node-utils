@@ -10,6 +10,16 @@ on:
         required: false
         type: boolean
         default: false
+      generate-keys:
+        description: 'Whether to run command for dummy key generation'
+        required: false
+        type: boolean
+        default: false
+      log-level:
+        description: 'Which log level to use for `super-linter`'
+        required: false
+        type: string
+        default: 'VERBOSE'
       skip-checkout:
         description: 'Whether to skip repository checkout in this workflow'
         required: false
@@ -29,7 +39,7 @@ env:
   KUBERNETES_KUBEVAL_OPTIONS: --ignore-missing-schemas
   LINTER_RULES_PATH: /
   # options: ERROR, WARN, NOTICE, VERBOSE, DEBUG or TRACE
-  LOG_LEVEL: ${{ inputs.logLevel || 'VERBOSE' }}
+  LOG_LEVEL: ${{ inputs.log-level }}
   MARKDOWN_CONFIG_FILE: /.markdownlint.yaml
   NODE_VERSION: 18
   TERRAFORM_TERRASCAN_CONFIG_FILE: /.github/linters/terrascan.yaml
@@ -133,11 +143,15 @@ jobs:
 
       - name: 📦 Install Dependencies (install-all)
         if: inputs.install-all == true
-        run: yarn install-all
+        run: yarn install:all
 
       - name: 📦 Install Dependencies
         if: inputs.install-all != true
         run: yarn
+
+      - name: 🔑 Generate dummy keys
+        if: inputs.generate-keys == true
+        run: yarn keys:generate
 
       - name: 📚 Lint Code Base
         uses: docker://github/super-linter:v4
