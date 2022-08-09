@@ -20,11 +20,6 @@ on:
         required: false
         type: string
         default: 'VERBOSE'
-      skip-checkout:
-        description: 'Whether to skip repository checkout in this workflow'
-        required: false
-        type: boolean
-        default: false
 
 env:
   CSS_FILE_NAME: /.stylelintrc.json
@@ -129,7 +124,6 @@ jobs:
       statuses: write
     steps:
       - name: 👀 Checkout repository
-        if: inputs.skip-checkout != true
         uses: actions/checkout@v3
         with:
           persist-credentials: false
@@ -139,7 +133,7 @@ jobs:
         with:
           persist-credentials: false
           repository: swrlab/node-utils
-          ref: 'dev/prettier-upgrade'
+          ref: 'main'
           path: '.utils'
 
       - name: ⛺️ Install Node.js
