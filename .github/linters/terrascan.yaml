@@ -1,0 +1,13 @@
+# terrascan configuration file https://github.com/accurics/terrascan/blob/master/config/terrascan.toml
+# list of policies https://runterrascan.io/docs/policies/
+
+severity:
+  level: 'medium'
+
+# scan and skip rules configuration
+rules:
+  # skip rules (list of rules to skip)
+  skip-rules:
+    # skip service account at project-level check https://runterrascan.io/docs/policies/gcp/#google_project_iam_member
+    # https://github.com/tenable/terrascan/blob/8ae13452f91b9040038166c1b10e0f4191966ddd/pkg/policies/opa/rego/gcp/google_project_iam_member/accurics.gcp.IAM.137.json
+    - 'AC_GCP_0006'

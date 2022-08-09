@@ -1,0 +1,129 @@
+---
+name: Linter
+
+on:
+  pull_request:
+  workflow_call:
+
+env:
+  CSS_FILE_NAME: /.stylelintrc.json
+  DEFAULT_BRANCH: main
+  DOCKERFILE_HADOLINT_FILE_NAME: /.github/linters/hadolint.yaml
+  EDITORCONFIG_FILE_NAME: /.editorconfig
+  FILTER_REGEX_EXCLUDE: .*(ati-smarttag.js|skycons.js|.github/workflows/*|docs/ARCHITECTURE/*|traffic/sftp-gcs/*|.mp3|.php|.drawio|demo.ejs)
+  IGNORE_GITIGNORED_FILES: true
+  JAVASCRIPT_DEFAULT_STYLE: prettier
+  JAVASCRIPT_ES_CONFIG_FILE: /.eslintrc.json
+  JSCPD_CONFIG_FILE: /.github/linters/jscpd.json
+  KUBERNETES_KUBEVAL_OPTIONS: --ignore-missing-schemas
+  LINTER_RULES_PATH: /
+  # options: ERROR, WARN, NOTICE, VERBOSE, DEBUG or TRACE
+  LOG_LEVEL: ${{ inputs.logLevel || 'VERBOSE' }}
+  MARKDOWN_CONFIG_FILE: /.markdownlint.yaml
+  NODE_VERSION: 18
+  TERRAFORM_TERRASCAN_CONFIG_FILE: /.github/linters/terrascan.yaml
+  VALIDATE_ALL_CODEBASE: true
+  VALIDATE_ANSIBLE: false
+  VALIDATE_ARM: false
+  # VALIDATE_BASH: true
+  # VALIDATE_BASH_EXEC: true
+  VALIDATE_CPP: false
+  VALIDATE_CLANG_FORMAT: false
+  VALIDATE_CLOJURE: false
+  VALIDATE_CLOUDFORMATION: false
+  VALIDATE_COFFEESCRIPT: false
+  VALIDATE_CSHARP: false
+  VALIDATE_CSS: false
+  VALIDATE_DART: false
+  # VALIDATE_DOCKERFILE_HADOLINT: true
+  # VALIDATE_EDITORCONFIG: true
+  # VALIDATE_ENV: true
+  VALIDATE_GHERKIN: false
+  # VALIDATE_GITHUB_ACTIONS: true
+  # VALIDATE_GITLEAKS: true
+  VALIDATE_GO: false
+  VALIDATE_GOOGLE_JAVA_FORMAT: false
+  VALIDATE_GROOVY: false
+  # VALIDATE_HTML: true
+  VALIDATE_JAVA: false
+  # VALIDATE_JAVASCRIPT_ES: true
+  # VALIDATE_JAVASCRIPT_STANDARD: true
+  # VALIDATE_JSCPD: true
+  # VALIDATE_JSON: true
+  # VALIDATE_JSX: true
+  VALIDATE_KOTLIN: false
+  VALIDATE_KOTLIN_ANDROID: false
+  # VALIDATE_KUBERNETES_KUBEVAL: true
+  VALIDATE_LATEX: false
+  VALIDATE_LUA: false
+  # VALIDATE_MARKDOWN: true
+  # VALIDATE_NATURAL_LANGUAGE: true
+  VALIDATE_OPENAPI: false
+  VALIDATE_PERL: false
+  VALIDATE_PHP: false
+  VALIDATE_PHP_BUILTIN: false
+  VALIDATE_PHP_PHPCS: false
+  VALIDATE_PHP_PHPSTAN: false
+  VALIDATE_PHP_PSALM: false
+  # VALIDATE_POWERSHELL: true
+  VALIDATE_PROTOBUF: false
+  VALIDATE_PYTHON: false
+  VALIDATE_PYTHON_BLACK: false
+  VALIDATE_PYTHON_FLAKE8: false
+  VALIDATE_PYTHON_ISORT: false
+  VALIDATE_PYTHON_MYPY: false
+  VALIDATE_PYTHON_PYLINT: false
+  VALIDATE_R: false
+  VALIDATE_RAKU: false
+  VALIDATE_RUBY: false
+  VALIDATE_RUST_2015: false
+  VALIDATE_RUST_2018: false
+  VALIDATE_RUST_2021: false
+  VALIDATE_RUST_CLIPPY: false
+  VALIDATE_SCALAFMT: false
+  VALIDATE_SHELL_SHFMT: false
+  VALIDATE_SNAKEMAKE_LINT: false
+  VALIDATE_SNAKEMAKE_SNAKEFMT: false
+  VALIDATE_STATES: false
+  VALIDATE_SQL: false
+  VALIDATE_SQLFLUFF: false
+  VALIDATE_TEKTON: false
+  # VALIDATE_TERRAFORM_TERRASCAN: true
+  # VALIDATE_TERRAFORM_TFLINT: true
+  VALIDATE_TERRAGRUNT: false
+  # VALIDATE_TSX: true
+  # VALIDATE_TYPESCRIPT_ES: true
+  # VALIDATE_TYPESCRIPT_STANDARD: true
+  # VALIDATE_XML: true
+  # VALIDATE_YAML: true
+  YAML_CONFIG_FILE: /.github/linters/yamllint.yaml
+
+jobs:
+  build:
+    name: Lint Code Base
+    runs-on: ubuntu-latest
+    timeout-minutes: 70
+    permissions:
+      contents: read
+    steps:
+      - name: 👀 Checkout repo
+        uses: actions/checkout@v3
+
+      - name: ⛺️ Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'yarn'
+          cache-dependency-path: '**/yarn.lock'
+
+      - name: 📦 Install Dependencies
+        run: yarn
+
+      - name: 📚 Lint Code Base
+        uses: docker://github/super-linter:v4
+        with:
+          context: .
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

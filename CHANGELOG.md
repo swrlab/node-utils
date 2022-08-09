@@ -4,62 +4,44 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 
 ## Changelog
 
+- 2022-08-09 - v1.0.1
+  - chore: update `super-linter` with new config
 - 2022-07-27 - v1.0.0
   - chore: move node-crc to swrlab account
   - feat: add mocha tests for strings utils
-
 - 2022-07-26 - v1.0.10-beta
   - chore: merge `frytg/undici-wrapper` into this package
-
 - 2022-07-06 - v1.0.9-beta
   - chore: update undici to v0.1.0 (with fix for `undici.request` instead of `Pool`)
-
 - 2022-06-30 - v1.0.8-beta
   - feat: add `isEven` to string helpers
-
 - 2022-06-29 - v1.0.7-beta
   - fix: node-crc fork (linux-musl binaries)
-
 - 2022-06-28 - v1.0.6-beta
-  - add: mocha test for node-crc
-  - fix:
-    - node-crc fork (prebuild binaries)
-    - github-actions workflow
-
+  - feat: mocha test for node-crc
+  - fix: node-crc fork (prebuild binaries)
+  - fix: github-actions workflow
 - 2022-06-21 - v1.0.5-beta
-  - update:
-    - github-actions to use latest versions
-    - @google-cloud/storage to `v6.1.0`
-    - frytg/undici-wrapper to `v0.0.5`
-    - node-crc to `rafaelmaeuer/node-crc`
-
+  - chore: update GitHub actions to use latest versions
 - 2022-05-03 - v1.0.4-beta
-  - update actions:
-    - /checkout to `v3.0.2`
-    - /super-linter to `v4.9.2`
-
+  - chore: update GitHub actions
 - 2022-03-02 - v1.0.3-beta
   - chore: change license to `MIT`
   - chore: required Node.js is `v16`
-
 - 2022-01-31 - v1.0.2-beta
   - fix: ard publisher script
   - add: script for publisher ordering
-
 - 2022-01-31 - v1.0.1-beta
   - feat: add string helpers
-
 - 2022-01-26 - v1.0.0-beta
   - chore!: folder migration
   - refactor: swap node-fetch for undici
   - feat: add ard publisher script
   - feat: add ard category parser
-
 - 2021-08-11 - v0.2.3
   - updated dependencies
   - updated GitHub actions
   - add optional 'resumable' flag
-
 - 2021-06-21 - v0.2.2
   - updated dependencies
   - updated GitHub actions
