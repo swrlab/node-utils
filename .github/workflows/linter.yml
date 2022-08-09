@@ -10,6 +10,11 @@ on:
         required: false
         type: boolean
         default: false
+      skip-checkout:
+        description: 'Whether to skip repository checkout in this workflow'
+        required: false
+        type: boolean
+        default: false
 
 env:
   CSS_FILE_NAME: /.stylelintrc.json
@@ -114,7 +119,10 @@ jobs:
       statuses: write
     steps:
       - name: 👀 Checkout repo
+        if: inputs.skip-checkout != true
         uses: actions/checkout@v3
+        with:
+          persist-credentials: false
 
       - name: ⛺️ Install Node.js
         uses: actions/setup-node@v3
