@@ -2,8 +2,7 @@
 /*
 
 	by SWR audio lab
-
-    simple tests with mocha and chai
+	simple tests with mocha and chai
 
 */
 

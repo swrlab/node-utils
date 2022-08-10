@@ -1,0 +1,11 @@
+# Dockerfile linter https://github.com/hadolint/hadolint
+
+failure-threshold: error
+
+ignored:
+  # Using latest is prone to errors if the image will ever update
+  - DL3007
+  # Pin versions in apk add
+  - DL3018
+  # Use absolute WORKDIR
+  - DL3000
