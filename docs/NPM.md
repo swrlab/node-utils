@@ -13,7 +13,7 @@ To set up 2FA for your account, visit this guide: [docs.npmjs.com/configuring-tw
 
 ## Publishing
 
-First, make sure you are logged into the `npm` CLI locally (`npm config list). If not, use the web authentication workflow:
+First, make sure you are logged into the `npm` CLI locally (`npm config list`). If not, use the web authentication workflow:
 
 ```sh
 npm login --auth-type web
