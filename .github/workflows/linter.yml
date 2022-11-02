@@ -31,7 +31,7 @@ env:
   DEFAULT_BRANCH: main
   DOCKERFILE_HADOLINT_FILE_NAME: /.utils/.github/linters/hadolint.yaml
   EDITORCONFIG_FILE_NAME: /.editorconfig
-  FILTER_REGEX_EXCLUDE: .*(ati-smarttag.js|skycons.js|.github/workflows/*|docs/ARCHITECTURE/*|traffic/sftp/*|tmp/*|.mp3|.php|.drawio|demo.ejs)
+  FILTER_REGEX_EXCLUDE: .*(ati-smarttag.js|skycons.js|.github/workflows/*|docs/ARCHITECTURE/*|traffic/sftp/*|tmp/*|.mp3|.php|.gpg|.drawio|demo.ejs)
   IGNORE_GITIGNORED_FILES: true
   JAVASCRIPT_DEFAULT_STYLE: prettier
   JAVASCRIPT_ES_CONFIG_FILE: /.eslintrc.json
