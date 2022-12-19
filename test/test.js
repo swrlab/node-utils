@@ -27,8 +27,8 @@ describe('Test ARD Package', () => {
 // Test Helpers Package
 describe('Test Helpers Package', () => {
 	describe('Test sleep', () => {
-		it('sleep(1000) will sleep 1s', async () => {
-			const time = 1000
+		it('sleep(1e3) will sleep 1s', async () => {
+			const time = 1e3
 			const before = Date.now()
 			await helpers.sleep(time)
 			const after = Date.now()

@@ -27,6 +27,6 @@ const { sleep } = require('@swrlab/utils/packages/helpers')
 Then use the toolkit:
 
 ```js
-await sleep(1000)
+await sleep(1e3)
 // will sleep 1s
 ```
