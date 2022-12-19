@@ -11,6 +11,7 @@
 
 const { expect } = require('chai')
 const createHashedId = require('../utils/ard/createHashedId')
+const helpers = require('../packages/helpers')
 const numbers = require('../packages/numbers')
 const strings = require('../packages/strings')
 
@@ -19,6 +20,19 @@ describe('Test ARD Package', () => {
 	describe('Test ARD-CoreID Hash', () => {
 		it('createHashedId("test") = 0c171b2e54a30c11', () => {
 			expect(createHashedId('test')).to.equal('0c171b2e54a30c11')
+		})
+	})
+})
+
+// Test Helpers Package
+describe('Test Helpers Package', () => {
+	describe('Test sleep', () => {
+		it('sleep(1000) will sleep 1s', async () => {
+			const time = 1000
+			const before = Date.now()
+			await helpers.sleep(time)
+			const after = Date.now()
+			expect(after - before).to.be.greaterThan(time)
 		})
 	})
 })

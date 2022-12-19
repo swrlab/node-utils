@@ -37,7 +37,7 @@ isEven(1)
 
 ## `toReadable` - get a number in readable format
 
-- `value` (required) - Value to check
+- `value` (required) - Value to convert
 
 Import the library:
 
