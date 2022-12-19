@@ -11,11 +11,22 @@
 
 const { expect } = require('chai')
 const createHashedId = require('../utils/ard/createHashedId')
+const numbers = require('../packages/numbers')
 const strings = require('../packages/strings')
 
 describe('Test ARD-CoreID Hash', () => {
 	it('createHashedId("test") = 0c171b2e54a30c11', () => {
 		expect(createHashedId('test')).to.equal('0c171b2e54a30c11')
+	})
+})
+
+describe('Test isEven', () => {
+	it('isEven(2) = true', () => {
+		expect(numbers.isEven(2)).to.equal(true)
+	})
+
+	it('isEven(1) = false', () => {
+		expect(numbers.isEven(1)).to.equal(false)
 	})
 })
 
@@ -56,16 +67,6 @@ describe('Test isEmptyObject', () => {
 
 	it('isEmptyObject({ hello: "world" }) = false', () => {
 		expect(strings.isEmptyObject({ hello: 'world' })).to.equal(false)
-	})
-})
-
-describe('Test isEven', () => {
-	it('isEven(2) = true', () => {
-		expect(strings.isEven(2)).to.equal(true)
-	})
-
-	it('isEven(1) = false', () => {
-		expect(strings.isEven(1)).to.equal(false)
 	})
 })
 
