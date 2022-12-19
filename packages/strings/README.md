@@ -4,6 +4,7 @@ Common string, array, object encoding and getter helpers.
 
 - [SWR Audio Lab / Strings, Arrays, Objects](#swr-audio-lab--strings-arrays-objects)
   - [Install](#install)
+  - [`capitalize` - get capitalized string](#capitalize---get-capitalized-string)
   - [`getObjectLength` - get the length of an object](#getobjectlength---get-the-length-of-an-object)
   - [`isArray` - check if a value is a proper array](#isarray---check-if-a-value-is-a-proper-array)
   - [`isEmptyArray` - check if a value is an empty array](#isemptyarray---check-if-a-value-is-an-empty-array)
@@ -15,6 +16,7 @@ Common string, array, object encoding and getter helpers.
   - [`notEmptyArray` - check if a value is not an empty array](#notemptyarray---check-if-a-value-is-not-an-empty-array)
   - [`notEmptyObject` - check if a value is not an empty object](#notemptyobject---check-if-a-value-is-not-an-empty-object)
   - [`notNullOrUndefined` - check if a value is neither null nor undefined](#notnullorundefined---check-if-a-value-is-neither-null-nor-undefined)
+  - [`pluralize` - get pluralized string](#pluralize---get-pluralized-string)
   - [`removeDoubleSpaces` - take a string and remove its duplicate spaces](#removedoublespaces---take-a-string-and-remove-its-duplicate-spaces)
   - [`toHex` - take a string convert it to a hex string](#tohex---take-a-string-convert-it-to-a-hex-string)
 
@@ -24,6 +26,23 @@ Add the parent package to your dependencies:
 
 ```sh
 yarn add @swrlab/utils
+```
+
+## `capitalize` - get capitalized string
+
+- `value` (required) - Value to capitalize
+
+Import the library:
+
+```js
+const { capitalize } = require('@swrlab/utils/packages/strings')
+```
+
+Then use the toolkit:
+
+```js
+capitalize( 'apple' )
+// Apple
 ```
 
 ## `getObjectLength` - get the length of an object
@@ -248,6 +267,32 @@ notNullOrUndefined(null)
 
 notNullOrUndefined(undefined)
 // false
+```
+
+## `pluralize` - get pluralized string
+
+- `value` (required) - Value to pluralize
+
+Import the library:
+
+```js
+const { pluralize } = require('@swrlab/utils/packages/strings')
+```
+
+Then use the toolkit:
+
+```js
+pluralize( 1, 'Apple' )
+// 1 Apple
+
+pluralize( 2, 'Apple' )
+// 2 Apples
+
+pluralize( 1, 'Child', 'Children')
+// 1 Child
+
+pluralize( 2, 'Child', 'Children')
+// 2 Children
 ```
 
 ## `removeDoubleSpaces` - take a string and remove its duplicate spaces

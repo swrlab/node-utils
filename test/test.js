@@ -58,6 +58,12 @@ describe('Test Numbers Package', () => {
 
 // Test Strings Package
 describe('Test Strings Package', () => {
+	describe('Test capitalize', () => {
+		it('capitalize("apple") = Apple', () => {
+			expect(strings.capitalize('apple')).to.equal('Apple')
+		})
+	})
+
 	describe('Test getObjectLength', () => {
 		it('getObjectLength({ hello: "world" }) = 1', () => {
 			expect(strings.getObjectLength({ hello: 'world' })).to.equal(1)
@@ -169,6 +175,24 @@ describe('Test Strings Package', () => {
 
 		it('notNullOrUndefined(undefined) = false', () => {
 			expect(strings.notNullOrUndefined(undefined)).to.equal(false)
+		})
+	})
+
+	describe('Test pluralize', () => {
+		it('pluralize(1, "Apple") = 1 Apple', () => {
+			expect(strings.pluralize(1, 'Apple')).to.equal('1 Apple')
+		})
+
+		it('pluralize(2, "Apple") = 2 Apples', () => {
+			expect(strings.pluralize(2, 'Apple')).to.equal('2 Apples')
+		})
+
+		it('pluralize(1, "Child", "Children") = 1 Child', () => {
+			expect(strings.pluralize(1, 'Child', 'Children')).to.equal('1 Child')
+		})
+
+		it('pluralize(2, "Child", "Children") = 2 Children', () => {
+			expect(strings.pluralize(2, 'Child', 'Children')).to.equal('2 Children')
 		})
 	})
 
