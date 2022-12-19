@@ -26,7 +26,7 @@
 		"abort-controller": "^3.0.0",
 		"aws-sdk": "^2.1277.0",
 		"chai": "^4.3.7",
-		"node-crc": "swrlab/node-crc#v2.0.15",
+		"node-crc": "swrlab/node-crc#v2.1.0",
 		"undici": "^5.14.0",
 		"uuid": "9.0.0"
 	},
