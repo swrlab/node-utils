@@ -28,7 +28,7 @@
 		"chai": "^4.3.7",
 		"node-crc": "swrlab/node-crc#v2.0.15",
 		"undici": "^5.14.0",
-		"uuid": "8.3.2"
+		"uuid": "9.0.0"
 	},
 	"devDependencies": {
 		"@swrlab/eslint-plugin-swr": "^0.2.0",
