@@ -96,4 +96,4 @@ A separate Changelog is available in [CHANGELOG.md](CHANGELOG.md)
 
 ## License
 
-See [LICENSE.md](LICENSE.md)
+See [LICENSE.txt](LICENSE.txt)
