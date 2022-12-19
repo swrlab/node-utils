@@ -34,6 +34,12 @@ describe('Test Numbers Package', () => {
 			expect(numbers.isEven(1)).to.equal(false)
 		})
 	})
+
+	describe('Test toReadable', () => {
+		it('toReadable(1234567) = 1.234.567', () => {
+			expect(numbers.toReadable(1234567)).to.equal('1.234.567')
+		})
+	})
 })
 
 // Test Strings Package
