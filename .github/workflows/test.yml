@@ -1,4 +1,4 @@
-name: node-utils test
+name: Test
 
 on:
   workflow_dispatch:
@@ -11,6 +11,7 @@ on:
 
 jobs:
   test:
+    name: Run Mocha Tests
     runs-on: ubuntu-latest
     steps:
       - name: 👀 Checkout Code
