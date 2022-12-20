@@ -9,7 +9,9 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
   - feat: add helpers package (with `sleep` function)
   - feat: add numbers package (with `toReadable` function)
   - feat: add `capitalize` and `pluralize` functions in strings package
-  - chore: move `isEven` from strings to numbers package (BREAKING CHANGE)
+  - chore!: move `isEven` from strings to numbers package
+
+  BREAKING CHANGE: `strings.isEven()` is deprecated, use `numbers.isEven()` instead
 
 - 2022-08-09 - v1.0.1
   - chore: update `super-linter` with new config
