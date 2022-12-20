@@ -5,6 +5,7 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 ## Changelog
 
 - 2022-12-19 - v1.1.0
+  - feat: add test workflow to github/actions
   - feat: add helpers package (with `sleep` function)
   - feat: add numbers package (with `toReadable` function)
   - feat: add `capitalize` and `pluralize` functions in strings package

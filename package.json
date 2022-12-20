@@ -15,6 +15,7 @@
 		"ard:categories": "node -r dotenv/config scripts/ard/categories.js",
 		"ard:publishers": "node -r dotenv/config scripts/ard/publishers.js",
 		"ard:pub-sort": "node -r dotenv/config scripts/ard/sortPubByExtId.js",
+		"lint": "eslint .",
 		"test": "mocha test/test.js -r dotenv/config",
 		"reinstall": "rm -rf node_modules && rm yarn.lock && yarn"
 	},
