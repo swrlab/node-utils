@@ -32,7 +32,7 @@ describe('Test Helpers Package', () => {
 			const before = Date.now()
 			await helpers.sleep(time)
 			const after = Date.now()
-			expect(after - before).to.be.greaterThan(time)
+			expect(after - before).to.be.greaterThanOrEqual(time)
 		})
 	})
 })
