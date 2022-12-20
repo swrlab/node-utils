@@ -1,6 +1,6 @@
 {
 	"name": "@swrlab/utils",
-	"version": "1.0.1",
+	"version": "1.1.0",
 	"description": "Wrapping common SWR Audio Lab utils",
 	"main": "./src/index.js",
 	"engines": {
@@ -15,6 +15,7 @@
 		"ard:categories": "node -r dotenv/config scripts/ard/categories.js",
 		"ard:publishers": "node -r dotenv/config scripts/ard/publishers.js",
 		"ard:pub-sort": "node -r dotenv/config scripts/ard/sortPubByExtId.js",
+		"lint": "eslint .",
 		"test": "mocha test/test.js -r dotenv/config",
 		"reinstall": "rm -rf node_modules && rm yarn.lock && yarn"
 	},
@@ -22,22 +23,22 @@
 	"license": "MIT",
 	"private": false,
 	"dependencies": {
-		"@google-cloud/storage": "^6.3.0",
+		"@google-cloud/storage": "^6.8.0",
 		"abort-controller": "^3.0.0",
-		"aws-sdk": "^2.1190.0",
-		"chai": "^4.3.6",
-		"node-crc": "swrlab/node-crc#v2.0.15",
-		"undici": "^5.8.2",
-		"uuid": "8.3.2"
+		"aws-sdk": "^2.1277.0",
+		"chai": "^4.3.7",
+		"node-crc": "swrlab/node-crc#v2.1.0",
+		"undici": "^5.14.0",
+		"uuid": "9.0.0"
 	},
 	"devDependencies": {
 		"@swrlab/eslint-plugin-swr": "^0.2.0",
 		"@swrlab/swr-prettier-config": "^0.2.0",
-		"dotenv": "^16.0.1",
-		"eslint": "^8.21.0",
+		"dotenv": "^16.0.3",
+		"eslint": "^8.30.0",
 		"eslint-plugin-json": "^3.1.0",
-		"mocha": "^10.0.0",
-		"prettier": "^2.7.1"
+		"mocha": "^10.2.0",
+		"prettier": "^2.8.1"
 	},
 	"prettier": "@swrlab/swr-prettier-config"
 }

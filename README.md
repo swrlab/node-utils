@@ -32,6 +32,8 @@ Then run the desired script.
 ## Packages
 
 - [ARD](./packages/ard) - Common internal ARD tools like ID creation
+- [Helpers](./packages/helpers) - Common functions and helpers
+- [Numbers](./packages/numbers) - Common number and math helpers
 - [Storage Wrapper](./packages/storage-wrapper) - A utility to wrap file access to local, Google Cloud Storage and AWS S3 file storage
 - [Strings](./packages/strings) - Common string, array, object encoding and getter helpers
 - [Undici](./packages/undici) - Provides the latest install of [`undici-wrapper`](https://github.com/frytg/undici-wrapper), a wrapper around the [`undici`](https://undici.nodejs.org/) HTTP library
@@ -96,4 +98,4 @@ A separate Changelog is available in [CHANGELOG.md](CHANGELOG.md)
 
 ## License
 
-See [LICENSE.md](LICENSE.md)
+See [LICENSE.txt](LICENSE.txt)

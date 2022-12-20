@@ -1,0 +1,31 @@
+name: Test
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - chore/*
+      - feat/*
+      - dev/*
+      - main
+
+jobs:
+  test:
+    name: Run Mocha Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: 👀 Checkout Code
+        uses: actions/checkout@v3
+
+      - name: ⛺️ Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: "yarn"
+          cache-dependency-path: "**/yarn.lock"
+
+      - name: 📦 Install Dependencies
+        run: yarn
+
+      - name: 🧪 Run Tests
+        run: yarn lint && yarn test
