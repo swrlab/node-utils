@@ -59,6 +59,9 @@ describe('Test Numbers Package', () => {
 // Test Strings Package
 describe('Test Strings Package', () => {
 	describe('Test capitalize', () => {
+		it('capitalize("a") = A', () => {
+			expect(strings.capitalize('a')).to.equal('A')
+		})
 		it('capitalize("apple") = Apple', () => {
 			expect(strings.capitalize('apple')).to.equal('Apple')
 		})
