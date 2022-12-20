@@ -41,7 +41,7 @@ const { capitalize } = require('@swrlab/utils/packages/strings')
 Then use the toolkit:
 
 ```js
-capitalize( 'apple' )
+capitalize('apple')
 // Apple
 ```
 
@@ -282,16 +282,16 @@ const { pluralize } = require('@swrlab/utils/packages/strings')
 Then use the toolkit:
 
 ```js
-pluralize( 1, 'Apple' )
+pluralize(1, 'Apple')
 // 1 Apple
 
-pluralize( 2, 'Apple' )
+pluralize(2, 'Apple')
 // 2 Apples
 
-pluralize( 1, 'Child', 'Children')
+pluralize(1, 'Child', 'Children')
 // 1 Child
 
-pluralize( 2, 'Child', 'Children')
+pluralize(2, 'Child', 'Children')
 // 2 Children
 ```
 
