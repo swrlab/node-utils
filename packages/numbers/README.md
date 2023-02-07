@@ -5,7 +5,7 @@ Common number and math helpers.
 - [SWR Audio Lab / Numbers](#swr-audio-lab--numbers)
   - [Install](#install)
   - [`isEven` - check if a value is even](#iseven---check-if-a-value-is-even)
-  - [`round` - check if a value is even](#round---check-if-a-value-is-even)
+  - [`roundTo` - round float to a specified decimal place](#roundto---round-float-to-a-specified-decimal-place)
   - [`toReadable` - get a number in readable format](#toreadable---get-a-number-in-readable-format)
 
 ## Install
@@ -36,7 +36,7 @@ isEven(1)
 // false
 ```
 
-## `round` - check if a value is even
+## `roundTo` - round float to a specified decimal place
 
 - `value` (required) - Float value to round
 - `decimal` (required) - Decimal places to round
@@ -44,16 +44,16 @@ isEven(1)
 Import the library:
 
 ```js
-const { round } = require('@swrlab/utils/packages/numbers')
+const { roundTo } = require('@swrlab/utils/packages/numbers')
 ```
 
 Then use the toolkit:
 
 ```js
-round(1.23456, 2)
+roundTo(1.23456, 2)
 // 1.23
 
-round(1.23456, 4)
+roundTo(1.23456, 4)
 // 1.2346
 ```
 

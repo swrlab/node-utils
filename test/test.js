@@ -49,13 +49,13 @@ describe('Test Numbers Package', () => {
 		})
 	})
 
-	describe('Test round', () => {
-		it('round(1.23456, 2) = 1.23', () => {
-			expect(numbers.round(1.23456, 2)).to.equal(1.23)
+	describe('Test roundTo', () => {
+		it('roundTo(1.23456, 2) = 1.23', () => {
+			expect(numbers.roundTo(1.23456, 2)).to.equal(1.23)
 		})
 
-		it('round(1.23456, 4) = 1.2346', () => {
-			expect(numbers.round(1.23456, 4)).to.equal(1.2346)
+		it('roundTo(1.23456, 4) = 1.2346', () => {
+			expect(numbers.roundTo(1.23456, 4)).to.equal(1.2346)
 		})
 	})
 
