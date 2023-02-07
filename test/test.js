@@ -74,8 +74,8 @@ describe('Test Numbers Package', () => {
 			expect(numbers.sum([1, 2, 3])).to.equal(6)
 		})
 
-		it('sum([1.2, 2.4, 3.6]) = 7.2', () => {
-			expect(numbers.sum([1.2, 2.4, 3.6])).to.equal(7.2)
+		it('sum([1.2, 2.4, 3.6], 1) = 7.2', () => {
+			expect(numbers.sum([1.2, 2.4, 3.6], 1)).to.equal(7.2)
 		})
 	})
 
