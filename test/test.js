@@ -49,6 +49,16 @@ describe('Test Numbers Package', () => {
 		})
 	})
 
+	describe('Test diff', () => {
+		it('diff(2, 1) = 1', () => {
+			expect(numbers.diff(2, 1)).to.equal(1)
+		})
+
+		it('diff(1, 2) = -1', () => {
+			expect(numbers.diff(1, 2)).to.equal(-1)
+		})
+	})
+
 	describe('Test isEven', () => {
 		it('isEven(2) = true', () => {
 			expect(numbers.isEven(2)).to.equal(true)

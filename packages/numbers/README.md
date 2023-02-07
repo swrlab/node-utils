@@ -5,6 +5,7 @@ Common number and math helpers.
 - [SWR Audio Lab / Numbers](#swr-audio-lab--numbers)
   - [Install](#install)
   - [`average` - get average from array of numbers](#average---get-average-from-array-of-numbers)
+  - [`diff` - get difference of two numbers](#diff---get-difference-of-two-numbers)
   - [`isEven` - check if a value is even](#iseven---check-if-a-value-is-even)
   - [`randomIn` - get random int between min and max](#randomin---get-random-int-between-min-and-max)
   - [`roundTo` - round float to a specified decimal place](#roundto---round-float-to-a-specified-decimal-place)
@@ -38,6 +39,27 @@ average([1, 2, 3])
 
 average([1.2, 2.4, 3.6], 1)
 // 2.4
+```
+
+## `diff` - get difference of two numbers
+
+- `value a` (required) - value to subtract from
+- `value b` (required) - value to subtract
+
+Import the library:
+
+```js
+const { diff } = require('@swrlab/utils/packages/numbers')
+```
+
+Then use the toolkit:
+
+```js
+diff(2, 1)
+// 1
+
+diff(1, 2)
+// -1
 ```
 
 ## `isEven` - check if a value is even
