@@ -49,6 +49,16 @@ describe('Test Numbers Package', () => {
 		})
 	})
 
+	describe('Test randomIn', () => {
+		it('randomIn(1, 5) = 1,2,3,4 or 5', () => {
+			expect([1, 2, 3, 4, 5]).to.include(numbers.randomIn(1, 5))
+		})
+
+		it('randomIn(5, 9) = 5,6,7,8 or 9', () => {
+			expect([5, 6, 7, 8, 9]).to.include(numbers.randomIn(5, 9))
+		})
+	})
+
 	describe('Test roundTo', () => {
 		it('roundTo(1.23456, 2) = 1.23', () => {
 			expect(numbers.roundTo(1.23456, 2)).to.equal(1.23)
