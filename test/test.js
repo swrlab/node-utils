@@ -49,6 +49,16 @@ describe('Test Numbers Package', () => {
 		})
 	})
 
+	describe('Test round', () => {
+		it('round(1.23456, 2) = 1.23', () => {
+			expect(numbers.round(1.23456, 2)).to.equal(1.23)
+		})
+
+		it('round(1.23456, 4) = 1.2346', () => {
+			expect(numbers.round(1.23456, 4)).to.equal(1.2346)
+		})
+	})
+
 	describe('Test toReadable', () => {
 		it('toReadable(1234567) = 1.234.567', () => {
 			expect(numbers.toReadable(1234567)).to.equal('1.234.567')
