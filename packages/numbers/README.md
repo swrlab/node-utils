@@ -4,6 +4,7 @@ Common number and math helpers.
 
 - [SWR Audio Lab / Numbers](#swr-audio-lab--numbers)
   - [Install](#install)
+  - [`average` - get average from array of numbers](#average---get-average-from-array-of-numbers)
   - [`isEven` - check if a value is even](#iseven---check-if-a-value-is-even)
   - [`randomIn` - get random int between min and max](#randomin---get-random-int-between-min-and-max)
   - [`roundTo` - round float to a specified decimal place](#roundto---round-float-to-a-specified-decimal-place)
@@ -16,6 +17,27 @@ Add the parent package to your dependencies:
 
 ```sh
 yarn add @swrlab/utils
+```
+
+## `average` - get average from array of numbers
+
+- `array` (required) - Array of numbers
+- `decimal` (optional) - Decimal places to round (default 2)
+
+Import the library:
+
+```js
+const { average } = require('@swrlab/utils/packages/numbers')
+```
+
+Then use the toolkit:
+
+```js
+average([1, 2, 3])
+// 2
+
+average([1.2, 2.4, 3.6], 1)
+// 2.4
 ```
 
 ## `isEven` - check if a value is even

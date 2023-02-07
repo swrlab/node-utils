@@ -39,6 +39,16 @@ describe('Test Helpers Package', () => {
 
 // Test Numbers Package
 describe('Test Numbers Package', () => {
+	describe('Test average', () => {
+		it('average([1, 2, 3]) = 2', () => {
+			expect(numbers.average([1, 2, 3])).to.equal(2)
+		})
+
+		it('average([1.2, 2.4, 3.6], 1) = 2.4', () => {
+			expect(numbers.average([1.2, 2.4, 3.6], 1)).to.equal(2.4)
+		})
+	})
+
 	describe('Test isEven', () => {
 		it('isEven(2) = true', () => {
 			expect(numbers.isEven(2)).to.equal(true)
