@@ -7,6 +7,7 @@ Common number and math helpers.
   - [`isEven` - check if a value is even](#iseven---check-if-a-value-is-even)
   - [`randomIn` - get random int between min and max](#randomin---get-random-int-between-min-and-max)
   - [`roundTo` - round float to a specified decimal place](#roundto---round-float-to-a-specified-decimal-place)
+  - [`sum` - get sum from array of numbers](#sum---get-sum-from-array-of-numbers)
   - [`toReadable` - get a number in readable format](#toreadable---get-a-number-in-readable-format)
 
 ## Install
@@ -77,6 +78,27 @@ roundTo(1.23456)
 
 roundTo(1.23456, 4)
 // 1.2346
+```
+
+## `sum` - get sum from array of numbers
+
+- `array` (required) - Array of numbers
+- `decimal` (optional) - Decimal places to round (default 2)
+
+Import the library:
+
+```js
+const { sum } = require('@swrlab/utils/packages/numbers')
+```
+
+Then use the toolkit:
+
+```js
+sum([1, 2, 3])
+// 6
+
+sum([1.2, 2.4, 3.6])
+// 7.2
 ```
 
 ## `toReadable` - get a number in readable format

@@ -69,6 +69,16 @@ describe('Test Numbers Package', () => {
 		})
 	})
 
+	describe('Test sum', () => {
+		it('sum([1, 2, 3]) = 6', () => {
+			expect(numbers.sum([1, 2, 3])).to.equal(6)
+		})
+
+		it('sum([1.2, 2.4, 3.6]) = 7.2', () => {
+			expect(numbers.sum([1.2, 2.4, 3.6])).to.equal(7.2)
+		})
+	})
+
 	describe('Test toReadable', () => {
 		it('toReadable(1234567) = 1.234.567', () => {
 			expect(numbers.toReadable(1234567)).to.equal('1.234.567')
