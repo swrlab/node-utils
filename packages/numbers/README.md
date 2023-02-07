@@ -39,8 +39,8 @@ isEven(1)
 
 ## `randomIn` - get random int between min and max
 
-- `min` (required) - min value (inclusive)
-- `max` (required) - max value (inclusive)
+- `min` (required) - Min value (inclusive)
+- `max` (required) - Max value (inclusive)
 
 Import the library:
 
@@ -61,7 +61,7 @@ randomIn(5, 9)
 ## `roundTo` - round float to a specified decimal place
 
 - `value` (required) - Float value to round
-- `decimal` (required) - Decimal places to round
+- `decimal` (optional) - Decimal places to round (default 2)
 
 Import the library:
 
@@ -72,7 +72,7 @@ const { roundTo } = require('@swrlab/utils/packages/numbers')
 Then use the toolkit:
 
 ```js
-roundTo(1.23456, 2)
+roundTo(1.23456)
 // 1.23
 
 roundTo(1.23456, 4)

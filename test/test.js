@@ -60,8 +60,8 @@ describe('Test Numbers Package', () => {
 	})
 
 	describe('Test roundTo', () => {
-		it('roundTo(1.23456, 2) = 1.23', () => {
-			expect(numbers.roundTo(1.23456, 2)).to.equal(1.23)
+		it('roundTo(1.23456) = 1.23', () => {
+			expect(numbers.roundTo(1.23456)).to.equal(1.23)
 		})
 
 		it('roundTo(1.23456, 4) = 1.2346', () => {
