@@ -1,6 +1,6 @@
 {
 	"name": "@swrlab/utils",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"description": "Wrapping common SWR Audio Lab utils",
 	"main": "./src/index.js",
 	"engines": {

@@ -4,6 +4,13 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 
 ## Changelog
 
+- 2023-02-07 - v1.1.1
+  - feat: add `diff` to numbers package
+  - feat: add `average` to numbers package
+  - feat: add `sum` to numbers package
+  - feat: add `randomIn` to numbers package
+  - feat: add `roundTo` to numbers package
+
 - 2022-12-19 - v1.1.0
   - feat: add test workflow to github/actions
   - feat: add helpers package (with `sleep` function)
