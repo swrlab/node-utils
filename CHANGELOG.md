@@ -4,7 +4,9 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 
 ## Changelog
 
-- 2023-02-07 - v1.1.1
+- 2023-02-08 - v1.1.1
+  - feat: add `addTrailingZeros` to numbers package
+  - feat: add `addLeadingZero` to numbers package
   - feat: add `getDiff` to numbers package
   - feat: add `getAverage` to numbers package
   - feat: add `getSum` to numbers package

@@ -36,10 +36,10 @@ Then use the toolkit:
 
 ```js
 addLeadingZero(1)
-// 01
+// '01'
 
 addLeadingZero(10)
-// 10
+// '10'
 ```
 
 ## `addTrailingZeros` - add trailing zeros to number
@@ -58,22 +58,22 @@ Then use the toolkit:
 
 ```js
 addTrailingZeros(1, 5)
-// 1.00000
+// '1.00000'
 
 addTrailingZeros(1.1, 5)
-// 1.10000
+// '1.10000'
 
 addTrailingZeros('1.2', 5)
-// 1.20000
+// '1.20000'
 
 addTrailingZeros(2, 2, ',')
-// 2,00
+// '2,00'
 
 addTrailingZeros(2.1, 2, ',')
-// 2,10
+// '2,10'
 
 addTrailingZeros('2,2', 2, ',')
-// 2,20
+// '2,20'
 ```
 
 ## `getAverage` - get average from array of numbers
@@ -215,5 +215,5 @@ Then use the toolkit:
 
 ```js
 toReadable(1234567)
-// 1.234.567
+// '1.234.567'
 ```
