@@ -30,7 +30,7 @@ yarn add @swrlab/utils
 
 ## `capitalize` - get capitalized string
 
-- `value` (required) - Value to capitalize
+- `value` (required) - String to capitalize
 
 Import the library:
 
@@ -271,7 +271,7 @@ notNullOrUndefined(undefined)
 
 ## `pluralize` - get pluralized string
 
-- `value` (required) - Value to pluralize
+- `value` (required) - String to pluralize
 
 Import the library:
 
@@ -297,7 +297,7 @@ pluralize(2, 'Child', 'Children')
 
 ## `removeDoubleSpaces` - take a string and remove its duplicate spaces
 
-- `value` (required) - Value to convert
+- `value` (required) - String to convert
 
 Import the library:
 
@@ -317,7 +317,7 @@ removeDoubleSpaces('hello  world  once  again')
 
 ## `toHex` - take a string convert it to a hex string
 
-- `value` (required) - Value to convert
+- `value` (required) - String to convert
 
 Import the library:
 
