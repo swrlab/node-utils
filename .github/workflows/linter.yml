@@ -123,7 +123,7 @@ env:
 jobs:
   build:
     name: Lint Code Base
-    runs-on: ubuntu-latest-8-cores
+    runs-on: ubuntu-latest
     timeout-minutes: 90
     permissions:
       contents: read
