@@ -40,11 +40,11 @@ describe('Test Helpers Package', () => {
 // Test Numbers Package
 describe('Test Numbers Package', () => {
 	describe('Test addLeadingZero', () => {
-		it('addLeadingZero(1) = 01', () => {
+		it("addLeadingZero(1) = '01'", () => {
 			expect(numbers.addLeadingZero(1)).to.equal('01')
 		})
 
-		it('addLeadingZero(10) = 10', () => {
+		it("addLeadingZero(10) = '10'", () => {
 			expect(numbers.addLeadingZero(10)).to.equal('10')
 		})
 	})
@@ -136,7 +136,7 @@ describe('Test Numbers Package', () => {
 	})
 
 	describe('Test toReadable', () => {
-		it('toReadable(1234567) = 1.234.567', () => {
+		it("toReadable(1234567) = '1.234.567'", () => {
 			expect(numbers.toReadable(1234567)).to.equal('1.234.567')
 		})
 	})
