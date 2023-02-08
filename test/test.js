@@ -49,6 +49,32 @@ describe('Test Numbers Package', () => {
 		})
 	})
 
+	describe('Test addTrailingZeros', () => {
+		it("addTrailingZeros(1, 5) = '1.00000'", () => {
+			expect(numbers.addTrailingZeros(1, 5)).to.equal('1.00000')
+		})
+
+		it("addTrailingZeros(1.1, 5) = '1.10000'", () => {
+			expect(numbers.addTrailingZeros(1.1, 5)).to.equal('1.10000')
+		})
+
+		it("addTrailingZeros('1.2', 5) = '1.20000'", () => {
+			expect(numbers.addTrailingZeros('1.2', 5)).to.equal('1.20000')
+		})
+
+		it("addTrailingZeros(2, 2, ',') = '2,00'", () => {
+			expect(numbers.addTrailingZeros(2, 2, ',')).to.equal('2,00')
+		})
+
+		it("addTrailingZeros(2.1, 2, ',') = '2,10'", () => {
+			expect(numbers.addTrailingZeros(2.1, 2, ',')).to.equal('2,10')
+		})
+
+		it("addTrailingZeros('2,2', 2, ','') = '2,20'", () => {
+			expect(numbers.addTrailingZeros('2,2', 2, ',')).to.equal('2,20')
+		})
+	})
+
 	describe('Test getAverage', () => {
 		it('getAverage([1, 2, 3]) = 2', () => {
 			expect(numbers.getAverage([1, 2, 3])).to.equal(2)

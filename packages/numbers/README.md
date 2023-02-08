@@ -5,6 +5,7 @@ Common number and math helpers.
 - [SWR Audio Lab / Numbers](#swr-audio-lab--numbers)
   - [Install](#install)
   - [`addLeadingZero` - add leading zero to number](#addleadingzero---add-leading-zero-to-number)
+  - [`addTrailingZeros` - add trailing zeros to number](#addtrailingzeros---add-trailing-zeros-to-number)
   - [`getAverage` - get average from array of numbers](#getaverage---get-average-from-array-of-numbers)
   - [`getDiff` - get difference of two numbers](#getdiff---get-difference-of-two-numbers)
   - [`getRandomIn` - get random int between min and max](#getrandomin---get-random-int-between-min-and-max)
@@ -20,7 +21,6 @@ Add the parent package to your dependencies:
 ```sh
 yarn add @swrlab/utils
 ```
-
 
 ## `addLeadingZero` - add leading zero to number
 
@@ -40,6 +40,40 @@ addLeadingZero(1)
 
 addLeadingZero(10)
 // 10
+```
+
+## `addTrailingZeros` - add trailing zeros to number
+
+- `value` (required) - Value to add trailing zeros
+- `length` (required) - Amount of the digits after delimiter
+- `delimiter` (optional) - Delimiter for trailing zeros (default .)
+
+Import the library:
+
+```js
+const { addTrailingZeros } = require('@swrlab/utils/packages/numbers')
+```
+
+Then use the toolkit:
+
+```js
+addTrailingZeros(1, 5)
+// 1.00000
+
+addTrailingZeros(1.1, 5)
+// 1.10000
+
+addTrailingZeros('1.2', 5)
+// 1.20000
+
+addTrailingZeros(2, 2, ',')
+// 2,00
+
+addTrailingZeros(2.1, 2, ',')
+// 2,10
+
+addTrailingZeros('2,2', 2, ',')
+// 2,20
 ```
 
 ## `getAverage` - get average from array of numbers

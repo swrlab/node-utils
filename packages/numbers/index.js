@@ -1,5 +1,6 @@
 // import packages
 const addLeadingZero = require('../../utils/numbers/addLeadingZero')
+const addTrailingZeros = require('../../utils/numbers/addTrailingZeros')
 const getAverage = require('../../utils/numbers/getAverage')
 const getDiff = require('../../utils/numbers/getDiff')
 const getRandomIn = require('../../utils/numbers/getRandomIn')
@@ -11,6 +12,7 @@ const toReadable = require('../../utils/numbers/toReadable')
 // export packages
 module.exports = {
 	addLeadingZero,
+	addTrailingZeros,
 	getAverage,
 	getDiff,
 	getRandomIn,
