@@ -5,10 +5,10 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 ## Changelog
 
 - 2023-02-07 - v1.1.1
-  - feat: add `diff` to numbers package
-  - feat: add `average` to numbers package
-  - feat: add `sum` to numbers package
-  - feat: add `randomIn` to numbers package
+  - feat: add `getDiff` to numbers package
+  - feat: add `getAverage` to numbers package
+  - feat: add `getSum` to numbers package
+  - feat: add `getRandomIn` to numbers package
   - feat: add `roundTo` to numbers package
 
 - 2022-12-19 - v1.1.0

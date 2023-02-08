@@ -4,12 +4,12 @@ Common number and math helpers.
 
 - [SWR Audio Lab / Numbers](#swr-audio-lab--numbers)
   - [Install](#install)
-  - [`average` - get average from array of numbers](#average---get-average-from-array-of-numbers)
-  - [`diff` - get difference of two numbers](#diff---get-difference-of-two-numbers)
+  - [`getAverage` - get getAfrom array of numbers](#getaverage---get-getafrom-array-of-numbers)
+  - [`getDiff` - get difference of two numbers](#getdiff---get-difference-of-two-numbers)
+  - [`getRandomIn` - get random int between min and max](#getrandomin---get-random-int-between-min-and-max)
+  - [`getSum` - get sum from array of numbers](#getsum---get-sum-from-array-of-numbers)
   - [`isEven` - check if a value is even](#iseven---check-if-a-value-is-even)
-  - [`randomIn` - get random int between min and max](#randomin---get-random-int-between-min-and-max)
   - [`roundTo` - round float to a specified decimal place](#roundto---round-float-to-a-specified-decimal-place)
-  - [`sum` - get sum from array of numbers](#sum---get-sum-from-array-of-numbers)
   - [`toReadable` - get a number in readable format](#toreadable---get-a-number-in-readable-format)
 
 ## Install
@@ -20,7 +20,7 @@ Add the parent package to your dependencies:
 yarn add @swrlab/utils
 ```
 
-## `average` - get average from array of numbers
+## `getAverage` - get getAfrom array of numbers
 
 - `array` (required) - Array of numbers
 - `decimal` (optional) - Decimal places to round (default 2)
@@ -28,20 +28,20 @@ yarn add @swrlab/utils
 Import the library:
 
 ```js
-const { average } = require('@swrlab/utils/packages/numbers')
+const { getAverage } = require('@swrlab/utils/packages/numbers')
 ```
 
 Then use the toolkit:
 
 ```js
-average([1, 2, 3])
+getAverage([1, 2, 3])
 // 2
 
-average([1.2, 2.4, 3.6], 1)
+getAverage([1.2, 2.4, 3.6], 1)
 // 2.4
 ```
 
-## `diff` - get difference of two numbers
+## `getDiff` - get difference of two numbers
 
 - `value a` (required) - value to subtract from
 - `value b` (required) - value to subtract
@@ -49,17 +49,59 @@ average([1.2, 2.4, 3.6], 1)
 Import the library:
 
 ```js
-const { diff } = require('@swrlab/utils/packages/numbers')
+const { getDiff } = require('@swrlab/utils/packages/numbers')
 ```
 
 Then use the toolkit:
 
 ```js
-diff(2, 1)
+getDiff(2, 1)
 // 1
 
-diff(1, 2)
+getDiff(1, 2)
 // -1
+```
+
+## `getRandomIn` - get random int between min and max
+
+- `min` (required) - Min value (inclusive)
+- `max` (required) - Max value (inclusive)
+
+Import the library:
+
+```js
+const { getRandomIn } = require('@swrlab/utils/packages/numbers')
+```
+
+Then use the toolkit:
+
+```js
+getRandomIn(1, 5)
+// 1,2,3,4 or 5
+
+getRandomIn(5, 9)
+// 5,6,7,8 or 9
+```
+
+## `getSum` - get sum from array of numbers
+
+- `array` (required) - Array of numbers
+- `decimal` (optional) - Decimal places to round (default 2)
+
+Import the library:
+
+```js
+const { getSum } = require('@swrlab/utils/packages/numbers')
+```
+
+Then use the toolkit:
+
+```js
+getSum([1, 2, 3])
+// 6
+
+getSum([1.2, 2.4, 3.6], 1)
+// 7.2
 ```
 
 ## `isEven` - check if a value is even
@@ -82,27 +124,6 @@ isEven(1)
 // false
 ```
 
-## `randomIn` - get random int between min and max
-
-- `min` (required) - Min value (inclusive)
-- `max` (required) - Max value (inclusive)
-
-Import the library:
-
-```js
-const { randomIn } = require('@swrlab/utils/packages/numbers')
-```
-
-Then use the toolkit:
-
-```js
-randomIn(1, 5)
-// 1,2,3,4 or 5
-
-randomIn(5, 9)
-// 5,6,7,8 or 9
-```
-
 ## `roundTo` - round float to a specified decimal place
 
 - `value` (required) - Float value to round
@@ -122,27 +143,6 @@ roundTo(1.23456)
 
 roundTo(1.23456, 4)
 // 1.2346
-```
-
-## `sum` - get sum from array of numbers
-
-- `array` (required) - Array of numbers
-- `decimal` (optional) - Decimal places to round (default 2)
-
-Import the library:
-
-```js
-const { sum } = require('@swrlab/utils/packages/numbers')
-```
-
-Then use the toolkit:
-
-```js
-sum([1, 2, 3])
-// 6
-
-sum([1.2, 2.4, 3.6], 1)
-// 7.2
 ```
 
 ## `toReadable` - get a number in readable format

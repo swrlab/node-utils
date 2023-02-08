@@ -39,23 +39,43 @@ describe('Test Helpers Package', () => {
 
 // Test Numbers Package
 describe('Test Numbers Package', () => {
-	describe('Test average', () => {
-		it('average([1, 2, 3]) = 2', () => {
-			expect(numbers.average([1, 2, 3])).to.equal(2)
+	describe('Test getAverage', () => {
+		it('getAverage([1, 2, 3]) = 2', () => {
+			expect(numbers.getAverage([1, 2, 3])).to.equal(2)
 		})
 
-		it('average([1.2, 2.4, 3.6], 1) = 2.4', () => {
-			expect(numbers.average([1.2, 2.4, 3.6], 1)).to.equal(2.4)
+		it('getAverage([1.2, 2.4, 3.6], 1) = 2.4', () => {
+			expect(numbers.getAverage([1.2, 2.4, 3.6], 1)).to.equal(2.4)
 		})
 	})
 
-	describe('Test diff', () => {
-		it('diff(2, 1) = 1', () => {
-			expect(numbers.diff(2, 1)).to.equal(1)
+	describe('Test getDiff', () => {
+		it('getDiff(2, 1) = 1', () => {
+			expect(numbers.getDiff(2, 1)).to.equal(1)
 		})
 
-		it('diff(1, 2) = -1', () => {
-			expect(numbers.diff(1, 2)).to.equal(-1)
+		it('getDiff(1, 2) = -1', () => {
+			expect(numbers.getDiff(1, 2)).to.equal(-1)
+		})
+	})
+
+	describe('Test getRandomIn', () => {
+		it('getRandomIn(1, 5) = 1,2,3,4 or 5', () => {
+			expect([1, 2, 3, 4, 5]).to.include(numbers.getRandomIn(1, 5))
+		})
+
+		it('getRandomIn(5, 9) = 5,6,7,8 or 9', () => {
+			expect([5, 6, 7, 8, 9]).to.include(numbers.getRandomIn(5, 9))
+		})
+	})
+
+	describe('Test getSum', () => {
+		it('getSum([1, 2, 3]) = 6', () => {
+			expect(numbers.getSum([1, 2, 3])).to.equal(6)
+		})
+
+		it('getSum([1.2, 2.4, 3.6], 1) = 7.2', () => {
+			expect(numbers.getSum([1.2, 2.4, 3.6], 1)).to.equal(7.2)
 		})
 	})
 
@@ -69,16 +89,6 @@ describe('Test Numbers Package', () => {
 		})
 	})
 
-	describe('Test randomIn', () => {
-		it('randomIn(1, 5) = 1,2,3,4 or 5', () => {
-			expect([1, 2, 3, 4, 5]).to.include(numbers.randomIn(1, 5))
-		})
-
-		it('randomIn(5, 9) = 5,6,7,8 or 9', () => {
-			expect([5, 6, 7, 8, 9]).to.include(numbers.randomIn(5, 9))
-		})
-	})
-
 	describe('Test roundTo', () => {
 		it('roundTo(1.23456) = 1.23', () => {
 			expect(numbers.roundTo(1.23456)).to.equal(1.23)
@@ -86,16 +96,6 @@ describe('Test Numbers Package', () => {
 
 		it('roundTo(1.23456, 4) = 1.2346', () => {
 			expect(numbers.roundTo(1.23456, 4)).to.equal(1.2346)
-		})
-	})
-
-	describe('Test sum', () => {
-		it('sum([1, 2, 3]) = 6', () => {
-			expect(numbers.sum([1, 2, 3])).to.equal(6)
-		})
-
-		it('sum([1.2, 2.4, 3.6], 1) = 7.2', () => {
-			expect(numbers.sum([1.2, 2.4, 3.6], 1)).to.equal(7.2)
 		})
 	})
 
