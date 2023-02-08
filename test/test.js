@@ -39,6 +39,16 @@ describe('Test Helpers Package', () => {
 
 // Test Numbers Package
 describe('Test Numbers Package', () => {
+	describe('Test addLeadingZero', () => {
+		it('addLeadingZero(1) = 01', () => {
+			expect(numbers.addLeadingZero(1)).to.equal('01')
+		})
+
+		it('addLeadingZero(10) = 10', () => {
+			expect(numbers.addLeadingZero(10)).to.equal('10')
+		})
+	})
+
 	describe('Test getAverage', () => {
 		it('getAverage([1, 2, 3]) = 2', () => {
 			expect(numbers.getAverage([1, 2, 3])).to.equal(2)

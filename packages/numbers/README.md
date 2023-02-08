@@ -4,7 +4,8 @@ Common number and math helpers.
 
 - [SWR Audio Lab / Numbers](#swr-audio-lab--numbers)
   - [Install](#install)
-  - [`getAverage` - get getAfrom array of numbers](#getaverage---get-getafrom-array-of-numbers)
+  - [`addLeadingZero` - add leading zero to number](#addleadingzero---add-leading-zero-to-number)
+  - [`getAverage` - get average from array of numbers](#getaverage---get-average-from-array-of-numbers)
   - [`getDiff` - get difference of two numbers](#getdiff---get-difference-of-two-numbers)
   - [`getRandomIn` - get random int between min and max](#getrandomin---get-random-int-between-min-and-max)
   - [`getSum` - get sum from array of numbers](#getsum---get-sum-from-array-of-numbers)
@@ -20,7 +21,28 @@ Add the parent package to your dependencies:
 yarn add @swrlab/utils
 ```
 
-## `getAverage` - get getAfrom array of numbers
+
+## `addLeadingZero` - add leading zero to number
+
+- `value` (required) - Value to add leading zero
+
+Import the library:
+
+```js
+const { addLeadingZero } = require('@swrlab/utils/packages/numbers')
+```
+
+Then use the toolkit:
+
+```js
+addLeadingZero(1)
+// 01
+
+addLeadingZero(10)
+// 10
+```
+
+## `getAverage` - get average from array of numbers
 
 - `array` (required) - Array of numbers
 - `decimal` (optional) - Decimal places to round (default 2)
