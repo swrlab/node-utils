@@ -2,25 +2,27 @@ name: Linter
 
 on:
   pull_request:
+    branches-ignore:
+      - dependabot/**
   workflow_call:
     inputs:
       install-all:
-        description: 'Install dependencies using `install-all`'
+        description: "Install dependencies using `install-all`"
         required: false
         type: boolean
         default: false
       generate-keys:
-        description: 'Whether to run command for dummy key generation'
+        description: "Whether to run command for dummy key generation"
         required: false
         type: boolean
         default: false
       log-level:
-        description: 'Which log level to use for `super-linter`'
+        description: "Which log level to use for `super-linter`"
         required: false
         type: string
-        default: 'VERBOSE'
+        default: "VERBOSE"
       validate-all-codebase:
-        description: 'Whether to run validation on all files'
+        description: "Whether to run validation on all files"
         required: false
         type: boolean
         default: true
@@ -121,7 +123,7 @@ env:
 jobs:
   build:
     name: Lint Code Base
-    runs-on: ubuntu-latest-16-cores
+    runs-on: ubuntu-latest-4-cores
     timeout-minutes: 90
     permissions:
       contents: read
@@ -137,15 +139,15 @@ jobs:
         with:
           persist-credentials: false
           repository: swrlab/node-utils
-          ref: 'main'
-          path: '.utils'
+          ref: "main"
+          path: ".utils"
 
-      - name: ⛺️ Install Node.js
+      - name: 🏗 Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: 'yarn'
-          cache-dependency-path: '**/yarn.lock'
+          cache: "yarn"
+          cache-dependency-path: "**/yarn.lock"
 
       - name: 📦 Install Dependencies (if `install:all`)
         if: inputs.install-all == true

@@ -4,6 +4,15 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 
 ## Changelog
 
+- 2023-02-13 - v1.1.1
+  - feat: add `addTrailingZeros` to numbers package
+  - feat: add `addLeadingZero` to numbers package
+  - feat: add `getDiff` to numbers package
+  - feat: add `getAverage` to numbers package
+  - feat: add `getSum` to numbers package
+  - feat: add `getRandomInRange` to numbers package
+  - feat: add `roundTo` to numbers package
+
 - 2022-12-19 - v1.1.0
   - feat: add test workflow to github/actions
   - feat: add helpers package (with `sleep` function)
