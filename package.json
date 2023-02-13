@@ -25,20 +25,20 @@
 	"dependencies": {
 		"@google-cloud/storage": "^6.9.2",
 		"abort-controller": "^3.0.0",
-		"aws-sdk": "^2.1310.0",
+		"aws-sdk": "^2.1313.0",
 		"chai": "^4.3.7",
 		"node-crc": "swrlab/node-crc#v2.1.0",
-		"undici": "^5.18.0",
+		"undici": "^5.19.1",
 		"uuid": "9.0.0"
 	},
 	"devDependencies": {
 		"@swrlab/eslint-plugin-swr": "^0.2.0",
 		"@swrlab/swr-prettier-config": "^0.2.0",
 		"dotenv": "^16.0.3",
-		"eslint": "^8.33.0",
+		"eslint": "^8.34.0",
 		"eslint-plugin-json": "^3.1.0",
 		"mocha": "^10.2.0",
-		"prettier": "^2.8.3"
+		"prettier": "^2.8.4"
 	},
 	"prettier": "@swrlab/swr-prettier-config"
 }
