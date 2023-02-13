@@ -3,7 +3,7 @@ const addLeadingZero = require('../../utils/numbers/addLeadingZero')
 const addTrailingZeros = require('../../utils/numbers/addTrailingZeros')
 const getAverage = require('../../utils/numbers/getAverage')
 const getDiff = require('../../utils/numbers/getDiff')
-const getRandomIn = require('../../utils/numbers/getRandomIn')
+const getRandomInRange = require('../../utils/numbers/getRandomInRange')
 const getSum = require('../../utils/numbers/getSum')
 const isEven = require('../../utils/numbers/isEven')
 const roundTo = require('../../utils/numbers/roundTo')
@@ -15,7 +15,7 @@ module.exports = {
 	addTrailingZeros,
 	getAverage,
 	getDiff,
-	getRandomIn,
+	getRandomInRange,
 	getSum,
 	isEven,
 	roundTo,

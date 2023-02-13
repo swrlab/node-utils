@@ -8,7 +8,7 @@ Common number and math helpers.
   - [`addTrailingZeros` - add trailing zeros to number](#addtrailingzeros---add-trailing-zeros-to-number)
   - [`getAverage` - get average from array of numbers](#getaverage---get-average-from-array-of-numbers)
   - [`getDiff` - get difference of two numbers](#getdiff---get-difference-of-two-numbers)
-  - [`getRandomIn` - get random int between min and max](#getrandomin---get-random-int-between-min-and-max)
+  - [`getRandomInRange` - get random int between min and max](#getrandominrange---get-random-int-between-min-and-max)
   - [`getSum` - get sum from array of numbers](#getsum---get-sum-from-array-of-numbers)
   - [`isEven` - check if a value is even](#iseven---check-if-a-value-is-even)
   - [`roundTo` - round float to a specified decimal place](#roundto---round-float-to-a-specified-decimal-place)
@@ -118,7 +118,7 @@ getDiff(1, 2)
 // -1
 ```
 
-## `getRandomIn` - get random int between min and max
+## `getRandomInRange` - get random int between min and max
 
 - `min` (required) - Min value (inclusive)
 - `max` (required) - Max value (inclusive)
@@ -126,16 +126,16 @@ getDiff(1, 2)
 Import the library:
 
 ```js
-const { getRandomIn } = require('@swrlab/utils/packages/numbers')
+const { getRandomInRange } = require('@swrlab/utils/packages/numbers')
 ```
 
 Then use the toolkit:
 
 ```js
-getRandomIn(1, 5)
+getRandomInRange(1, 5)
 // 1,2,3,4 or 5
 
-getRandomIn(5, 9)
+getRandomInRange(5, 9)
 // 5,6,7,8 or 9
 ```
 

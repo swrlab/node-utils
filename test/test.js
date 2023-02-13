@@ -95,13 +95,13 @@ describe('Test Numbers Package', () => {
 		})
 	})
 
-	describe('Test getRandomIn', () => {
-		it('getRandomIn(1, 5) = 1,2,3,4 or 5', () => {
-			expect([1, 2, 3, 4, 5]).to.include(numbers.getRandomIn(1, 5))
+	describe('Test getRandomInRange', () => {
+		it('getRandomInRange(1, 5) = 1,2,3,4 or 5', () => {
+			expect([1, 2, 3, 4, 5]).to.include(numbers.getRandomInRange(1, 5))
 		})
 
-		it('getRandomIn(5, 9) = 5,6,7,8 or 9', () => {
-			expect([5, 6, 7, 8, 9]).to.include(numbers.getRandomIn(5, 9))
+		it('getRandomInRange(5, 9) = 5,6,7,8 or 9', () => {
+			expect([5, 6, 7, 8, 9]).to.include(numbers.getRandomInRange(5, 9))
 		})
 	})
 
