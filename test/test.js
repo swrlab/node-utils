@@ -193,6 +193,16 @@ describe('Test Strings Package', () => {
 		})
 	})
 
+	describe('Test isEmptyString', () => {
+		it('isEmptyString("") = true', () => {
+			expect(strings.isEmptyString('')).to.equal(true)
+		})
+
+		it('isEmptyString("hello world") = false', () => {
+			expect(strings.isEmptyString('hello world')).to.equal(false)
+		})
+	})
+
 	describe('Test isIncluded', () => {
 		it('isIncluded("hello world", "hello") = true', () => {
 			expect(strings.isIncluded('hello world', 'hello')).to.equal(true)

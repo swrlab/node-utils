@@ -4,6 +4,9 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 
 ## Changelog
 
+- 2023-02-14 - v1.1.2
+  - feat: add `isEmptyString` to strings package
+
 - 2023-02-13 - v1.1.1
   - feat: add `addTrailingZeros` to numbers package
   - feat: add `addLeadingZero` to numbers package
