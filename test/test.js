@@ -26,6 +26,16 @@ describe('Test ARD Package', () => {
 
 // Test Helpers Package
 describe('Test Helpers Package', () => {
+	describe('Test arrayToObjectCount', () => {
+		it("arrayToObjectCount(['foo', 'bar', 'bar']) = { bar: 2, foo: 1 }", () => {
+			const test = ['foo', 'bar', 'bar']
+			const result = { bar: 2, foo: 1 }
+			const testResult = helpers.arrayToObjectCount(test)
+			expect(testResult.bar).to.equal(result.bar)
+			expect(testResult.foo).to.equal(result.foo)
+		})
+	})
+
 	describe('Test getJsonKeys', () => {
 		it("getJsonKeys({ hello: 'world', foo: 'bar' }) = ['hello', 'foo']", () => {
 			const test = { hello: 'world', foo: 'bar' }
