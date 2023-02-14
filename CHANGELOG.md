@@ -5,6 +5,7 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 ## Changelog
 
 - 2023-02-14 - v1.1.2
+  - feat: add `getJsonKeys` to helpers package
   - feat: add `normalize` to numbers package
   - feat: add `isEmptyString` to strings package
 
