@@ -125,6 +125,16 @@ describe('Test Numbers Package', () => {
 		})
 	})
 
+	describe('Test normalize', () => {
+		it('normalize(2, 100) = 0.02', () => {
+			expect(numbers.normalize(2, 100)).to.equal(0.02)
+		})
+
+		it('normalize(80, 100) = 0.8', () => {
+			expect(numbers.normalize(80, 100)).to.equal(0.8)
+		})
+	})
+
 	describe('Test roundTo', () => {
 		it('roundTo(1.23456) = 1.23', () => {
 			expect(numbers.roundTo(1.23456)).to.equal(1.23)

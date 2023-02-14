@@ -11,6 +11,7 @@ Common number and math helpers.
   - [`getRandomInRange` - get random int between min and max](#getrandominrange---get-random-int-between-min-and-max)
   - [`getSum` - get sum from array of numbers](#getsum---get-sum-from-array-of-numbers)
   - [`isEven` - check if a value is even](#iseven---check-if-a-value-is-even)
+  - [`normalize` - normalize a value by given maximum](#normalize---normalize-a-value-by-given-maximum)
   - [`roundTo` - round float to a specified decimal place](#roundto---round-float-to-a-specified-decimal-place)
   - [`toReadable` - get a number in readable format](#toreadable---get-a-number-in-readable-format)
 
@@ -178,6 +179,27 @@ isEven(2)
 
 isEven(1)
 // false
+```
+
+## `normalize` - normalize a value by given maximum
+
+- `value` (required) - Value to normalize
+- `max` (required) - Maximum for normalization
+
+Import the library:
+
+```js
+const { normalize } = require('@swrlab/utils/packages/numbers')
+```
+
+Then use the toolkit:
+
+```js
+normalize(2, 100)
+// 0.02
+
+normalize(80, 100)
+// 0.8
 ```
 
 ## `roundTo` - round float to a specified decimal place

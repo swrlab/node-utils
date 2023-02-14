@@ -6,6 +6,7 @@ const getDiff = require('../../utils/numbers/getDiff')
 const getRandomInRange = require('../../utils/numbers/getRandomInRange')
 const getSum = require('../../utils/numbers/getSum')
 const isEven = require('../../utils/numbers/isEven')
+const normalize = require('../../utils/numbers/normalize')
 const roundTo = require('../../utils/numbers/roundTo')
 const toReadable = require('../../utils/numbers/toReadable')
 
@@ -18,6 +19,7 @@ module.exports = {
 	getRandomInRange,
 	getSum,
 	isEven,
+	normalize,
 	roundTo,
 	toReadable,
 }
