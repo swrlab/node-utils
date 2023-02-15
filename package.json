@@ -23,9 +23,9 @@
 	"license": "MIT",
 	"private": false,
 	"dependencies": {
-		"@google-cloud/storage": "^6.9.2",
+		"@google-cloud/storage": "^6.9.3",
 		"abort-controller": "^3.0.0",
-		"aws-sdk": "^2.1313.0",
+		"aws-sdk": "^2.1315.0",
 		"chai": "^4.3.7",
 		"luxon": "^3.2.1",
 		"node-crc": "swrlab/node-crc#v2.1.0",
