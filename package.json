@@ -27,6 +27,7 @@
 		"abort-controller": "^3.0.0",
 		"aws-sdk": "^2.1313.0",
 		"chai": "^4.3.7",
+		"luxon": "^3.2.1",
 		"node-crc": "swrlab/node-crc#v2.1.0",
 		"undici": "^5.19.1",
 		"uuid": "9.0.0"
