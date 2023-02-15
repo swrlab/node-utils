@@ -11,6 +11,7 @@ Date functions and time helpers.
   - [`getIsoRelativeTime` - get iso date with relative years](#getisorelativetime---get-iso-date-with-relative-years)
   - [`getRelativeTime` - get relative years from iso date](#getrelativetime---get-relative-years-from-iso-date)
   - [`getYearMonthDay` - get YYYYMMDD from iso date](#getyearmonthday---get-yyyymmdd-from-iso-date)
+  - [`revYearMonthDay` - get DDMMYYYY from YYYYMMDD](#revyearmonthday---get-ddmmyyyy-from-yyyymmdd)
 
 ## Install
 
@@ -137,4 +138,21 @@ Then use the toolkit:
 ```js
 getYearMonthDay('2038-01-19T03:14:08.000')
 // '20380119'
+```
+
+## `revYearMonthDay` - get DDMMYYYY from YYYYMMDD
+
+- `value` (required) - Date as `YYYYMMDD` string
+
+Import the library:
+
+```js
+const { revYearMonthDay } = require('@swrlab/utils/packages/date')
+```
+
+Then use the toolkit:
+
+```js
+revYearMonthDay('20380119')
+// '19012038'
 ```

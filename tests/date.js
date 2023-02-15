@@ -65,4 +65,12 @@ describe('Test DateTime Package', () => {
 			expect(date.getYearMonthDay(testDate)).to.equal(testResult)
 		})
 	})
+
+	describe('Test revYearMonthDay', () => {
+		const test = '20380119'
+		const testResult = '19012038'
+		it(`revYearMonthDay('${test}') = '${testResult}'`, () => {
+			expect(date.revYearMonthDay(test)).to.equal(testResult)
+		})
+	})
 })

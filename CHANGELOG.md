@@ -5,7 +5,8 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 ## Changelog
 
 - 2023-02-15 - v1.1.2
-  - feat: add date package with time functions
+  - feat: add `revYearMonthDay` to date package
+  - feat: add `date` package with iso time functions
   - feat: add `arrayToObjectCount` to helpers package
   - feat: add `getJsonKeys` to helpers package
   - feat: add `normalize` to numbers package

@@ -6,6 +6,7 @@ const getHourMinutes = require('../../utils/date/getHourMinutes')
 const getIsoRelativeTime = require('../../utils/date/getIsoRelativeTime')
 const getRelativeTime = require('../../utils/date/getRelativeTime')
 const getYearMonthDay = require('../../utils/date/getYearMonthDay')
+const revYearMonthDay = require('../../utils/date/revYearMonthDay')
 
 // export packages
 module.exports = {
@@ -16,4 +17,5 @@ module.exports = {
 	getIsoRelativeTime,
 	getRelativeTime,
 	getYearMonthDay,
+	revYearMonthDay,
 }
