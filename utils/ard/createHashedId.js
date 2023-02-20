@@ -1,6 +1,6 @@
 /*
 
-	by SWR audio lab
+	by SWR Audio Lab
 
 	this file creates a CRC64-ECMA182-compliant hash
 	based on an utf-8 encoded input string

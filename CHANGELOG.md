@@ -4,6 +4,14 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 
 ## Changelog
 
+- 2023-02-15 - v1.1.2
+  - feat: add `revYearMonthDay` to date package
+  - feat: add `date` package with iso time functions
+  - feat: add `arrayToObjectCount` to helpers package
+  - feat: add `getJsonKeys` to helpers package
+  - feat: add `normalize` to numbers package
+  - feat: add `isEmptyString` to strings package
+
 - 2023-02-13 - v1.1.1
   - feat: add `addTrailingZeros` to numbers package
   - feat: add `addLeadingZero` to numbers package
