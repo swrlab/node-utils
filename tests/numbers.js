@@ -1,8 +1,8 @@
 /* eslint-disable sonarjs/no-duplicate-string */
 /*
 
-	by SWR audio lab
-	simple tests with mocha and chai
+	by SWR Audio Lab
+	tests with mocha and chai
 
 */
 

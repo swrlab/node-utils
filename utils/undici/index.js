@@ -1,6 +1,6 @@
 /*
 
-	SWR Audio Lab
+	by SWR Audio Lab
 
 	this file runs the undici-wrapper util
 
