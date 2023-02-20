@@ -25,11 +25,11 @@
 	"dependencies": {
 		"@google-cloud/storage": "^6.9.3",
 		"abort-controller": "^3.0.0",
-		"aws-sdk": "^2.1315.0",
+		"aws-sdk": "^2.1318.0",
 		"chai": "^4.3.7",
 		"luxon": "^3.2.1",
 		"node-crc": "swrlab/node-crc#v2.1.0",
-		"undici": "^5.19.1",
+		"undici": "^5.20.0",
 		"uuid": "9.0.0"
 	},
 	"devDependencies": {
