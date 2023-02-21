@@ -5,10 +5,12 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 ## Changelog
 
 - 2023-02-21 - v2.0.0
+  - refactor: move `undici` tools to `utils` folder
   - refactor!: migrate to new `@aws-sdk/client-s3`
   - refactor!: rename `storage-wrapper` folder to `storage`
+  - refactor!: migrate logging in `storage` package
 
-  BREAKING CHANGE: rename imports with `require('@swrlab/utils/packages/storage-wrapper')`
+  BREAKING CHANGE: rename imports with `require('@swrlab/utils/packages/storage-wrapper')`, check new syntax
 
 - 2023-02-15 - v1.1.2
   - feat: add `revYearMonthDay` to date package

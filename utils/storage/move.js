@@ -3,40 +3,39 @@
 // load node utils
 const { CopyObjectCommand, DeleteObjectCommand } = require('@aws-sdk/client-s3')
 
-module.exports = async function (sourceUri, destinationUri, keepOriginal, logPrefix) {
-	const thisLogPrefix = logPrefix ? [logPrefix, '>'] : []
-	let structure, bucket, path
-
+module.exports = async function (sourceUri, destinationUri, keepOriginal) {
 	if (sourceUri.substr(0, 5).toLowerCase() === 'gs://' && destinationUri.substr(0, 5).toLowerCase() === 'gs://') {
 		// google to google transfer
 
 		// parse source
-		structure = sourceUri.substr(5).split('/')
-		bucket = structure.shift()
-		path = structure.join('/')
+		const structure = sourceUri.substr(5).split('/')
+		const bucket = structure.shift()
+		const path = structure.join('/')
 
 		// move file within gcs
 		if (keepOriginal !== true) {
 			// move is productive/ destructive
-			this.sdk.log(
-				this,
-				'log',
-				thisLogPrefix.concat(['storage.move.gcp2gcp >', sourceUri, destinationUri])
-			)
+			if (this.logger) {
+				this.logger.log({
+					level: 'info',
+					message: `storage.move.gs > ${sourceUri}`,
+					source: this.logSource,
+					data: { sourceUri, destinationUri, keepOriginal },
+				})
+			}
 
 			// move file
 			await this.sdk.gs.bucket(bucket).file(path).move(destinationUri)
 		} else {
 			// mode is dev, only copy file
-			this.sdk.log(
-				this,
-				'log',
-				thisLogPrefix.concat([
-					'storage.move.gcp2gcp (only copying) >',
-					sourceUri,
-					destinationUri,
-				])
-			)
+			if (this.logger) {
+				this.logger.log({
+					level: 'info',
+					message: `storage.move.gs (only copying) > ${sourceUri}`,
+					source: this.logSource,
+					data: { sourceUri, destinationUri, keepOriginal },
+				})
+			}
 
 			// copy file
 			await this.sdk.gs.bucket(bucket).file(path).copy(destinationUri)
@@ -50,16 +49,19 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal, logPre
 		// s3 to s3 transfer
 
 		// parse source
-		structure = destinationUri.substr(5).split('/')
-		bucket = structure.shift()
-		path = structure.join('/')
+		const structure = destinationUri.substr(5).split('/')
+		const bucket = structure.shift()
+		const path = structure.join('/')
 
 		// always copying
-		this.sdk.log(
-			this,
-			'log',
-			thisLogPrefix.concat(['storage.move.aws2aws copying >', sourceUri, destinationUri])
-		)
+		if (this.logger) {
+			this.logger.log({
+				level: 'info',
+				message: `storage.move.s3 (copying) > ${sourceUri}`,
+				source: this.logSource,
+				data: { sourceUri, destinationUri, keepOriginal },
+			})
+		}
 
 		// copy file
 		await this.sdk.s3.send(
@@ -73,22 +75,25 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal, logPre
 		// move file within gcs
 		if (keepOriginal !== true) {
 			// move is productive/ destructive
-			this.sdk.log(
-				this,
-				'log',
-				thisLogPrefix.concat(['storage.move.aws2aws deleting source >', sourceUri])
-			)
+			if (this.logger) {
+				this.logger.log({
+					level: 'info',
+					message: `storage.move.s3 (deleting source) > ${sourceUri}`,
+					source: this.logSource,
+					data: { sourceUri, destinationUri, keepOriginal },
+				})
+			}
 
 			// parse source
-			structure = sourceUri.substr(5).split('/')
-			bucket = structure.shift()
-			path = structure.join('/')
+			const sourceStructure = sourceUri.substr(5).split('/')
+			const sourceBucket = sourceStructure.shift()
+			const sourcePath = sourceStructure.join('/')
 
 			// move file
 			await this.sdk.s3.send(
 				new DeleteObjectCommand({
-					Bucket: bucket,
-					Key: path,
+					Bucket: sourceBucket,
+					Key: sourcePath,
 				})
 			)
 		}
@@ -98,11 +103,14 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal, logPre
 	}
 
 	// any to any transfer
-	this.sdk.log(
-		this,
-		'log',
-		thisLogPrefix.concat(['storage.move.any2any >', keepOriginal, sourceUri, destinationUri])
-	)
+	if (this.logger) {
+		this.logger.log({
+			level: 'info',
+			message: `storage.move.any > ${sourceUri}`,
+			source: this.logSource,
+			data: { sourceUri, destinationUri, keepOriginal },
+		})
+	}
 
 	// download file
 	const blob = await this.load(sourceUri)
@@ -113,12 +121,13 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal, logPre
 	// delete file if in production
 	if (keepOriginal !== true) {
 		await this.delete(sourceUri)
-	} else {
-		this.sdk.log(
-			this,
-			'log',
-			thisLogPrefix.concat(['storage.move.any2any not deleting sourceUri >', keepOriginal, sourceUri])
-		)
+	} else if (this.logger) {
+		this.logger.log({
+			level: 'info',
+			message: `storage.move.s3 (not deleting source) > ${sourceUri}`,
+			source: this.logSource,
+			data: { sourceUri, destinationUri, keepOriginal },
+		})
 	}
 
 	// return ok

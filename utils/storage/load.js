@@ -14,18 +14,22 @@ const loadLocalFile = (that, uri) =>
 		})
 	})
 
-module.exports = async function (uri, logPrefix, options) {
-	const thisLogPrefix = logPrefix ? [logPrefix, '>'] : []
-	let structure, bucket, path
-
+module.exports = async function (uri, options) {
 	if (uri.substr(0, 5).toLowerCase() === 's3://') {
 		// aws s3 file
-		structure = uri.substr(5).split('/')
-		bucket = structure.shift()
-		path = structure.join('/')
+		const structure = uri.substr(5).split('/')
+		const bucket = structure.shift()
+		const path = structure.join('/')
 
 		// log progress
-		this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.load.aws >', uri]))
+		if (this.logger) {
+			this.logger.log({
+				level: 'info',
+				message: `storage.load.s3 > ${uri}`,
+				source: this.logSource,
+				data: { uri },
+			})
+		}
 
 		// load file
 		const file = await this.sdk.s3.send(
@@ -41,11 +45,19 @@ module.exports = async function (uri, logPrefix, options) {
 
 	if (uri.substr(0, 5).toLowerCase() === 'gs://') {
 		// google cloud storage
-		structure = uri.substr(5).split('/')
-		bucket = structure.shift()
-		path = structure.join('/')
+		const structure = uri.substr(5).split('/')
+		const bucket = structure.shift()
+		const path = structure.join('/')
 
-		this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.load gcp >', uri]))
+		// log progress
+		if (this.logger) {
+			this.logger.log({
+				level: 'info',
+				message: `storage.load.gs > ${uri}`,
+				source: this.logSource,
+				data: { uri },
+			})
+		}
 
 		// load file
 		const [file] = await this.sdk.gs.bucket(bucket).file(path).download()
@@ -56,7 +68,14 @@ module.exports = async function (uri, logPrefix, options) {
 
 	if (uri.substr(0, 7).toLowerCase() === 'http://' || uri.substr(0, 8).toLowerCase() === 'https://') {
 		// log progress
-		this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.load.https >', uri]))
+		if (this.logger) {
+			this.logger.log({
+				level: 'info',
+				message: `storage.load.https > ${uri}`,
+				source: this.logSource,
+				data: { uri, options },
+			})
+		}
 
 		// public http(s) endpoint
 		const file = await undici(uri, {
@@ -72,7 +91,14 @@ module.exports = async function (uri, logPrefix, options) {
 	}
 
 	// log progress
-	this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.load.local >', uri]))
+	if (this.logger) {
+		this.logger.log({
+			level: 'info',
+			message: `storage.load.local > ${uri}`,
+			source: this.logSource,
+			data: { uri },
+		})
+	}
 
 	// local file
 	const file = await loadLocalFile(this, uri)

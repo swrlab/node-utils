@@ -3,10 +3,10 @@
 // load node utils
 const fs = require('fs')
 const { Storage } = require('@google-cloud/storage')
-const { S3 } = require('@aws-sdk/client-s3')
+const { S3, S3Client } = require('@aws-sdk/client-s3')
 
 // create wrapper
-function StorageWrapper(config) {
+function StorageWrapper(config, logger) {
 	// check config
 	if (!config || !config.gs) return Promise.reject(new Error('storage config invalid'))
 
@@ -22,23 +22,12 @@ function StorageWrapper(config) {
 	// load aws sdk
 	if (config.s3) {
 		this.sdk.s3 = new S3(config.s3)
+		this.sdk.s3Client = new S3Client(config.s3)
 	}
 
 	// configure logging
-	this.config = {
-		logging: config.logging,
-	}
-
-	// set logging
-	this.sdk.log = (that, level, message) => {
-		let thisMessage
-		if (message instanceof Array) thisMessage = message.join(' ')
-		else thisMessage = message
-
-		if (level === 'log' && that.config.logging) console.log(thisMessage)
-		else if (level === 'warn' && that.config.logging) console.warn(thisMessage)
-		else if (level === 'error' && that.config.logging) console.error(thisMessage)
-	}
+	this.logger = logger || null
+	this.logSource = '@swrlab/utils/storage'
 
 	// import functions
 	this.createUri = require('./createUri')
@@ -50,14 +39,18 @@ function StorageWrapper(config) {
 	this.save = require('./save')
 
 	// log progress
-	this.sdk.log(this, 'log', [
-		'storage.index',
-		'loaded config',
-		JSON.stringify({
-			gs: config.gs ? config.gs.projectId : null,
-			s3: config.s3 ? { accessKeyId: config.s3.accessKeyId, region: config.s3.region } : null,
-		}),
-	])
+	if (this.logger) {
+		this.logger.log({
+			level: 'info',
+			message: `loaded storage config`,
+			source: '@swrlab/utils/storage',
+			data: {
+				isLoggingEnabled: !!logger,
+				gs: config.gs ? config.gs.projectId : null,
+				s3: config.s3 ? { accessKeyId: config.s3.accessKeyId, region: config.s3.region } : null,
+			},
+		})
+	}
 }
 
 // export

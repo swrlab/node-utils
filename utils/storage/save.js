@@ -4,6 +4,7 @@
 const os = require('os')
 const pathUtil = require('path')
 const { v4: uuidv4 } = require('uuid')
+const { PutObjectCommand } = require('@aws-sdk/client-s3')
 
 const saveLocalFile = (that, uri, buffer) =>
 	new Promise((resolve, reject) => {
@@ -21,27 +22,31 @@ const deleteLocalFile = (that, filePath) =>
 		})
 	})
 
-module.exports = async function (uri, buffer, logPrefix, resumable) {
-	const thisLogPrefix = logPrefix ? [logPrefix, '>'] : []
-	let structure, bucket, path
-
+module.exports = async function (uri, buffer, resumable) {
 	if (uri.substr(0, 5).toLowerCase() === 's3://') {
 		// aws s3 file
-		structure = uri.substr(5).split('/')
-		bucket = structure.shift()
-		path = structure.join('/')
+		const structure = uri.substr(5).split('/')
+		const bucket = structure.shift()
+		const path = structure.join('/')
 
 		// log progress
-		this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.save.s3 >', uri]))
+		if (this.logger) {
+			this.logger.log({
+				level: 'info',
+				message: `storage.save.s3 > ${uri}`,
+				source: this.logSource,
+				data: { uri },
+			})
+		}
 
 		// upload to aws
-		await this.sdk.s3
-			.upload({
+		await this.sdk.s3.send(
+			new PutObjectCommand({
 				Bucket: bucket,
 				Body: buffer,
 				Key: path,
 			})
-			.promise()
+		)
 
 		// return ok
 		return Promise.resolve()
@@ -49,16 +54,23 @@ module.exports = async function (uri, buffer, logPrefix, resumable) {
 
 	if (uri.substr(0, 5).toLowerCase() === 'gs://') {
 		// google cloud storage
-		structure = uri.substr(5).split('/')
-		bucket = structure.shift()
-		path = structure.join('/')
+		const structure = uri.substr(5).split('/')
+		const bucket = structure.shift()
+		const path = structure.join('/')
 
 		// save to local file
 		const tempFilePath = pathUtil.resolve(os.tmpdir(), uuidv4())
 		await saveLocalFile(this, tempFilePath, buffer)
 
 		// log progress
-		this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.save.gs >', uri]))
+		if (this.logger) {
+			this.logger.log({
+				level: 'info',
+				message: `storage.save.gs > ${uri}`,
+				source: this.logSource,
+				data: { uri, resumable },
+			})
+		}
 
 		// create default bucket config
 		const bucketConfig = {
@@ -85,7 +97,14 @@ module.exports = async function (uri, buffer, logPrefix, resumable) {
 	// local file
 
 	// log progress
-	this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.save.local >', uri]))
+	if (this.logger) {
+		this.logger.log({
+			level: 'info',
+			message: `storage.save.local > ${uri}`,
+			source: this.logSource,
+			data: { uri },
+		})
+	}
 
 	// save file
 	const file = await saveLocalFile(this, uri, buffer)

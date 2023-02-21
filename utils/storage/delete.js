@@ -11,18 +11,22 @@ const deleteLocalFile = (that, filePath) =>
 		})
 	})
 
-module.exports = async function (uri, logPrefix) {
-	const thisLogPrefix = logPrefix ? [logPrefix, '>'] : []
-	let structure, bucket, path
-
+module.exports = async function (uri) {
 	if (uri.substr(0, 5).toLowerCase() === 's3://') {
 		// aws s3 file
-		structure = uri.substr(5).split('/')
-		bucket = structure.shift()
-		path = structure.join('/')
+		const structure = uri.substr(5).split('/')
+		const bucket = structure.shift()
+		const path = structure.join('/')
 
 		// log progress
-		this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.delete.s3 >', uri]))
+		if (this.logger) {
+			this.logger.log({
+				level: 'info',
+				message: `storage.delete.s3 > ${uri}`,
+				source: this.logSource,
+				data: { uri },
+			})
+		}
 
 		// delete from aws
 		const deleted = await this.sdk.s3.send(
@@ -38,12 +42,19 @@ module.exports = async function (uri, logPrefix) {
 
 	if (uri.substr(0, 5).toLowerCase() === 'gs://') {
 		// google cloud storage
-		structure = uri.substr(5).split('/')
-		bucket = structure.shift()
-		path = structure.join('/')
+		const structure = uri.substr(5).split('/')
+		const bucket = structure.shift()
+		const path = structure.join('/')
 
 		// log progress
-		this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.delete.gs >', uri]))
+		if (this.logger) {
+			this.logger.log({
+				level: 'info',
+				message: `storage.delete.gs > ${uri}`,
+				source: this.logSource,
+				data: { uri },
+			})
+		}
 
 		// delete from gcp
 		const deleted = await this.sdk.gs.bucket(bucket).file(path).delete(path)
@@ -54,14 +65,28 @@ module.exports = async function (uri, logPrefix) {
 
 	if (uri.substr(0, 7).toLowerCase() === 'http://' || uri.substr(0, 8).toLowerCase() === 'https://') {
 		// log progress
-		this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.delete.https (not possible) >', uri]))
+		if (this.logger) {
+			this.logger.log({
+				level: 'info',
+				message: `storage.delete.https (not possible) > ${uri}`,
+				source: this.logSource,
+				data: { uri },
+			})
+		}
 
 		// return ok
 		return Promise.resolve()
 	}
 
 	// log progress
-	this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.delete.local >', uri]))
+	if (this.logger) {
+		this.logger.log({
+			level: 'info',
+			message: `storage.delete.local > ${uri}`,
+			source: this.logSource,
+			data: { uri },
+		})
+	}
 
 	// delete file
 	await deleteLocalFile(this, uri)

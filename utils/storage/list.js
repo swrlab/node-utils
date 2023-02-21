@@ -2,17 +2,20 @@
 /* eslint-disable no-await-in-loop */
 /* eslint-disable func-names */
 
-const awsListObjects = async (that, bucket, path, next, logPrefix) => {
+// load node utils
+const { ListObjectsV2Command } = require('@aws-sdk/client-s3')
+
+const awsListObjects = async (that, bucket, path, next) => {
 	try {
 		// load list from aws, pass next token (nullable)
-		const files = await that.sdk.s3
-			.listObjectsV2({
+		const files = await that.sdk.s3.send(
+			new ListObjectsV2Command({
 				Bucket: bucket,
 				Prefix: path,
 				MaxKeys: 500,
 				ContinuationToken: next,
 			})
-			.promise()
+		)
 
 		// return only list and next token
 		return Promise.resolve({
@@ -20,13 +23,6 @@ const awsListObjects = async (that, bucket, path, next, logPrefix) => {
 			next: files.IsTruncated ? files.NextContinuationToken : null,
 		})
 	} catch (err) {
-		that.sdk.log(
-			'error',
-			logPrefix.concat([
-				'storage.list.awsListObjects',
-				JSON.stringify({ bucket, path, next, message: err.message, stack: err.stack }),
-			])
-		)
 		return Promise.reject(err)
 	}
 }
@@ -39,8 +35,7 @@ const listLocalFiles = (that, uri) =>
 		})
 	})
 
-module.exports = async function (uri, max, next, logPrefix) {
-	const thisLogPrefix = logPrefix ? [logPrefix, '>'] : []
+module.exports = async function (uri, max, next) {
 	let structure, bucket, path, file
 
 	if (uri.substr(0, 5).toLowerCase() === 's3://') {
@@ -50,7 +45,14 @@ module.exports = async function (uri, max, next, logPrefix) {
 		path = structure.join('/')
 
 		// log progress
-		this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.list.aws >', uri, max]))
+		if (this.logger) {
+			this.logger.log({
+				level: 'info',
+				message: `storage.list.s3 > ${uri}`,
+				source: this.logSource,
+				data: { uri, max, next },
+			})
+		}
 
 		// load file
 		let maxNotReached = true
@@ -59,7 +61,7 @@ module.exports = async function (uri, max, next, logPrefix) {
 
 		do {
 			// load data
-			const awsReturn = await awsListObjects(this, bucket, path, thisNext || null, thisLogPrefix)
+			const awsReturn = await awsListObjects(this, bucket, path, thisNext || null)
 
 			// add to return list
 			fileList = fileList.concat(awsReturn.list)
@@ -82,7 +84,14 @@ module.exports = async function (uri, max, next, logPrefix) {
 		path = structure.join('/')
 
 		// log request
-		this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.list.gcp >', uri]))
+		if (this.logger) {
+			this.logger.log({
+				level: 'info',
+				message: `storage.list.gs > ${uri}`,
+				source: this.logSource,
+				data: { uri, max, next },
+			})
+		}
 
 		// load file
 		file = await this.sdk.gs.bucket(bucket).getFiles({
@@ -94,7 +103,14 @@ module.exports = async function (uri, max, next, logPrefix) {
 	}
 
 	// log request
-	this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.list.local >', uri]))
+	if (this.logger) {
+		this.logger.log({
+			level: 'info',
+			message: `storage.list.local > ${uri}`,
+			source: this.logSource,
+			data: { uri, max, next },
+		})
+	}
 
 	// local file
 	file = await listLocalFiles(this, uri)
