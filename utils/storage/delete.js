@@ -12,11 +12,12 @@ const deleteLocalFile = (that, filePath) =>
 	})
 
 module.exports = async function (uri) {
+	const structure = uri.substr(5).split('/')
+	const bucket = structure.shift()
+	const path = structure.join('/')
+
 	if (uri.substr(0, 5).toLowerCase() === 's3://') {
 		// aws s3 file
-		const structure = uri.substr(5).split('/')
-		const bucket = structure.shift()
-		const path = structure.join('/')
 
 		// log progress
 		if (this.logger) {
@@ -42,9 +43,6 @@ module.exports = async function (uri) {
 
 	if (uri.substr(0, 5).toLowerCase() === 'gs://') {
 		// google cloud storage
-		const structure = uri.substr(5).split('/')
-		const bucket = structure.shift()
-		const path = structure.join('/')
 
 		// log progress
 		if (this.logger) {
