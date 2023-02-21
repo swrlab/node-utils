@@ -1,6 +1,6 @@
 {
 	"name": "@swrlab/utils",
-	"version": "1.1.2",
+	"version": "2.0.0",
 	"description": "Wrapping common SWR Audio Lab utils",
 	"main": "./index.js",
 	"engines": {
@@ -23,9 +23,9 @@
 	"license": "MIT",
 	"private": false,
 	"dependencies": {
+		"@aws-sdk/client-s3": "^3.272.0",
 		"@google-cloud/storage": "^6.9.3",
 		"abort-controller": "^3.0.0",
-		"aws-sdk": "^2.1318.0",
 		"chai": "^4.3.7",
 		"luxon": "^3.2.1",
 		"node-crc": "swrlab/node-crc#v2.1.0",

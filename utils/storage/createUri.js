@@ -1,6 +1,7 @@
 /*
 
-	node-storage-wrapper
+	node-utils by SWR Audio Lab
+	frequently used node-packages and helpers
 
 	This module provides easy access to combine bucket + path to unique URIs
 

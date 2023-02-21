@@ -1,8 +1,8 @@
-# SWR Audio Lab / Storage Wrapper
+# SWR Audio Lab / Storage
 
 A utility to wrap file access to local, Google Cloud Storage and AWS S3 file storage.
 
-- [SWR Audio Lab / Storage Wrapper](#swr-audio-lab--storage-wrapper)
+- [SWR Audio Lab / Storage](#swr-audio-lab--storage)
   - [Install](#install)
   - [Initialization](#initialization)
   - [`createUri` - Convert to URI](#createuri---convert-to-uri)
@@ -27,7 +27,7 @@ We like to create one local file in a project that provides this initialized uti
 
 ```js
 // load node util
-const Storage = require('@swrlab/utils/packages/storage-wrapper')
+const Storage = require('@swrlab/utils/packages/storage')
 
 // load custom keys and storage
 const storage = new Storage({

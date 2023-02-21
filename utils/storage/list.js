@@ -1,11 +1,6 @@
 /* eslint-disable one-var */
 /* eslint-disable no-await-in-loop */
 /* eslint-disable func-names */
-/*
-
-	node-storage-wrapper
-
-*/
 
 const awsListObjects = async (that, bucket, path, next, logPrefix) => {
 	try {

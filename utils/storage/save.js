@@ -1,9 +1,4 @@
 /* eslint-disable func-names */
-/*
-
-	node-storage-wrapper
-
-*/
 
 // load node utils
 const os = require('os')

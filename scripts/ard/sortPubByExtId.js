@@ -7,7 +7,7 @@
 */
 
 // init storage
-const Storage = require('../../packages/storage-wrapper')
+const Storage = require('../../packages/storage')
 
 const storage = new Storage({
 	gs: { projectId: process.env.GCP_PROJECT_ID },

@@ -1,9 +1,7 @@
 /* eslint-disable func-names */
-/*
 
-	node-storage-wrapper
-
-*/
+// load node utils
+const { DeleteObjectCommand } = require('@aws-sdk/client-s3')
 
 const deleteLocalFile = (that, filePath) =>
 	new Promise((resolve, reject) => {
@@ -27,15 +25,15 @@ module.exports = async function (uri, logPrefix) {
 		this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.delete.s3 >', uri]))
 
 		// delete from aws
-		await this.sdk.s3
-			.deleteObject({
+		const deleted = await this.sdk.s3.send(
+			new DeleteObjectCommand({
 				Bucket: bucket,
 				Key: path,
 			})
-			.promise()
+		)
 
 		// return ok
-		return Promise.resolve()
+		return Promise.resolve(deleted)
 	}
 
 	if (uri.substr(0, 5).toLowerCase() === 'gs://') {
@@ -48,10 +46,10 @@ module.exports = async function (uri, logPrefix) {
 		this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.delete.gs >', uri]))
 
 		// delete from gcp
-		await this.sdk.gs.bucket(bucket).file(path).delete(path)
+		const deleted = await this.sdk.gs.bucket(bucket).file(path).delete(path)
 
 		// return ok
-		return Promise.resolve()
+		return Promise.resolve(deleted)
 	}
 
 	if (uri.substr(0, 7).toLowerCase() === 'http://' || uri.substr(0, 8).toLowerCase() === 'https://') {

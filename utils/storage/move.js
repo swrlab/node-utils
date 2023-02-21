@@ -1,9 +1,7 @@
 /* eslint-disable func-names */
-/*
 
-	node-storage-wrapper
-
-*/
+// load node utils
+const { CopyObjectCommand, DeleteObjectCommand } = require('@aws-sdk/client-s3')
 
 module.exports = async function (sourceUri, destinationUri, keepOriginal, logPrefix) {
 	const thisLogPrefix = logPrefix ? [logPrefix, '>'] : []
@@ -49,7 +47,7 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal, logPre
 	}
 
 	if (sourceUri.substr(0, 5).toLowerCase() === 's3://' && destinationUri.substr(0, 5).toLowerCase() === 's3://') {
-		// google to google transfer
+		// s3 to s3 transfer
 
 		// parse source
 		structure = destinationUri.substr(5).split('/')
@@ -64,13 +62,13 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal, logPre
 		)
 
 		// copy file
-		await this.sdk.s3
-			.copyObject({
+		await this.sdk.s3.send(
+			new CopyObjectCommand({
 				Bucket: bucket,
 				Key: path,
 				CopySource: sourceUri.replace('s3://', '/'),
 			})
-			.promise()
+		)
 
 		// move file within gcs
 		if (keepOriginal !== true) {
@@ -87,12 +85,12 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal, logPre
 			path = structure.join('/')
 
 			// move file
-			await this.sdk.s3
-				.deleteObject({
+			await this.sdk.s3.send(
+				new DeleteObjectCommand({
 					Bucket: bucket,
 					Key: path,
 				})
-				.promise()
+			)
 		}
 
 		// return ok

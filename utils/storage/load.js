@@ -1,12 +1,10 @@
 /* eslint-disable func-names */
-/*
-
-	node-storage-wrapper
-
-*/
 
 // load node utils
-const undici = require('../../utils/undici')
+const { GetObjectCommand } = require('@aws-sdk/client-s3')
+
+// load utils
+const undici = require('../../packages/undici')
 
 const loadLocalFile = (that, uri) =>
 	new Promise((resolve, reject) => {
@@ -18,7 +16,7 @@ const loadLocalFile = (that, uri) =>
 
 module.exports = async function (uri, logPrefix, options) {
 	const thisLogPrefix = logPrefix ? [logPrefix, '>'] : []
-	let structure, bucket, path, file
+	let structure, bucket, path
 
 	if (uri.substr(0, 5).toLowerCase() === 's3://') {
 		// aws s3 file
@@ -30,12 +28,12 @@ module.exports = async function (uri, logPrefix, options) {
 		this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.load.aws >', uri]))
 
 		// load file
-		file = await this.sdk.s3
-			.getObject({
+		const file = await this.sdk.s3.send(
+			new GetObjectCommand({
 				Bucket: bucket,
 				Key: path,
 			})
-			.promise()
+		)
 
 		// return file
 		return Promise.resolve(file.Body)
@@ -50,10 +48,10 @@ module.exports = async function (uri, logPrefix, options) {
 		this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.load gcp >', uri]))
 
 		// load file
-		file = await this.sdk.gs.bucket(bucket).file(path).download()
+		const [file] = await this.sdk.gs.bucket(bucket).file(path).download()
 
 		// return file
-		return Promise.resolve(file[0])
+		return Promise.resolve(file)
 	}
 
 	if (uri.substr(0, 7).toLowerCase() === 'http://' || uri.substr(0, 8).toLowerCase() === 'https://') {
@@ -61,10 +59,9 @@ module.exports = async function (uri, logPrefix, options) {
 		this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.load.https >', uri]))
 
 		// public http(s) endpoint
-		file = await undici(uri, {
+		const file = await undici(uri, {
 			timeout: options?.timeout,
 			method: 'GET',
-			headers: { 'User-Agent': 'node-storage-wrapper' },
 		})
 
 		if (file.ok) {
@@ -78,7 +75,7 @@ module.exports = async function (uri, logPrefix, options) {
 	this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.load.local >', uri]))
 
 	// local file
-	file = await loadLocalFile(this, uri)
+	const file = await loadLocalFile(this, uri)
 
 	// return file
 	return Promise.resolve(file)

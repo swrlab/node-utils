@@ -1,11 +1,4 @@
 /* eslint-disable func-names */
-/*
-
-	node-storage-wrapper
-
-	This module provides easy access to combine bucket + path to unique URIs
-
-*/
 
 module.exports = async function (uri, ttl, logPrefix) {
 	const thisLogPrefix = logPrefix ? [logPrefix, '>'] : []

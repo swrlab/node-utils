@@ -1,14 +1,9 @@
 /* eslint-disable global-require */
-/*
-
-	node-storage-wrapper
-
-*/
 
 // load node utils
-const AWS = require('aws-sdk')
 const fs = require('fs')
 const { Storage } = require('@google-cloud/storage')
+const { S3 } = require('@aws-sdk/client-s3')
 
 // create wrapper
 function StorageWrapper(config) {
@@ -26,7 +21,7 @@ function StorageWrapper(config) {
 
 	// load aws sdk
 	if (config.s3) {
-		this.sdk.s3 = new AWS.S3(config.s3)
+		this.sdk.s3 = new S3(config.s3)
 	}
 
 	// configure logging

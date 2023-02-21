@@ -4,6 +4,12 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 
 ## Changelog
 
+- 2023-02-21 - v2.0.0
+  - refactor!: migrate to new `@aws-sdk/client-s3`
+  - refactor!: rename `storage-wrapper` folder to `storage`
+
+  BREAKING CHANGE: rename imports with `require('@swrlab/utils/packages/storage-wrapper')`
+
 - 2023-02-15 - v1.1.2
   - feat: add `revYearMonthDay` to date package
   - feat: add `date` package with iso time functions
