@@ -125,7 +125,7 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal) {
 	} else if (this.logger) {
 		this.logger.log({
 			level: 'info',
-			message: `storage.move.s3 (not deleting source) > ${sourceUri}`,
+			message: `storage.move.any (not deleting source) > ${sourceUri}`,
 			source: this.logSource,
 			data: { sourceUri, destinationUri, keepOriginal },
 		})

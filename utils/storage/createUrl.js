@@ -1,6 +1,6 @@
 /* eslint-disable func-names */
 
-module.exports = async function (uri, ttl) {
+module.exports = async function (uri, ttl, options) {
 	if (uri.substr(0, 5).toLowerCase() === 's3://') {
 		// log progress
 		if (this.logger) {
@@ -35,6 +35,7 @@ module.exports = async function (uri, ttl) {
 		const config = {
 			action: 'read',
 			expires: Date.now() + ttl,
+			...options,
 		}
 
 		// create link

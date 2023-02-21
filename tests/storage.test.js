@@ -50,20 +50,92 @@ describe('Test storage.createUri - Create URI from bucket and path', () => {
 		expect(GS_URI_A).to.be.a('string')
 		expect(GS_URI_A).to.equal(`gs://${GS_BUCKET}/${GS_PATH_A}`)
 	})
+
 	it('createUri.gs (B)', async () => {
 		GS_URI_B = storage.createUri.gs(GS_BUCKET, GS_PATH_B)
 		expect(GS_URI_B).to.be.a('string')
 		expect(GS_URI_B).to.equal(`gs://${GS_BUCKET}/${GS_PATH_B}`)
 	})
+
 	it('createUri.s3 (A)', async () => {
 		S3_URI_A = storage.createUri.s3(S3_BUCKET, S3_PATH_A)
 		expect(S3_URI_A).to.be.a('string')
 		expect(S3_URI_A).to.equal(`s3://${S3_BUCKET}/${S3_PATH_A}`)
 	})
+
 	it('createUri.s3 (B)', async () => {
 		S3_URI_B = storage.createUri.s3(S3_BUCKET, S3_PATH_B)
 		expect(S3_URI_B).to.be.a('string')
 		expect(S3_URI_B).to.equal(`s3://${S3_BUCKET}/${S3_PATH_B}`)
+	})
+})
+
+const testBasicSignedUrl = (url) => {
+	expect(url).to.be.a('string')
+	expect(url).to.include('https://')
+	expect(url).to.include(`/${GS_PATH_A}?`)
+	expect(url).to.include('Expires=')
+	expect(url).to.include('Signature=')
+}
+
+const testSignedUrlV4 = (url) => {
+	expect(url).to.include('X-Goog-Algorithm=GOOG4-RSA-SHA256')
+}
+
+describe('Test storage.createUrl - Create signed URL from URI', () => {
+	it('createUrl.gs (no options)', async () => {
+		// sign url
+		const url = await storage.createUrl(GS_URI_A, 60)
+
+		// check result
+		testBasicSignedUrl(url)
+		expect(url).to.include('storage.googleapis.com')
+		expect(url).to.include(`/${GS_BUCKET}/`)
+		expect(url).to.include('GoogleAccessId=')
+	})
+
+	it('createUrl.gs (v4)', async () => {
+		// sign url
+		const config = {
+			version: 'v4',
+		}
+		const url = await storage.createUrl(GS_URI_A, 60, config)
+
+		// check result
+		testBasicSignedUrl(url)
+		testSignedUrlV4(url)
+		expect(url).to.include('storage.googleapis.com')
+		expect(url).to.include(`/${GS_BUCKET}/`)
+	})
+
+	it('createUrl.gs (v4 + custom domain)', async () => {
+		// sign url
+		const config = {
+			version: 'v4',
+			cname: 'https://fake-domain.swr.de',
+		}
+		const url = await storage.createUrl(GS_URI_A, 60, config)
+
+		// check result
+		testBasicSignedUrl(url)
+		testSignedUrlV4(url)
+		expect(url).to.include(config.cname)
+	})
+
+	it('createUrl.gs (v4 + custom query)', async () => {
+		// sign url
+		const config = {
+			version: 'v4',
+			queryParams: {
+				hello: 'world',
+			},
+		}
+		const url = await storage.createUrl(GS_URI_A, 60, config)
+
+		// check result
+		testBasicSignedUrl(url)
+		testSignedUrlV4(url)
+		expect(url).to.include('hello=world')
 	})
 })
 
@@ -75,7 +147,7 @@ describe('Test storage.save - Upload/save file to storage', () => {
 		const saved = await storage.save(GS_URI_A, file)
 		const { metadata } = saved
 
-		// check  result
+		// check result
 		expect(metadata.bucket).to.equal(GS_BUCKET)
 		expect(metadata.name).to.equal(GS_PATH_A)
 		expect(metadata.kind).to.equal('storage#object')
@@ -93,6 +165,17 @@ describe('Test storage.save - Upload/save file to storage', () => {
 
 		// check result
 		expect(saved).to.equal(undefined)
+	})
+})
+
+describe('Test storage.exists - Check if file exists in storage', () => {
+	it('exists.gs', async () => {
+		// run action
+		const exists = await storage.exists(GS_URI_A)
+
+		// check result
+		expect(exists).to.be.a('boolean')
+		expect(exists).to.equal(true)
 	})
 })
 
@@ -132,7 +215,7 @@ describe('Test storage.move - Copy file in storage', () => {
 		// load and parse file
 		const file = await storage.move(GS_URI_A, GS_URI_B, true)
 
-		// check  result
+		// check result
 		expect(file.bucket.name).to.equal(GS_BUCKET)
 		expect(file.name).to.equal(GS_PATH_B)
 	})
@@ -141,7 +224,7 @@ describe('Test storage.move - Copy file in storage', () => {
 		// load and parse file
 		const file = await storage.move(GS_URI_A, GS_URI_B, false)
 
-		// check  result
+		// check result
 		expect(file.bucket.name).to.equal(GS_BUCKET)
 		expect(file.name).to.equal(GS_PATH_B)
 	})

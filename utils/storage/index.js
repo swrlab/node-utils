@@ -33,6 +33,7 @@ function StorageWrapper(config, logger) {
 	this.createUri = require('./createUri')
 	this.createUrl = require('./createUrl')
 	this.delete = require('./delete')
+	this.exists = require('./exists')
 	this.list = require('./list')
 	this.load = require('./load')
 	this.move = require('./move')
