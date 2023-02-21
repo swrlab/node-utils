@@ -9,6 +9,7 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
   - refactor!: migrate to new `@aws-sdk/client-s3`
   - refactor!: rename `storage-wrapper` folder to `storage`
   - refactor!: migrate logging in `storage` package
+  - feat: add tests for storage package
 
   BREAKING CHANGE: rename imports with `require('@swrlab/utils/packages/storage-wrapper')`, check new syntax
 

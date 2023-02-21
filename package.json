@@ -16,7 +16,7 @@
 		"ard:publishers": "node -r dotenv/config scripts/ard/publishers.js",
 		"ard:pub-sort": "node -r dotenv/config scripts/ard/sortPubByExtId.js",
 		"lint": "eslint .",
-		"test": "mocha tests/**.js -r dotenv/config",
+		"test": "mocha tests/** --timeout 15000 --exit -r dotenv/config",
 		"reinstall": "rm -rf node_modules && rm yarn.lock && yarn"
 	},
 	"author": "SWR Audio Lab <lab@swr.de>",
@@ -27,7 +27,6 @@
 		"@aws-sdk/s3-request-presigner": "3.272.0",
 		"@google-cloud/storage": "^6.9.3",
 		"abort-controller": "^3.0.0",
-		"chai": "^4.3.7",
 		"luxon": "^3.2.1",
 		"node-crc": "swrlab/node-crc#v2.1.0",
 		"undici": "^5.20.0",
@@ -36,8 +35,10 @@
 	"devDependencies": {
 		"@swrlab/eslint-plugin-swr": "^0.2.0",
 		"@swrlab/swr-prettier-config": "^0.2.0",
+		"chai": "^4.3.7",
 		"dotenv": "^16.0.3",
 		"eslint": "^8.34.0",
+		"eslint-plugin-chai-friendly": "^0.7.2",
 		"eslint-plugin-json": "^3.1.0",
 		"mocha": "^10.2.0",
 		"prettier": "^2.8.4"

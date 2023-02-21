@@ -25,24 +25,23 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal) {
 			}
 
 			// move file
-			await this.sdk.gs.bucket(bucket).file(path).move(destinationUri)
-		} else {
-			// mode is dev, only copy file
-			if (this.logger) {
-				this.logger.log({
-					level: 'info',
-					message: `storage.move.gs (only copying) > ${sourceUri}`,
-					source: this.logSource,
-					data: { sourceUri, destinationUri, keepOriginal },
-				})
-			}
-
-			// copy file
-			await this.sdk.gs.bucket(bucket).file(path).copy(destinationUri)
+			const [file] = await this.sdk.gs.bucket(bucket).file(path).move(destinationUri)
+			return Promise.resolve(file)
 		}
 
-		// return ok
-		return Promise.resolve()
+		// mode is dev, only copy file
+		if (this.logger) {
+			this.logger.log({
+				level: 'info',
+				message: `storage.move.gs (only copying) > ${sourceUri}`,
+				source: this.logSource,
+				data: { sourceUri, destinationUri, keepOriginal },
+			})
+		}
+
+		// copy file
+		const [file] = await this.sdk.gs.bucket(bucket).file(path).copy(destinationUri)
+		return Promise.resolve(file)
 	}
 
 	if (sourceUri.substr(0, 5).toLowerCase() === 's3://' && destinationUri.substr(0, 5).toLowerCase() === 's3://') {
@@ -52,6 +51,7 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal) {
 		const structure = destinationUri.substr(5).split('/')
 		const bucket = structure.shift()
 		const path = structure.join('/')
+		let deleted
 
 		// always copying
 		if (this.logger) {
@@ -64,7 +64,7 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal) {
 		}
 
 		// copy file
-		await this.sdk.s3.send(
+		const moved = await this.sdk.s3.send(
 			new CopyObjectCommand({
 				Bucket: bucket,
 				Key: path,
@@ -90,7 +90,7 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal) {
 			const sourcePath = sourceStructure.join('/')
 
 			// move file
-			await this.sdk.s3.send(
+			deleted = await this.sdk.s3.send(
 				new DeleteObjectCommand({
 					Bucket: sourceBucket,
 					Key: sourcePath,
@@ -99,7 +99,7 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal) {
 		}
 
 		// return ok
-		return Promise.resolve()
+		return Promise.resolve({ moved, deleted })
 	}
 
 	// any to any transfer
@@ -116,11 +116,12 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal) {
 	const blob = await this.load(sourceUri)
 
 	// save file to destination
-	await this.save(destinationUri, blob)
+	const moved = await this.save(destinationUri, blob)
 
 	// delete file if in production
+	let deleted
 	if (keepOriginal !== true) {
-		await this.delete(sourceUri)
+		deleted = await this.delete(sourceUri)
 	} else if (this.logger) {
 		this.logger.log({
 			level: 'info',
@@ -131,5 +132,5 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal) {
 	}
 
 	// return ok
-	return Promise.resolve()
+	return Promise.resolve({ moved, deleted })
 }

@@ -55,7 +55,7 @@ module.exports = async function (uri) {
 		}
 
 		// delete from gcp
-		const deleted = await this.sdk.gs.bucket(bucket).file(path).delete(path)
+		const [deleted] = await this.sdk.gs.bucket(bucket).file(path).delete(path)
 
 		// return ok
 		return Promise.resolve(deleted)

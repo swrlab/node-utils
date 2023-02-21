@@ -40,7 +40,7 @@ module.exports = async function (uri, buffer, resumable) {
 		}
 
 		// upload to aws
-		await this.sdk.s3.send(
+		const saved = await this.sdk.s3.send(
 			new PutObjectCommand({
 				Bucket: bucket,
 				Body: buffer,
@@ -49,7 +49,7 @@ module.exports = async function (uri, buffer, resumable) {
 		)
 
 		// return ok
-		return Promise.resolve()
+		return Promise.resolve(saved)
 	}
 
 	if (uri.substr(0, 5).toLowerCase() === 'gs://') {
@@ -85,13 +85,13 @@ module.exports = async function (uri, buffer, resumable) {
 		}
 
 		// upload file to gcs
-		await this.sdk.gs.bucket(bucket).upload(tempFilePath, bucketConfig)
+		const [saved] = await this.sdk.gs.bucket(bucket).upload(tempFilePath, bucketConfig)
 
 		// delete local temp file
 		await deleteLocalFile(this, tempFilePath)
 
 		// return ok
-		return Promise.resolve()
+		return Promise.resolve(saved)
 	}
 
 	// local file
