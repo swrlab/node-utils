@@ -87,7 +87,6 @@ const fileUri = storage.createUri.s3(bucket, name)
 
 - `uri` (required) - Source URI to use for signing
 - `ttl` (required) - Time to live in milliseconds for public link, provide as integer or shortform (e.g. `60e3` for `60000`)
-- `logPrefix` (optional) - Prefix for log lines
 
 Use this to sign a URI into a (publicly) accessible URL. Currently only implemented for Google Cloud Storage:
 
@@ -98,22 +97,31 @@ const sourceUrl = await storage.createUrl(fileUri, 60e3)
 ## `delete` - Delete a file
 
 - `uri` (required) - Source URI to delete
-- `logPrefix` (optional) - Prefix for log lines
 
 Delete an existing file:
 
 ```js
-await storage.delete(fileUri)
+await storage.delete(uri)
 ```
 
 The proper connector is detected using the prefixes (`s3://`, `gs://`, `http[s]://` or local file). Actions against `http[s]://` are rejected.
+
+## `exists` - Check if a file exits
+
+- `uri` (required) - Source URI to check
+
+Delete an existing file:
+
+```js
+const isFileAvailable = await storage.exists(uri)
+```
+
 
 ## `list` - List files by prefix
 
 - `uri` (required) - Source URI prefix to list
 - `max` (required) - Rough maximum of elements expected
 - `next` (optional) - Next token if available (AWS only)
-- `logPrefix` (optional) - Prefix for log lines
 
 List all elements matching a prefix, which can be a folder name or folder + fileprefix.
 Google Cloud provides a full list of elements:
@@ -133,7 +141,6 @@ The utility keeps listing more elements until either max is reached or no more i
 ## `load` - Download a file
 
 - `uri` (required) - Source URI to load
-- `logPrefix` (optional) - Prefix for log lines
 - `options` (optional) - Prefix for log lines
   - `timeout` (optional) - Timeout for http[s] requests
 
@@ -148,7 +155,6 @@ const fileBuffer = await storage.list(fileUri)
 - `sourceUri` (required) - Source file URI to copy
 - `destinationUri` (required) - Destination URI where to copy the file to
 - `keepOriginal` (required) - Boolean whether to keep the source
-- `logPrefix` (optional) - Prefix for log lines
 
 Moving provides easy access to copy and move actions between multiple storage types and providers. Switching between copying (non-destructive) and moving (deletes the source) is handled via the `keepOriginal` flag.
 
@@ -162,7 +168,6 @@ There are essentially three ways to move files:
 
 - `uri` (required) - Destination URI to use for saving
 - `buffer` (required) - File buffer to save
-- `logPrefix` (optional) - Prefix for log lines
 - `resumable` (optional) - Set Google Cloud transfer as `resumable`
 
 Provide a URI and file buffer to save a file.

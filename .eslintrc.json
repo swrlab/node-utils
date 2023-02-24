@@ -13,6 +13,7 @@
 		"radix": 0,
 		"no-unused-vars": ["error", { "argsIgnorePattern": "next" }],
 		"no-param-reassign": [2, { "props": false }],
-		"no-restricted-syntax": 0
+		"no-restricted-syntax": 0,
+		"no-underscore-dangle": 0
 	}
 }

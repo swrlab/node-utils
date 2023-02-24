@@ -1,7 +1,5 @@
 /*
 
-	by SWR audio lab
-
 	this file creates a CLI for hashing ids
 
 */

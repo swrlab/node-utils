@@ -1,7 +1,5 @@
 /*
 
-	SWR audio lab
-
 	exports an ard-publisher list as json file
 
 */

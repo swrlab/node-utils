@@ -1,7 +1,5 @@
 /*
 
-	by SWR audio lab
-
 	sorts list of ard-publishers by external-id
 
 */
