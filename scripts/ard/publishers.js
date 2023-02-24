@@ -1,7 +1,5 @@
 /*
 
-	SWR audio lab
-
 	exports an ard-publisher list as json file
 
 */
@@ -10,7 +8,7 @@
 const undici = require('../../packages/undici')()
 
 // init storage
-const Storage = require('../../packages/storage-wrapper')
+const Storage = require('../../packages/storage')
 
 const storage = new Storage({
 	gs: { projectId: process.env.GCP_PROJECT_ID },

@@ -1,13 +1,5 @@
-/*
+// load utils
+const request = require('./request')
 
-	by SWR Audio Lab
-
-	this file runs the undici-wrapper util
-
-*/
-
-// load request handler
-const undici = require('../../packages/undici/index')
-
-// export handler
-module.exports = undici()
+// export handler with tracing, if enabled
+module.exports = (tracer) => tracer?.wrap('undici.request', request) || request

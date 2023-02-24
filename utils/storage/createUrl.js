@@ -1,18 +1,16 @@
 /* eslint-disable func-names */
-/*
 
-	node-storage-wrapper
-
-	This module provides easy access to combine bucket + path to unique URIs
-
-*/
-
-module.exports = async function (uri, ttl, logPrefix) {
-	const thisLogPrefix = logPrefix ? [logPrefix, '>'] : []
-
+module.exports = async function (uri, ttl, options) {
 	if (uri.substr(0, 5).toLowerCase() === 's3://') {
 		// log progress
-		this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.createUrl.aws >', uri]))
+		if (this.logger) {
+			this.logger.log({
+				level: 'warning',
+				message: `storage.createUrl.s3 > ${uri}`,
+				source: this.logSource,
+				data: { uri, ttl },
+			})
+		}
 
 		return Promise.reject(new Error('not implemented'))
 	}
@@ -24,12 +22,20 @@ module.exports = async function (uri, ttl, logPrefix) {
 		const path = structure.join('/')
 
 		// log progress
-		this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.createUrl.gcp >', uri]))
+		if (this.logger) {
+			this.logger.log({
+				level: 'info',
+				message: `storage.createUrl.gs > ${uri}`,
+				source: this.logSource,
+				data: { uri, ttl },
+			})
+		}
 
 		// set config
 		const config = {
 			action: 'read',
 			expires: Date.now() + ttl,
+			...options,
 		}
 
 		// create link
@@ -41,14 +47,28 @@ module.exports = async function (uri, ttl, logPrefix) {
 
 	if (uri.substr(0, 7).toLowerCase() === 'http://' || uri.substr(0, 8).toLowerCase() === 'https://') {
 		// log progress
-		this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.createUrl.https >', uri]))
+		if (this.logger) {
+			this.logger.log({
+				level: 'warning',
+				message: `storage.createUrl.https > ${uri}`,
+				source: this.logSource,
+				data: { uri, ttl },
+			})
+		}
 
 		// return link
 		return Promise.resolve(uri)
 	}
 
 	// log progress
-	this.sdk.log(this, 'log', thisLogPrefix.concat(['storage.createUrl.local >', uri]))
+	if (this.logger) {
+		this.logger.log({
+			level: 'warning',
+			message: `storage.createUrl.local > ${uri}`,
+			source: this.logSource,
+			data: { uri, ttl },
+		})
+	}
 
 	return Promise.reject(new Error('not implemented'))
 }
