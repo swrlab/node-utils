@@ -306,14 +306,14 @@ Then use the toolkit:
 pluralize(1, 'Apple')
 // 1 Apple
 
-pluralize(2, 'Apple')
-// 2 Apples
+pluralize(1000, 'Apple')
+// 1.000 Apples
 
 pluralize(1, 'Child', 'Children')
 // 1 Child
 
-pluralize(2, 'Child', 'Children')
-// 2 Children
+pluralize(1000, 'Child', 'Children')
+// 1.000 Children
 ```
 
 ## `removeDoubleSpaces` - take a string and remove its duplicate spaces
