@@ -7,6 +7,7 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 - 2023-04-19 - v1.1.3
   - fix: don't run linter on dependabot-pr
   - fix: use `toReadable` in `pluralize` helper
+  - security: add safe-to-test flag for pr's
 
 - 2023-02-15 - v1.1.2
   - feat: add `revYearMonthDay` to date package

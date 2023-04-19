@@ -1,0 +1,38 @@
+name: Test on Pull
+
+on:
+  pull_request_target:
+    types: [labeled]
+
+env:
+  NODE_VERSION: 18
+
+jobs:
+  security:
+    name: Check permissions for pull request runs
+    runs-on: ubuntu-latest
+    if: contains(github.event.pull_request.labels.*.name, 'safe to test')
+    steps:
+      - run: |
+          echo "Security checks passed!"
+
+  test:
+    needs: security
+    name: Run Mocha Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: 👀 Checkout Code
+        uses: actions/checkout@v3
+
+      - name: 🏗 Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "yarn"
+          cache-dependency-path: "**/yarn.lock"
+
+      - name: 📦 Install Dependencies
+        run: yarn
+
+      - name: 🧪 Run Tests
+        run: yarn lint && yarn test
