@@ -152,16 +152,16 @@ describe('Test Strings Package', () => {
 			expect(strings.pluralize(1, 'Apple')).to.equal('1 Apple')
 		})
 
-		it("pluralize(2, 'Apple') = '2 Apples'", () => {
-			expect(strings.pluralize(2, 'Apple')).to.equal('2 Apples')
+		it("pluralize(1000, 'Apple') = '1.000 Apples'", () => {
+			expect(strings.pluralize(1000, 'Apple')).to.equal('1.000 Apples')
 		})
 
 		it("pluralize(1, 'Child', 'Children') = '1 Child'", () => {
 			expect(strings.pluralize(1, 'Child', 'Children')).to.equal('1 Child')
 		})
 
-		it("pluralize(2, 'Child', 'Children') = '2 Children'", () => {
-			expect(strings.pluralize(2, 'Child', 'Children')).to.equal('2 Children')
+		it("pluralize(1000, 'Child', 'Children') = '1.000 Children'", () => {
+			expect(strings.pluralize(1000, 'Child', 'Children')).to.equal('1.000 Children')
 		})
 	})
 

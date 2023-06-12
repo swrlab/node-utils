@@ -32,6 +32,7 @@ Then run the desired script.
 ## Packages
 
 - [ARD](./packages/ard) - Common internal ARD tools like ID creation
+- [Date](./packages/date) - Common date functions and time helpers
 - [Helpers](./packages/helpers) - Common functions and helpers
 - [Numbers](./packages/numbers) - Common number and math helpers
 - [Storage Wrapper](./packages/storage-wrapper) - A utility to wrap file access to local, Google Cloud Storage and AWS S3 file storage

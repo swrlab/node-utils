@@ -1,9 +1,9 @@
 name: Linter
 
 on:
-  pull_request:
+  push:
     branches-ignore:
-      - dependabot/**
+      - "dependabot/**"
   workflow_call:
     inputs:
       install-all:
