@@ -42,7 +42,7 @@ env:
   # options: ERROR, WARN, NOTICE, VERBOSE, DEBUG or TRACE
   LOG_LEVEL: ${{ inputs.log-level }}
   MARKDOWN_CONFIG_FILE: /.markdownlint.yaml
-  NODE_VERSION: 18
+  NODE_VERSION: 20
   TERRAFORM_TERRASCAN_CONFIG_FILE: /.utils/.github/linters/terrascan.yaml
   VALIDATE_ALL_CODEBASE: ${{ inputs.validate-all-codebase }}
   VALIDATE_ANSIBLE: false
