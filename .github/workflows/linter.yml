@@ -151,7 +151,7 @@ jobs:
 
       - name: 📦 Install Dependencies (if `install:all`)
         if: inputs.install-all == true
-        run: yarn install:all
+        run: yarn -v && yarn && yarn install:all
 
       - name: 📦 Install Dependencies (if `install`)
         if: inputs.install-all != true
