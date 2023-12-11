@@ -149,14 +149,6 @@ jobs:
           cache: "yarn"
           cache-dependency-path: "**/yarn.lock"
 
-      - name: 📦 Prepare stable Yarn version
-        run: |
-          yarn -v
-          corepack enable
-          yarn set version stable
-          yarn config set nodeLinker "node-modules"
-          yarn -v
-
       - name: 📦 Install Dependencies (if `install:all`)
         if: inputs.install-all == true
         run: yarn install:all
