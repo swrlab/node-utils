@@ -143,11 +143,9 @@ jobs:
           path: ".utils"
 
       - name: 🏗 Install Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: "yarn"
-          cache-dependency-path: "**/yarn.lock"
 
       - name: 📦 Install Yarn
         run: corepack enable && yarn set version stable
