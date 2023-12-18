@@ -149,6 +149,9 @@ jobs:
           cache: "yarn"
           cache-dependency-path: "**/yarn.lock"
 
+      - name: 📦 Install Yarn
+        run: corepack enable && yarn set version stable
+
       - name: 📦 Install Dependencies (if `install:all`)
         if: inputs.install-all == true
         run: yarn -v && yarn && yarn install:all
