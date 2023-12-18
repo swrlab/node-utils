@@ -136,6 +136,11 @@ const { getYearMonthDay } = require('@swrlab/utils/packages/date')
 Then use the toolkit:
 
 ```js
+getYearMonthDay('2038-01-19T03:14:08.000', true)
+// '2038-01-19'
+```
+
+```js
 getYearMonthDay('2038-01-19T03:14:08.000')
 // '20380119'
 ```

@@ -4,6 +4,11 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 
 ## Changelog
 
+- 2023-06-16 - v1.2.0
+  - feat: `getYearMonthDay` can now return a date with strings (YYYY-MM-DD)
+  - refactor!: `getYearMonthDay` now returns an integer
+  - refactor!: `getIsoRelativeTime` is now called `getISOAndRelativeTime`
+
 - 2023-04-19 - v1.1.3
   - fix: don't run linter on dependabot-pr
   - fix: use `toReadable` in `pluralize` helper
