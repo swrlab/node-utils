@@ -4,6 +4,10 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 
 ## Changelog
 
+- 2023-12-18 - v1.2.0
+  - refact: optimize linter util to work with Yarn `>=v4`
+  - chore: upgrade default NodeJS version to `v20`
+
 - 2023-04-19 - v1.1.3
   - fix: don't run linter on dependabot-pr
   - fix: use `toReadable` in `pluralize` helper
