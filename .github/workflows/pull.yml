@@ -5,7 +5,7 @@ on:
     types: [labeled]
 
 env:
-  NODE_VERSION: 18
+  NODE_VERSION: 20
 
 jobs:
   security:
@@ -22,17 +22,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 👀 Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: 🏗 Install Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: "yarn"
-          cache-dependency-path: "**/yarn.lock"
+
+      - name: 📦 Install Yarn
+        run: corepack enable && yarn set version stable
 
       - name: 📦 Install Dependencies
-        run: yarn
+        run: yarn install
 
       - name: 🧪 Run Tests
         run: yarn lint && yarn test
