@@ -8,7 +8,7 @@
 // load node utils
 const os = require('os')
 const pathUtil = require('path')
-const { v4: uuidv4 } = require('uuid')
+const { randomUUID } = require('crypto')
 
 const saveLocalFile = (that, uri, buffer) =>
 	new Promise((resolve, reject) => {
@@ -59,7 +59,7 @@ module.exports = async function (uri, buffer, logPrefix, resumable) {
 		path = structure.join('/')
 
 		// save to local file
-		const tempFilePath = pathUtil.resolve(os.tmpdir(), uuidv4())
+		const tempFilePath = pathUtil.resolve(os.tmpdir(), randomUUID())
 		await saveLocalFile(this, tempFilePath, buffer)
 
 		// log progress
