@@ -7,6 +7,7 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 - 2023-12-27 - v1.2.1
   - chore: update dependencies
   - refact: remove `uuid` dependency
+  - chore!: upgrade minimum NodeJS version to `v18`
 
 - 2023-12-18 - v1.2.0
   - refact: optimize linter util to work with Yarn `>=v4`
