@@ -1,10 +1,10 @@
 {
 	"name": "@swrlab/utils",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"description": "Wrapping common SWR Audio Lab utils",
 	"main": "./index.js",
 	"engines": {
-		"node": ">=16"
+		"node": ">=18"
 	},
 	"repository": {
 		"type": "git",
@@ -18,18 +18,17 @@
 		"lint": "eslint .",
 		"test": "mocha tests/**.js -r dotenv/config",
 		"outdated": "yarn upgrade-interactive",
-		"reinstall": "rm -rf node_modules && rm yarn.lock && yarn"
+		"reinstall": "rm -rf node_modules && rm yarn.lock && touch yarn.lock && yarn"
 	},
 	"author": "SWR Audio Lab <lab@swr.de>",
 	"license": "MIT",
 	"dependencies": {
-		"@google-cloud/storage": "^6.12.0",
+		"@google-cloud/storage": "^7.7.0",
 		"abort-controller": "^3.0.0",
-		"aws-sdk": "2.1520.0",
+		"aws-sdk": "2.1525.0",
 		"luxon": "3.4.4",
 		"node-crc": "swrlab/node-crc#v2.1.0",
-		"undici": "6.0.1",
-		"uuid": "9.0.1"
+		"undici": "6.2.1"
 	},
 	"devDependencies": {
 		"@swrlab/eslint-plugin-swr": "^0.3.0",
