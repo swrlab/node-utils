@@ -4,6 +4,10 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 
 ## Changelog
 
+- 2023-12-27 - v1.2.1
+  - chore: update dependencies
+  - refact: remove `uuid` dependency
+
 - 2023-12-18 - v1.2.0
   - refact: optimize linter util to work with Yarn `>=v4`
   - chore: upgrade default NodeJS version to `v20`
