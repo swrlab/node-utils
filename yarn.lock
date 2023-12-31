@@ -274,7 +274,7 @@ __metadata:
     "@swrlab/eslint-plugin-swr": "npm:^0.3.0"
     "@swrlab/swr-prettier-config": "npm:^0.3.0"
     abort-controller: "npm:^3.0.0"
-    aws-sdk: "npm:2.1525.0"
+    aws-sdk: "npm:2.1528.0"
     chai: "npm:4.3.10"
     dotenv: "npm:^16.3.1"
     eslint: "npm:^8.56.0"
@@ -608,9 +608,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"aws-sdk@npm:2.1525.0":
-  version: 2.1525.0
-  resolution: "aws-sdk@npm:2.1525.0"
+"aws-sdk@npm:2.1528.0":
+  version: 2.1528.0
+  resolution: "aws-sdk@npm:2.1528.0"
   dependencies:
     buffer: "npm:4.9.2"
     events: "npm:1.1.1"
@@ -622,7 +622,7 @@ __metadata:
     util: "npm:^0.12.4"
     uuid: "npm:8.0.0"
     xml2js: "npm:0.5.0"
-  checksum: 72e875eb591dc656b973d7bd536c6f0f2579cc4ccf7556b978a350aa8c3be012fcc35fc373cb7d1d39d51b750224b4c7a11f4a5add7e873292cc4104619d9f5f
+  checksum: 57e0c6055992e4c8801f774b74301fcfbc11c4cd6c74f045da44e7650583875a4464f45f903f563735484bd043eba28ddba2a2b75815a7c7ac1952364778b500
   languageName: node
   linkType: hard
 
