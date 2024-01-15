@@ -24,7 +24,7 @@ const undici = require('@swrlab/utils/packages/undici')
 Scripts are meant to be run locally, therefore clone the repository and first install dependencies. We prefer `yarn` for this:
 
 ```sh
-yarn install @swrlab/utils
+yarn add @swrlab/utils
 ```
 
 Then run the desired script.
