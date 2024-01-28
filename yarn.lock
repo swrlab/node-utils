@@ -274,7 +274,7 @@ __metadata:
     "@swrlab/eslint-plugin-swr": "npm:^0.3.0"
     "@swrlab/swr-prettier-config": "npm:^0.3.0"
     abort-controller: "npm:^3.0.0"
-    aws-sdk: "npm:2.1525.0"
+    aws-sdk: "npm:2.1545.0"
     chai: "npm:4.3.10"
     dotenv: "npm:^16.3.1"
     eslint: "npm:^8.56.0"
@@ -608,9 +608,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"aws-sdk@npm:2.1525.0":
-  version: 2.1525.0
-  resolution: "aws-sdk@npm:2.1525.0"
+"aws-sdk@npm:2.1545.0":
+  version: 2.1545.0
+  resolution: "aws-sdk@npm:2.1545.0"
   dependencies:
     buffer: "npm:4.9.2"
     events: "npm:1.1.1"
@@ -621,8 +621,8 @@ __metadata:
     url: "npm:0.10.3"
     util: "npm:^0.12.4"
     uuid: "npm:8.0.0"
-    xml2js: "npm:0.5.0"
-  checksum: 72e875eb591dc656b973d7bd536c6f0f2579cc4ccf7556b978a350aa8c3be012fcc35fc373cb7d1d39d51b750224b4c7a11f4a5add7e873292cc4104619d9f5f
+    xml2js: "npm:0.6.2"
+  checksum: 6a1526221c5c4c71246fc5a2ce3228db1bce2b7fde218dbb8e3f1944d42cf88b696a051e75555468f99d55efa21c0e99a1133a74957e1049a2b0908b305c50b0
   languageName: node
   linkType: hard
 
@@ -4323,13 +4323,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"xml2js@npm:0.5.0":
-  version: 0.5.0
-  resolution: "xml2js@npm:0.5.0"
+"xml2js@npm:0.6.2":
+  version: 0.6.2
+  resolution: "xml2js@npm:0.6.2"
   dependencies:
     sax: "npm:>=0.6.0"
     xmlbuilder: "npm:~11.0.0"
-  checksum: c9cd07cd19c5e41c740913bbbf16999a37a204488e11f86eddc2999707d43967197e257014d7ed72c8fc4348c192fa47eb352d1d9d05637cefd0d2e24e9aa4c8
+  checksum: e98a84e9c172c556ee2c5afa0fc7161b46919e8b53ab20de140eedea19903ed82f7cd5b1576fb345c84f0a18da1982ddf65908129b58fc3d7cbc658ae232108f
   languageName: node
   linkType: hard
 
