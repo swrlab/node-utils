@@ -148,7 +148,7 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
 
       - name: 📦 Install Yarn
-        run: corepack enable && yarn set version stable
+        run: corepack enable
 
       - name: 📦 Install Dependencies (if `install:all`)
         if: inputs.install-all == true
@@ -156,7 +156,7 @@ jobs:
 
       - name: 📦 Install Dependencies (if `install`)
         if: inputs.install-all != true
-        run: yarn
+        run: yarn install
 
       - name: 🔑 Generate dummy keys
         if: inputs.generate-keys == true
