@@ -25,7 +25,7 @@
 	"dependencies": {
 		"@google-cloud/storage": "^7.7.0",
 		"abort-controller": "^3.0.0",
-		"aws-sdk": "2.1525.0",
+		"aws-sdk": "2.1565.0",
 		"luxon": "3.4.4",
 		"node-crc": "swrlab/node-crc#v2.1.0",
 		"undici": "6.2.1"
