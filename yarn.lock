@@ -82,13 +82,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fastify/busboy@npm:^2.0.0":
-  version: 2.1.0
-  resolution: "@fastify/busboy@npm:2.1.0"
-  checksum: 7bb641080aac7cf01d88749ad331af10ba9ec3713ec07cabbe833908c75df21bd56249bb6173bdec07f5a41896b21e3689316f86684c06635da45f91ff4565a2
-  languageName: node
-  linkType: hard
-
 "@google-cloud/paginator@npm:^5.0.0":
   version: 5.0.0
   resolution: "@google-cloud/paginator@npm:5.0.0"
@@ -283,7 +276,7 @@ __metadata:
     mocha: "npm:^10.2.0"
     node-crc: "swrlab/node-crc#v2.1.0"
     prettier: "npm:^3.1.1"
-    undici: "npm:6.2.1"
+    undici: "npm:6.10.1"
   languageName: unknown
   linkType: soft
 
@@ -4054,12 +4047,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici@npm:6.2.1":
-  version: 6.2.1
-  resolution: "undici@npm:6.2.1"
-  dependencies:
-    "@fastify/busboy": "npm:^2.0.0"
-  checksum: 3e7a3a6013bb9058961b5e635183003ea2771b7409c544e20aa2f06408cc98bef0bf27e3df465e7f40bcdd0c4c8195404ae3babe0d5a3548a92c75ebfe7e2c6c
+"undici@npm:6.10.1":
+  version: 6.10.1
+  resolution: "undici@npm:6.10.1"
+  checksum: c4cbb7ad30680cf4cb83895051ec8adb068b81e60755081f008c6d070b46d475d14ee52145b7577a24f2f59d475fad2ac6f2761b7f890cc5df2b14ca7250a8e3
   languageName: node
   linkType: hard
 
