@@ -28,7 +28,7 @@
 		"aws-sdk": "2.1525.0",
 		"luxon": "3.4.4",
 		"node-crc": "swrlab/node-crc#v2.1.0",
-		"undici": "6.2.1"
+		"undici": "6.10.1"
 	},
 	"devDependencies": {
 		"@swrlab/eslint-plugin-swr": "^0.3.0",
