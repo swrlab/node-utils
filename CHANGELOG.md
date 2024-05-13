@@ -6,6 +6,7 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 
 - 2024-05-13 - v1.3.0
 
+  - chore: update dependencies
   - chore!: upgrade minimum NodeJS version to `v20`
 
 - 2023-12-27 - v1.2.1
