@@ -3,26 +3,26 @@ name: Linter
 on:
   push:
     branches-ignore:
-      - "dependabot/**"
+      - 'dependabot/**'
   workflow_call:
     inputs:
       install-all:
-        description: "Install dependencies using `install-all`"
+        description: 'Install dependencies using `install-all`'
         required: false
         type: boolean
         default: false
       generate-keys:
-        description: "Whether to run command for dummy key generation"
+        description: 'Whether to run command for dummy key generation'
         required: false
         type: boolean
         default: false
       log-level:
-        description: "Which log level to use for `super-linter`"
+        description: 'Which log level to use for `super-linter`'
         required: false
         type: string
-        default: "VERBOSE"
+        default: 'VERBOSE'
       validate-all-codebase:
-        description: "Whether to run validation on all files"
+        description: 'Whether to run validation on all files'
         required: false
         type: boolean
         default: true
@@ -139,15 +139,20 @@ jobs:
         with:
           persist-credentials: false
           repository: swrlab/node-utils
-          ref: "main"
-          path: ".utils"
+          ref: 'main'
+          path: '.utils'
 
       - name: 🏗 Install Node.js
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - name: 📦 Install Yarn
+      - name: 🛠 Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: 📦 Enable Corepack
         run: corepack enable
 
       - name: 📦 Install Dependencies (if `install:all`)
