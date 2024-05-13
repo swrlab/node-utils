@@ -2,13 +2,9 @@
 
 This is a quick guide and some notes about SWR Audio Lab packages on [npmjs.com](https://www.npmjs.com/).
 
-- [SWR Audio Lab on npm](#swr-audio-lab-on-npm)
-  - [Security](#security)
-  - [Publishing](#publishing)
-
 ## Security
 
-Two-factor authentication (2FA) is enabled for all of SWR Audio Lab's packages (published as `@swrlab`).  
+Two-factor authentication (2FA) is enabled for all of SWR Audio Lab's packages (published as `@swrlab`).
 To set up 2FA for your account, visit this guide: [docs.npmjs.com/configuring-two-factor-authentication](https://docs.npmjs.com/configuring-two-factor-authentication).
 
 ## Publishing

@@ -2,17 +2,6 @@
 
 This repository contains several frequently used packages and scripts for easier access and maintenance.
 
-- [SWR Audio Lab / Node.js Utils](#swr-audio-lab--nodejs-utils)
-  - [Install](#install)
-  - [Packages](#packages)
-  - [Scripts](#scripts)
-    - [ARD Category Remapper](#ard-category-remapper)
-    - [ARD Core ID generator](#ard-core-id-generator)
-    - [ARD Core Publisher Remapper](#ard-core-publisher-remapper)
-  - [Publish to npm](#publish-to-npm)
-  - [Changelog](#changelog)
-  - [License](#license)
-
 ## Install
 
 Packages are meant to be imported into other projects:
