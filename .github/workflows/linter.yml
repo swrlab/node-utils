@@ -26,6 +26,11 @@ on:
         required: false
         type: boolean
         default: true
+      javascript-es-config-file:
+        description: 'Path to the ESLint configuration file'
+        required: false
+        type: string
+        default: '/.eslintrc.json'
 
 env:
   CSS_FILE_NAME: /.stylelintrc.json
@@ -35,7 +40,7 @@ env:
   FILTER_REGEX_EXCLUDE: .*(ati-smarttag.js|skycons.js|.github/workflows/*|docs/ARCHITECTURE/*|traffic/sftp/*|tmp/*|.mp3|.php|.gpg|.drawio|demo.ejs)
   IGNORE_GITIGNORED_FILES: true
   JAVASCRIPT_DEFAULT_STYLE: prettier
-  JAVASCRIPT_ES_CONFIG_FILE: /.eslintrc.json
+  JAVASCRIPT_ES_CONFIG_FILE: ${{ inputs.javascript-es-config-file }}
   JSCPD_CONFIG_FILE: /.utils/.github/linters/jscpd.json
   KUBERNETES_KUBEVAL_OPTIONS: --ignore-missing-schemas
   LINTER_RULES_PATH: /
