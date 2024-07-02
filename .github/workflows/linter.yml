@@ -163,7 +163,6 @@ jobs:
           bun-version: latest
 
       - name: 📦 Enable Corepack
-        if: inputs.use-bun != true
         run: corepack enable
 
       - name: 🛠 Use Bun (if `use-bun`)
