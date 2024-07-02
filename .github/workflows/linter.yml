@@ -11,6 +11,11 @@ on:
         required: false
         type: boolean
         default: false
+      use-bun:
+        description: 'Use Bun instead of yarn'
+        required: false
+        type: boolean
+        default: false
       generate-keys:
         description: 'Whether to run command for dummy key generation'
         required: false
