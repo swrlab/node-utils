@@ -178,9 +178,13 @@ jobs:
         if: inputs.install-all != true && inputs.use-bun != true
         run: yarn install
 
-      - name: 🔑 Generate dummy keys
-        if: inputs.generate-keys == true
+      - name: 🔑 Generate dummy keys (via yarn)
+        if: inputs.generate-keys == true && inputs.use-bun != true
         run: yarn keys:generate
+
+      - name: 🔑 Generate dummy keys (via bun)
+        if: inputs.generate-keys == true && inputs.use-bun == true
+        run: bun run keys:generate
 
       - name: 📚 Lint Code Base
         uses: docker://github/super-linter:v4
