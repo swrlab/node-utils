@@ -158,14 +158,19 @@ jobs:
           bun-version: latest
 
       - name: 📦 Enable Corepack
+        if: inputs.use-bun != true
         run: corepack enable
+
+      - name: 🛠 Use Bun (if `use-bun`)
+        if: inputs.use-bun == true
+        run: bun install
 
       - name: 📦 Install Dependencies (if `install:all`)
         if: inputs.install-all == true
         run: yarn -v && yarn && yarn install:all
 
       - name: 📦 Install Dependencies (if `install`)
-        if: inputs.install-all != true
+        if: inputs.install-all != true && inputs.use-bun != true
         run: yarn install
 
       - name: 🔑 Generate dummy keys

@@ -1,4 +1,3 @@
-/* eslint-disable sonarjs/no-duplicate-string */
 /*
 
 	by SWR Audio Lab
