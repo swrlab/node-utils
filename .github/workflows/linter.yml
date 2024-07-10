@@ -35,7 +35,7 @@ on:
         description: 'Path to the ESLint configuration file'
         required: false
         type: string
-        default: '/.eslintrc.json'
+        default: '/eslint.config.mjs'
 
 env:
   CSS_FILE_NAME: /.stylelintrc.json

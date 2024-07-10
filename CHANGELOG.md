@@ -4,6 +4,10 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 
 ## Changelog
 
+- 2024-07-10 - v2.0.0
+
+  - refact!: remove aws-sdk integration (s3)
+
 - 2024-05-13 - v1.3.0
 
   - chore: update dependencies
