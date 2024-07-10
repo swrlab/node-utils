@@ -23,7 +23,10 @@ module.exports = async function (uri, _logPrefix, options) {
 		const path = structure.join('/')
 
 		// load file
-		const file = await this.sdk.gs.bucket(bucket).file(path).download()
+		const file = await this.sdk.gs
+			.bucket(bucket)
+			.file(path)
+			.download()
 
 		// return file
 		return Promise.resolve(file[0])
@@ -45,7 +48,9 @@ module.exports = async function (uri, _logPrefix, options) {
 		}
 
 		return Promise.reject(
-			new Error(`fetching url failed with status > ${file.statusCode}`)
+			new Error(
+				`fetching url failed with status > ${file.statusCode}`
+			)
 		)
 	}
 

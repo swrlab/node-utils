@@ -7,9 +7,7 @@
 		"url": "https://github.com/swrlab/node-utils"
 	},
 	"author": "SWR Audio Lab <lab@swr.de>",
-	"engines": {
-		"node": ">=20"
-	},
+	"license": "MIT",
 	"main": "./index.js",
 	"scripts": {
 		"ard:coreId": "node ./scripts/ard/coreId.js",
@@ -21,7 +19,6 @@
 		"outdated": "yarn upgrade-interactive",
 		"reinstall": "rm -rf node_modules && rm yarn.lock && touch yarn.lock && yarn"
 	},
-	"license": "MIT",
 	"dependencies": {
 		"@google-cloud/storage": "^7.11.3",
 		"abort-controller": "^3.0.0",
@@ -37,6 +34,9 @@
 		"eslint-plugin-json": "^4.0.0",
 		"mocha": "^10.6.0",
 		"prettier": "^3.3.2"
+	},
+	"engines": {
+		"node": ">=20"
 	},
 	"packageManager": "yarn@4.2.2",
 	"prettier": "@swrlab/style-guide/prettier"

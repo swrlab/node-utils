@@ -26,9 +26,7 @@ const deleteLocalFile = (that, filePath) =>
 	})
 
 module.exports = async function (uri, buffer, _logPrefix, resumable) {
-	let structure
-	let bucket
-	let path
+	let structure, bucket, path
 
 	if (uri.substr(0, 5).toLowerCase() === 'gs://') {
 		// google cloud storage
@@ -53,7 +51,9 @@ module.exports = async function (uri, buffer, _logPrefix, resumable) {
 		}
 
 		// upload file to gcs
-		await this.sdk.gs.bucket(bucket).upload(tempFilePath, bucketConfig)
+		await this.sdk.gs
+			.bucket(bucket)
+			.upload(tempFilePath, bucketConfig)
 
 		// delete local temp file
 		await deleteLocalFile(this, tempFilePath)

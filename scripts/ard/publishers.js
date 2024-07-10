@@ -17,29 +17,44 @@ const storage = new Storage({
 	logging: true,
 })
 
-const ARD_API_URL = process.env.ARD_DELIVER_API || 'https://deliver-test.ard.de/organization-service/'
-const ARD_API_HEADERS = { Authorization: `Basic ${Buffer.from(process.env.ARD_AUTH).toString('base64')}` }
+const ARD_API_URL =
+	process.env.ARD_DELIVER_API ||
+	'https://deliver-test.ard.de/organization-service/'
+const ARD_API_HEADERS = {
+	Authorization: `Basic ${Buffer.from(process.env.ARD_AUTH).toString('base64')}`,
+}
 
 const crawl = async () => {
 	const output = []
 
 	try {
-		const { string: publisherString } = await undici(`${ARD_API_URL}publishers?page=0&size=500`, {
-			headers: ARD_API_HEADERS,
-		})
+		const { string: publisherString } = await undici(
+			`${ARD_API_URL}publishers?page=0&size=500`,
+			{
+				headers: ARD_API_HEADERS,
+			}
+		)
 
 		const publishers = JSON.parse(publisherString)
 
 		for await (const publisher of publishers.elements) {
-			const { string: publisherInfoString } = await undici(publisher.href, {
-				headers: ARD_API_HEADERS,
-			})
+			const { string: publisherInfoString } = await undici(
+				publisher.href,
+				{
+					headers: ARD_API_HEADERS,
+				}
+			)
 			const publisherInfo = JSON.parse(publisherInfoString)
 
-			const { string: institutionInfoString } = await undici(publisherInfo.institution.href, {
-				headers: ARD_API_HEADERS,
-			})
-			const institutionInfo = JSON.parse(institutionInfoString)
+			const { string: institutionInfoString } = await undici(
+				publisherInfo.institution.href,
+				{
+					headers: ARD_API_HEADERS,
+				}
+			)
+			const institutionInfo = JSON.parse(
+				institutionInfoString
+			)
 
 			const details = {
 				_type: publisherInfo._type,
@@ -59,7 +74,10 @@ const crawl = async () => {
 			console.log(details)
 		}
 
-		await storage.save('tmp/ard-publishers.json', JSON.stringify(output))
+		await storage.save(
+			'tmp/ard-publishers.json',
+			JSON.stringify(output)
+		)
 	} catch (error) {
 		console.log(error)
 	}

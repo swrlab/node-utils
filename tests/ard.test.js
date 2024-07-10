@@ -15,7 +15,9 @@ const { createHashedId } = require('../packages/ard')
 describe('Test ARD Package', () => {
 	describe('Test ARD-CoreID Hash', () => {
 		it("createHashedId('test') = 0c171b2e54a30c11", () => {
-			expect(createHashedId('test')).to.equal('0c171b2e54a30c11')
+			expect(createHashedId('test')).to.equal(
+				'0c171b2e54a30c11'
+			)
 		})
 	})
 })

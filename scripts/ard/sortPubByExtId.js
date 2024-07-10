@@ -20,10 +20,16 @@ const sort = async () => {
 		const publisher = JSON.parse(input)
 
 		publisher.sort((a, b) => {
-			return parseInt(a.externalId) - parseInt(b.externalId)
+			return (
+				Number.parseInt(a.externalId) -
+				Number.parseInt(b.externalId)
+			)
 		})
 
-		await storage.save('tmp/ard-publishers-ordered.json', JSON.stringify(publisher))
+		await storage.save(
+			'tmp/ard-publishers-ordered.json',
+			JSON.stringify(publisher)
+		)
 	} catch (error) {
 		console.log(error)
 	}

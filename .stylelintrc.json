@@ -4,7 +4,11 @@
 		"stylelint-config-standard-scss",
 		"stylelint-config-recommended-vue/scss"
 	],
-	"ignoreFiles": ["**/static-ui/dist/*", "**/ati-smarttag.js", "**/skycons.js"],
+	"ignoreFiles": [
+		"**/static-ui/dist/*",
+		"**/ati-smarttag.js",
+		"**/skycons.js"
+	],
 	"rules": {
 		"declaration-empty-line-before": null,
 		"indentation": "tab",

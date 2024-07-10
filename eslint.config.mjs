@@ -30,6 +30,8 @@ export default audiolab(
 				// a bit more complex to fix (but nice idea in general)
 				'import/no-default-export': 'off',
 				'no-console': 'off',
+				'func-names': 'off',
+				'jsonc/sort-keys': 'off',
 
 				// harder to fix
 			},
