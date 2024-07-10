@@ -1,7 +1,14 @@
 {
 	"defaultSeverity": "warning",
-	"extends": ["stylelint-config-standard-scss", "stylelint-config-recommended-vue/scss"],
-	"ignoreFiles": ["**/static-ui/dist/*", "**/ati-smarttag.js", "**/skycons.js"],
+	"extends": [
+		"stylelint-config-standard-scss",
+		"stylelint-config-recommended-vue/scss"
+	],
+	"ignoreFiles": [
+		"**/static-ui/dist/*",
+		"**/ati-smarttag.js",
+		"**/skycons.js"
+	],
 	"rules": {
 		"declaration-empty-line-before": null,
 		"indentation": "tab",

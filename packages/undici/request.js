@@ -1,5 +1,3 @@
-/* eslint-disable prefer-promise-reject-errors */
-
 // load node utils
 const undici = require('undici')
 const AbortController = require('abort-controller')
@@ -19,7 +17,8 @@ module.exports = async (url, options) => {
 
 	// calculcate redirect
 	const maxRedirections =
-		options?.maxRedirections !== null && options?.maxRedirections !== undefined
+		options?.maxRedirections !== null &&
+		options?.maxRedirections !== undefined
 			? options.maxRedirections
 			: 5
 
@@ -31,24 +30,34 @@ module.exports = async (url, options) => {
 		signal: abortController.signal,
 		maxRedirections,
 	}
-	if (options?.headers) requestOptions.headers = { ...requestOptions.headers, ...options.headers }
+	if (options?.headers)
+		requestOptions.headers = {
+			...requestOptions.headers,
+			...options.headers,
+		}
 
 	// make actual request
-	const { statusCode, headers, trailers, body } = await undici.request(url, requestOptions)
+	const { statusCode, headers, trailers, body } = await undici.request(
+		url,
+		requestOptions
+	)
 
 	// remove timeout since request finished beforehand
 	clearTimeout(abortTimeout)
 
 	// set ok
 	const ok = statusCode >= 200 && statusCode < 300
-	if (!ok && (!options || options?.reject !== false)) return Promise.reject({ statusCode, ok, headers, url })
+	if (!ok && (!options || options?.reject !== false))
+		return Promise.reject({ statusCode, ok, headers, url })
 
 	// turn stream into string
 	const { string, buffer } = await convertReadableStream(body)
 
 	// detect/ set redirect
 	const redirect =
-		statusCode >= 300 && statusCode < 400 && headers.location ? new URL(headers.location, url) : null
+		statusCode >= 300 && statusCode < 400 && headers.location
+			? new URL(headers.location, url)
+			: null
 
 	// fetch header vars
 	const contentType = headers['content-type']
@@ -56,7 +65,11 @@ module.exports = async (url, options) => {
 	// parse json if set
 	let json
 	try {
-		json = contentType?.indexOf('application/json') !== -1 ? JSON.parse(string) : null
+		json =
+			contentType?.indexOf('application/json') !== -1
+				? JSON.parse(string)
+				: null
+		// eslint-disable-next-line no-unused-vars
 	} catch (error) {
 		json = null
 	}
