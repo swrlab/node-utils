@@ -7,6 +7,8 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 - 2024-07-10 - v2.0.0
 
   - refact!: remove aws-sdk integration (s3)
+  - refact!: remove `ard:publishers` and `ard:pub-sort` scripts
+  - chore!: switch super-linter ESLint config default to `/eslint.config.mjs`
 
 - 2024-05-13 - v1.3.0
 

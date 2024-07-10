@@ -12,8 +12,6 @@
 	"scripts": {
 		"ard:coreId": "node ./scripts/ard/coreId.js",
 		"ard:categories": "node -r dotenv/config scripts/ard/categories.js",
-		"ard:publishers": "node -r dotenv/config scripts/ard/publishers.js",
-		"ard:pub-sort": "node -r dotenv/config scripts/ard/sortPubByExtId.js",
 		"lint": "eslint .",
 		"test": "mocha tests/**.js -r dotenv/config",
 		"outdated": "yarn upgrade-interactive",
