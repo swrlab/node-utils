@@ -22,7 +22,7 @@
 		"abort-controller": "^3.0.0",
 		"luxon": "3.5.0",
 		"node-crc": "swrlab/node-crc#v2.1.0",
-		"undici": "6.19.5"
+		"undici": "6.19.7"
 	},
 	"devDependencies": {
 		"@swrlab/style-guide": "https://github.com/swrlab/style-guide.git",
