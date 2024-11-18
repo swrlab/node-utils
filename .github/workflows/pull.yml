@@ -38,10 +38,10 @@ jobs:
         run: bun install
 
       - name: 🧪 Run Lint
-        run: bun lint
+        run: bun run lint
 
       - name: 🧪 Run Tests (in Bun)
-        run: bun test
+        run: bun run test
 
       - name: 🧪 Run Tests (in Node)
         run: npm run test
