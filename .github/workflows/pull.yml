@@ -1,7 +1,6 @@
 name: Test on Pull
 
 on:
-  workflow_dispatch:
   pull_request_target:
     types: [labeled]
 
