@@ -4,6 +4,10 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 
 ## Changelog
 
+- 2024-11-18 - v2.0.3
+
+  - chore: update dependencies
+
 - 2024-10-24 - v2.0.2
 
   - chore: fix node-crc dependency
