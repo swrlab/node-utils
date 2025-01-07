@@ -25,39 +25,27 @@ describe('Test Numbers Package', () => {
 
 	describe('Test addTrailingZeros', () => {
 		it("addTrailingZeros(1, 5) = '1.00000'", () => {
-			expect(numbers.addTrailingZeros(1, 5)).to.equal(
-				'1.00000'
-			)
+			expect(numbers.addTrailingZeros(1, 5)).to.equal('1.00000')
 		})
 
 		it("addTrailingZeros(1.1, 5) = '1.10000'", () => {
-			expect(numbers.addTrailingZeros(1.1, 5)).to.equal(
-				'1.10000'
-			)
+			expect(numbers.addTrailingZeros(1.1, 5)).to.equal('1.10000')
 		})
 
 		it("addTrailingZeros('1.2', 5) = '1.20000'", () => {
-			expect(numbers.addTrailingZeros('1.2', 5)).to.equal(
-				'1.20000'
-			)
+			expect(numbers.addTrailingZeros('1.2', 5)).to.equal('1.20000')
 		})
 
 		it("addTrailingZeros(2, 2, ',') = '2,00'", () => {
-			expect(numbers.addTrailingZeros(2, 2, ',')).to.equal(
-				'2,00'
-			)
+			expect(numbers.addTrailingZeros(2, 2, ',')).to.equal('2,00')
 		})
 
 		it("addTrailingZeros(2.1, 2, ',') = '2,10'", () => {
-			expect(numbers.addTrailingZeros(2.1, 2, ',')).to.equal(
-				'2,10'
-			)
+			expect(numbers.addTrailingZeros(2.1, 2, ',')).to.equal('2,10')
 		})
 
 		it("addTrailingZeros('2,2', 2, ','') = '2,20'", () => {
-			expect(
-				numbers.addTrailingZeros('2,2', 2, ',')
-			).to.equal('2,20')
+			expect(numbers.addTrailingZeros('2,2', 2, ',')).to.equal('2,20')
 		})
 	})
 
@@ -67,9 +55,7 @@ describe('Test Numbers Package', () => {
 		})
 
 		it('getAverage([1.2, 2.4, 3.6], 1) = 2.4', () => {
-			expect(numbers.getAverage([1.2, 2.4, 3.6], 1)).to.equal(
-				2.4
-			)
+			expect(numbers.getAverage([1.2, 2.4, 3.6], 1)).to.equal(2.4)
 		})
 	})
 
@@ -85,15 +71,11 @@ describe('Test Numbers Package', () => {
 
 	describe('Test getRandomInRange', () => {
 		it('getRandomInRange(1, 5) = 1,2,3,4 or 5', () => {
-			expect([1, 2, 3, 4, 5]).to.include(
-				numbers.getRandomInRange(1, 5)
-			)
+			expect([1, 2, 3, 4, 5]).to.include(numbers.getRandomInRange(1, 5))
 		})
 
 		it('getRandomInRange(5, 9) = 5,6,7,8 or 9', () => {
-			expect([5, 6, 7, 8, 9]).to.include(
-				numbers.getRandomInRange(5, 9)
-			)
+			expect([5, 6, 7, 8, 9]).to.include(numbers.getRandomInRange(5, 9))
 		})
 	})
 
@@ -139,9 +121,7 @@ describe('Test Numbers Package', () => {
 
 	describe('Test toReadable', () => {
 		it("toReadable(1234567) = '1.234.567'", () => {
-			expect(numbers.toReadable(1234567)).to.equal(
-				'1.234.567'
-			)
+			expect(numbers.toReadable(1234567)).to.equal('1.234.567')
 		})
 	})
 })

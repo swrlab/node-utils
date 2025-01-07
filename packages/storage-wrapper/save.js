@@ -51,9 +51,7 @@ module.exports = async function (uri, buffer, _logPrefix, resumable) {
 		}
 
 		// upload file to gcs
-		await this.sdk.gs
-			.bucket(bucket)
-			.upload(tempFilePath, bucketConfig)
+		await this.sdk.gs.bucket(bucket).upload(tempFilePath, bucketConfig)
 
 		// delete local temp file
 		await deleteLocalFile(this, tempFilePath)

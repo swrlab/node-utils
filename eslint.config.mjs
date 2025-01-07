@@ -1,4 +1,4 @@
-import { audiolab } from '@swrlab/style-guide/eslint/index'
+import { audiolab } from '@swrlab/style-guide/eslint/presets'
 
 export default audiolab(
 	[
@@ -7,14 +7,27 @@ export default audiolab(
 		},
 		{
 			rules: {
-				// previous config (does not trigger errors)
-				// 'import/no-extraneous-dependencies': 0,
-				// radix: 0,
-				// 'no-param-reassign': [2, { props: false }],
-				// 'no-restricted-syntax': 0,
-				// 'no-underscore-dangle': 0,
-				// 'no-return-assign': ['error', 'except-parens'],
-				// 'one-var': 0,
+				'n/no-missing-import': 'off',
+				'n/no-path-concat': 'off',
+				// 'vue/no-unused-component': 'off',
+				'vue/no-unused-components': 'off',
+				'n/no-unsupported-features/node-builtins': 'off',
+				'n/no-missing-require': 'off',
+				'no-unused-vars': 'off',
+				eqeqeq: 'off',
+				'no-undef': 'off',
+				// 'prefer-const': 'off',
+				'import/no-extraneous-dependencies': 'off',
+				'n/no-extraneous-require': 'off',
+
+				'vue/no-deprecated-destroyed-lifecycle': 'off',
+				'prefer-template': 'off',
+				'sonarjs/cognitive-complexity': 'off',
+
+				// fixable
+				'one-var': 'off',
+				'prefer-const': 'off',
+				'no-var': 'off',
 
 				// should be fixed / easy to fix
 				'prefer-promise-reject-errors': 'off',
@@ -24,7 +37,6 @@ export default audiolab(
 				'n/no-unpublished-import': 'off',
 				'n/no-unpublished-require': 'off',
 				'eslint-comments/require-description': 'off',
-				'vue/multi-word-component-names': 'off',
 				// could be fixed when converting to ESM
 				'import/order': 'off',
 				// a bit more complex to fix (but nice idea in general)
@@ -32,13 +44,11 @@ export default audiolab(
 				'no-console': 'off',
 				'func-names': 'off',
 				'jsonc/sort-keys': 'off',
-
-				// harder to fix
 			},
 		},
 	],
 	{
-		prettier: true,
+		prettier: false,
 		comments: true,
 	}
 )

@@ -1,6 +1,0 @@
-{
-	"threshold": 8,
-	"reporters": ["consoleFull"],
-	"ignore": ["**/models/*.json"],
-	"absolute": true
-}

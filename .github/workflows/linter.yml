@@ -3,8 +3,6 @@ name: Linter
 on:
   workflow_dispatch:
   pull_request:
-    branches-ignore:
-      - dependabot/**
 
 jobs:
   lint:
@@ -21,7 +19,10 @@ jobs:
           bun-version: latest
 
       - name: 📦 Install Dependencies
-        run: bun install
+        run: bun install --frozen-lockfile
 
       - name: 📚 Lint Code Base
         run: bun run lint
+
+      - name: 📚 Run Tests
+        run: bun run test

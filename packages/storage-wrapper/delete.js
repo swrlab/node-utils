@@ -26,10 +26,7 @@ module.exports = async function (uri) {
 		return Promise.resolve()
 	}
 
-	if (
-		uri.substr(0, 7).toLowerCase() === 'http://' ||
-		uri.substr(0, 8).toLowerCase() === 'https://'
-	) {
+	if (uri.substr(0, 7).toLowerCase() === 'http://' || uri.substr(0, 8).toLowerCase() === 'https://') {
 		// return ok
 		return Promise.resolve()
 	}

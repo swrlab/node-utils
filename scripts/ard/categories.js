@@ -21,14 +21,10 @@ const crawl = async () => {
 
 	const remapItem = (item) => {
 		// remap children if available
-		const children = item.children
-			? item.children.map(remapItem)
-			: null
+		const children = item.children ? item.children.map(remapItem) : null
 
 		// set main or sub prefix
-		const prefix = item.children
-			? CORE_PREFIX_GENRE
-			: CORE_PREFIX_SUBGENRE
+		const prefix = item.children ? CORE_PREFIX_GENRE : CORE_PREFIX_SUBGENRE
 
 		// build item
 		const category = {
@@ -49,10 +45,7 @@ const crawl = async () => {
 
 	const tree = categories.map(remapItem)
 
-	await storage.save(
-		'data/ard/categories.json',
-		JSON.stringify({ tree, list }, null, '\t')
-	)
+	await storage.save('data/ard/categories.json', JSON.stringify({ tree, list }, null, '\t'))
 }
 
 crawl()
