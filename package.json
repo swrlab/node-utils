@@ -12,7 +12,7 @@
 	"scripts": {
 		"ard:coreId": "node ./scripts/ard/coreId.js",
 		"lint": "eslint .",
-		"test": "bunx mocha tests/**.mjs"
+		"test": "bunx --bun mocha tests/**.mjs"
 	},
 	"dependencies": {
 		"@google-cloud/storage": "^7.14.0",
