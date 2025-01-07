@@ -30,16 +30,6 @@ Then run the desired script.
 
 ## Scripts
 
-### ARD Category Remapper
-
-Use the publicly available ARD categories and reformat them into our structure:
-
-```sh
-yarn ard:categories
-```
-
-The output is written to a file: [`data/ard/categories.json`](./data/ard/categories.json) (also kept in state in this repository).
-
 ### ARD Core ID generator
 
 A CLI to encode strings into the ARD Core ID standard:

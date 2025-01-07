@@ -7,6 +7,7 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 - chore: update dependencies (incl. undici to v7.2.0)
 - refact: update changelog format
 - refact: swap super-linter for repo-specific config
+- refact: remove ard category parser
 
 ## 2024-11-18 - v2.0.3
 

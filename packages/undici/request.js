@@ -1,5 +1,6 @@
 // load node utils
-const undici = require('node:undici')
+// eslint-disable-next-line unicorn/prefer-node-protocol
+const undici = require('undici')
 const AbortController = require('abort-controller')
 
 // fetch options and utils
