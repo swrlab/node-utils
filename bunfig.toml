@@ -1,0 +1,7 @@
+telemetry = false
+
+[install]
+saveTextLockfile = true
+
+[install.scopes]
+jsr = "https://npm.jsr.io"
