@@ -4,6 +4,8 @@ by [**SWR Audio Lab**](https://lab.swr.de/)
 
 ## 2025-01-07 - v2.1.0
 
+The next major version of this package will remove `@swrlab/utils/packages/date` - please migrate to [`@frytg/dates`](https://jsr.io/@frytg/dates), which is ESM-ready!
+
 - chore: update dependencies (incl. undici to v7.2.0)
 - refact: update changelog format
 - refact: swap super-linter for repo-specific config
