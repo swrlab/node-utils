@@ -5,11 +5,8 @@
 
 */
 
-// Add eslint exceptions for chai
-/* global describe it */
-
-const { expect } = require('chai')
-const { createHashedId } = require('../packages/ard')
+import { expect } from 'chai'
+import { createHashedId } from '../packages/ard'
 
 // Test ARD Package
 describe('Test ARD Package', () => {

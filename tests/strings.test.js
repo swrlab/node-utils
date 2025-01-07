@@ -8,8 +8,8 @@
 // Add eslint exceptions for chai
 /* global describe it */
 
-const { expect } = require('chai')
-const strings = require('../packages/strings')
+import { expect } from 'chai'
+import * as strings from '../packages/strings'
 
 // Test Strings Package
 describe('Test Strings Package', () => {

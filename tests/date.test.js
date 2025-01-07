@@ -8,8 +8,8 @@
 // Add eslint exceptions for chai
 /* global describe it */
 
-const { expect } = require('chai')
-const date = require('../packages/date')
+import { expect } from 'chai'
+import * as date from '../packages/date'
 
 const testDate = '2038-01-19T03:14:08.000'
 const relativeTime = 2147483647000 - new Date().getTime()
