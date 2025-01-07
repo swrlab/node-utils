@@ -30,16 +30,6 @@ Then run the desired script.
 
 ## Scripts
 
-### ARD Category Remapper
-
-Use the publicly available ARD categories and reformat them into our structure:
-
-```sh
-yarn ard:categories
-```
-
-The output is written to a file: [`data/ard/categories.json`](./data/ard/categories.json) (also kept in state in this repository).
-
 ### ARD Core ID generator
 
 A CLI to encode strings into the ARD Core ID standard:
@@ -57,16 +47,6 @@ my-string-to-encode
 OUTPUT (CRC64-ECMA182):
 6a80b80f748c9b50
 ```
-
-### ARD Core Publisher Remapper
-
-Download all publishers and remap them into our format:
-
-```sh
-yarn ard:publishers
-```
-
-The output is written to a file: `tmp/ard-publishers.json` (the state is not in this repository, but likely still in [`ard-eventhub/.../coreApi.json`](https://github.com/swrlab/ard-eventhub/blob/main/src/data/coreApi.json)).
 
 ## Publish to npm
 

@@ -5,10 +5,7 @@
 */
 
 module.exports = async function (sourceUri, destinationUri, keepOriginal) {
-	if (
-		sourceUri.substr(0, 5).toLowerCase() === 'gs://' &&
-		destinationUri.substr(0, 5).toLowerCase() === 'gs://'
-	) {
+	if (sourceUri.substr(0, 5).toLowerCase() === 'gs://' && destinationUri.substr(0, 5).toLowerCase() === 'gs://') {
 		// google to google transfer
 
 		// parse source
@@ -19,16 +16,10 @@ module.exports = async function (sourceUri, destinationUri, keepOriginal) {
 		// move file within gcs
 		if (keepOriginal !== true) {
 			// move file
-			await this.sdk.gs
-				.bucket(bucket)
-				.file(path)
-				.move(destinationUri)
+			await this.sdk.gs.bucket(bucket).file(path).move(destinationUri)
 		} else {
 			// copy file
-			await this.sdk.gs
-				.bucket(bucket)
-				.file(path)
-				.copy(destinationUri)
+			await this.sdk.gs.bucket(bucket).file(path).copy(destinationUri)
 		}
 
 		// return ok

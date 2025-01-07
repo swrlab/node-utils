@@ -1,4 +1,5 @@
 // load node utils
+// eslint-disable-next-line unicorn/prefer-node-protocol
 const undici = require('undici')
 const AbortController = require('abort-controller')
 
@@ -17,10 +18,7 @@ module.exports = async (url, options) => {
 
 	// calculcate redirect
 	const maxRedirections =
-		options?.maxRedirections !== null &&
-		options?.maxRedirections !== undefined
-			? options.maxRedirections
-			: 5
+		options?.maxRedirections !== null && options?.maxRedirections !== undefined ? options.maxRedirections : 5
 
 	// prepare options
 	const requestOptions = {
@@ -37,27 +35,20 @@ module.exports = async (url, options) => {
 		}
 
 	// make actual request
-	const { statusCode, headers, trailers, body } = await undici.request(
-		url,
-		requestOptions
-	)
+	const { statusCode, headers, trailers, body } = await undici.request(url, requestOptions)
 
 	// remove timeout since request finished beforehand
 	clearTimeout(abortTimeout)
 
 	// set ok
 	const ok = statusCode >= 200 && statusCode < 300
-	if (!ok && (!options || options?.reject !== false))
-		return Promise.reject({ statusCode, ok, headers, url })
+	if (!ok && (!options || options?.reject !== false)) return Promise.reject({ statusCode, ok, headers, url })
 
 	// turn stream into string
 	const { string, buffer } = await convertReadableStream(body)
 
 	// detect/ set redirect
-	const redirect =
-		statusCode >= 300 && statusCode < 400 && headers.location
-			? new URL(headers.location, url)
-			: null
+	const redirect = statusCode >= 300 && statusCode < 400 && headers.location ? new URL(headers.location, url) : null
 
 	// fetch header vars
 	const contentType = headers['content-type']
@@ -65,11 +56,7 @@ module.exports = async (url, options) => {
 	// parse json if set
 	let json
 	try {
-		json =
-			contentType?.indexOf('application/json') !== -1
-				? JSON.parse(string)
-				: null
-		// eslint-disable-next-line no-unused-vars
+		json = contentType?.indexOf('application/json') !== -1 ? JSON.parse(string) : null
 	} catch (error) {
 		json = null
 	}

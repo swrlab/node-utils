@@ -20,19 +20,13 @@ module.exports = async function (uri, ttl) {
 		}
 
 		// create link
-		const [url] = await this.sdk.gs
-			.bucket(bucket)
-			.file(path)
-			.getSignedUrl(config)
+		const [url] = await this.sdk.gs.bucket(bucket).file(path).getSignedUrl(config)
 
 		// return link
 		return Promise.resolve(url)
 	}
 
-	if (
-		uri.substr(0, 7).toLowerCase() === 'http://' ||
-		uri.substr(0, 8).toLowerCase() === 'https://'
-	) {
+	if (uri.substr(0, 7).toLowerCase() === 'http://' || uri.substr(0, 8).toLowerCase() === 'https://') {
 		// return link
 		return Promise.resolve(uri)
 	}

@@ -44,9 +44,9 @@ Advanced usage:
 ```js
 const data = await undici(someApiUrl, {
   method: 'GET',
-  timeout: 6e3, 
-  reject: false, 
-  maxRedirections: 5
+  timeout: 6e3,
+  reject: false,
+  maxRedirections: 5,
 })
 ```
 

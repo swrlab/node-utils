@@ -23,19 +23,13 @@ module.exports = async function (uri, _logPrefix, options) {
 		const path = structure.join('/')
 
 		// load file
-		const file = await this.sdk.gs
-			.bucket(bucket)
-			.file(path)
-			.download()
+		const file = await this.sdk.gs.bucket(bucket).file(path).download()
 
 		// return file
 		return Promise.resolve(file[0])
 	}
 
-	if (
-		uri.substr(0, 7).toLowerCase() === 'http://' ||
-		uri.substr(0, 8).toLowerCase() === 'https://'
-	) {
+	if (uri.substr(0, 7).toLowerCase() === 'http://' || uri.substr(0, 8).toLowerCase() === 'https://') {
 		// public http(s) endpoint
 		const file = await undici(uri, {
 			timeout: options?.timeout,
@@ -47,11 +41,7 @@ module.exports = async function (uri, _logPrefix, options) {
 			return Promise.resolve(file.buffer)
 		}
 
-		return Promise.reject(
-			new Error(
-				`fetching url failed with status > ${file.statusCode}`
-			)
-		)
+		return Promise.reject(new Error(`fetching url failed with status > ${file.statusCode}`))
 	}
 
 	// local file

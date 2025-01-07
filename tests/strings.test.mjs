@@ -8,8 +8,8 @@
 // Add eslint exceptions for chai
 /* global describe it */
 
-const { expect } = require('chai')
-const strings = require('../packages/strings')
+import { expect } from 'chai'
+import * as strings from '../packages/strings'
 
 // Test Strings Package
 describe('Test Strings Package', () => {
@@ -24,9 +24,7 @@ describe('Test Strings Package', () => {
 
 	describe('Test getObjectLength', () => {
 		it("getObjectLength({ hello: 'world' }) = 1", () => {
-			expect(
-				strings.getObjectLength({ hello: 'world' })
-			).to.equal(1)
+			expect(strings.getObjectLength({ hello: 'world' })).to.equal(1)
 		})
 
 		it("getObjectLength({ hello: 'world', foo: 'bar' }) = 2", () => {
@@ -45,9 +43,7 @@ describe('Test Strings Package', () => {
 		})
 
 		it("isArray({ hello: 'world' }) = false", () => {
-			expect(strings.isArray({ hello: 'world' })).to.equal(
-				false
-			)
+			expect(strings.isArray({ hello: 'world' })).to.equal(false)
 		})
 	})
 
@@ -57,9 +53,7 @@ describe('Test Strings Package', () => {
 		})
 
 		it("isEmptyArray(['hello world']) = false", () => {
-			expect(strings.isEmptyArray(['hello world'])).to.equal(
-				false
-			)
+			expect(strings.isEmptyArray(['hello world'])).to.equal(false)
 		})
 	})
 
@@ -69,9 +63,7 @@ describe('Test Strings Package', () => {
 		})
 
 		it("isEmptyObject({ hello: 'world' }) = false", () => {
-			expect(
-				strings.isEmptyObject({ hello: 'world' })
-			).to.equal(false)
+			expect(strings.isEmptyObject({ hello: 'world' })).to.equal(false)
 		})
 	})
 
@@ -81,23 +73,17 @@ describe('Test Strings Package', () => {
 		})
 
 		it("isEmptyString('hello world') = false", () => {
-			expect(strings.isEmptyString('hello world')).to.equal(
-				false
-			)
+			expect(strings.isEmptyString('hello world')).to.equal(false)
 		})
 	})
 
 	describe('Test isIncluded', () => {
 		it("isIncluded('hello world', 'hello') = true", () => {
-			expect(
-				strings.isIncluded('hello world', 'hello')
-			).to.equal(true)
+			expect(strings.isIncluded('hello world', 'hello')).to.equal(true)
 		})
 
 		it("isIncluded('hello world', 'earth') = false", () => {
-			expect(
-				strings.isIncluded('hello world', 'earth')
-			).to.equal(false)
+			expect(strings.isIncluded('hello world', 'earth')).to.equal(false)
 		})
 	})
 
@@ -113,9 +99,7 @@ describe('Test Strings Package', () => {
 
 	describe('Test isObject', () => {
 		it("isObject({ hello: 'world' }) = true", () => {
-			expect(strings.isObject({ hello: 'world' })).to.equal(
-				true
-			)
+			expect(strings.isObject({ hello: 'world' })).to.equal(true)
 		})
 
 		it("isObject('hello world') = false", () => {
@@ -135,9 +119,7 @@ describe('Test Strings Package', () => {
 
 	describe('Test notEmptyArray', () => {
 		it("notEmptyArray(['hello world']) = true", () => {
-			expect(strings.notEmptyArray(['hello world'])).to.equal(
-				true
-			)
+			expect(strings.notEmptyArray(['hello world'])).to.equal(true)
 		})
 
 		it('notEmptyArray([]) = false', () => {
@@ -147,9 +129,7 @@ describe('Test Strings Package', () => {
 
 	describe('Test notEmptyObject', () => {
 		it("notEmptyObject({ hello: 'world' }) = true", () => {
-			expect(
-				strings.notEmptyObject({ hello: 'world' })
-			).to.equal(true)
+			expect(strings.notEmptyObject({ hello: 'world' })).to.equal(true)
 		})
 
 		it('notEmptyObject({}) = false', () => {
@@ -159,9 +139,7 @@ describe('Test Strings Package', () => {
 
 	describe('Test notNullOrUndefined', () => {
 		it("notNullOrUndefined('hello world') = true", () => {
-			expect(
-				strings.notNullOrUndefined('hello world')
-			).to.equal(true)
+			expect(strings.notNullOrUndefined('hello world')).to.equal(true)
 		})
 
 		it('notNullOrUndefined(null) = false', () => {
@@ -169,59 +147,41 @@ describe('Test Strings Package', () => {
 		})
 
 		it('notNullOrUndefined(undefined) = false', () => {
-			expect(strings.notNullOrUndefined(undefined)).to.equal(
-				false
-			)
+			expect(strings.notNullOrUndefined(undefined)).to.equal(false)
 		})
 	})
 
 	describe('Test pluralize', () => {
 		it("pluralize(1, 'Apple') = '1 Apple'", () => {
-			expect(strings.pluralize(1, 'Apple')).to.equal(
-				'1 Apple'
-			)
+			expect(strings.pluralize(1, 'Apple')).to.equal('1 Apple')
 		})
 
 		it("pluralize(1000, 'Apple') = '1.000 Apples'", () => {
-			expect(strings.pluralize(1000, 'Apple')).to.equal(
-				'1.000 Apples'
-			)
+			expect(strings.pluralize(1000, 'Apple')).to.equal('1.000 Apples')
 		})
 
 		it("pluralize(1, 'Child', 'Children') = '1 Child'", () => {
-			expect(
-				strings.pluralize(1, 'Child', 'Children')
-			).to.equal('1 Child')
+			expect(strings.pluralize(1, 'Child', 'Children')).to.equal('1 Child')
 		})
 
 		it("pluralize(1000, 'Child', 'Children') = '1.000 Children'", () => {
-			expect(
-				strings.pluralize(1000, 'Child', 'Children')
-			).to.equal('1.000 Children')
+			expect(strings.pluralize(1000, 'Child', 'Children')).to.equal('1.000 Children')
 		})
 	})
 
 	describe('Test removeDoubleSpaces', () => {
 		it("removeDoubleSpaces('hello  world')) = 'hello world'", () => {
-			expect(
-				strings.removeDoubleSpaces('hello  world')
-			).to.equal('hello world')
+			expect(strings.removeDoubleSpaces('hello  world')).to.equal('hello world')
 		})
 
 		it("removeDoubleSpaces('hello  world  once  again')) = 'hello world once again'", () => {
-			expect(
-				strings.removeDoubleSpaces(
-					'hello  world  once  again'
-				)
-			).to.equal('hello world once again')
+			expect(strings.removeDoubleSpaces('hello  world  once  again')).to.equal('hello world once again')
 		})
 	})
 
 	describe('Test toHex', () => {
 		it("toHex('hello world')) = '68656c6c6f20776f726c64'", () => {
-			expect(strings.toHex('hello world')).to.equal(
-				'68656c6c6f20776f726c64'
-			)
+			expect(strings.toHex('hello world')).to.equal('68656c6c6f20776f726c64')
 		})
 	})
 })

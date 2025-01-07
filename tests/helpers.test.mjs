@@ -8,8 +8,8 @@
 // Add eslint exceptions for chai
 /* global describe it */
 
-const { expect } = require('chai')
-const helpers = require('../packages/helpers')
+import { expect } from 'chai'
+import * as helpers from '../packages/helpers'
 
 // Test Helpers Package
 describe('Test Helpers Package', () => {

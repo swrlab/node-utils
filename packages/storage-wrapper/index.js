@@ -11,8 +11,7 @@ const { Storage } = require('@google-cloud/storage')
 // create wrapper
 function StorageWrapper(config) {
 	// check config
-	if (!config || !config.gs)
-		return Promise.reject(new Error('storage config invalid'))
+	if (!config || !config.gs) return Promise.reject(new Error('storage config invalid'))
 
 	// enable SDKs
 	this.sdk = {}
