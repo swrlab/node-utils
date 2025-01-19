@@ -19,7 +19,7 @@
 		"abort-controller": "^3.0.0",
 		"luxon": "3.5.0",
 		"node-crc": "https://github.com/swrlab/node-crc#v2.1.0",
-		"undici": "7.2.0"
+		"undici": "7.2.3"
 	},
 	"devDependencies": {
 		"@swrlab/style-guide": "^1.0.3",
