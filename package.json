@@ -23,7 +23,7 @@
 	},
 	"devDependencies": {
 		"@swrlab/style-guide": "^1.0.3",
-		"chai": "5.1.2",
+		"chai": "5.2.0",
 		"eslint": "^9.17.0",
 		"eslint-plugin-json": "^4.0.1",
 		"mocha": "^11.0.1",
