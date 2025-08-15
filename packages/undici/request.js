@@ -16,17 +16,12 @@ module.exports = async (url, options) => {
 		abortController.abort()
 	}, options?.timeout || DEFAULT_TIMEOUT)
 
-	// calculcate redirect
-	const maxRedirections =
-		options?.maxRedirections !== null && options?.maxRedirections !== undefined ? options.maxRedirections : 5
-
 	// prepare options
 	const requestOptions = {
 		..._options,
 		method: options?.method || 'GET',
 		body: options?.body || undefined,
 		signal: abortController.signal,
-		maxRedirections,
 	}
 	if (options?.headers)
 		requestOptions.headers = {
