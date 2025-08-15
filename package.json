@@ -1,6 +1,6 @@
 {
 	"name": "@swrlab/utils",
-	"version": "2.1.0",
+	"version": "2.2.0",
 	"description": "Wrapping common SWR Audio Lab utils",
 	"repository": {
 		"type": "git",
@@ -15,19 +15,19 @@
 		"test": "bunx --bun mocha tests/**.mjs"
 	},
 	"dependencies": {
-		"@google-cloud/storage": "^7.14.0",
+		"@google-cloud/storage": "^7.16.0",
 		"abort-controller": "^3.0.0",
-		"luxon": "3.5.0",
+		"luxon": "3.7.1",
 		"node-crc": "https://github.com/swrlab/node-crc#v2.1.0",
-		"undici": "7.2.0"
+		"undici": "7.13.0"
 	},
 	"devDependencies": {
 		"@swrlab/style-guide": "^1.0.3",
 		"chai": "5.1.2",
-		"eslint": "^9.17.0",
+		"eslint": "^9.33.0",
 		"eslint-plugin-json": "^4.0.1",
-		"mocha": "^11.0.1",
-		"prettier": "^3.4.2"
+		"mocha": "^11.7.1",
+		"prettier": "^3.6.2"
 	},
 	"engines": {
 		"node": ">=20"
