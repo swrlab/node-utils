@@ -1,6 +1,7 @@
 {
 	"name": "@swrlab/utils",
-	"version": "2.2.0",
+	"version": "3.0.0",
+	"type": "module",
 	"description": "Wrapping common SWR Audio Lab utils",
 	"license": "MIT",
 	"repository": {
@@ -8,7 +9,7 @@
 		"url": "https://github.com/swrlab/node-utils"
 	},
 	"author": "SWR Audio Lab <lab@swr.de>",
-	"main": "./index.js",
+	"main": "./src/index.ts",
 	"publishConfig": {
 		"access": "public",
 		"provenance": true,
@@ -43,8 +44,11 @@
 	"devDependencies": {
 		"@swrlab/style-guide": "^2.0.7",
 		"@types/bun": "^1.2.21",
+		"@types/luxon": "^3.7.1",
 		"eslint": "^9.34.0",
-		"prettier": "^3.6.2"
+		"prettier": "^3.6.2",
+		"tsdown": "^0.14.2",
+		"typescript": "^5.9.2"
 	},
 	"devEngines": {
 		"runtime": {

@@ -28,6 +28,15 @@ Then run the desired script.
 - [Strings](./packages/strings) - Common string, array, object encoding and getter helpers
 - [Undici](./packages/undici) - Provides the latest install of [`undici-wrapper`](https://github.com/frytg/undici-wrapper), a wrapper around the [`undici`](https://undici.nodejs.org/) HTTP library
 
+### ARD
+
+```js
+import { createHashedId } from '@swrlab/utils/ard.js'
+
+// or globally
+import { ard } from '@swrlab/utils'
+```
+
 ## Scripts
 
 ### ARD Core ID generator

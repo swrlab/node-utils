@@ -2,12 +2,13 @@ import { audiolab } from '@swrlab/style-guide/eslint.js'
 
 export default audiolab(
 	{
-		prettier: true,
+		prettier: false,
 		comments: true,
 	},
 	[
 		{
 			name: 'node-utils/disabled-rules',
+			files: ['packages/**', 'utils/**'],
 			// because we disable some rules, there might be complaints about unused disable directives
 			linterOptions: {
 				reportUnusedDisableDirectives: false,

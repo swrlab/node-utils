@@ -1,6 +1,6 @@
 import assert from 'node:assert'
 import { describe, it } from 'node:test'
-import { createHashedId } from '../packages/ard/index.js'
+import { createHashedId } from '../src/ard/index.ts'
 
 describe('Test ARD Package', () => {
 	describe('Test ARD-CoreID Hash', () => {

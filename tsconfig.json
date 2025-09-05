@@ -1,0 +1,44 @@
+{
+	"compilerOptions": {
+		"target": "esnext",
+		"rootDir": "src",
+		"module": "nodenext",
+		// "lib": ["esnext"],
+		// "types": ["node"],
+		"resolveJsonModule": true,
+
+		"allowImportingTsExtensions": true,
+
+		// "noPropertyAccessFromIndexSignature": true,
+
+		// Recommended Options
+		"strict": true,
+		"exactOptionalPropertyTypes": true,
+
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitOverride": true,
+		// Style Options
+		"noImplicitReturns": true,
+		// "noEmit": true,
+
+		// Stricter Typechecking Options
+		"noUncheckedIndexedAccess": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"declaration": true,
+		"declarationMap": true,
+		"isolatedDeclarations": true,
+		"outDir": "dist",
+		// Other Outputs
+		"sourceMap": true,
+		"erasableSyntaxOnly": true,
+		"isolatedModules": true,
+		"verbatimModuleSyntax": true, // --> isolatedModules
+		"rewriteRelativeImportExtensions": true,
+		// "jsx": "react-jsx",
+		// "moduleDetection": "force",
+		"skipLibCheck": true,
+		"noUncheckedSideEffectImports": true
+	},
+	"include": ["src/**/*"]
+}

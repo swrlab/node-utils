@@ -2,7 +2,7 @@
  * @fileoverview A port of the ard test to bun using bun's `expect` (that behaves like jest).
  */
 import { describe, expect, it } from 'bun:test'
-import { createHashedId } from '../packages/ard/index.js'
+import { createHashedId } from '../src/ard/index.ts'
 
 describe('Test ARD Package', () => {
 	describe('Test ARD-CoreID Hash', () => {
