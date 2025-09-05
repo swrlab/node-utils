@@ -1,54 +1,41 @@
-import { audiolab } from '@swrlab/style-guide/eslint/presets'
+import { audiolab } from '@swrlab/style-guide/eslint.js'
 
 export default audiolab(
+	{
+		prettier: false,
+		comments: true,
+	},
 	[
 		{
 			ignores: [],
 		},
 		{
+			name: 'node-utils/disabled-rules',
 			rules: {
-				'n/no-missing-import': 'off',
-				'n/no-path-concat': 'off',
-				// 'vue/no-unused-component': 'off',
-				'vue/no-unused-components': 'off',
-				'n/no-unsupported-features/node-builtins': 'off',
-				'n/no-missing-require': 'off',
-				'no-unused-vars': 'off',
-				eqeqeq: 'off',
-				'no-undef': 'off',
-				// 'prefer-const': 'off',
-				'import/no-extraneous-dependencies': 'off',
-				'n/no-extraneous-require': 'off',
-
-				'vue/no-deprecated-destroyed-lifecycle': 'off',
-				'prefer-template': 'off',
-				'sonarjs/cognitive-complexity': 'off',
-
-				// fixable
-				'one-var': 'off',
-				'prefer-const': 'off',
-				'no-var': 'off',
-
-				// should be fixed / easy to fix
-				'prefer-promise-reject-errors': 'off',
-				'n/prefer-global/process': 'off',
-				'n/prefer-global/buffer': 'off',
-				'n/no-process-exit': 'off',
-				'n/no-unpublished-import': 'off',
-				'n/no-unpublished-require': 'off',
-				'eslint-comments/require-description': 'off',
-				// could be fixed when converting to ESM
-				'import/order': 'off',
-				// a bit more complex to fix (but nice idea in general)
-				'import/no-default-export': 'off',
-				'no-console': 'off',
-				'func-names': 'off',
+				'unicorn/prefer-string-slice': 'off',
+				'perfectionist/sort-imports': 'off',
+				'unicorn/prefer-string-replace-all': 'off',
+				'node/prefer-global/buffer': 'off',
+				'@eslint-community/eslint-comments/require-description': 'off',
 				'jsonc/sort-keys': 'off',
+				'no-console': 'off',
+				'node/prefer-global/process': 'off',
+				'prefer-template': 'off',
+				'require-await': 'off',
+				'security/detect-non-literal-fs-filename': 'off',
+				'security/detect-non-literal-regexp': 'off',
+				'security/detect-object-injection': 'off',
+				'sonarjs/no-ignored-exceptions': 'off',
+				'sonarjs/os-command': 'off',
+				'sonarjs/pseudo-random': 'off',
+				'sonarjs/slow-regex': 'off',
+				'unicorn/no-instanceof-builtins': 'off',
+				'unicorn/prefer-date-now': 'off',
+				'unicorn/prefer-includes': 'off',
+				'unicorn/prefer-optional-catch-binding': 'off',
+				'unicorn/prefer-prototype-methods': 'off',
+				'unused-imports/no-unused-vars': 'off',
 			},
 		},
-	],
-	{
-		prettier: false,
-		comments: true,
-	}
+	]
 )

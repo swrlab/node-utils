@@ -4,9 +4,6 @@ on:
   pull_request_target:
     types: [labeled]
 
-env:
-  NODE_VERSION: 20
-
 jobs:
   security:
     name: Check permissions for pull request runs
@@ -20,6 +17,9 @@ jobs:
     needs: security
     name: Run Tests
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        version: [20, 22]
     steps:
       - name: 👀 Checkout Code
         uses: actions/checkout@v4
@@ -27,7 +27,7 @@ jobs:
       - name: 🏗 Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ env.NODE_VERSION }}
+          node-version: ${{ matrix.version }}
 
       - name: 🛠 Setup Bun
         uses: oven-sh/setup-bun@v2

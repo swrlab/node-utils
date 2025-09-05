@@ -1,5 +1,4 @@
 // load node utils
-// eslint-disable-next-line unicorn/prefer-node-protocol
 const undici = require('undici')
 const AbortController = require('abort-controller')
 
@@ -43,7 +42,8 @@ module.exports = async (url, options) => {
 	const { string, buffer } = await convertReadableStream(body)
 
 	// detect/ set redirect
-	const redirect = statusCode >= 300 && statusCode < 400 && headers.location ? new URL(headers.location, url) : null
+	const redirect =
+		statusCode >= 300 && statusCode < 400 && headers.location ? new URL(headers.location, url) : null
 
 	// fetch header vars
 	const contentType = headers['content-type']

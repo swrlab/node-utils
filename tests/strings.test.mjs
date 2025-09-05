@@ -175,7 +175,9 @@ describe('Test Strings Package', () => {
 		})
 
 		it("removeDoubleSpaces('hello  world  once  again')) = 'hello world once again'", () => {
-			expect(strings.removeDoubleSpaces('hello  world  once  again')).to.equal('hello world once again')
+			expect(strings.removeDoubleSpaces('hello  world  once  again')).to.equal(
+				'hello world once again'
+			)
 		})
 	})
 
