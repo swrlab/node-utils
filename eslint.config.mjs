@@ -2,16 +2,16 @@ import { audiolab } from '@swrlab/style-guide/eslint.js'
 
 export default audiolab(
 	{
-		prettier: false,
+		prettier: true,
 		comments: true,
 	},
 	[
 		{
-			ignores: [],
-		},
-		{
-			files: ['./packages/**/*.js', './utils/**/*.js'],
 			name: 'node-utils/disabled-rules',
+			// because we disable some rules, there might be complaints about unused disable directives
+			linterOptions: {
+				reportUnusedDisableDirectives: false,
+			},
 			rules: {
 				'unicorn/prefer-string-slice': 'off',
 				'perfectionist/sort-imports': 'off',
