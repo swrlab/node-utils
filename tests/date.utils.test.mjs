@@ -1,60 +1,87 @@
 import assert from 'node:assert'
-import { test } from 'node:test'
-import { formatDateString } from '../src/dates/utils.ts'
+import { describe, test } from 'node:test'
+import { formatDateString, formatDateTimeString } from '../src/dates/utils.ts'
 
 /** german formatted date string */
 const date = 'Mo., 19. Januar 2038 um 14:08'
 const formattedDate = 'Mo, 19. Januar 2038 - 14:08 Uhr'
 
-test('formatDateString()', (t) => {
-	t.test('default values', () => {
-		assert.strictEqual(formatDateString(''), ' Uhr')
-		assert.strictEqual(formatDateString(' um '), ' -  Uhr')
-		assert.strictEqual(formatDateString('So., 20'), 'So, 20 Uhr')
-		assert.strictEqual(formatDateString(date), formattedDate)
+describe('formatDateString(): ', () => {
+	test('formatDateString(): default values', () => {
+		assert.strictEqual(formatDateString(''), '')
+		assert.strictEqual(formatDateString('So., 20'), 'So, 20')
+		assert.strictEqual(formatDateString(date), date.replace('.,', ','))
 	})
-	t.test('no modifications', () => {
-		const options = {
-			addOClockSuffix: false,
-			timePrefix: false,
-			weekdayWithoutDot: false,
-		}
-		assert.strictEqual(formatDateString('', options), '')
-		assert.strictEqual(formatDateString(date, options), date)
-	})
-	t.test('addOClockSuffix', () => {
-		assert.strictEqual(formatDateString('', { addOClockSuffix: false }), '')
-		assert.strictEqual(
-			formatDateString(date, { addOClockSuffix: false }),
-			formattedDate.replace(' Uhr', '')
-		)
-		assert(!formatDateString(date, { addOClockSuffix: false }).includes('Uhr'))
-	})
-	t.test('other timePrefix', () => {
-		const prefix = 'hello'
-		assert.strictEqual(formatDateString('', { timePrefix: prefix }), ' Uhr')
-		assert.strictEqual(
-			formatDateString(' um ', { timePrefix: prefix, addOClockSuffix: false }),
-			` ${prefix} `
-		)
-		assert(formatDateString(date, { timePrefix: prefix }).includes(prefix))
-	})
-	t.test('weekday with dot', () => {
+	test('formatDateString(): weekday with dot', () => {
 		assert.strictEqual(
 			formatDateString('.,', {
 				weekdayWithoutDot: false,
-				addOClockSuffix: false,
 			}),
 			'.,'
 		)
 		assert.strictEqual(
 			formatDateString('.,', {
 				weekdayWithoutDot: true,
-				addOClockSuffix: false,
 			}),
 			','
 		)
 		assert(formatDateString(date, { weekdayWithoutDot: false }).includes('.,'))
 		assert(!formatDateString(date, { weekdayWithoutDot: true }).includes('.,'))
+	})
+})
+
+describe('formatDateTimeString(): ', () => {
+	test('formatDateTimeString(): default values', () => {
+		assert.strictEqual(formatDateTimeString(''), ' Uhr')
+		assert.strictEqual(formatDateTimeString(' um '), ' -  Uhr')
+		assert.strictEqual(formatDateTimeString('So., 20'), 'So, 20 Uhr')
+		assert.strictEqual(formatDateTimeString(date), formattedDate)
+	})
+	test('formatDateTimeString(): no modifications', () => {
+		const options = {
+			addOClockSuffix: false,
+			timePrefix: false,
+			weekdayWithoutDot: false,
+		}
+		assert.strictEqual(formatDateTimeString('', options), '')
+		assert.strictEqual(formatDateTimeString(date, options), date)
+	})
+	test('formatDateTimeString(): addOClockSuffix', () => {
+		assert.strictEqual(formatDateTimeString('', { addOClockSuffix: false }), '')
+		assert.strictEqual(
+			formatDateTimeString(date, { addOClockSuffix: false }),
+			formattedDate.replace(' Uhr', '')
+		)
+		assert(!formatDateTimeString(date, { addOClockSuffix: false }).includes('Uhr'))
+	})
+	test('formatDateTimeString(): other timePrefix', () => {
+		const prefix = 'hello'
+		assert.strictEqual(formatDateTimeString('', { timePrefix: prefix }), ' Uhr')
+		assert.strictEqual(
+			formatDateTimeString(' um ', {
+				timePrefix: prefix,
+				addOClockSuffix: false,
+			}),
+			` ${prefix} `
+		)
+		assert(formatDateTimeString(date, { timePrefix: prefix }).includes(prefix))
+	})
+	test('formatDateTimeString(): weekday with dot', () => {
+		assert.strictEqual(
+			formatDateTimeString('.,', {
+				weekdayWithoutDot: false,
+				addOClockSuffix: false,
+			}),
+			'.,'
+		)
+		assert.strictEqual(
+			formatDateTimeString('.,', {
+				weekdayWithoutDot: true,
+				addOClockSuffix: false,
+			}),
+			','
+		)
+		assert(formatDateTimeString(date, { weekdayWithoutDot: false }).includes('.,'))
+		assert(!formatDateTimeString(date, { weekdayWithoutDot: true }).includes('.,'))
 	})
 })

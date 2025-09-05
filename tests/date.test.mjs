@@ -2,22 +2,34 @@ import assert from 'node:assert'
 import { describe, it } from 'node:test'
 import * as date from '../src/dates/index.ts'
 
+const date2 = 'Fri Sep 05 2025 21:44:37 GMT+0200 (Central European Summer Time)'
+const date2date = new Date(date2)
+const date2iso = '2025-09-05T19:44:37.000Z'
+
 const testDate = '2038-01-19T03:14:08.000'
 const relativeTime = 2147483647000 - Date.now()
 const relativeYears = Number.parseInt(relativeTime / (1000 * 60 * 60 * 24 * 365), 10)
 
 describe('Test DateTime Package', () => {
 	describe('Test getDateHourMinutes', () => {
-		const testResult = 'Di, 19. Januar 2038 - 03:14 Uhr'
-		it(`getDateHourMinutes('${testDate}') = '${testResult}'`, () => {
-			assert.equal(date.getDateHourMinutes(testDate), testResult)
+		const newFormat = 'Di., 19. Januar 2038 um 03:14'
+		const testLegacyResult = 'Di, 19. Januar 2038 - 03:14 Uhr'
+		it(`getDateHourMinutes('${testDate}') = '${testLegacyResult}'`, () => {
+			assert.equal(date.getDateHourMinutesLegacy(testDate), testLegacyResult)
+		})
+		it(`getDateHourMinutes('${testDate}') = '${newFormat}'`, () => {
+			assert.equal(date.getDateHourMinutes(testDate), newFormat)
 		})
 	})
 
 	describe('Test getDayMonthYear', () => {
-		const testResult = 'Di, 19. Januar 2038'
-		it(`getDayMonthYear('${testDate}') = '${testResult}'`, () => {
-			assert.equal(date.getDayMonthYear(testDate), testResult)
+		const newFormat = 'Di., 19. Januar 2038'
+		it(`getDayMonthYear('${testDate}') = '${newFormat}'`, () => {
+			assert.equal(date.getDayMonthYear(testDate), newFormat)
+		})
+		const testLegacyFormat = 'Di, 19. Januar 2038'
+		it(`getDayMonthYear('${testDate}') = '${testLegacyFormat}'`, () => {
+			assert.equal(date.legacy.getDayMonthYear(testDate), testLegacyFormat)
 		})
 	})
 

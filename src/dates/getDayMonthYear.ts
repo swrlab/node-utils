@@ -1,21 +1,16 @@
-import { DateTime } from 'luxon'
-import { formatDateString, type ISODateString } from './utils.ts'
+import { DEFAULT_LOCALE, type ISODateString, parseDate, parseDateWithLuxon } from './utils.ts'
 
-const DEFAULT_LOCALE = 'de'
-
-const dateFormat = 'ccc, d. LLLL yyyy'
+const luxonDateFormat = 'ccc, d. LLLL yyyy'
 /**
  * Get weekday, day, month and year in german locale.
  *
  * @category dates
  *
  * @param date - input Date
- * @param locale - defaults to `de`
  *
  * @returns 'Do, 1. Januar 1970'
  */
-export const getDayMonthYearLegacy = (date: ISODateString, locale: string = DEFAULT_LOCALE): string =>
-	DateTime.fromISO(date).setLocale(locale).toFormat(dateFormat)
+export const getDayMonthYearLegacy = (date: ISODateString): string => parseDateWithLuxon(date).toFormat(luxonDateFormat)
 
 const options: Intl.DateTimeFormatOptions = {
 	weekday: 'short',
@@ -23,6 +18,7 @@ const options: Intl.DateTimeFormatOptions = {
 	month: 'long',
 	year: 'numeric',
 }
+
 /**
  * Get weekday, day, month and year in german locale.
  *
@@ -33,5 +29,5 @@ const options: Intl.DateTimeFormatOptions = {
  *
  * @returns 'Do, 1. Januar 1970'
  */
-export const getDayMonthYear = (date: ISODateString, locale: string = 'de-DE'): string =>
-	formatDateString(new Intl.DateTimeFormat(locale, options).format(Date.parse(date)))
+export const getDayMonthYear = (date: ISODateString, locale: string = DEFAULT_LOCALE): string =>
+	new Intl.DateTimeFormat(locale, options).format(parseDate(date))
