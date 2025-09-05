@@ -29,7 +29,7 @@ type OptionsWeekdayDot = {
 }
 type FormatOptions = OptionsWeekdayDot & {
 	/** replaces `um` or `at` with provided string or `-` if `true` */
-	timePrefix?: string | true
+	timePrefix?: string | boolean
 	/** add ` Uhr` suffix after the time */
 	addOClockSuffix?: boolean
 }

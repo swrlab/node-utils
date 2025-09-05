@@ -1,6 +1,6 @@
 import assert from 'node:assert'
 import { describe, it } from 'node:test'
-import * as helpers from '../packages/helpers/index.js'
+import * as helpers from '../src/helpers/index.ts'
 
 describe('Test Helpers Package', () => {
 	describe('Test arrayToObjectCount', () => {
@@ -20,6 +20,10 @@ describe('Test Helpers Package', () => {
 			const testResult = helpers.getJsonKeys(test)
 			assert.equal(testResult[0], result[0])
 			assert.equal(testResult[1], result[1])
+			// just using `Object.keys`
+			const testResultSimple = Object.keys(test)
+			assert.equal(testResultSimple[0], result[0])
+			assert.equal(testResultSimple[1], result[1])
 		})
 	})
 
