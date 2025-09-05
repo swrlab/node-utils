@@ -27,7 +27,6 @@
 	"devDependencies": {
 		"@swrlab/style-guide": "^2.0.7",
 		"@types/bun": "^1.2.21",
-		"chai": "5.1.2",
 		"eslint": "^9.34.0",
 		"prettier": "^3.6.2"
 	},

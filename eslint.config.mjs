@@ -10,6 +10,7 @@ export default audiolab(
 			ignores: [],
 		},
 		{
+			files: ['./packages/**/*.js', './utils/**/*.js'],
 			name: 'node-utils/disabled-rules',
 			rules: {
 				'unicorn/prefer-string-slice': 'off',

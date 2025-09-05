@@ -1,25 +1,15 @@
-/*
+import assert from 'node:assert'
+import { describe, it } from 'node:test'
+import * as helpers from '../packages/helpers/index.js'
 
-	by SWR Audio Lab
-	tests with mocha and chai
-
-*/
-
-// Add eslint exceptions for chai
-/* global describe it */
-
-import { expect } from 'chai'
-import * as helpers from '../packages/helpers'
-
-// Test Helpers Package
 describe('Test Helpers Package', () => {
 	describe('Test arrayToObjectCount', () => {
 		it("arrayToObjectCount(['foo', 'bar', 'bar']) = { bar: 2, foo: 1 }", () => {
 			const test = ['foo', 'bar', 'bar']
 			const result = { bar: 2, foo: 1 }
 			const testResult = helpers.arrayToObjectCount(test)
-			expect(testResult.bar).to.equal(result.bar)
-			expect(testResult.foo).to.equal(result.foo)
+			assert.equal(testResult.bar, result.bar)
+			assert.equal(testResult.foo, result.foo)
 		})
 	})
 
@@ -28,8 +18,8 @@ describe('Test Helpers Package', () => {
 			const test = { hello: 'world', foo: 'bar' }
 			const result = ['hello', 'foo']
 			const testResult = helpers.getJsonKeys(test)
-			expect(testResult[0]).to.equal(result[0])
-			expect(testResult[1]).to.equal(result[1])
+			assert.equal(testResult[0], result[0])
+			assert.equal(testResult[1], result[1])
 		})
 	})
 
@@ -39,7 +29,7 @@ describe('Test Helpers Package', () => {
 			const before = Date.now()
 			await helpers.sleep(time)
 			const after = Date.now()
-			expect(after - before).to.be.greaterThanOrEqual(time)
+			assert(after - before >= time)
 		})
 	})
 })
