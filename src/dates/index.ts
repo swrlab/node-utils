@@ -5,7 +5,7 @@
 import { getDateHourMinutes } from './getDateHourMinutes.ts'
 import { getDayMonthYear } from './getDayMonthYear.ts'
 import { getFullRelativeTime, getFullRelativeTimeLegacy } from './getFullRelativeTime.ts'
-// import { revYearMonthDay } from './utils/date/revYearMonthDay.ts'
+import { toDayMonthYear } from './revYearMonthDay.ts'
 import { formatDateTimeString, type ISODateString, shortenWeekday } from './utils.ts'
 
 export { getDateHourMinutesLegacy } from './getDateHourMinutes.ts'
@@ -16,8 +16,12 @@ export { getRelativeTime } from './getRelativeTime.ts'
 export { getDateHourMinutes }
 export { getDayMonthYear }
 export { getFullRelativeTime }
-
 export { getYearMonthDay } from './getYearMonthDay.ts'
+// new name
+export { toDayMonthYear }
+// export old name
+/** @deprecated please use `toDayMonthYear` */
+export { toDayMonthYear as revYearMonthDay }
 
 /**
  * Legacy date exports to be compatible with the previous format.

@@ -2,13 +2,14 @@ import assert from 'node:assert'
 import { describe, it } from 'node:test'
 import * as date from '../src/dates/index.ts'
 
-const date2 = 'Fri Sep 05 2025 21:44:37 GMT+0200 (Central European Summer Time)'
-const date2date = new Date(date2)
-const date2iso = '2025-09-05T19:44:37.000Z'
-
+const ONE_YEAR_IN_MS = 1000 * 60 * 60 * 24 * 365
 const testDate = '2038-01-19T03:14:08.000'
 const relativeTime = 2147483647000 - Date.now()
-const relativeYears = Number.parseInt(relativeTime / (1000 * 60 * 60 * 24 * 365), 10)
+const relativeYears = Math.floor(relativeTime / ONE_YEAR_IN_MS)
+
+// const date2 = 'Fri Sep 05 2025 21:44:37 GMT+0200 (Central European Summer Time)'
+// const date2date = new Date(date2)
+// const date2iso = '2025-09-05T19:44:37.000Z'
 
 describe('Test DateTime Package', () => {
 	describe('Test getDateHourMinutes', () => {
