@@ -18,7 +18,9 @@ export const getDateHourMinutesLegacy = (date: ISODateString): string =>
  *
  * @module dates
  * @category dates
+ *
  * @param date
+ *
  * @returns german formatted date string
  */
 export function getDateHourMinutes(date: ISODateString): string {

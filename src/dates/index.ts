@@ -8,10 +8,9 @@ import { getFullRelativeTime, getFullRelativeTimeLegacy } from './getFullRelativ
 // import { revYearMonthDay } from './utils/date/revYearMonthDay.ts'
 import { formatDateTimeString, type ISODateString, shortenWeekday } from './utils.ts'
 
-// import { getHourMinutes } from './utils/date/getHourMinutes'
-// import { getIsoRelativeTime } from './utils/date/getIsoRelativeTime'
-
 export { getDateHourMinutesLegacy } from './getDateHourMinutes.ts'
+export { getHourMinutes } from './getHourMinutes.ts'
+export { getIsoRelativeTime } from './getIsoRelativeTime.ts'
 export { getRelativeTime } from './getRelativeTime.ts'
 
 export { getDateHourMinutes }
@@ -28,4 +27,3 @@ export const legacy = {
 	getDayMonthYear: (date: ISODateString): string => shortenWeekday(getDayMonthYear(date)),
 	getFullRelativeTime: (date: ISODateString): string => getFullRelativeTimeLegacy(date),
 }
-// TODO: consider adding all functions to legacy
