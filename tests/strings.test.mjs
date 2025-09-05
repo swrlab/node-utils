@@ -156,10 +156,7 @@ describe('Test Strings Package', () => {
 		})
 
 		it("pluralize(1000, 'Child', 'Children') = '1.000 Children'", () => {
-			assert.equal(
-				strings.pluralize(1000, 'Child', 'Children'),
-				'1.000 Children'
-			)
+			assert.equal(strings.pluralize(1000, 'Child', 'Children'), '1.000 Children')
 		})
 	})
 
@@ -169,10 +166,7 @@ describe('Test Strings Package', () => {
 		})
 
 		it("removeDoubleSpaces('hello  world  once  again')) = 'hello world once again'", () => {
-			assert.equal(
-				strings.removeDoubleSpaces('hello  world  once  again'),
-				'hello world once again'
-			)
+			assert.equal(strings.removeDoubleSpaces('hello  world  once  again'), 'hello world once again')
 		})
 	})
 

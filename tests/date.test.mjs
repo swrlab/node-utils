@@ -4,10 +4,7 @@ import * as date from '../packages/date/index.js'
 
 const testDate = '2038-01-19T03:14:08.000'
 const relativeTime = 2147483647000 - Date.now()
-const relativeYears = Number.parseInt(
-	relativeTime / (1000 * 60 * 60 * 24 * 365),
-	10
-)
+const relativeYears = Number.parseInt(relativeTime / (1000 * 60 * 60 * 24 * 365), 10)
 
 describe('Test DateTime Package', () => {
 	describe('Test getDateHourMinutes', () => {

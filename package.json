@@ -2,13 +2,29 @@
 	"name": "@swrlab/utils",
 	"version": "2.2.0",
 	"description": "Wrapping common SWR Audio Lab utils",
+	"license": "MIT",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/swrlab/node-utils"
 	},
 	"author": "SWR Audio Lab <lab@swr.de>",
-	"license": "MIT",
 	"main": "./index.js",
+	"publishConfig": {
+		"access": "public",
+		"provenance": true,
+		"main": "./dist/index.js",
+		"module": "./dist/index.js",
+		"exports": {
+			".": {
+				"types": "./dist/index.d.mts",
+				"default": "./dist/index.js"
+			},
+			"/ard.js": {
+				"types": "./dist/ard/index.d.mts",
+				"default": "./dist/ard/index.js"
+			}
+		}
+	},
 	"scripts": {
 		"ard:coreId": "node ./scripts/ard/coreId.js",
 		"format": "prettier --write .",
@@ -44,21 +60,5 @@
 	"engines": {
 		"node": ">=20 || ^22.18.0 || ^24.6.0"
 	},
-	"prettier": "@swrlab/style-guide/prettier.js",
-	"publishConfig": {
-		"access": "public",
-		"provenance": true,
-		"main": "./dist/index.js",
-		"module": "./dist/index.js",
-		"exports": {
-			".": {
-				"types": "./dist/index.d.mts",
-				"default": "./dist/index.js"
-			},
-			"/ard.js": {
-				"types": "./dist/ard/index.d.mts",
-				"default": "./dist/ard/index.js"
-			}
-		}
-	}
+	"prettier": "@swrlab/style-guide/prettier.js"
 }
