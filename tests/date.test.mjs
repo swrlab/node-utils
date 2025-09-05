@@ -14,8 +14,11 @@ describe('Test DateTime Package', () => {
 	describe('Test getDateHourMinutes', () => {
 		const newFormat = 'Di., 19. Januar 2038 um 03:14'
 		const testLegacyResult = 'Di, 19. Januar 2038 - 03:14 Uhr'
-		it(`getDateHourMinutes('${testDate}') = '${testLegacyResult}'`, () => {
+		it(`getDateHourMinutesLegacy('${testDate}') = '${testLegacyResult}'`, () => {
 			assert.equal(date.getDateHourMinutesLegacy(testDate), testLegacyResult)
+		})
+		it(`legacy.getDateHourMinutes('${testDate}') = '${testLegacyResult}'`, () => {
+			assert.equal(date.legacy.getDateHourMinutes(testDate), testLegacyResult)
 		})
 		it(`getDateHourMinutes('${testDate}') = '${newFormat}'`, () => {
 			assert.equal(date.getDateHourMinutes(testDate), newFormat)
@@ -28,15 +31,19 @@ describe('Test DateTime Package', () => {
 			assert.equal(date.getDayMonthYear(testDate), newFormat)
 		})
 		const testLegacyFormat = 'Di, 19. Januar 2038'
-		it(`getDayMonthYear('${testDate}') = '${testLegacyFormat}'`, () => {
+		it(`legacy.getDayMonthYear('${testDate}') = '${testLegacyFormat}'`, () => {
 			assert.equal(date.legacy.getDayMonthYear(testDate), testLegacyFormat)
 		})
 	})
 
 	describe('Test getFullRelativeTime', () => {
-		const testResult = `Di, 19. Januar 2038 - 03:14 Uhr (in ${relativeYears} Jahren)`
-		it(`getFullRelativeTime('${testDate}') = '${testResult}'`, () => {
-			assert.equal(date.getFullRelativeTime(testDate), testResult)
+		const legacyResult = `Di, 19. Januar 2038 - 03:14 Uhr (in ${relativeYears} Jahren)`
+		it(`legacy.getFullRelativeTime('${testDate}') = '${legacyResult}'`, () => {
+			assert.equal(date.legacy.getFullRelativeTime(testDate), legacyResult)
+		})
+		const newResult = `Di., 19. Januar 2038 um 03:14 (in ${relativeYears} Jahren)`
+		it(`getFullRelativeTime('${testDate}') = '${newResult}'`, () => {
+			assert.equal(date.getFullRelativeTime(testDate), newResult)
 		})
 	})
 
