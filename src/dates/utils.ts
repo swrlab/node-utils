@@ -8,10 +8,14 @@ export const DEFAULT_LOCALE = 'de-DE'
 export type ISODateString = `${string}T${string}`
 
 export const parseDateWithLuxon = (date: ISODateString): DateTime => DateTime.fromISO(date).setLocale(DEFAULT_LOCALE)
+export const luxonFormat = (date: ISODateString, format: string): string => parseDateWithLuxon(date).toFormat(format)
 
 export const parseDate = (date: ISODateString): Date => new Date(date)
 // in the future we can use the Temporal API
 // export const parseDate = (date: ISODateString): Temporal.PlainDateTime => new Temporal.PlainDateTime.from(date)
+
+export const intlFormat = (date: ISODateString, options: Intl.DateTimeFormatOptions): string =>
+	new Intl.DateTimeFormat(DEFAULT_LOCALE, options).format(parseDate(date))
 
 /** append ` Uhr` suffix */
 export const addOClock = (str: string) => `${str} Uhr`

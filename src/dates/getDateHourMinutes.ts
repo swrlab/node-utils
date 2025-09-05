@@ -1,4 +1,4 @@
-import { type ISODateString, parseDate, parseDateWithLuxon } from './utils.ts'
+import { addOClock, intlFormat, type ISODateString, luxonFormat } from './utils.ts'
 
 const dayHourMinutesFormat = 'ccc, d. LLLL yyyy - HH:mm'
 // const dayHourMinutesFormatDateFNS = 'PPPP - kk:mm'
@@ -10,8 +10,8 @@ const dayHourMinutesFormat = 'ccc, d. LLLL yyyy - HH:mm'
  *
  * @returns A string like 'Di, 19. Januar 2038 - 03:14 Uhr'.
  */
-export const getDateHourMinutesLegacy = (date: ISODateString) =>
-	`${parseDateWithLuxon(date).toFormat(dayHourMinutesFormat)} Uhr`
+export const getDateHourMinutesLegacy = (date: ISODateString): string =>
+	addOClock(luxonFormat(date, dayHourMinutesFormat))
 
 /**
  * Get a date string with full date including weekday and hours with minutes.
@@ -30,7 +30,8 @@ export function getDateHourMinutes(date: ISODateString): string {
 		hour: 'numeric',
 		minute: 'numeric',
 		hour12: false,
+		// setting timezone can cause some trouble
 		// timeZone: 'Europe/Berlin',
 	}
-	return new Intl.DateTimeFormat('de-DE', options).format(parseDate(date))
+	return intlFormat(date, options)
 }
