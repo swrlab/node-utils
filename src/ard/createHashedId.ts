@@ -2,12 +2,13 @@ import { Buffer } from 'node:buffer'
 import crc from 'node-crc'
 
 /**
- * Create a a CRC64-ECMA182-compliant hash
+ * Create a a CRC64-ECMA182-compliant hash from given input.
  *
  * @module ard
  * @category ard
- * @param input - utf-8 encoded input string
- * @returns CRC64-ECMA182-compliant hashed input
+ *
+ * @param {string} input - The utf-8 encoded input string.
+ * @returns {string} - CRC64-ECMA182-compliant hashed input
  *
  * @example
  * ```

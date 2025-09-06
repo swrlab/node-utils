@@ -1,6 +1,6 @@
 import assert from 'node:assert'
 import { describe, test } from 'node:test'
-import { formatDateString, formatDateTimeString } from '../src/dates/utils.ts'
+import { formatDateString, formatDateTimeString } from '../src/date/utils.ts'
 
 /** german formatted date string */
 const date = 'Mo., 19. Januar 2038 um 14:08'

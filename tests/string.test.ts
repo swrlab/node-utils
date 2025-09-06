@@ -1,7 +1,7 @@
 import assert from 'node:assert'
 import { describe, it, test } from 'node:test'
-import * as strings from '../src/strings/index.ts'
-import { capitalize } from '../src/strings/index.ts'
+import * as strings from '../src/string/index.ts'
+import { capitalize } from '../src/string/index.ts'
 
 describe('Test Strings Package', () => {
 	describe('Test capitalize', () => {

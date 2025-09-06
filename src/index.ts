@@ -1,4 +1,5 @@
 export * from './ard/index.ts'
-export * from './dates/index.ts'
+export * from './date/index.ts'
 export * from './helpers/index.ts'
-export * from './numbers/index.ts'
+export * from './number/index.ts'
+export * from './string/index.ts'

@@ -1,5 +1,6 @@
 /**
  * @fileoverview A port of the ard test to bun using bun's `expect` (that behaves like jest).
+ * NOTE: This file cannot be run in nodejs, since node does not know `bun:test`.
  */
 import { describe, expect, it } from 'bun:test'
 import { createHashedId } from '../src/ard/index.ts'

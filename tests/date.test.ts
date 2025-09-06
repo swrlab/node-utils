@@ -1,6 +1,6 @@
 import assert from 'node:assert'
 import { describe, it } from 'node:test'
-import * as date from '../src/dates/index.ts'
+import * as date from '../src/date/index.ts'
 
 const ONE_YEAR_IN_MS = 1000 * 60 * 60 * 24 * 365
 const testDate = '2038-01-19T03:14:08.000'
