@@ -1,14 +1,15 @@
 import assert from 'node:assert'
-import { describe, it } from 'node:test'
-import * as strings from '../packages/strings/index.js'
+import { describe, it, test } from 'node:test'
+import * as strings from '../src/strings/index.ts'
+import { capitalize } from '../src/strings/index.ts'
 
 describe('Test Strings Package', () => {
 	describe('Test capitalize', () => {
 		it("capitalize('a') = 'A'", () => {
-			assert.equal(strings.capitalize('a'), 'A')
+			assert.equal(capitalize('a'), 'A')
 		})
 		it("capitalize('apple') = 'Apple'", () => {
-			assert.equal(strings.capitalize('apple'), 'Apple')
+			assert.equal(capitalize('apple'), 'Apple')
 		})
 	})
 
@@ -35,6 +36,21 @@ describe('Test Strings Package', () => {
 
 		it("isArray({ hello: 'world' }) = false", () => {
 			assert.equal(strings.isArray({ hello: 'world' }), false)
+		})
+
+		test('valid arrays', () => {
+			assert(strings.isArray([]))
+			assert(strings.isArray([0]))
+			assert(strings.isArray([false]))
+		})
+		test('non arrays', () => {
+			assert(!strings.isArray(true))
+			assert(!strings.isArray(false))
+			assert(!strings.isArray(''))
+			assert(!strings.isArray('[]'))
+			assert(!strings.isArray(null))
+			assert(!strings.isArray())
+			assert(!strings.isArray(undefined))
 		})
 	})
 
@@ -98,6 +114,19 @@ describe('Test Strings Package', () => {
 		})
 	})
 
+	describe('Test isPlainObject', () => {
+		it('is true with objects', () => {
+			assert(strings.isPlainObject({}))
+			assert(strings.isPlainObject(Object.create(null)))
+			assert(strings.isPlainObject({ hello: 'world' }))
+		})
+
+		it('is false with invalid objects', () => {
+			assert.equal(strings.isPlainObject([]), false)
+			assert.equal(strings.isPlainObject('hello world'), false)
+		})
+	})
+
 	describe('Test isUndefined', () => {
 		it('isUndefined(undefined) = true', () => {
 			assert.equal(strings.isUndefined(undefined), true)
@@ -105,6 +134,10 @@ describe('Test Strings Package', () => {
 
 		it('isUndefined(null) = false', () => {
 			assert.equal(strings.isUndefined(null), false)
+		})
+
+		it('isUndefined(false) = false', () => {
+			assert.equal(strings.isUndefined(false), false)
 		})
 	})
 
@@ -165,8 +198,17 @@ describe('Test Strings Package', () => {
 			assert.equal(strings.removeDoubleSpaces('hello  world'), 'hello world')
 		})
 
+		it("removeDoubleSpaces('hello     world')) = 'hello world'", () => {
+			assert.equal(strings.removeDoubleSpaces('hello     world'), 'hello world')
+		})
+
 		it("removeDoubleSpaces('hello  world  once  again')) = 'hello world once again'", () => {
 			assert.equal(strings.removeDoubleSpaces('hello  world  once  again'), 'hello world once again')
+		})
+
+		it('does not remove normal spaces', () => {
+			assert.equal(strings.removeDoubleSpaces('hello world'), 'hello world')
+			assert.equal(strings.removeDoubleSpaces(' hello world '), ' hello world ')
 		})
 	})
 

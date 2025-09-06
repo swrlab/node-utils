@@ -1,4 +1,4 @@
-import { roundTo } from './roundTo.js'
+import { roundTo } from './roundTo.ts'
 
 /**
  * Get sum of number array.

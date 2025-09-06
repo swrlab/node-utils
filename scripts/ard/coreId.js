@@ -1,5 +1,5 @@
-const process = require('node:process')
-const createHashedId = require('../../utils/ard/createHashedId')
+import process from 'node:process'
+import { createHashedId } from '../../src/ard/index.ts'
 
 const input = process.argv.slice(2)
 

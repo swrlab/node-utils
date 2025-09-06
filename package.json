@@ -32,8 +32,9 @@
 		"format": "prettier --write .",
 		"lint": "eslint",
 		"lint:fix": "eslint --fix",
-		"test": "bun test tests/**/*.ts",
-		"test:node": "node --test tests/**/*.ts"
+		"test": "bun run test:bun",
+		"test:bun": "bun test ./tests/**test*.ts",
+		"test:node": "node --test ./tests/**/*.test.ts"
 	},
 	"dependencies": {
 		"@google-cloud/storage": "^7.16.0",

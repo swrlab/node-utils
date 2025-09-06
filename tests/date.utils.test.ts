@@ -48,10 +48,7 @@ describe('formatDateTimeString(): ', () => {
 	})
 	test('formatDateTimeString(): addOClockSuffix', () => {
 		assert.strictEqual(formatDateTimeString('', { addOClockSuffix: false }), '')
-		assert.strictEqual(
-			formatDateTimeString(date, { addOClockSuffix: false }),
-			formattedDate.replace(' Uhr', '')
-		)
+		assert.strictEqual(formatDateTimeString(date, { addOClockSuffix: false }), formattedDate.replace(' Uhr', ''))
 		assert(!formatDateTimeString(date, { addOClockSuffix: false }).includes('Uhr'))
 	})
 	test('formatDateTimeString(): other timePrefix', () => {

@@ -2,7 +2,7 @@ import { audiolab } from '@swrlab/style-guide/eslint.js'
 
 export default audiolab(
 	{
-		prettier: false,
+		prettier: true,
 		comments: true,
 	},
 	[
