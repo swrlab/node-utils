@@ -1,4 +1,4 @@
-import type { StorageOptions } from '@google-cloud/storage'
+import type { File, StorageOptions } from '@google-cloud/storage'
 import type { Buffer } from 'node:buffer'
 import type { CloudStorageURI } from './createUri.ts'
 import assert from 'node:assert'

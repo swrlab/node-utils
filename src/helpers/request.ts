@@ -43,7 +43,7 @@ export const request = async (
 	url: string,
 	options: RequestInit & OptionsTimeout & OptionsReject
 ): Promise<Record<any, any>> => {
-	const requestOptions: RequestInit = {
+	const requestOptions = {
 		...defaultOptions,
 		method: options?.method || 'GET',
 		body: options?.body || undefined,
@@ -56,7 +56,7 @@ export const request = async (
 		}
 
 	// make actual request
-	const { status, headers, body, ok, redirected: _redirected } = await fetch(url, requestOptions)
+	const { status, headers, url: finalUrl, body, ok, redirected } = await fetch(url, requestOptions as RequestInit)
 	const statusCode = status
 
 	// const ok = statusCode >= 200 && statusCode < 300
@@ -66,8 +66,7 @@ export const request = async (
 	const { string, buffer } = await convertReadableStream(body)
 
 	// detect/ set redirect
-
-	const redirect = statusCode >= 300 && statusCode < 400 && headers.location ? new URL(headers.location, url) : null
+	// const redirect = statusCode >= 300 && statusCode < 400 && headers.location ? new URL(headers.location, url) : null
 
 	// fetch header vars
 	const contentType = headers.get('content-type')
@@ -84,7 +83,7 @@ export const request = async (
 	return Promise.resolve({
 		statusCode,
 		ok,
-		redirect,
+		redirect: redirected ? finalUrl : undefined,
 		headers,
 		contentType,
 		/** @deprecated */
