@@ -1,6 +1,6 @@
 import assert from 'node:assert'
 import { describe, it } from 'node:test'
-import * as numbers from '../packages/numbers/index.js'
+import * as numbers from '../src/numbers/index.ts'
 
 describe('Test Numbers Package', () => {
 	describe('Test addLeadingZero', () => {
@@ -106,6 +106,20 @@ describe('Test Numbers Package', () => {
 
 		it('roundTo(1.23456, 4) = 1.2346', () => {
 			assert.equal(numbers.roundTo(1.23456, 4), 1.2346)
+		})
+
+		it('roundTo(234.23456, 4) = 234.2346', () => {
+			assert.equal(numbers.roundTo(234.23456, 4), 234.2346)
+		})
+
+		it('roundTo(234.2345671, 4) = 234.2346', () => {
+			assert.equal(numbers.roundTo(234.2345671, 4), 234.2346)
+		})
+		it('roundTo(234.2344671, 3) = 234.234', () => {
+			assert.equal(numbers.roundTo(234.2344671, 3), 234.234)
+		})
+		it('roundTo(234.2343671, 3) = 234.234', () => {
+			assert.equal(numbers.roundTo(234.2343671, 3), 234.234)
 		})
 	})
 
