@@ -56,7 +56,7 @@ export const request = async (
 		}
 
 	// make actual request
-	const { status, headers, body, ok, redirected } = await fetch(url, requestOptions)
+	const { status, headers, body, ok, redirected: _redirected } = await fetch(url, requestOptions)
 	const statusCode = status
 
 	// const ok = statusCode >= 200 && statusCode < 300
