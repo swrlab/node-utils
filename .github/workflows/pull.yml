@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        version: [20, 22]
+        version: [20, 22, 24]
     steps:
       - name: 👀 Checkout Code
         uses: actions/checkout@v4
@@ -44,4 +44,10 @@ jobs:
         run: bun run test
 
       - name: 🧪 Run Tests (in Node)
+        run: node --run test:node
+
+      - name: 🧪 Run Tests (in via npm in Bun)
         run: npm run test
+
+      - name: 🧪 Run Tests (in via npm in Node)
+        run: npm run test:node
