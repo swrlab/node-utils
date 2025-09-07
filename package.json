@@ -17,7 +17,7 @@
 	"dependencies": {
 		"@google-cloud/storage": "^7.16.0",
 		"abort-controller": "^3.0.0",
-		"luxon": "3.7.1",
+		"luxon": "3.7.2",
 		"node-crc": "https://github.com/swrlab/node-crc#v2.1.0",
 		"undici": "7.13.0"
 	},
