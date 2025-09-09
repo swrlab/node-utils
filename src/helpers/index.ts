@@ -1,6 +1,8 @@
 /**
  * @fileoverview General helper functions.
+ * @category helpers
+ * @module helpers
  */
-export { arrayToObjectCount } from './arrayToObjectCount.ts'
-export { getJsonKeys } from './getJsonKeys.ts'
+
+export { request } from './request.ts'
 export { sleep } from './sleep.ts'

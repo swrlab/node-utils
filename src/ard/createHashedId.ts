@@ -8,7 +8,7 @@ import crc from 'node-crc'
  * @category ard
  *
  * @param {string} input - The utf-8 encoded input string.
- * @returns {string} - CRC64-ECMA182-compliant hashed input
+ * @returns {string} - CRC64-ECMA182-compliant hashed input.
  *
  * @example
  * ```

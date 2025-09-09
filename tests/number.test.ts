@@ -1,19 +1,19 @@
 import assert from 'node:assert'
-import { describe, it } from 'node:test'
+import { describe, it, test } from 'node:test'
 import * as number from '../src/number/index.ts'
 
-describe('Test Numbers Package', () => {
-	describe('Test addLeadingZero', () => {
-		it("addLeadingZero(1) = '01'", () => {
+describe('number utils', () => {
+	describe('addLeadingZero', () => {
+		it('prepends a zero for one-digit numbers', () => {
 			assert.equal(number.addLeadingZero(1), '01')
 		})
 
-		it("addLeadingZero(10) = '10'", () => {
+		it('does not change anything for two-digit numbers', () => {
 			assert.equal(number.addLeadingZero(10), '10')
 		})
 	})
 
-	describe('Test addTrailingZeros', () => {
+	describe('addTrailingZeros', () => {
 		it("addTrailingZeros(1, 5) = '1.00000'", () => {
 			assert.equal(number.addTrailingZeros(1, 5), '1.00000')
 		})
@@ -39,7 +39,7 @@ describe('Test Numbers Package', () => {
 		})
 	})
 
-	describe('Test getAverage', () => {
+	describe('getAverage', () => {
 		it('getAverage([1, 2, 3]) = 2', () => {
 			assert.equal(number.getAverage([1, 2, 3]), 2)
 		})
@@ -49,7 +49,7 @@ describe('Test Numbers Package', () => {
 		})
 	})
 
-	describe('Test getDiff', () => {
+	describe('getDiff', () => {
 		it('getDiff(2, 1) = 1', () => {
 			assert.equal(number.getDiff(2, 1), 1)
 		})
@@ -59,7 +59,7 @@ describe('Test Numbers Package', () => {
 		})
 	})
 
-	describe('Test getRandomInRange', () => {
+	describe('getRandomInRange', () => {
 		it('getRandomInRange(1, 5) = 1,2,3,4 or 5', () => {
 			assert([1, 2, 3, 4, 5].includes(number.getRandomInRange(1, 5)))
 		})
@@ -69,7 +69,7 @@ describe('Test Numbers Package', () => {
 		})
 	})
 
-	describe('Test getSum', () => {
+	describe('getSum', () => {
 		it('getSum([1, 2, 3]) = 6', () => {
 			assert.equal(number.getSum([1, 2, 3]), 6)
 		})
@@ -79,17 +79,19 @@ describe('Test Numbers Package', () => {
 		})
 	})
 
-	describe('Test isEven', () => {
-		it('isEven(2) = true', () => {
-			assert.equal(number.isEven(2), true)
+	describe('isEven', () => {
+		test('even numbers', () => {
+			assert(number.isEven(2))
+			assert(number.isEven(4))
 		})
 
-		it('isEven(1) = false', () => {
+		test('uneven numbers', () => {
 			assert.equal(number.isEven(1), false)
+			assert.equal(number.isEven(11), false)
 		})
 	})
 
-	describe('Test normalize', () => {
+	describe('normalize', () => {
 		it('normalize(2, 100) = 0.02', () => {
 			assert.equal(number.normalize(2, 100), 0.02)
 		})
@@ -99,7 +101,7 @@ describe('Test Numbers Package', () => {
 		})
 	})
 
-	describe('Test roundTo', () => {
+	describe('roundTo', () => {
 		it('roundTo(1.23456) = 1.23', () => {
 			assert.equal(number.roundTo(1.23456), 1.23)
 		})
@@ -123,7 +125,7 @@ describe('Test Numbers Package', () => {
 		})
 	})
 
-	describe('Test toReadable', () => {
+	describe('toReadable', () => {
 		it("toReadable(1234567) = '1.234.567'", () => {
 			assert.equal(number.toReadable(1234567), '1.234.567')
 		})

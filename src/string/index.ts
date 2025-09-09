@@ -1,16 +1,12 @@
+/**
+ * @fileoverview String utilities.
+ * @category string
+ * @module string
+ */
+
 export { capitalize } from './capitalize.ts'
-export { getObjectLength } from './getObjectLength.ts'
-export { isArray } from './isArray.ts'
-export { isEmptyArray } from './isEmptyArray.ts'
-export { isEmptyObject } from './isEmptyObject.ts'
 export { isEmptyString } from './isEmptyString.ts'
 export { isIncluded } from './isIncluded.ts'
-export { isNull } from './isNull.ts'
-export { isObject, isPlainObject } from './isObject.ts'
-export { isUndefined } from './isUndefined.ts'
-export { notEmptyArray } from './notEmptyArray.ts'
-export { notEmptyObject } from './notEmptyObject.ts'
-export { notNullOrUndefined } from './notNullOrUndefined.ts'
 export { pluralize } from './pluralize.ts'
 export { removeDoubleSpaces } from './removeDoubleSpaces.ts'
 export { toHex } from './toHex.ts'

@@ -1,5 +1,7 @@
 /**
  * @fileoverview Date formatting utilities.
+ * @category date
+ * @module date
  */
 
 import { getDateHourMinutes } from './getDateHourMinutes.ts'

@@ -34,7 +34,7 @@
 		"lint:fix": "eslint --fix",
 		"test": "bun run typecheck && bun run test:bun",
 		"test:bun": "bun test ./tests/**test*.ts",
-		"test:node": "node --test ./tests/**/*.test.ts",
+		"test:node": "node --test ./tests/**.test.ts",
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {

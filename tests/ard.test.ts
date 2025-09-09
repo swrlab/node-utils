@@ -1,11 +1,9 @@
 import assert from 'node:assert'
-import { describe, it } from 'node:test'
+import { describe, test } from 'node:test'
 import { createHashedId } from '../src/ard/index.ts'
 
-describe('Test ARD Package', () => {
-	describe('Test ARD-CoreID Hash', () => {
-		it("createHashedId('test') = 0c171b2e54a30c11", () => {
-			assert.equal(createHashedId('test'), '0c171b2e54a30c11')
-		})
+describe('ard utils', () => {
+	test('createHashedId', () => {
+		assert.equal(createHashedId('test'), '0c171b2e54a30c11', 'expected hash for the input `test` does not match.')
 	})
 })

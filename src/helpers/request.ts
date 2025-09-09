@@ -39,6 +39,15 @@ const DEFAULT_TIMEOUT = 7e3
 type OptionsTimeout = { timeout: number }
 type OptionsReject = { reject: boolean }
 
+/**
+ * Create a fetchrequest.
+ *
+ * @deprecated Use `fetch` or `ofetch` instead.
+ *
+ * @param {string} url - URL
+ * @param options - fetch options
+ * @returns - Custom fetch object.
+ */
 export const request = async (
 	url: string,
 	options: RequestInit & OptionsTimeout & OptionsReject

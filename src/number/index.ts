@@ -1,3 +1,9 @@
+/**
+ * @fileoverview Number utilities.
+ * @category number
+ * @module number
+ */
+
 export { addLeadingZero } from './addLeadingZero.ts'
 export { addTrailingZeros } from './addTrailingZeros.ts'
 export { getAverage } from './getAverage.ts'

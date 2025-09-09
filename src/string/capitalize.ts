@@ -1,4 +1,5 @@
 type Capitalized<T extends string> = T extends `${infer FL}${infer Rest}` ? `${Uppercase<FL>}${Rest}` : T
+
 /**
  * Converts the first character of string to upper case.
  *
@@ -8,6 +9,7 @@ type Capitalized<T extends string> = T extends `${infer FL}${infer Rest}` ? `${U
  *
  * @example
  * const result = capitalize('apple') // returns 'Apple'
+ * const result = capitalize('Apple') // returns 'Apple'
  * const result2 = capitalize('ABC') // returns 'ABC'
  */
 export const capitalize = <T extends string>(str: T): Capitalized<T> =>

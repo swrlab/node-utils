@@ -1,6 +1,7 @@
 /**
- * Sleep the given time in ms (async).
+ * Sleep or wairt for a given time.
  *
- * @param ms - miliseconds to sleep
+ * @param {number} ms - miliseconds to sleep
+ * @returns {Promise<void>} - Sleep Promise.
  */
 export const sleep = (ms: number): Promise<void> => new Promise((resolve) => setTimeout(resolve, ms))
