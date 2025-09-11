@@ -14,7 +14,7 @@
 	"types": "./dist/index.d.ts",
 	"exports": {
 		".": "./src/index.ts",
-		"./packages/date": "./src/legacy/date.ts",
+		"./packages/*": "./src/legacy/*.ts",
 		"./ard": "./src/ard/index.ts",
 		"./date": "./src/date/index.ts"
 	},
@@ -37,8 +37,16 @@
 				"default": "./dist/date.js"
 			},
 			"./packages/date": {
-				"types": "./src/legacy/date.d.ts",
-				"default": "./src/legacy/date.js"
+				"types": "./dist/packages/date.d.ts",
+				"default": "./dist/packages/date.js"
+			},
+			"./packages/strings": {
+				"types": "./dist/packages/strings.d.ts",
+				"default": "./dist/packages/strings.js"
+			},
+			"./packages/numbers": {
+				"types": "./dist/packages/strings.d.ts",
+				"default": "./dist/packages/strings.js"
 			},
 			"./packages/*": {
 				"types": "./src/legacy/*.d.ts",
