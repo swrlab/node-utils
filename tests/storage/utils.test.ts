@@ -9,10 +9,15 @@ describe('storage utils', () => {
 			assert(isHttp('https:'))
 		})
 		test('invalid http protocols', () => {
+			// @ts-expect-error - error is ok
 			assert.equal(isHttp(''), false)
+			// @ts-expect-error - error is ok
 			assert(!isHttp('http'))
+			// @ts-expect-error - error is ok
 			assert(!isHttp('https'))
+			// @ts-expect-error - error is ok
 			assert(!isHttp('http://'))
+			// @ts-expect-error - error is ok
 			assert(!isHttp('https://'))
 		})
 	})
@@ -22,7 +27,9 @@ describe('storage utils', () => {
 			assert(isCloudStorage('gs:'))
 		})
 		test('invalid Cloud Storage protocols', () => {
+			// @ts-expect-error - error is ok
 			assert(!isCloudStorage('gs'))
+			// @ts-expect-error - error is ok
 			assert(!isCloudStorage('gs:/'))
 			assert(!isCloudStorage('http:'))
 			assert(!isCloudStorage('https:'))

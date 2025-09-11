@@ -1,5 +1,4 @@
-import { Buffer } from 'node:buffer'
-import crc from 'node-crc'
+import { crc64String } from '../string/crc64.ts'
 
 /**
  * Create a a CRC64-ECMA182-compliant hash from given input.
@@ -16,4 +15,4 @@ import crc from 'node-crc'
  * ard.createHashedId('my-string-to-encode')
  * ```
  */
-export const createHashedId = (input: string): string => crc.crc64(Buffer.from(input, 'utf-8')).toString('hex')
+export const createHashedId = (input: string): string => crc64String(input)

@@ -2,105 +2,91 @@ import { Buffer } from 'node:buffer'
 import process from 'node:process'
 
 import pkg from '../../package.json' with { type: 'json' }
-const convertReadableStream = async (readable: any) => {
-	// create output details
-	let string = ''
-	const chunks = []
-
-	// handle each chunk
-	for await (const chunk of readable) {
-		string += chunk
-		chunks.push(chunk)
-	}
-
-	// reformat buffer
-	const buffer = Buffer.concat(chunks)
-
-	// return data
-	return { string, buffer }
-}
 const { name, version } = pkg
 
-const userAgent = `${name.replace('@', '')}/${version}`
+const userAgent: string = process.env.USER_AGENT || `${name.replace('@', '')}/${version}`
 
-const defaultOptions: RequestInit = {
-	method: 'GET',
-	// keepAliveTimeout: 30e3,
-	// headersTimeout: 0,
-	// bodyTimeout: 0,
-	headers: {
-		'user-agent': process.env.USER_AGENT || userAgent,
-	},
+/** 7 seconds (in milliseconds) */
+const DEFAULT_TIMEOUT: number = 7e3
+
+type OptionsTimeout = {
+	/**
+	 * @deprecated Don't use `timeout`. Just use `{ signal: AbortSignal.timeout(timeout) }` in request options instead. Or pass an abortController.
+	 */
+	timeout?: number
+}
+type OptionsReject = {
+	/**
+	 * @deprecated Don't use `reject`. Just use `Response.ok` instead on a plain fetch.
+	 */
+	reject?: boolean
 }
 
-/** 7 seconds (as milliseconds) */
-const DEFAULT_TIMEOUT = 7e3
-
-type OptionsTimeout = { timeout: number }
-type OptionsReject = { reject: boolean }
-
 /**
- * Create a fetchrequest.
+ * Create a fetch request.
+ * Tiny wrapper around the native fetch API.
  *
- * @deprecated Use `fetch` or `ofetch` instead.
+ * @deprecated If possible, prefer using `fetch` directly or a package like `ofetch` instead.
  *
- * @param {string} url - URL
- * @param options - fetch options
- * @returns - Custom fetch object.
+ * @param {string | URL} resource - URL
+ * @param [options] - (Optional) fetch request options.
+ * @returns - fetch response object.
  */
 export const request = async (
-	url: string,
-	options: RequestInit & OptionsTimeout & OptionsReject
+	resource: string | URL,
+	options: RequestInit & OptionsTimeout & OptionsReject = {}
 ): Promise<Record<any, any>> => {
+	// TODO: Consider using `defu` to merge with defaul parameters safely and easily.
 	const requestOptions = {
-		...defaultOptions,
-		method: options?.method || 'GET',
-		body: options?.body || undefined,
-		signal: AbortSignal.timeout(options?.timeout || DEFAULT_TIMEOUT),
+		...options,
+		signal: options.signal ?? AbortSignal.timeout(options?.timeout ?? DEFAULT_TIMEOUT),
+		headers: {
+			'user-agent': userAgent,
+			...(options.headers ?? {}),
+		},
 	}
-	if (options?.headers)
-		requestOptions.headers = {
-			...requestOptions.headers,
-			...options.headers,
-		}
+	// delete non-existing request properties from the Request
+	delete requestOptions.timeout
+	delete requestOptions.reject
 
-	// make actual request
-	const { status, headers, url: finalUrl, body, ok, redirected } = await fetch(url, requestOptions as RequestInit)
-	const statusCode = status
+	const response = await fetch(resource, requestOptions as RequestInit)
+	const { status, ok, headers, url, body, redirected } = response
 
-	// const ok = statusCode >= 200 && statusCode < 300
-	if (!ok && (!options || options?.reject !== false)) return Promise.reject({ statusCode, ok, headers, url })
+	if (!ok && options?.reject === true) return Promise.reject({ statusCode: status, ok, headers, url })
 
-	// turn stream into string
-	const { string, buffer } = await convertReadableStream(body)
-
-	// detect/ set redirect
-	// const redirect = statusCode >= 300 && statusCode < 400 && headers.location ? new URL(headers.location, url) : null
-
-	// fetch header vars
 	const contentType = headers.get('content-type')
 
-	// parse json if set
-	let json
+	// TODO: change flow, since there are other types like `blob` and text type should be detecte too.
+	// TODO: consider using `destr` for more performance, safety and Types.
+	const text = await response.text()
+	let json: any
 	try {
-		json = contentType?.includes('application/json') ? JSON.parse(string) : null
+		json = contentType?.includes('application/json') ? JSON.parse(text) : null
 	} catch {
 		json = null
 	}
 
-	// return data
 	return Promise.resolve({
-		statusCode,
+		/** @deprecated Use `Response.status` instead. */
+		statusCode: status,
 		ok,
-		redirect: redirected ? finalUrl : undefined,
+		redirectd: redirected,
+		/** @deprecated Use `Response.redirected` and if true then `Response.url` is the latest one. */
+		redirect: redirected ? url : undefined,
+		url,
 		headers,
+		/** @deprecated Just use Response.headers.get('content-type') instead. */
 		contentType,
-		/** @deprecated */
-		trailers: new Error('not supported any longer'),
+		/** @deprecated Use `Response.headers` instead. */
+		trailers: undefined,
+		/** @deprecated Use a plain fetch if body access is neede. This one hast an already used body. */
 		body,
 		status,
-		string,
-		buffer,
+		/** @deprecated Use `await Response.text()` instead. This can still be parsed to JSON or a Buffer. */
+		string: text,
+		/** @deprecated Use `Response.arrayBuffer()` instead. A Buffer can be converted to text as well. */
+		buffer: Buffer.from(text, 'utf-8'),
+		/** @deprecated Use `await Response.json()` instead of use `ofetch`. */
 		json,
 	})
 }

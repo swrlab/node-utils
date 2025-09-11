@@ -10,6 +10,14 @@
 	},
 	"author": "SWR Audio Lab <lab@swr.de>",
 	"main": "./src/index.ts",
+	"module": "./src/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": "./src/index.ts",
+		"./packages/date": "./src/legacy/date.ts",
+		"./ard": "./src/ard/index.ts",
+		"./date": "./src/date/index.ts"
+	},
 	"publishConfig": {
 		"access": "public",
 		"provenance": true,
@@ -17,12 +25,24 @@
 		"module": "./dist/index.js",
 		"exports": {
 			".": {
-				"types": "./dist/index.d.mts",
+				"types": "./dist/index.d.ts",
 				"default": "./dist/index.js"
 			},
-			"/ard.js": {
-				"types": "./dist/ard/index.d.mts",
-				"default": "./dist/ard/index.js"
+			"./ard": {
+				"types": "./dist/ard.d.ts",
+				"default": "./dist/ard.js"
+			},
+			"./date": {
+				"types": "./dist/date.d.ts",
+				"default": "./dist/date.js"
+			},
+			"./packages/date": {
+				"types": "./src/legacy/date.d.ts",
+				"default": "./src/legacy/date.js"
+			},
+			"./packages/*": {
+				"types": "./src/legacy/*.d.ts",
+				"default": "./src/legacy/*.js"
 			}
 		}
 	},
@@ -34,11 +54,14 @@
 		"lint:fix": "eslint --fix",
 		"test": "bun run typecheck && bun run test:bun",
 		"test:bun": "bun test ./tests/**test*.ts",
+		"test:legacy": "bun test ./tests/legacy/*.test.mjs",
+		"test:legacy:node": "node --test ./tests/legacy/*.test.mjs",
 		"test:node": "node --test ./tests/**.test.ts",
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
 		"@google-cloud/storage": "^7.17.0",
+		"@types/node": "^24.3.1",
 		"abort-controller": "^3.0.0",
 		"luxon": "3.7.2",
 		"node-crc": "https://github.com/swrlab/node-crc#v2.1.0",
