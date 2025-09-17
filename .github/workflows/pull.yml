@@ -6,7 +6,7 @@ on:
 
 jobs:
   test:
-    name: Run Tests
+    name: Run Node.js Tests
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -31,7 +31,7 @@ jobs:
       - name: 🧪 Run Lint
         run: bun run lint
 
-      - name: 🧪 Run build
+      - name: 🔨 Run build
         run: bun run build
 
       - name: 🧪 Run Tests (in Bun)
@@ -46,8 +46,11 @@ jobs:
       - name: 🧪 Run Tests (in via npm in Node)
         run: npm run test:node
 
+      - name: 🧪 Run Dist Tests (in via npm in Node)
+        run: npm run test:dist:node
+
   test-node-20:
-    name: Run Tests
+    name: Run Tests in Node.js v20
     runs-on: ubuntu-latest
     steps:
       - name: 👀 Checkout Code
@@ -71,12 +74,6 @@ jobs:
 
       - name: 🧪 Run Tests
         run: npm run test
-
-      - name: Test dist Strings
-        run: node --test ./test/dist-legacy/strings.test.mjs
-
-      - name: Test dist ARD
-        run: node --test ./test/dist-legacy/ard.test.mjs
 
       - name: 🧪 Run Dist Tests (in Node via npm)
         run: npm run test:dist:node
