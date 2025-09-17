@@ -111,7 +111,7 @@
 		"test:dist": "bun test ./tests/dist-legacy/*test*.mjs",
 		"test:dist:node": "node --test ./tests/dist-legacy/*test.mjs",
 		"test:legacy": "bun test ./tests/legacy/*.test.mjs",
-		"test:legacy:node": "node --test ./tests/legacy/*.test.mjs",
+		"test:legacy:node": "node --test ./tests/legacy/",
 		"test:node": "node --test ./tests/**.test.ts",
 		"typecheck": "tsc --noEmit"
 	},
