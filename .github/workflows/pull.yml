@@ -73,10 +73,10 @@ jobs:
         run: npm run test
 
       - name: Test dist Strings
-        run: node --test ./tests/legacy/strings.test.mjs
+        run: node --test ./tests/dist-legacy/strings.test.mjs
 
       - name: Test dist ARD
-        run: node --test ./tests/legacy/ard.test.mjs
+        run: node --test ./tests/dist-legacy/ard.test.mjs
 
       - name: 🧪 Run Dist Tests (in Node via npm)
         run: npm run test:dist:node
