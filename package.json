@@ -107,12 +107,12 @@
 		"lint:fix": "eslint --fix",
 		"release": "bunx bumpp",
 		"test": "bun run typecheck && bun run test:bun && bun run test:legacy",
-		"test:bun": "bun test ./tests/**test*.ts",
-		"test:dist": "bun test ./tests/dist-legacy/*test*.mjs",
-		"test:dist:node": "node --test ./tests/dist-legacy/",
-		"test:legacy": "bun test ./tests/legacy/*.test.mjs",
-		"test:legacy:node": "node --test ./tests/legacy/",
-		"test:node": "node --test ./tests/**.test.ts",
+		"test:bun": "bun test ./test/**test*.ts",
+		"test:dist": "bun test ./test/dist-legacy/*test*.mjs",
+		"test:dist:node": "node --test ./test/dist-legacy/",
+		"test:legacy": "bun test ./test/legacy/*.test.mjs",
+		"test:legacy:node": "node --test ./test/legacy/",
+		"test:node": "node --test ./test/**.test.ts",
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
