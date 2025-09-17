@@ -91,7 +91,7 @@
 		}
 	},
 	"bin": {
-		"ard-coreId": "./bin/ard-coreId.js"
+		"ard-coreId": "./bin/ard-coreId.mjs"
 	},
 	"publishConfig": {
 		"access": "public",
