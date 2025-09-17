@@ -6,7 +6,6 @@ on:
 
 jobs:
   test:
-    needs: security
     name: Run Tests
     runs-on: ubuntu-latest
     strategy:
