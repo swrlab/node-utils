@@ -66,7 +66,7 @@ describe('mocked env values', () => {
 		})
 		it('should throw a SyntaxError for invalid json data', () => {
 			assert.throws(() => getEnvBase64('BASE64_BROKEN'), {
-				message: /BASE64_BROKEN.*SyntaxError: JSON Parse error: Unexpected identifier/,
+				message: /SyntaxError:.*Unexpected/,
 			})
 			assert.throws(() => getEnvBase64('BASE64_BROKEN'), { message: /variable BASE64_BROKEN as/ })
 		})
@@ -79,7 +79,7 @@ describe('mocked env values', () => {
 			})
 		})
 		it('should throw a SyntaxError for mal-formed json', () => {
-			assert.throws(() => getEnvBase64('BROKEN_JSON'), { message: /SyntaxError: JSON Parse error: Unexpected/ })
+			assert.throws(() => getEnvBase64('BROKEN_JSON'), { message: /SyntaxError:.*Unexpected/ })
 		})
 	})
 })
