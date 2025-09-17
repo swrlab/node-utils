@@ -161,8 +161,8 @@ const request = async (
 }
 
 /**
- * Request object, wrapped in a tracer if provided.
- * @param [tracer] - (Optional) Tracer object containing a tracer function.
+ * Request object, wrapped in a Datadog tracer if provided.
+ * @param [tracer] - (Optional) Datadog APM Tracer object containing a tracer function.
  * @param tracer.wrap - (Optional) Object containing `name` and `request`.
  * @deprecated Just use native fetch instead or `ofetch` or `axios` if required. But modern fetch solves most problems and works in all Runtimes and Browsers.
  * @returns {object} - Request object.

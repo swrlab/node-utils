@@ -1,6 +1,6 @@
-# SWR Audio Lab / Numbers
+# SWR Audio Lab / Number
 
-Common number and math helpers.
+Common number and math utilities.
 
 - [SWR Audio Lab / Numbers](#swr-audio-lab--numbers)
   - [Install](#install)
@@ -20,7 +20,9 @@ Common number and math helpers.
 Add the parent package to your dependencies:
 
 ```sh
-yarn add @swrlab/utils
+bun install @swrlab/utils
+# or
+bun install @swrlab/utils
 ```
 
 ## `addLeadingZero` - add leading zero to number
@@ -30,7 +32,7 @@ yarn add @swrlab/utils
 Import the library:
 
 ```js
-const { addLeadingZero } = require('@swrlab/utils/packages/numbers')
+import { addLeadingZero } from '@swrlab/utils/number'
 ```
 
 Then use the toolkit:
@@ -52,7 +54,7 @@ addLeadingZero(10)
 Import the library:
 
 ```js
-const { addTrailingZeros } = require('@swrlab/utils/packages/numbers')
+import { addTrailingZeros } from '@swrlab/utils/number'
 ```
 
 Then use the toolkit:
@@ -85,7 +87,7 @@ addTrailingZeros('2,2', 2, ',')
 Import the library:
 
 ```js
-const { getAverage } = require('@swrlab/utils/packages/numbers')
+import { getAverage } from '@swrlab/utils/number'
 ```
 
 Then use the toolkit:
@@ -106,7 +108,7 @@ getAverage([1.2, 2.4, 3.6], 1)
 Import the library:
 
 ```js
-const { getDiff } = require('@swrlab/utils/packages/numbers')
+import { getDiff } from '@swrlab/utils/number'
 ```
 
 Then use the toolkit:
@@ -127,7 +129,7 @@ getDiff(1, 2)
 Import the library:
 
 ```js
-const { getRandomInRange } = require('@swrlab/utils/packages/numbers')
+import { getRandomInRange } from '@swrlab/utils/number'
 ```
 
 Then use the toolkit:
@@ -148,7 +150,7 @@ getRandomInRange(5, 9)
 Import the library:
 
 ```js
-const { getSum } = require('@swrlab/utils/packages/numbers')
+import { getSum } from '@swrlab/utils/number'
 ```
 
 Then use the toolkit:
@@ -168,7 +170,7 @@ getSum([1.2, 2.4, 3.6], 1)
 Import the library:
 
 ```js
-const { isEven } = require('@swrlab/utils/packages/numbers')
+import { isEven } from '@swrlab/utils/number'
 ```
 
 Then use the toolkit:
@@ -189,7 +191,7 @@ isEven(1)
 Import the library:
 
 ```js
-const { normalize } = require('@swrlab/utils/packages/numbers')
+import { normalize } from '@swrlab/utils/number'
 ```
 
 Then use the toolkit:
@@ -210,7 +212,7 @@ normalize(80, 100)
 Import the library:
 
 ```js
-const { roundTo } = require('@swrlab/utils/packages/numbers')
+import { roundTo } from '@swrlab/utils/number'
 ```
 
 Then use the toolkit:
@@ -230,7 +232,7 @@ roundTo(1.23456, 4)
 Import the library:
 
 ```js
-const { toReadable } = require('@swrlab/utils/packages/numbers')
+import { toReadable } from '@swrlab/utils/number'
 ```
 
 Then use the toolkit:

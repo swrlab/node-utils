@@ -6,61 +6,107 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/swrlab/node-utils"
+		"url": "git+https://github.com/swrlab/node-utils.git"
 	},
 	"author": "SWR Audio Lab <lab@swr.de>",
-	"main": "./src/index.ts",
-	"module": "./src/index.js",
+	"files": [
+		"bin",
+		"dist"
+	],
+	"main": "./dist/index.js",
+	"module": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"exports": {
-		".": "./src/index.ts",
-		"./packages/*": "./src/legacy/*.ts",
-		"./ard": "./src/ard/index.ts",
-		"./date": "./src/date/index.ts"
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		},
+		"./ard": {
+			"types": "./dist/ard.d.ts",
+			"default": "./dist/ard.js"
+		},
+		"./array": {
+			"types": "./dist/array.d.ts",
+			"default": "./dist/array.js"
+		},
+		"./date": {
+			"types": "./dist/date.d.ts",
+			"default": "./dist/date.js"
+		},
+		"./env": {
+			"types": "./dist/env.d.ts",
+			"default": "./dist/env.js"
+		},
+		"./helper": {
+			"types": "./dist/helper.d.ts",
+			"default": "./dist/helper.js"
+		},
+		"./number": {
+			"types": "./dist/number.d.ts",
+			"default": "./dist/number.js"
+		},
+		"./object": {
+			"types": "./dist/object.d.ts",
+			"default": "./dist/object.js"
+		},
+		"./predicate": {
+			"types": "./dist/predicate.d.ts",
+			"default": "./dist/predicate.js"
+		},
+		"./storage": {
+			"types": "./dist/storage.d.ts",
+			"default": "./dist/storage.js"
+		},
+		"./string": {
+			"types": "./dist/string.d.ts",
+			"default": "./dist/string.js"
+		},
+		"./packages/ard": {
+			"types": "./dist/packages/ard.d.ts",
+			"default": "./dist/packages/ard.js"
+		},
+		"./packages/date": {
+			"types": "./dist/packages/date.d.ts",
+			"default": "./dist/packages/date.js"
+		},
+		"./packages/helpers": {
+			"types": "./dist/packages/helpers.d.ts",
+			"default": "./dist/packages/helpers.js"
+		},
+		"./packages/numbers": {
+			"types": "./dist/packages/numbers.d.ts",
+			"default": "./dist/packages/numbers.js"
+		},
+		"./packages/storage-wrapper": {
+			"types": "./dist/packages/storage-wrapper.d.ts",
+			"default": "./dist/packages/storage-wrapper.js"
+		},
+		"./packages/strings": {
+			"types": "./dist/packages/strings.d.ts",
+			"default": "./dist/packages/strings.js"
+		},
+		"./packages/undici": {
+			"types": "./dist/packages/undici.d.ts",
+			"default": "./dist/packages/undici.js"
+		}
+	},
+	"bin": {
+		"ard-coreId": "./bin/ard-coreId.js"
 	},
 	"publishConfig": {
 		"access": "public",
-		"provenance": true,
-		"main": "./dist/index.js",
-		"module": "./dist/index.js",
-		"exports": {
-			".": {
-				"types": "./dist/index.d.ts",
-				"default": "./dist/index.js"
-			},
-			"./ard": {
-				"types": "./dist/ard.d.ts",
-				"default": "./dist/ard.js"
-			},
-			"./date": {
-				"types": "./dist/date.d.ts",
-				"default": "./dist/date.js"
-			},
-			"./packages/date": {
-				"types": "./dist/packages/date.d.ts",
-				"default": "./dist/packages/date.js"
-			},
-			"./packages/strings": {
-				"types": "./dist/packages/strings.d.ts",
-				"default": "./dist/packages/strings.js"
-			},
-			"./packages/numbers": {
-				"types": "./dist/packages/strings.d.ts",
-				"default": "./dist/packages/strings.js"
-			},
-			"./packages/*": {
-				"types": "./src/legacy/*.d.ts",
-				"default": "./src/legacy/*.js"
-			}
-		}
+		"provenance": true
 	},
 	"scripts": {
-		"ard:coreId": "node ./scripts/ard/coreId.js",
+		"ard:coreId": "bun ./bin/ard-coreId.mjs",
+		"attw": "bunx @arethetypeswrong/cli --pack . --profile esm-only",
 		"build": "tsdown",
 		"format": "prettier --write .",
+		"knip": "knip",
 		"lint": "eslint",
 		"lint:fix": "eslint --fix",
-		"test": "bun run typecheck && bun run test:bun",
+		"release": "bunx bumpp",
+		"test": "bun run typecheck && bun run test:bun && bun run test:legacy",
 		"test:bun": "bun test ./tests/**test*.ts",
 		"test:legacy": "bun test ./tests/legacy/*.test.mjs",
 		"test:legacy:node": "node --test ./tests/legacy/*.test.mjs",
@@ -68,18 +114,17 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@google-cloud/storage": "^7.17.0",
-		"@types/node": "^24.3.1",
-		"abort-controller": "^3.0.0",
 		"luxon": "3.7.2",
-		"node-crc": "https://github.com/swrlab/node-crc#v2.1.0",
 		"undici": "7.15.0"
 	},
 	"devDependencies": {
+		"@google-cloud/storage": "^7.17.0",
 		"@swrlab/style-guide": "^2.0.7",
 		"@types/bun": "^1.2.21",
 		"@types/luxon": "^3.7.1",
+		"@types/node": "^24.3.1",
 		"eslint": "^9.35.0",
+		"knip": "^5.63.1",
 		"prettier": "^3.6.2",
 		"tsdown": "^0.14.2",
 		"typescript": "^5.9.2"

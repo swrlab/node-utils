@@ -28,7 +28,7 @@ yarn add @swrlab/utils
 Import the library:
 
 ```js
-const { getDateHourMinutes } = require('@swrlab/utils/packages/date')
+import { getDateHourMinutes } from '@swrlab/utils/date'
 ```
 
 Then use the toolkit:
@@ -45,7 +45,7 @@ getDateHourMinutes('2038-01-19T03:14:08.000')
 Import the library:
 
 ```js
-const { getDayMonthYear } = require('@swrlab/utils/packages/date')
+import { getDayMonthYear } from '@swrlab/utils/date'
 ```
 
 Then use the toolkit:
@@ -62,7 +62,7 @@ getDayMonthYear('2038-01-19T03:14:08.000')
 Import the library:
 
 ```js
-const { getFullRelativeTime } = require('@swrlab/utils/packages/date')
+import { getFullRelativeTime } from '@swrlab/utils/date'
 ```
 
 Then use the toolkit:
@@ -79,7 +79,7 @@ getFullRelativeTime('2038-01-19T03:14:08.000')
 Import the library:
 
 ```js
-const { getHourMinutes } = require('@swrlab/utils/packages/date')
+import { getHourMinutes } from '@swrlab/utils/date'
 ```
 
 Then use the toolkit:
@@ -96,7 +96,7 @@ getHourMinutes('2038-01-19T03:14:08.000')
 Import the library:
 
 ```js
-const { getIsoRelativeTime } = require('@swrlab/utils/packages/date')
+import { getIsoRelativeTime } from '@swrlab/utils/date'
 ```
 
 Then use the toolkit:
@@ -113,7 +113,7 @@ getIsoRelativeTime('2038-01-19T03:14:08.000')
 Import the library:
 
 ```js
-const { getRelativeTime } = require('@swrlab/utils/packages/date')
+import { getRelativeTime } from '@swrlab/utils/date'
 ```
 
 Then use the toolkit:
@@ -130,7 +130,7 @@ getRelativeTime('2038-01-19T03:14:08.000')
 Import the library:
 
 ```js
-const { getYearMonthDay } = require('@swrlab/utils/packages/date')
+import { getYearMonthDay } from '@swrlab/utils/date'
 ```
 
 Then use the toolkit:
@@ -147,7 +147,7 @@ getYearMonthDay('2038-01-19T03:14:08.000')
 Import the library:
 
 ```js
-const { revYearMonthDay } = require('@swrlab/utils/packages/date')
+import { revYearMonthDay } from '@swrlab/utils/date'
 ```
 
 Then use the toolkit:

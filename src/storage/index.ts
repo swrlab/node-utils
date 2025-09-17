@@ -1,23 +1,24 @@
-import type { File } from '@google-cloud/storage'
 /**
  * @fileoverview API for Storage.
  */
+
+import type { File } from '@google-cloud/storage'
 import type { Buffer } from 'node:buffer'
-import type { StorageConfig, StorageWrapperInstance } from './utils.ts'
 import { randomUUID } from 'node:crypto'
 import os from 'node:os'
 import path from 'node:path'
-import * as createUri from './createUri.ts'
 import * as google from './google.ts'
 import * as localFs from './local.ts'
 import { isCloudStorageUrl, isHttpUrl, validateUrl } from './utils.ts'
 
-const createUrl = async (url: string, ttl: number): Promise<string> => {
+export * as createUri from './createUri.ts'
+
+export const createUrl = async (url: string, ttl: number): Promise<string> => {
 	validateUrl(url)
 	return isCloudStorageUrl(url) ? await google.createSignedUrl(url, ttl) : Promise.resolve(url)
 }
 
-const deleteFile = async (url: string): Promise<void> => {
+export const deleteFile = async (url: string): Promise<void> => {
 	if (isCloudStorageUrl(url)) {
 		await google.deleteFile(url)
 	}
@@ -29,7 +30,7 @@ const deleteFile = async (url: string): Promise<void> => {
 	await localFs.deleteFile(url)
 }
 
-const list = async (url: string): Promise<(File | string)[]> => {
+export const list = async (url: string): Promise<(File | string)[]> => {
 	if (isCloudStorageUrl(url)) {
 		return await google.listFiles(url)
 	}
@@ -58,7 +59,7 @@ const fetchContents = async (url: string, timeout?: number): Promise<ArrayBuffer
 	throw new Error(`fetching url failed with status > ${response.status}`)
 }
 
-const load = async (uri: string): Promise<Buffer<ArrayBufferLike> | ArrayBufferLike | string> => {
+export const load = async (uri: string): Promise<Buffer<ArrayBufferLike> | ArrayBufferLike | string> => {
 	if (isCloudStorageUrl(uri)) {
 		return await google.download(uri)
 	}
@@ -75,7 +76,7 @@ const createTempFile = async (contents: any): Promise<string> => {
 	return filePath
 }
 
-const save = async (
+export const save = async (
 	uri: string,
 	contents: Buffer<ArrayBufferLike> | ArrayBufferLike | string,
 	_logPrefix?: string,
@@ -92,7 +93,7 @@ const save = async (
 	localFs.writeFile(uri, contents.toString())
 }
 
-const move = async (sourceUri: string, destinationUri: string, keepOriginal: boolean = false): Promise<void> => {
+export const move = async (sourceUri: string, destinationUri: string, keepOriginal: boolean = false): Promise<void> => {
 	if (isCloudStorageUrl(sourceUri) && isCloudStorageUrl(destinationUri)) {
 		return await google.move(sourceUri, destinationUri, keepOriginal)
 	}
@@ -107,31 +108,4 @@ const move = async (sourceUri: string, destinationUri: string, keepOriginal: boo
 	if (keepOriginal !== true) {
 		await deleteFile(sourceUri)
 	}
-}
-
-// legacy export
-/**
- * Create a Google Cloud Storage Wrapper.
- * @deprecated
- *
- * @param config - Storage Config.
- * @returns A StorageWrapper
- */
-export function StorageWrapper(config: StorageConfig): Promise<Error> | StorageWrapperInstance {
-	// TODO: just throw the Error and make an async function
-	if (!config || !config.gs) return Promise.reject(new Error('storage config invalid'))
-
-	google.initialize(config.gs)
-
-	const api: StorageWrapperInstance = {
-		createUri,
-		createUrl,
-		delete: deleteFile,
-		list,
-		load,
-		save,
-		move,
-	}
-
-	return api
 }
