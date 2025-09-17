@@ -31,6 +31,9 @@ jobs:
       - name: 🧪 Run Lint
         run: bun run lint
 
+      - name: 🧪 Run build
+        run: bun run build
+
       - name: 🧪 Run Tests (in Bun)
         run: bun run test
 
@@ -60,17 +63,14 @@ jobs:
         with:
           bun-version: latest
 
-      - name: 📦 Install Dependencies (via Bun)
-        run: bun install
+      - name: 📦 Install Dependencies (via npm)
+        run: npm install
 
-      - name: 🧪 Run Lint (in Bun)
-        run: bun run lint
+      - name: 📦 Install Dependencies (via Bun)
+        run: npm run build
 
       - name: 🧪 Run Tests (in Bun)
-        run: bun run test
-
-      - name: 🧪 Run Node Tests (in via npm in Bun)
-        run: npm run test:node
-
-      - name: 🧪 Run Tests (in via npm in Node)
         run: npm run test
+
+      - name: 🧪 Run Dist Tests (in Node via npm)
+        run: npm run test:dist:node
