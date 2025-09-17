@@ -1,6 +1,6 @@
 {
 	"name": "@swrlab/utils",
-	"version": "3.0.0-beta.2",
+	"version": "3.0.0-beta.3",
 	"description": "Wrapping common SWR Audio Lab utils",
 	"type": "module",
 	"license": "MIT",
