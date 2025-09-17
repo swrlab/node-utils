@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        version: [20, 22, 24]
+        version: [22, 24]
     steps:
       - name: 👀 Checkout Code
         uses: actions/checkout@v4
@@ -42,3 +42,35 @@ jobs:
 
       - name: 🧪 Run Tests (in via npm in Node)
         run: npm run test:node
+
+  test-node-20:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: 👀 Checkout Code
+        uses: actions/checkout@v4
+
+      - name: 🏗 Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 🛠 Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: 📦 Install Dependencies (via Bun)
+        run: bun install
+
+      - name: 🧪 Run Lint (in Bun)
+        run: bun run lint
+
+      - name: 🧪 Run Tests (in Bun)
+        run: bun run test
+
+      - name: 🧪 Run Node Tests (in via npm in Bun)
+        run: npm run test:node
+
+      - name: 🧪 Run Tests (in via npm in Node)
+        run: npm run test
