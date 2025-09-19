@@ -1,0 +1,60 @@
+{
+	"name": "@swrlab/storage",
+	"version": "3.0.0-beta.3",
+	"packageManager": "bun@1.2.22",
+	"description": "SWR Audio Lab storage utilities for Node.js.",
+	"type": "module",
+	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/swrlab/node-utils.git",
+		"directory": "packages/storage"
+	},
+	"author": "SWR Audio Lab <lab@swr.de>",
+	"files": [
+		"dist"
+	],
+	"main": "./dist/index.js",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		}
+	},
+	"publishConfig": {
+		"access": "public",
+		"provenance": true
+	},
+	"scripts": {
+		"attw": "bunx @arethetypeswrong/cli --pack . --profile esm-only",
+		"build": "tsdown",
+		"test": "bun run typecheck && bun run test:bun && bun run test:node",
+		"test:bun": "bun test ./test/**test*.ts",
+		"test:node": "node --test ./test/**.test.ts",
+		"typecheck": "tsc --noEmit"
+	},
+	"dependencies": {
+		"@google-cloud/storage": "^7.17.0"
+	},
+	"devDependencies": {
+		"@types/node": "^24.3.1",
+		"tsdown": "^0.14.2",
+		"typescript": "^5.9.2"
+	},
+	"devEngines": {
+		"runtime": {
+			"name": "node",
+			"version": "^22.18.0 || >= 24.6",
+			"onFail": "warn"
+		},
+		"packageManager": {
+			"name": "bun",
+			"onFail": "warn"
+		}
+	},
+	"engines": {
+		"node": "^22.18.0 || >= 24.6.0"
+	}
+}

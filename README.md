@@ -27,7 +27,7 @@ Each utility category (`string`, `date`, etc.) has their own export and thus can
 ```js
 // examples
 import { toRelativeTime } from '@swrlab/utils/date'
-import { roundTo, getRandomInRange } from '@swrlab/utils/number'
+import { getRandomInRange, roundTo } from '@swrlab/utils/number'
 import * as numberUtilities from '@swrlab/utils/number'
 ```
 
