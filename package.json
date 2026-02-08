@@ -24,7 +24,7 @@
 	"devDependencies": {
 		"@swrlab/style-guide": "^1.0.3",
 		"chai": "5.1.2",
-		"eslint": "^9.33.0",
+		"eslint": "^10.0.0",
 		"eslint-plugin-json": "^4.0.1",
 		"mocha": "^11.7.1",
 		"prettier": "^3.6.2"
