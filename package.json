@@ -32,17 +32,20 @@
 		"test:node": "bun run --filter '*' test:node",
 		"typecheck": "tsc --noEmit"
 	},
+	"dependencies": {
+		"biome": "^0.3.3"
+	},
 	"devDependencies": {
 		"@arethetypeswrong/cli": "^0.18.2",
-		"@biomejs/biome": "2.2.4",
+		"@biomejs/biome": "2.3.8",
 		"@swrlab/style-guide": "^2.0.8",
-		"@types/node": "^24.5.2",
-		"bumpp": "^10.2.3",
-		"eslint": "^9.35.0",
-		"knip": "^5.63.1",
-		"prettier": "^3.6.2",
-		"typescript": "^5.9.2",
-		"vitest": "^3.2.4"
+		"@types/node": "^25.2.3",
+		"bumpp": "^10.4.1",
+		"eslint": "^9.39.2",
+		"knip": "^5.84.1",
+		"prettier": "^3.8.1",
+		"typescript": "^5.9.3",
+		"vitest": "^4.0.18"
 	},
 	"devEngines": {
 		"runtime": {

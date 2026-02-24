@@ -2,6 +2,9 @@ telemetry = false
 
 [install]
 saveTextLockfile = true
+# Only install package versions published at least 6 days ago
+minimumReleaseAge = 518400 # seconds
 
 [install.scopes]
 jsr = "https://npm.jsr.io"
+
