@@ -36,7 +36,7 @@
 		"test": "bun run test:bun",
 		"test:bun": "bun test ./test/*test.ts",
 		"test:dist": "bun test ./test/*test.mjs",
-		"test:dist:node": "node --test ./test/*.mjs",
+		"test:dist:node": "node --test ./test/*test.mjs",
 		"test:node": "node --test ./test/*.test.ts"
 	},
 	"dependencies": {

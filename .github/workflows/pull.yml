@@ -78,5 +78,5 @@ jobs:
       - name: 🧪 Run Storage Tests
         run: npm run --workspace=packages/storage test:bun && npm run --workspace=packages/storage typecheck
 
-      - name: 🧪 Run Dist Tests (in Node via npm)
-        run: npm run --workspace=packages/legacy test:dist:node
+      - name: 🧪 Run Dist Tests (in Node via bun)
+        run: npm run --workspace=packages/legacy test:dist
