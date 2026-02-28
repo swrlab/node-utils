@@ -47,7 +47,7 @@ jobs:
         run: npm run test:node
 
       - name: 🧪 Run Dist Tests (in via npm in Node)
-        run: npm run test:dist:node
+        run: npm run test:dist:node --workspace=packages/legacy
 
   test-node-20:
     name: Run Tests in Node.js v20
@@ -66,8 +66,8 @@ jobs:
         with:
           bun-version: latest
 
-      - name: 📦 Install Dependencies (via npm)
-        run: npm install
+      - name: 📦 Install Dependencies (via bun)
+        run: bun install
 
       - name: 📦 Run build
         run: npm run build
