@@ -3,9 +3,6 @@ import type { Buffer } from 'node:buffer'
 import type { CloudStorageUrl } from './utils.ts'
 import { Storage } from '@google-cloud/storage'
 
-// TODO: Remove in next mayor bump. Used for legacy imports only.
-export { Storage }
-
 let storage: Storage | undefined
 
 const parseURI = (uri: string): { bucket: string; file: string } => {

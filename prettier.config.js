@@ -1,4 +1,4 @@
-import audiolabPretterConfig from '@swrlab/style-guide/prettier.js'
+import audiolabPretterConfig from '@swrlab/style-guide/prettier'
 
 /**
  * @see https://prettier.io/docs/configuration

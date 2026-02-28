@@ -1,4 +1,4 @@
-import { audiolab } from '@swrlab/style-guide/eslint'
+import { audiolab } from '@swrlab/style-guide/eslint.mjs'
 
 export default audiolab({
 	typescript: true,

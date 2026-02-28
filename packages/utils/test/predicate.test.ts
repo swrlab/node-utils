@@ -100,6 +100,7 @@ describe('predicate utils', () => {
 
 		it('should return false when passing undefined', () => {
 			assert.equal(notNullOrUndefined(undefined), false)
+			// eslint-disable-next-line no-unassigned-vars -- we create a test case
 			let undefVar: unknown
 			assert.equal(notNullOrUndefined(undefVar), false)
 		})
