@@ -46,7 +46,7 @@ describe('storage utils', () => {
 			try {
 				isValidUrl('gs')
 			} catch (error) {
-				assert.equal(error.code, 'ERR_INVALID_URL')
+				assert.equal((error as { code: string }).code, 'ERR_INVALID_URL')
 			}
 		})
 		test('invalid stoarge urls', () => {
