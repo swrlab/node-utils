@@ -1,5 +1,7 @@
 import { afterEach, assert, beforeEach, describe, expect, it, vi } from 'vitest'
 import { request, sleep } from '../src/helpers/index.ts'
+import packageJson from '../package.json'
+const { version } = packageJson
 
 describe('helpers', () => {
 	describe('request', () => {
@@ -22,7 +24,7 @@ describe('helpers', () => {
 				await request(url)
 				expect(newFetch).toBeCalledWith(url, {
 					headers: {
-						'user-agent': 'swrlab/utils/3.0.0-beta.3',
+						'user-agent': `swrlab/utils/${version}`,
 					},
 					signal: expect.any(AbortSignal),
 				})
