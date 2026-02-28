@@ -46,6 +46,10 @@ jobs:
       - name: 🧪 Run Tests (in via npm in Node)
         run: npm run test:node
 
+      - name: 🧪 Install dependencies
+        run: bun install
+        working-directory: packages/legacy
+
       - name: 🧪 Run Dist Tests (in via npm in Node)
         run: npm run test:dist --workspace=packages/legacy
 
