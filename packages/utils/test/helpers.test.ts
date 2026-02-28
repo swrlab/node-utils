@@ -1,6 +1,6 @@
 import { afterEach, assert, beforeEach, describe, expect, it, vi } from 'vitest'
-import { request, sleep } from '../src/helpers/index.ts'
 import packageJson from '../package.json'
+import { request, sleep } from '../src/helpers/index.ts'
 const { version } = packageJson
 
 describe('helpers', () => {
