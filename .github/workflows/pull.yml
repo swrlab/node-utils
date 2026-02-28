@@ -47,7 +47,7 @@ jobs:
         run: npm run test:node
 
       - name: 🧪 Run Dist Tests (in via npm in Node)
-        run: npm run test:dist:node --workspace=packages/legacy
+        run: npm run test:dist --workspace=packages/legacy
 
   test-node-20:
     name: Run Tests in Node.js v20
