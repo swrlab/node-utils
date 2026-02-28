@@ -73,12 +73,12 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"@types/node": "^24.3.1",
-		"@vitest/coverage-v8": "4.0.15",
-		"knip": "^5.63.1",
-		"tsdown": "^0.14.2",
-		"typescript": "^5.9.2",
-		"vitest": "^4.0.15"
+		"@types/node": "^25.3.2",
+		"@vitest/coverage-v8": "4.0.18",
+		"knip": "^5.85.0",
+		"tsdown": "^0.21.0-beta.2",
+		"typescript": "^5.9.3",
+		"vitest": "^4.0.18"
 	},
 	"devEngines": {
 		"runtime": {
