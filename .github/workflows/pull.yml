@@ -76,4 +76,4 @@ jobs:
         run: npm run test
 
       - name: 🧪 Run Dist Tests (in Node via npm)
-        run: npm run test:dist:node
+        run: npm run test:dist:node --workspace=packages/legacy
