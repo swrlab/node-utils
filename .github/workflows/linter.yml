@@ -21,8 +21,11 @@ jobs:
       - name: 📦 Install Dependencies
         run: bun install --frozen-lockfile
 
-      - name: 📚 Lint Code Base
-        run: bun run lint
+      - name: 📚 Code format check
+        run: bun run format:check
 
-      - name: 📚 Run Tests
-        run: bun run test
+      - name: 📚 Lint types
+        run: bun run typecheck
+
+      - name: 📚 Lint code
+        run: bun run lint
