@@ -15,45 +15,45 @@
 		"bin",
 		"dist"
 	],
-	"main": "./dist/index.js",
-	"module": "./dist/index.js",
-	"types": "./dist/index.d.ts",
+	"main": "./dist/index.mjs",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.mts",
 	"exports": {
 		".": {
-			"types": "./dist/index.d.ts",
-			"default": "./dist/index.js"
+			"types": "./dist/index.d.mts",
+			"default": "./dist/index.mjs"
 		},
 		"./ard": {
-			"types": "./dist/ard.d.ts",
-			"default": "./dist/ard.js"
+			"types": "./dist/ard.d.mts",
+			"default": "./dist/ard.mjs"
 		},
 		"./array": {
-			"types": "./dist/array.d.ts",
-			"default": "./dist/array.js"
+			"types": "./dist/array.d.mts",
+			"default": "./dist/array.mjs"
 		},
 		"./env": {
-			"types": "./dist/env.d.ts",
-			"default": "./dist/env.js"
+			"types": "./dist/env.d.mts",
+			"default": "./dist/env.mjs"
 		},
 		"./helper": {
-			"types": "./dist/helper.d.ts",
-			"default": "./dist/helper.js"
+			"types": "./dist/helper.d.mts",
+			"default": "./dist/helper.mjs"
 		},
 		"./number": {
-			"types": "./dist/number.d.ts",
-			"default": "./dist/number.js"
+			"types": "./dist/number.d.mts",
+			"default": "./dist/number.mjs"
 		},
 		"./object": {
-			"types": "./dist/object.d.ts",
-			"default": "./dist/object.js"
+			"types": "./dist/object.d.mts",
+			"default": "./dist/object.mjs"
 		},
 		"./predicate": {
-			"types": "./dist/predicate.d.ts",
-			"default": "./dist/predicate.js"
+			"types": "./dist/predicate.d.mts",
+			"default": "./dist/predicate.mjs"
 		},
 		"./string": {
-			"types": "./dist/string.d.ts",
-			"default": "./dist/string.js"
+			"types": "./dist/string.d.mts",
+			"default": "./dist/string.mjs"
 		}
 	},
 	"bin": {

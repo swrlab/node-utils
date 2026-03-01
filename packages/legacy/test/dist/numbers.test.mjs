@@ -1,5 +1,5 @@
 import { describe, it } from 'node:test'
-import * as numbers from '../../dist/packages/numbers.js'
+import * as numbers from '../../dist/packages/numbers.mjs'
 import { expect } from './utils.mjs'
 
 describe('Test Numbers Package', () => {

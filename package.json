@@ -12,7 +12,9 @@
 	},
 	"author": "SWR Audio Lab <lab@swr.de>",
 	"workspaces": [
-		"packages/*"
+		"packages/legacy",
+		"packages/storage",
+		"packages/utils"
 	],
 	"scripts": {
 		"ard:coreId": "bun ./packages/utils/src/ard/coreId.ts",

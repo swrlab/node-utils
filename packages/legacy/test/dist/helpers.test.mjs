@@ -1,5 +1,5 @@
 import { describe, it } from 'node:test'
-import * as helpers from '../../dist/packages/helpers.js'
+import * as helpers from '../../dist/packages/helpers.mjs'
 import { expect } from './utils.mjs'
 
 describe('Test Helpers Package', () => {

@@ -1,5 +1,5 @@
 import { describe, it } from 'node:test'
-import { createHashedId } from '../../dist/packages/ard.js'
+import { createHashedId } from '../../dist/packages/ard.mjs'
 import { expect } from './utils.mjs'
 
 describe('Test ARD Package', () => {

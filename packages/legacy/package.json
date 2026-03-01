@@ -35,21 +35,22 @@
 		"build": "tsdown",
 		"test": "bun run test:bun",
 		"test:bun": "bun test ./test/*test.ts",
-		"test:dist": "bun test ./test/*test.mjs",
+		"test:mjs": "bun test ./test/*test.mjs",
+		"test:dist": "bun test ./test/dist/*test.mjs",
 		"test:dist:node": "node --test ./test/*test.mjs",
 		"test:node": "node --test ./test/*.test.ts"
 	},
 	"dependencies": {
 		"@google-cloud/storage": "^7.16.0",
-		"@swrlab/storage": "workspace:*",
-		"@swrlab/utils": "workspace:*",
-		"luxon": "3.7.1",
+		"@swrlab/storage": "workspace:^3.0.0-beta.4",
+		"@swrlab/utils": "workspace:^3.0.0-beta.4",
+		"luxon": "3.7.2",
 		"node-crc": "https://github.com/swrlab/node-crc#v2.1.0",
 		"undici": "7.13.0"
 	},
 	"devDependencies": {
-		"@types/node": "^24.3.1",
-		"tsdown": "^0.14.2",
+		"@types/node": "^25.3.3",
+		"tsdown": "^0.21.0-beta.2",
 		"typescript": "^5.9.2"
 	},
 	"devEngines": {

@@ -1,5 +1,5 @@
 import { describe, it } from 'node:test'
-import * as strings from '../../dist/packages/strings.js'
+import * as strings from '../../dist/packages/strings.mjs'
 import { expect } from './utils.mjs'
 
 describe('Test Strings Package', () => {

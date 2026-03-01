@@ -1,5 +1,5 @@
 import { describe, it } from 'node:test'
-import * as date from '../../dist/packages/date.js'
+import * as date from '../../dist/packages/date.mjs'
 import { expect } from './utils.mjs'
 
 const testDate = '2038-01-19T03:14:08.000'
