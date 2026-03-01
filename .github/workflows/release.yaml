@@ -41,6 +41,10 @@ jobs:
         run: bun run test
         working-directory: packages/utils
 
+      - name: create tarball
+        run: bun pm pack
+        working-directory: packages/utils
+
       - name: npm publish beta
-        run: npm publish --access public --provenance --tag beta
+        run: npm publish --access public --provenance --tag beta *.tgz
         working-directory: packages/utils
