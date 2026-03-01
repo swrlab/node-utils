@@ -42,8 +42,8 @@
 	},
 	"dependencies": {
 		"@google-cloud/storage": "^7.16.0",
-		"@swrlab/storage": "workspace:^3.0.0-beta.4",
-		"@swrlab/utils": "workspace:^3.0.0-beta.4",
+		"@swrlab/storage": "workspace:*",
+		"@swrlab/utils": "workspace:*",
 		"luxon": "3.7.2",
 		"node-crc": "https://github.com/swrlab/node-crc#v2.1.0",
 		"undici": "7.13.0"
