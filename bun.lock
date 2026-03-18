@@ -31,13 +31,14 @@
     },
     "packages/utils": {
       "name": "@swrlab/utils",
-      "version": "4.0.0-beta.1",
+      "version": "4.0.0-beta.0",
       "bin": {
         "ard-coreId": "bin/ard-coreId.mjs",
       },
       "devDependencies": {
         "@types/node": "^25.3.2",
         "@vitest/coverage-v8": "4.1.0",
+        "bumpp": "^11.0.1",
         "knip": "^5.85.0",
         "tsdown": "^0.21.4",
         "typescript": "^5.9.3",
@@ -46,7 +47,7 @@
     },
     "packages/utils-legacy": {
       "name": "@swrlab/utils-legacy",
-      "version": "3.0.0-beta.4",
+      "version": "3.0.0-beta.14",
       "dependencies": {
         "@google-cloud/storage": "^7.19.0",
         "@swrlab/storage": "workspace:*",
