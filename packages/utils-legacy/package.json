@@ -64,10 +64,10 @@
 	"devDependencies": {
 		"@swrlab/storage": "workspace:*",
 		"@swrlab/utils": "workspace:*",
-		"@types/node": "^25.5.0",
-		"bumpp": "^11.0.1",
-		"tsdown": "^0.21.4",
-		"typescript": "^5.9.3"
+		"@types/node": "catalog:dev",
+		"bumpp": "catalog:dev",
+		"tsdown": "catalog:dev",
+		"typescript": "catalog:dev"
 	},
 	"engines": {
 		"node": "^22.18.0 || >= 24.6.0"

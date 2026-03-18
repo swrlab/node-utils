@@ -75,13 +75,13 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"@types/node": "^25.3.2",
-		"@vitest/coverage-v8": "4.1.0",
-		"bumpp": "^11.0.1",
-		"knip": "^5.85.0",
-		"tsdown": "^0.21.4",
-		"typescript": "^5.9.3",
-		"vitest": "^4.0.18"
+		"@types/node": "catalog:dev",
+		"@vitest/coverage-v8": "catalog:dev",
+		"bumpp": "catalog:dev",
+		"knip": "catalog:dev",
+		"tsdown": "catalog:dev",
+		"typescript": "catalog:dev",
+		"vitest": "catalog:dev"
 	},
 	"engines": {
 		"node": "^22.18.0 || >= 24.6.0"
