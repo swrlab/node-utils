@@ -45,28 +45,17 @@
 	},
 	"dependencies": {
 		"@google-cloud/storage": "^7.19.0",
-		"@swrlab/storage": "workspace:*",
-		"@swrlab/utils": "workspace:*",
 		"luxon": "3.7.2",
 		"node-crc": "https://github.com/swrlab/node-crc#v2.1.0",
 		"undici": "7.24.4"
 	},
 	"devDependencies": {
+		"@swrlab/storage": "workspace:*",
+		"@swrlab/utils": "workspace:*",
 		"@types/node": "^25.5.0",
 		"bumpp": "^11.0.1",
 		"tsdown": "^0.21.4",
 		"typescript": "^5.9.3"
-	},
-	"devEngines": {
-		"runtime": {
-			"name": "node",
-			"version": "^22.18.0 || >= 24.6",
-			"onFail": "warn"
-		},
-		"packageManager": {
-			"name": "bun",
-			"onFail": "warn"
-		}
 	},
 	"engines": {
 		"node": "^22.18.0 || >= 24.6.0"

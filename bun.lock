@@ -31,7 +31,7 @@
     },
     "packages/utils": {
       "name": "@swrlab/utils",
-      "version": "4.0.0-beta.0",
+      "version": "4.0.0-beta.1",
       "bin": {
         "ard-coreId": "bin/ard-coreId.mjs",
       },
@@ -50,13 +50,13 @@
       "version": "3.0.0-beta.14",
       "dependencies": {
         "@google-cloud/storage": "^7.19.0",
-        "@swrlab/storage": "workspace:*",
-        "@swrlab/utils": "workspace:*",
         "luxon": "3.7.2",
         "node-crc": "https://github.com/swrlab/node-crc#v2.1.0",
         "undici": "7.24.4",
       },
       "devDependencies": {
+        "@swrlab/storage": "workspace:*",
+        "@swrlab/utils": "workspace:*",
         "@types/node": "^25.5.0",
         "bumpp": "^11.0.1",
         "tsdown": "^0.21.4",
