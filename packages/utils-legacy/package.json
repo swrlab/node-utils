@@ -14,29 +14,17 @@
 	"files": [
 		"dist"
 	],
-	"main": "./dist/index.cjs",
+	"main": "./dist/index.mjs",
 	"module": "./dist/index.mjs",
 	"types": "./dist/index.d.mts",
 	"exports": {
 		".": {
-			"require": {
-				"types": "./dist/index.d.cts",
-				"default": "./dist/index.cjs"
-			},
-			"import": {
-				"types": "./dist/index.d.mts",
-				"default": "./dist/index.mjs"
-			}
+			"types": "./dist/index.d.mts",
+			"default": "./dist/index.mjs"
 		},
 		"./packages/*": {
-			"require": {
-				"types": "./dist/packages/*.d.cts",
-				"default": "./dist/packages/*.cjs"
-			},
-			"import": {
-				"types": "./dist/packages/*.d.mts",
-				"default": "./dist/packages/*.mjs"
-			}
+			"types": "./dist/packages/*.d.mts",
+			"default": "./dist/packages/*.mjs"
 		}
 	},
 	"publishConfig": {

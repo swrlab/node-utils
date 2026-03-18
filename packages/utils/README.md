@@ -72,7 +72,6 @@ import * as array from '@swrlab/utils/array'
 
 Date functions and time helpers.
 
-
 ### Helpers
 
 ### bin / scripts
