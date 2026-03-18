@@ -47,6 +47,10 @@ jobs:
         run: bun pm pkg set name="@swrlab/utils"
         working-directory: packages/utils-legacy
 
+      - name: ensure correct package name for new package (to prevent errors)
+        run: bun pm pkg set name="@swrlab/utils-new"
+        working-directory: packages/utils
+
       - name: create tarball
         run: bun pm pack --filename swrlab-utils-legacy.tgz
         working-directory: packages/utils-legacy
