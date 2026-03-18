@@ -61,7 +61,7 @@
 	},
 	"publishConfig": {
 		"access": "public",
-		"tag": "beta",
+		"tag": "latest",
 		"provenance": true
 	},
 	"scripts": {
