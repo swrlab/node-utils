@@ -1,5 +1,5 @@
 {
-	"name": "@swrlab/utils",
+	"name": "@swrlab/utils-legacy",
 	"version": "3.0.0-beta.11",
 	"packageManager": "bun@1.3.9",
 	"description": "Previous generation of SWR Audio Lab utilities for Node.js.",
