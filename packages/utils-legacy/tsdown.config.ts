@@ -8,5 +8,5 @@ export default defineConfig({
 		index: 'src/index.ts',
 		'packages/*': 'src/*.ts',
 	},
-	format: ['esm'],
+	format: ['cjs', 'esm'],
 })
