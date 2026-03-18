@@ -43,10 +43,14 @@ jobs:
         run: bun run test
         working-directory: packages/utils-legacy
 
+      - name: ensure correct package name
+        run: bun pm pkg set name="@swrlab/utils"
+        working-directory: packages/utils-legacy
+
       - name: create tarball
-        run: bun pm pack
+        run: bun pm pack --filename swrlab-utils-legacy.tgz
         working-directory: packages/utils-legacy
 
       - name: npm publish legacy
-        run: npm publish --access public --provenance --tag legacy *.tgz
+        run: npm publish --access public --provenance --tag legacy swrlab-utils-legacy.tgz
         working-directory: packages/utils-legacy
