@@ -32,3 +32,5 @@ export function StorageWrapper(config: StorageConfig): Promise<Error> | StorageW
 
 	return api
 }
+
+export default StorageWrapper
