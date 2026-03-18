@@ -2,7 +2,7 @@ import type { StorageConfig, StorageWrapperInstance } from '@swrlab/storage'
 import { createUri, createUrl, deleteFile, google, list, load, move, save } from '@swrlab/storage'
 
 // export const Storage = google.Storage
-export { Storage } from '@google-cloud/storage'
+// export { Storage } from '@google-cloud/storage'
 
 /**
  * Create a Google Cloud Storage Wrapper.
@@ -11,7 +11,7 @@ export { Storage } from '@google-cloud/storage'
  * @param config - Storage Config.
  * @returns A StorageWrapper
  */
-export function StorageWrapper(config: StorageConfig): Promise<Error> | StorageWrapperInstance {
+function StorageWrapper(config: StorageConfig): Promise<Error> | StorageWrapperInstance {
 	if (!config || !config.gs) {
 		throw new Error('storage config invalid')
 	}
