@@ -1,9 +1,9 @@
 {
 	"name": "node-utils-workspace",
-	"version": "3.0.0-beta.6",
+	"version": "",
 	"private": true,
 	"packageManager": "bun@1.3.9",
-	"description": "SWR Audio Lab utilities collection for Node.js.",
+	"description": "SWR Audio Lab utilities collection.",
 	"type": "module",
 	"license": "ISC",
 	"repository": {
@@ -12,16 +12,17 @@
 	},
 	"author": "SWR Audio Lab <lab@swr.de>",
 	"workspaces": [
-		"packages/legacy",
 		"packages/storage",
+		"packages/utils-legacy",
 		"packages/utils"
 	],
 	"scripts": {
 		"ard:coreId": "bun ./packages/utils/src/ard/coreId.ts",
 		"attw": "attw --pack . --profile esm-only",
 		"biome": "biome check",
-		"build": "bun run --filter './packages/{utils,storage,legacy}' build",
+		"build": "bun run --filter './packages/{utils,storage,utils-legacy}' build",
 		"check": "bun run --parallel lint format:check typecheck",
+		"clear": "rm -rf ./node_modules ./packages/*/node_modules/",
 		"format": "prettier --write .",
 		"format:check": "prettier --check .",
 		"format:check:beta": "prettier --experimental-cli --config-path ./prettier.config.js --check .",
@@ -29,7 +30,7 @@
 		"lint": "eslint",
 		"lint:fix": "eslint --fix",
 		"release": "bumpp",
-		"test": "bun run --filter './packages/{utils,storage,legacy}' test",
+		"test": "bun run --filter './packages/{utils,storage,utils-legacy}' test",
 		"test:bun": "bun run --filter './packages/utils' test:bun",
 		"test:node": "bun run --filter '*' test:node",
 		"typecheck": "tsc --noEmit"
@@ -37,16 +38,16 @@
 	"dependencies": {},
 	"devDependencies": {
 		"@arethetypeswrong/cli": "^0.18.2",
-		"@biomejs/biome": "2.4.4",
-		"@swrlab/style-guide": "^2.1.6",
-		"@types/node": "^25.3.0",
+		"@biomejs/biome": "2.4.7",
+		"@swrlab/style-guide": "^2.1.7",
+		"@types/node": "^25.5.0",
 		"biome": "^0.3.3",
-		"bumpp": "^10.4.1",
-		"eslint": "^10.0.2",
-		"knip": "^5.85.0",
+		"bumpp": "^11.0.1",
+		"eslint": "^10.0.3",
+		"knip": "^5.88.0",
 		"prettier": "^3.8.1",
 		"typescript": "^5.9.3",
-		"vitest": "^4.0.18"
+		"vitest": "^4.1.0"
 	},
 	"devEngines": {
 		"runtime": {

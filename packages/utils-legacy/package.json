@@ -1,14 +1,14 @@
 {
 	"name": "@swrlab/utils-legacy",
-	"version": "3.0.0-beta.3",
-	"packageManager": "bun@1.2.22",
+	"version": "3.0.0-beta.4",
+	"packageManager": "bun@1.3.9",
 	"description": "Previous generation of SWR Audio Lab utilities for Node.js.",
 	"type": "module",
 	"license": "ISC",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/swrlab/node-utils.git",
-		"directory": "packages/legacy"
+		"directory": "packages/utils-legacy"
 	},
 	"author": "SWR Audio Lab <lab@swr.de>",
 	"files": [
@@ -29,7 +29,9 @@
 	},
 	"publishConfig": {
 		"access": "public",
-		"provenance": true
+		"name": "@swrlab/utils",
+		"provenance": true,
+		"tag": "legacy"
 	},
 	"scripts": {
 		"build": "tsdown",
@@ -41,17 +43,17 @@
 		"test:node": "node --test ./test/*.test.ts"
 	},
 	"dependencies": {
-		"@google-cloud/storage": "^7.16.0",
+		"@google-cloud/storage": "^7.19.0",
 		"@swrlab/storage": "workspace:*",
 		"@swrlab/utils": "workspace:*",
 		"luxon": "3.7.2",
 		"node-crc": "https://github.com/swrlab/node-crc#v2.1.0",
-		"undici": "7.13.0"
+		"undici": "7.24.4"
 	},
 	"devDependencies": {
-		"@types/node": "^25.3.3",
-		"tsdown": "^0.21.0-beta.2",
-		"typescript": "^5.9.2"
+		"@types/node": "^25.5.0",
+		"tsdown": "^0.21.4",
+		"typescript": "^5.9.3"
 	},
 	"devEngines": {
 		"runtime": {

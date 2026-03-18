@@ -1,6 +1,6 @@
 import assert from 'node:assert'
 import { describe, it } from 'node:test'
-import * as date from '../../legacy/src/date.ts'
+import * as date from '../../utils-legacy/src/date.ts'
 
 const testDate = '2038-01-19T03:14:08.000'
 const relativeTime = 2147483647000 - Date.now()

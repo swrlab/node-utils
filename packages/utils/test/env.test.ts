@@ -1,4 +1,4 @@
-import { afterAll as after, assert, beforeAll as before, describe, it } from 'vitest'
+import { afterAll, assert, beforeAll, describe, it } from 'vitest'
 import { getEnv, getEnvBase64, getEnvBoolean, getEnvString, MissingEnvVarError } from './../src/env.ts'
 
 describe('no env values available', () => {
@@ -43,11 +43,11 @@ describe('mocked env values', () => {
 		BROKEN_JSON: '{ "asdf"',
 	} as const
 
-	before(() => {
+	beforeAll(() => {
 		// set mocked env values for env.ts
 		globalThis.__VitestMockEnv = mocked
 	})
-	after(() => {
+	afterAll(() => {
 		// clean up
 		globalThis.__VitestMockEnv = undefined
 	})

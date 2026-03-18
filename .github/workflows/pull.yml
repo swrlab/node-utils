@@ -47,13 +47,13 @@ jobs:
         run: npm run test:node
 
       - name: 🧪 Run MJS Tests (in via npm in Node)
-        run: npm run test:mjs --workspace=packages/legacy
+        run: npm run test:mjs --workspace=packages/utils-legacy
 
       - name: 🧪 Run Dist Tests (in via npm in bun)
-        run: npm run test:dist --workspace=packages/legacy
+        run: npm run test:dist --workspace=packages/utils-legacy
 
       - name: 🧪 Run Dist Tests (in via npm in Node)
-        run: npm run test:dist:node --workspace=packages/legacy
+        run: npm run test:dist:node --workspace=packages/utils-legacy
 
   test-node-20:
     name: Run Tests in Node.js v20
@@ -79,13 +79,13 @@ jobs:
         run: npm run build
 
       - name: 🧪 Run Tests
-        run: npm run --workspace=packages/{legacy,utils} test
+        run: npm run --workspace=packages/{utils-legacy,utils} test
 
       - name: 🧪 Run Storage Tests
         run: npm run --workspace=packages/storage test:bun && npm run --workspace=packages/storage typecheck
 
       - name: 🧪 Run Dist Tests (in Node via bun)
-        run: npm run --workspace=packages/legacy test:dist
+        run: npm run --workspace=packages/utils-legacy test:dist
 
       - name: 🧪 Run Tests (in Node via bun)
-        run: npm run --workspace=packages/legacy test
+        run: npm run --workspace=packages/utils-legacy test

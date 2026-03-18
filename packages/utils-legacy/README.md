@@ -9,7 +9,7 @@
 
 ### NPM Publish
 
-The previous or _legacy_ version remains at Version 3 (`v3`).
+The previous or _legacy_ version remains at Version 3 (`v3`) (with tag `legacy`).
 
 The newer versions are `v4` and higher.
 

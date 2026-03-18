@@ -5,8 +5,7 @@
 	},
 	"references": [
 		// { "path": "./packages/date/tsconfig.json" },
-		// { "path": "./packages/logger/tsconfig.json" },
-		{ "path": "./packages/legacy" },
+		{ "path": "./packages/utils-legacy" },
 		{ "path": "./packages/storage" },
 		{ "path": "./packages/utils" }
 	],
