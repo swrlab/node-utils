@@ -35,6 +35,7 @@
 	},
 	"scripts": {
 		"build": "tsdown",
+		"release": "bumpp",
 		"test": "bun run test:bun",
 		"test:bun": "bun test ./test/*test.ts",
 		"test:mjs": "bun test ./test/*test.mjs",
