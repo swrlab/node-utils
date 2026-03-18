@@ -57,6 +57,8 @@ jobs:
 
   test-node-20:
     name: Run Tests in Node.js v20
+    env:
+      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
     runs-on: ubuntu-latest
     steps:
       - name: 👀 Checkout Code
