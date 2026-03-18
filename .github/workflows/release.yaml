@@ -37,6 +37,9 @@ jobs:
       - name: bun install
         run: bun install --frozen-lockfile
 
+      - name: global bun build
+        run: bun run build
+
       - name: bun build
         run: bun run build
         working-directory: packages/utils-legacy
