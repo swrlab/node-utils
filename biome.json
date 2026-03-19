@@ -1,5 +1,5 @@
 {
-	"$schema": "https://biomejs.dev/schemas/2.4.4/schema.json",
+	"$schema": "https://biomejs.dev/schemas/2.4.8/schema.json",
 	"vcs": {
 		"enabled": true,
 		"clientKind": "git",
@@ -8,13 +8,13 @@
 	},
 	"files": {
 		"ignoreUnknown": false,
-		"includes": ["packages/**/*.{js,mjs,ts}"]
+		"includes": ["packages/**/*.{js,mjs,ts,cjs}"]
 	},
 	"formatter": {
 		"enabled": true,
-		"formatWithErrors": false,
+		"formatWithErrors": true,
 		"indentStyle": "tab",
-		"indentWidth": 2,
+		"indentWidth": 4,
 		"lineEnding": "lf",
 		"lineWidth": 120,
 		"attributePosition": "auto",
@@ -37,17 +37,12 @@
 	},
 	"javascript": {
 		"formatter": {
-			"jsxQuoteStyle": "double",
 			"quoteProperties": "asNeeded",
 			"trailingCommas": "es5",
 			"semicolons": "asNeeded",
 			"arrowParentheses": "always",
-			"bracketSameLine": false,
-			"lineEnding": "lf",
 			"lineWidth": 120,
-			"quoteStyle": "single",
-			"attributePosition": "auto",
-			"bracketSpacing": true
+			"quoteStyle": "single"
 		}
 	},
 	"html": {

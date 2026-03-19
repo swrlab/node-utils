@@ -53,16 +53,16 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"@arethetypeswrong/cli": "catalog:dev",
-		"@biomejs/biome": "2.4.7",
+		"@arethetypeswrong/cli": "^0.18.2",
+		"@biomejs/biome": "2.4.8",
 		"@swrlab/style-guide": "^2.1.7",
-		"@types/node": "catalog:dev",
+		"@types/node": "^25.5.0",
 		"biome": "^0.3.3",
 		"eslint": "^10.0.3",
-		"knip": "catalog:dev",
+		"knip": "^5.88.1",
 		"prettier": "^3.8.1",
-		"typescript": "catalog:dev",
-		"vitest": "catalog:dev"
+		"typescript": "^5.9.3",
+		"vitest": "^4.1.0"
 	},
 	"devEngines": {
 		"runtime": {
