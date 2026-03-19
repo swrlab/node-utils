@@ -14,6 +14,7 @@
 	"workspaces": {
 		"packages": [
 			"packages/storage",
+			"packages/tests",
 			"packages/utils-legacy",
 			"packages/utils"
 		],
@@ -44,9 +45,9 @@
 		"knip": "knip",
 		"lint": "eslint",
 		"lint:fix": "eslint --fix",
-		"release": "bumpp",
-		"test": "bun run --filter './packages/{utils,storage,utils-legacy}' test",
+		"test": "bun run --filter './packages/{utils,storage,utils-legacy,tests}' test",
 		"test:bun": "bun run --filter './packages/utils' test:bun",
+		"test:dist": "bun run --filter './packages/tests' test",
 		"test:node": "bun run --filter '*' test:node",
 		"typecheck": "tsc --noEmit"
 	},

@@ -28,9 +28,20 @@
         "typescript": "catalog:dev",
       },
     },
+    "packages/tests": {
+      "name": "utils-tests",
+      "version": "0.0.1",
+      "devDependencies": {
+        "@swrlab/utils": "workspace:*",
+        "@swrlab/utils-legacy": "workspace:*",
+        "@types/node": "catalog:dev",
+        "typescript": "catalog:dev",
+        "vitest": "catalog:dev",
+      },
+    },
     "packages/utils": {
       "name": "@swrlab/utils",
-      "version": "4.0.0-beta.2",
+      "version": "4.0.0-beta.3",
       "bin": {
         "ard-coreId": "bin/ard-coreId.mjs",
       },
@@ -46,7 +57,7 @@
     },
     "packages/utils-legacy": {
       "name": "@swrlab/utils-legacy",
-      "version": "3.0.1-beta.4",
+      "version": "3.0.1-beta.5",
       "dependencies": {
         "@google-cloud/storage": "^7.19.0",
         "luxon": "3.7.2",
@@ -1347,6 +1358,8 @@
     "user-home": ["user-home@2.0.0", "", { "dependencies": { "os-homedir": "^1.0.0" } }, "sha512-KMWqdlOcjCYdtIJpicDSFBQ8nFwS2i9sslAd6f4+CBGcU4gist2REnr2fxj2YocvJFxSF3ZOHLYLVZnUxv4BZQ=="],
 
     "util-deprecate": ["util-deprecate@1.0.2", "", {}, "sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw=="],
+
+    "utils-tests": ["utils-tests@workspace:packages/tests"],
 
     "uuid": ["uuid@8.3.2", "", { "bin": { "uuid": "dist/bin/uuid" } }, "sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg=="],
 
