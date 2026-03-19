@@ -12,39 +12,60 @@
 	},
 	"formatter": {
 		"enabled": true,
+		"formatWithErrors": false,
 		"indentStyle": "tab",
-		"useEditorconfig": true,
+		"indentWidth": 2,
+		"lineEnding": "lf",
+		"lineWidth": 120,
+		"attributePosition": "auto",
+		"bracketSameLine": false,
 		"bracketSpacing": true,
-		"bracketSameLine": true,
-		"expand": "auto"
+		"expand": "auto",
+		"useEditorconfig": true
 	},
 	"linter": {
 		"enabled": true,
 		"rules": {
 			"recommended": true,
-			"suspicious": {
-				"noExplicitAny": "off"
-			},
 			"style": {
-				"useImportType": "on",
 				"useExportType": "on",
+				"useImportType": "on",
 				"useNodejsImportProtocol": "on"
-			}
+			},
+			"suspicious": { "noExplicitAny": "off" }
 		}
 	},
 	"javascript": {
 		"formatter": {
-			"quoteStyle": "single",
-			"lineEnding": "lf",
-			"semicolons": "asNeeded",
-			"lineWidth": 120,
+			"jsxQuoteStyle": "double",
+			"quoteProperties": "asNeeded",
 			"trailingCommas": "es5",
+			"semicolons": "asNeeded",
 			"arrowParentheses": "always",
+			"bracketSameLine": false,
+			"lineEnding": "lf",
+			"lineWidth": 120,
+			"quoteStyle": "single",
 			"attributePosition": "auto",
-			"bracketSameLine": true,
 			"bracketSpacing": true
 		}
 	},
+	"html": {
+		"formatter": {
+			"indentScriptAndStyle": false,
+			"selfCloseVoidElements": "always"
+		}
+	},
+	"overrides": [
+		{
+			"includes": ["**/*.jsonc"],
+			"javascript": { "formatter": { "trailingCommas": "none" } }
+		},
+		{
+			"includes": ["*.yml", "*.yaml", "*.md"],
+			"formatter": { "indentStyle": "space", "indentWidth": 2 }
+		}
+	],
 	"assist": {
 		"enabled": true,
 		"actions": {
@@ -52,9 +73,8 @@
 				"organizeImports": {
 					"level": "off",
 					"options": {
-						"identifierOrder": "natural",
 						"groups": [
-							{ "type": true },
+							{ "type": true, "source": null },
 							":URL:",
 							":PACKAGE_WITH_PROTOCOL:",
 							":PACKAGE:",
@@ -62,7 +82,8 @@
 							":BUN:",
 							":ALIAS:",
 							":PATH:"
-						]
+						],
+						"identifierOrder": "natural"
 					}
 				}
 			}

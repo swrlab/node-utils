@@ -31,8 +31,8 @@
 		"attw": "bunx @arethetypeswrong/cli --pack . --profile esm-only",
 		"build": "tsdown",
 		"test": "bun run typecheck && bun run test:bun && bun run test:node",
-		"test:bun": "bun test ./test/**test*.ts",
-		"test:node": "node --test ./test/**.test.ts",
+		"test:bun": "bun test",
+		"test:node": "node --test",
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {

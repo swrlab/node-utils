@@ -35,8 +35,14 @@ describe('number utils', () => {
 			assert.strictEqual((2.5).toLocaleString('en'), '2.5')
 			assert.strictEqual((2.5).toLocaleString('de'), '2,5')
 			assert.strictEqual((2.5).toLocaleString('de-DE'), '2,5')
-			assert.strictEqual((1).toLocaleString('en-US', { minimumFractionDigits: 5, maximumFractionDigits: 5 }), '1.00000')
-			assert.strictEqual((1).toLocaleString('de-DE', { minimumFractionDigits: 5, maximumFractionDigits: 5 }), '1,00000')
+			assert.strictEqual(
+				(1).toLocaleString('en-US', { minimumFractionDigits: 5, maximumFractionDigits: 5 }),
+				'1.00000'
+			)
+			assert.strictEqual(
+				(1).toLocaleString('de-DE', { minimumFractionDigits: 5, maximumFractionDigits: 5 }),
+				'1,00000'
+			)
 		})
 	})
 
