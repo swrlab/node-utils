@@ -36,7 +36,7 @@
 		"attw": "attw --pack . --profile esm-only",
 		"biome": "biome check",
 		"build": "bun run --filter ./packages/utils build && bun run --filter ./packages/storage build && bun run --filter ./packages/utils-legacy build",
-		"build:parallel": "bun run --filter './packages/{utils,storage,utils-legacy}' build",
+		"build:parallel": "bun run --sequential --filter './packages/{utils,storage,utils-legacy}' build",
 		"check": "bun run --parallel lint format:check typecheck",
 		"clear": "rm -rf ./node_modules ./packages/*/node_modules/",
 		"format": "prettier --write .",

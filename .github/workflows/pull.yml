@@ -80,6 +80,9 @@ jobs:
       - name: 📦 Run build
         run: npm run build
 
+      - name: Run tests
+        run: npm run test
+
       - name: 🧪 Run Tests
         run: npm run --workspace=packages/{utils-legacy,utils} test
 
