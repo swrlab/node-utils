@@ -1,6 +1,6 @@
+import assert from 'node:assert/strict'
 import { describe, it } from 'node:test'
 import { createHashedId } from '@swrlab/utils-legacy/packages/ard'
-import assert from 'node:assert/strict'
 
 describe('Test ARD Package', () => {
 	describe('Test ARD-CoreID Hash', () => {

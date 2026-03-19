@@ -20,7 +20,7 @@ describe('packages/storage-wrapper cjs', () => {
 	it('should throw for missing google storage config', () => {
 		assert.throws(
 			() => {
-				new Storage({ gs: null })
+				const _s = new Storage({ gs: null })
 			},
 			(error) => {
 				assert.strictEqual(error.name, 'Error')

@@ -15,7 +15,7 @@ describe('packages/undici mts', () => {
 	})
 
 	if (isBun()) {
-		it('should use require too', async () => {
+		it('should use require too', () => {
 			const undici = require('@swrlab/utils-legacy/packages/undici')
 			assert(typeof undici === 'function')
 			assert(typeof undici.default === 'undefined')
@@ -25,7 +25,7 @@ describe('packages/undici mts', () => {
 	it('should fail', () => {
 		assert.rejects(
 			async () => {
-				const undi = await import('@swrlab/utils-legacy/packages/undici.mjs') //.catch((e) => console.error('err', e))
+				const _undi = await import('@swrlab/utils-legacy/packages/undici.mjs') //.catch((e) => console.error('err', e))
 			},
 			(err) => {
 				const name = isBun() ? 'ResolveMessage' : 'Error'
