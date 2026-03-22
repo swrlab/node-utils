@@ -2,8 +2,8 @@
  * @fileoverview API for Storage.
  */
 
-import type { File } from '@google-cloud/storage'
 import type { Buffer } from 'node:buffer'
+import type { File } from '@google-cloud/storage'
 import { randomUUID } from 'node:crypto'
 import os from 'node:os'
 import path from 'node:path'

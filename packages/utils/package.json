@@ -75,10 +75,12 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
+		"@arethetypeswrong/core": "catalog:dev",
 		"@types/node": "catalog:dev",
 		"@vitest/coverage-v8": "catalog:dev",
 		"bumpp": "catalog:dev",
 		"knip": "catalog:dev",
+		"publint": "catalog:dev",
 		"tsdown": "catalog:dev",
 		"typescript": "catalog:dev",
 		"vitest": "catalog:dev"

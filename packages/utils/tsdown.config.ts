@@ -15,4 +15,8 @@ export default defineConfig({
 		predicate: 'src/predicate/index.ts',
 		string: 'src/string/index.ts',
 	},
+	attw: {
+		profile: 'esm-only',
+	},
+	publint: true,
 })

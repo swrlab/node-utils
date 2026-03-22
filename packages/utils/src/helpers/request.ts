@@ -45,7 +45,7 @@ export const request = async (
 		signal: options.signal ?? AbortSignal.timeout(options?.timeout ?? DEFAULT_TIMEOUT),
 		headers: {
 			'user-agent': userAgent,
-			...(options.headers ?? {}),
+			...options.headers,
 		},
 	}
 	delete requestOptions.timeout

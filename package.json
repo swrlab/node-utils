@@ -21,10 +21,12 @@
 		"catalogs": {
 			"dev": {
 				"@arethetypeswrong/cli": "^0.18.2",
+				"@arethetypeswrong/core": "^0.18.2",
 				"@types/node": "^25.5.0",
 				"@vitest/coverage-v8": "4.1.0",
 				"bumpp": "^11.0.1",
-				"knip": "^5.88.0",
+				"knip": "^6.0.1",
+				"publint": "^0.3.18",
 				"tsdown": "^0.21.4",
 				"typescript": "^5.9.3",
 				"vitest": "^4.1.0"
@@ -33,7 +35,7 @@
 	},
 	"scripts": {
 		"ard:coreId": "bun ./packages/utils/src/ard/coreId.ts",
-		"attw": "attw --pack . --profile esm-only",
+		"attw": "attw --pack . --profile esm-only --no-summary",
 		"biome": "biome check",
 		"build": "bun run --filter ./packages/utils build && bun run --filter ./packages/storage build && bun run --filter ./packages/utils-legacy build",
 		"build:parallel": "bun run --sequential --filter './packages/{utils,storage,utils-legacy}' build",
@@ -54,13 +56,15 @@
 	"dependencies": {},
 	"devDependencies": {
 		"@arethetypeswrong/cli": "^0.18.2",
+		"@arethetypeswrong/core": "^0.18.2",
 		"@biomejs/biome": "2.4.8",
-		"@swrlab/style-guide": "^2.1.7",
+		"@swrlab/style-guide": "^2.1.10",
 		"@types/node": "^25.5.0",
 		"biome": "^0.3.3",
-		"eslint": "^10.0.3",
-		"knip": "^5.88.1",
+		"eslint": "^10.1.0",
+		"knip": "^6.0.1",
 		"prettier": "^3.8.1",
+		"publint": "^0.3.18",
 		"typescript": "^5.9.3",
 		"vitest": "^4.1.0"
 	},

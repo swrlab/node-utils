@@ -9,4 +9,8 @@ export default defineConfig({
 		'packages/*': 'src/*.ts',
 	},
 	format: ['cjs', 'esm'],
+	attw: {
+		profile: 'esm-only',
+	},
+	publint: true,
 })
