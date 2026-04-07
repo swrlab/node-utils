@@ -9,6 +9,7 @@ export default defineConfig({
 		'packages/*': 'src/*.ts',
 	},
 	format: ['cjs', 'esm'],
+	target: ['esnext', 'firefox148'],
 	attw: {
 		profile: 'esm-only',
 	},
