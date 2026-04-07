@@ -1,17 +1,18 @@
 # `@swrlab/utils` - Node.js utils
 
-This repository contains several frequently used packages and scripts for easier access and maintenance.
+This repository contains several frequently used packages and scripts for
+easier access and maintenance.
 
 ## Install
 
 ```sh
+bun add @swrlab/utils
+
+# or with npm
 npm install @swrlab/utils
 
 # or with pnpm
 pnpm add @swrlab/utils
-
-# or with bun:
-bun add @swrlab/utils
 ```
 
 ## Features
@@ -22,7 +23,8 @@ bun add @swrlab/utils
 
 ## Usage
 
-Each utility category (`string`, `date`, etc.) has their own export and thus can be imported individually.
+Each utility category (`string`, `date`, etc.) has their own export and thus
+can be imported individually.
 
 ```js
 // examples
@@ -131,7 +133,19 @@ See [LICENSE.txt](LICENSE.txt)
 
 ### Requirements
 
-This repo is using _bun_ as package-manager and TypeScript runtime, however all functionality works in plain Node.js with ESM support as well.
+This repo is using _bun_ as package-manager and TypeScript runtime, however all
+functionality works in plain Node.js with ESM support as well.
 
 - bun and/or
 - node: `>= v24.6` or `^22.18`
+- optionally: vite-plus
+
+### Installation
+
+```bash
+# with vite-plus
+vp install
+
+# without vite-plus being installed
+bunx -p vite-plus vp install
+```
