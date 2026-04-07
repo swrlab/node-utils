@@ -1,6 +1,14 @@
 import { defineConfig } from 'vite-plus'
 
 export default defineConfig({
+	run: {
+		tasks: {
+			build: {
+				command: 'vp pack',
+				dependsOn: ['@swrlab/storage#build', '@swrlab/utils#build'],
+			},
+		},
+	},
 	pack: {
 		deps: {
 			alwaysBundle: ['@swrlab/storage', '@swrlab/utils'],

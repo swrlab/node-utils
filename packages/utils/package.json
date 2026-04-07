@@ -19,6 +19,7 @@
 	"type": "module",
 	"main": "./src/index.ts",
 	"module": "./src/index.ts",
+	"types": "./dist/index.d.mts",
 	"exports": {
 		".": "./src/index.ts",
 		"./ard": "./src/ard/index.ts",
@@ -73,8 +74,7 @@
 		"main": "./dist/index.mjs",
 		"module": "./dist/index.mjs",
 		"provenance": true,
-		"tag": "latest",
-		"types": "./dist/index.d.mts"
+		"tag": "latest"
 	},
 	"scripts": {
 		"ard:coreId": "bun ./bin/ard-coreId.mjs",
@@ -82,8 +82,7 @@
 		"build": "vp pack",
 		"knip": "knip",
 		"release": "bumpp",
-		"test": "vp test run --coverage --typecheck",
-		"typecheck": "tsc --noEmit"
+		"test": "vp test run --coverage --typecheck"
 	},
 	"dependencies": {},
 	"devDependencies": {

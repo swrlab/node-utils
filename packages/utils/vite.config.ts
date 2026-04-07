@@ -16,9 +16,8 @@ export default defineConfig({
 			predicate: 'src/predicate/index.ts',
 			string: 'src/string/index.ts',
 		},
-		attw: {
-			profile: 'esm-only',
-		},
+		// attw does not work with `publishConfig`, so it cannot find all types.
+		// attw: { profile: 'esm-only', },
 		publint: true,
 	},
 })

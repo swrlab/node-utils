@@ -22,9 +22,7 @@
 		"ard:coreId": "bun ./packages/utils/src/ard/coreId.ts",
 		"attw": "attw --pack . --profile esm-only --no-summary",
 		"biome": "biome check",
-		"build": "bun run --filter ./packages/utils build && bun run --filter ./packages/storage build && bun run --filter ./packages/utils-legacy build",
-		"build:parallel": "bun run --sequential --filter './packages/{utils,storage,utils-legacy}' build",
-		"check": "bun run --parallel lint format:check typecheck",
+		"build": "vp run --filter ./packages/utils-legacy build",
 		"clear": "rm -rf ./node_modules ./packages/*/node_modules/ ./packages/*/dist/",
 		"format": "vp fmt .",
 		"format:check": "vp fmt --check .",
@@ -33,11 +31,10 @@
 		"lint": "vp lint",
 		"lint:fix": "vp lint --fix",
 		"prepare": "vp config",
-		"test": "bun run --filter './packages/{utils,storage,utils-legacy,tests}' test",
-		"test:bun": "bun run --filter './packages/utils' test:bun",
-		"test:dist": "bun run --filter './packages/tests' test",
-		"test:node": "bun run --filter '*' test:node",
-		"typecheck": "tsc --noEmit"
+		"test": "vp run --filter './packages/{utils,storage,utils-legacy,tests}' test",
+		"test:bun": "vp run --filter './packages/utils' test:bun",
+		"test:dist": "vp run --filter './packages/tests' test",
+		"test:node": "vp run --filter '*' test:node"
 	},
 	"dependencies": {},
 	"devDependencies": {
