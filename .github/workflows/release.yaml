@@ -34,19 +34,28 @@ jobs:
         with:
           node-version: 24.x
 
-      - name: bun install
-        run: bun install --frozen-lockfile
+      - uses: voidzero-dev/setup-vp@8ecb39174989ce55af90f45cf55b02738599831d # v1.6.0
+        with:
+          node-version: '24'
+          cache: true
 
-      - name: global bun build
-        run: bun run build
+      - name: install dependencies (via vite-plus)
+      - run: vp install --frozen-lockfile
 
-      - name: bun build
-        run: bun run build
-        working-directory: packages/utils-legacy
+      - name: global build
+        run: vp run build
 
-      - name: bun test
-        run: bun run test
-        working-directory: packages/utils-legacy
+      - name: linting
+        run: vp run lint
+
+      - name: run all tests
+        run: vp run test
+
+      - name: build `utils-legacy`
+        run: vp run --filter ./packages/utils-legacy build
+
+      - name: run tests
+        run: vp run --filter ./packages/utils-legacy test
 
       - name: ensure correct package name
         run: bun pm pkg set name="@swrlab/utils"
