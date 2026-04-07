@@ -1,6 +1,6 @@
 {
 	"name": "@swrlab/utils-legacy",
-	"version": "3.0.1-beta.6",
+	"version": "3.0.1-beta.7",
 	"description": "Previous generation of SWR Audio Lab utilities for Node.js.",
 	"license": "ISC",
 	"author": "SWR Audio Lab <lab@swr.de>",
