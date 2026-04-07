@@ -1,6 +1,6 @@
 {
 	"name": "@swrlab/utils",
-	"version": "4.0.0-beta.6",
+	"version": "4.0.0-beta.7",
 	"description": "SWR Audio Lab utilities for Node.js.",
 	"license": "ISC",
 	"author": "SWR Audio Lab <lab@swr.de>",
