@@ -1,6 +1,6 @@
 {
 	"name": "@swrlab/utils",
-	"version": "4.0.0-beta.7",
+	"version": "4.0.0-beta.8",
 	"description": "SWR Audio Lab utilities for Node.js.",
 	"license": "ISC",
 	"author": "SWR Audio Lab <lab@swr.de>",
@@ -17,62 +17,49 @@
 		"dist"
 	],
 	"type": "module",
-	"main": "./src/index.ts",
-	"module": "./src/index.ts",
+	"main": "./dist/index.mjs",
+	"module": "./dist/index.mjs",
 	"types": "./dist/index.d.mts",
 	"exports": {
-		".": "./src/index.ts",
-		"./ard": "./src/ard/index.ts",
-		"./array": "./src/array/index.ts",
-		"./env": "./src/env.ts",
-		"./helper": "./src/helpers/index.ts",
-		"./number": "./src/number/index.ts",
-		"./object": "./src/object/index.ts",
-		"./predicate": "./src/predicate/index.ts",
-		"./string": "./src/string/index.ts"
+		".": {
+			"types": "./dist/index.d.mts",
+			"default": "./dist/index.mjs"
+		},
+		"./ard": {
+			"types": "./dist/ard.d.mts",
+			"default": "./dist/ard.mjs"
+		},
+		"./array": {
+			"types": "./dist/array.d.mts",
+			"default": "./dist/array.mjs"
+		},
+		"./env": {
+			"types": "./dist/env.d.mts",
+			"default": "./dist/env.mjs"
+		},
+		"./helper": {
+			"types": "./dist/helper.d.mts",
+			"default": "./dist/helper.mjs"
+		},
+		"./number": {
+			"types": "./dist/number.d.mts",
+			"default": "./dist/number.mjs"
+		},
+		"./object": {
+			"types": "./dist/object.d.mts",
+			"default": "./dist/object.mjs"
+		},
+		"./predicate": {
+			"types": "./dist/predicate.d.mts",
+			"default": "./dist/predicate.mjs"
+		},
+		"./string": {
+			"types": "./dist/string.d.mts",
+			"default": "./dist/string.mjs"
+		}
 	},
 	"publishConfig": {
 		"access": "public",
-		"exports": {
-			".": {
-				"types": "./dist/index.d.mts",
-				"default": "./dist/index.mjs"
-			},
-			"./ard": {
-				"types": "./dist/ard.d.mts",
-				"default": "./dist/ard.mjs"
-			},
-			"./array": {
-				"types": "./dist/array.d.mts",
-				"default": "./dist/array.mjs"
-			},
-			"./env": {
-				"types": "./dist/env.d.mts",
-				"default": "./dist/env.mjs"
-			},
-			"./helper": {
-				"types": "./dist/helper.d.mts",
-				"default": "./dist/helper.mjs"
-			},
-			"./number": {
-				"types": "./dist/number.d.mts",
-				"default": "./dist/number.mjs"
-			},
-			"./object": {
-				"types": "./dist/object.d.mts",
-				"default": "./dist/object.mjs"
-			},
-			"./predicate": {
-				"types": "./dist/predicate.d.mts",
-				"default": "./dist/predicate.mjs"
-			},
-			"./string": {
-				"types": "./dist/string.d.mts",
-				"default": "./dist/string.mjs"
-			}
-		},
-		"main": "./dist/index.mjs",
-		"module": "./dist/index.mjs",
 		"provenance": true,
 		"tag": "latest"
 	},
