@@ -98,15 +98,12 @@ jobs:
 
       - run: vp install --frozen-lockfile
       - run: vp lint
-      - run: vp run test
 
-      - name: bun build
-        run: bun run build
-        working-directory: packages/utils
+      - name: build utils
+        run: vp run --filter ./packages/utils build
 
-      - name: bun test
-        run: bun run test
-        working-directory: packages/utils
+      - name: run tests
+        run: vp run --filter ./packages/utils test
 
       - name: create tarball
         run: bun pm pack
