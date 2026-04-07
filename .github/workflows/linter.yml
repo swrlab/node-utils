@@ -19,5 +19,4 @@ jobs:
           cache: true
 
       - run: vp install --frozen-lockfile
-      - run: vp run --cache --filter ./packages/storage --filter ./packages/utils build
       - run: vp check

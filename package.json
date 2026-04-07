@@ -25,19 +25,19 @@
 		"build": "bun run --filter ./packages/utils build && bun run --filter ./packages/storage build && bun run --filter ./packages/utils-legacy build",
 		"build:parallel": "bun run --sequential --filter './packages/{utils,storage,utils-legacy}' build",
 		"check": "bun run --parallel lint format:check typecheck",
-		"clear": "rm -rf ./node_modules ./packages/*/node_modules/",
+		"clear": "rm -rf ./node_modules ./packages/*/node_modules/ ./packages/*/dist/",
 		"format": "vp fmt .",
 		"format:check": "vp fmt --check .",
 		"format:check:beta": "vp fmt --config-path ./prettier.config.js --check .",
 		"knip": "knip",
 		"lint": "vp lint",
 		"lint:fix": "vp lint --fix",
+		"prepare": "vp config",
 		"test": "bun run --filter './packages/{utils,storage,utils-legacy,tests}' test",
 		"test:bun": "bun run --filter './packages/utils' test:bun",
 		"test:dist": "bun run --filter './packages/tests' test",
 		"test:node": "bun run --filter '*' test:node",
-		"typecheck": "tsc --noEmit",
-		"prepare": "vp config"
+		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {},
 	"devDependencies": {

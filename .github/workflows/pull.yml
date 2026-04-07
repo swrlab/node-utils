@@ -76,7 +76,7 @@ jobs:
           bun-version: latest
 
       - name: 📦 Install Dependencies (via bun)
-        run: bun install
+        run: bun install --frozen-lockfile
 
       - name: 📦 Run build
         run: npm run build

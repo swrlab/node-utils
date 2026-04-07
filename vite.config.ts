@@ -254,10 +254,38 @@ export default defineConfig({
 		singleQuote: true,
 		trailingComma: 'es5',
 		printWidth: 120,
-		sortPackageJson: true,
+		sortImports: {
+			groups: [
+				'type-builtin',
+				'type-external',
+				'type-internal',
+				'type-subpath',
+				['type-parent', 'type-sibling', 'type-index'],
+				'builtin',
+				'bun',
+				'external',
+				'internal',
+				'subpath',
+				['parent', 'sibling', 'index'],
+				'side_effect',
+				'style',
+				'unknown',
+			],
+			newlinesBetween: false,
+			customGroups: [
+				{
+					groupName: 'bun',
+					elementNamePattern: ['bun', 'bun:test'],
+				},
+			],
+		},
+		sortPackageJson: {
+			sortScripts: true,
+		},
 		ignorePatterns: [],
 	},
 	test: {
+		// Only these tests explicitly use vitest.
 		include: ['packages/utils/test/*.test.ts'],
 	},
 })
