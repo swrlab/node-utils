@@ -11,7 +11,7 @@ import { createUri, createUrl, deleteFile, google, list, load, move, save } from
  * @param config - Storage Config.
  * @returns A StorageWrapper
  */
-function StorageWrapper(config: StorageConfig): Promise<Error> | StorageWrapperInstance {
+function StorageWrapper(config: StorageConfig): StorageWrapperInstance {
 	if (!config || !config.gs) {
 		throw new Error('storage config invalid')
 	}
