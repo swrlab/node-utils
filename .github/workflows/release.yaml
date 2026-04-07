@@ -40,7 +40,7 @@ jobs:
           cache: true
 
       - name: install dependencies (via vite-plus)
-      - run: vp install --frozen-lockfile
+        run: vp install --frozen-lockfile
 
       - name: global build
         run: vp run build
