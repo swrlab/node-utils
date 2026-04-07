@@ -97,7 +97,7 @@ jobs:
           cache: true
 
       - run: vp install --frozen-lockfile
-      - run: vp check
+      - run: vp lint
       - run: vp run test
 
       - name: bun build
