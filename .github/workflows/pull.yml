@@ -31,10 +31,12 @@ jobs:
           cache: true
 
       - run: vp install --frozen-lockfile
-      - run: vp check
 
       - name: 🔨 Run build
         run: vp run build
+
+      - name: Run checks
+        run: vp check
 
       - name: 🧪 Run Tests (in Bun)
         run: vp run test

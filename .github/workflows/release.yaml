@@ -106,7 +106,6 @@ jobs:
           cache: true
 
       - run: vp install --frozen-lockfile
-      - run: vp lint
 
       - name: build utils
         run: vp run --filter ./packages/utils build
