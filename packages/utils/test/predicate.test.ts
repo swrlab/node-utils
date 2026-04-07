@@ -1,4 +1,4 @@
-import { assert, describe, it } from 'vitest'
+import { assert, describe, it } from 'vite-plus/test'
 import { isArray, isNull, isObject, isPlainObject, isUndefined, notNullOrUndefined } from '../src/predicate/index.ts'
 
 describe('predicate utils', () => {
@@ -100,7 +100,7 @@ describe('predicate utils', () => {
 
 		it('should return false when passing undefined', () => {
 			assert.equal(notNullOrUndefined(undefined), false)
-			// eslint-disable-next-line no-unassigned-vars -- we create a test case
+			// oxlint-disable-next-line no-unassigned-vars -- we create a test case
 			let undefVar: unknown
 			assert.equal(notNullOrUndefined(undefVar), false)
 		})

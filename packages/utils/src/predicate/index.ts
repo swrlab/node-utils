@@ -1,8 +1,6 @@
 /**
- * Predicate utilities.
- * @fileoverview Predicate utilities
- * @category predicate
- * @module predicate
+ * @module Predicate utilities
+
  */
 
 export { isArray } from './isArray.ts'

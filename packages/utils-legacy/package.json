@@ -1,19 +1,18 @@
 {
 	"name": "@swrlab/utils-legacy",
 	"version": "3.0.1-beta.6",
-	"packageManager": "bun@1.3.9",
 	"description": "Previous generation of SWR Audio Lab utilities for Node.js.",
-	"type": "module",
 	"license": "ISC",
+	"author": "SWR Audio Lab <lab@swr.de>",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/swrlab/node-utils.git",
 		"directory": "packages/utils-legacy"
 	},
-	"author": "SWR Audio Lab <lab@swr.de>",
 	"files": [
 		"dist"
 	],
+	"type": "module",
 	"main": "./dist/index.mjs",
 	"module": "./dist/index.mjs",
 	"types": "./dist/index.d.mts",
@@ -46,7 +45,7 @@
 		"tag": "legacy"
 	},
 	"scripts": {
-		"build": "tsdown",
+		"build": "vp pack",
 		"release": "bumpp",
 		"test": "bun run test:bun",
 		"test:bun": "bun test ./test/*test.ts",
@@ -62,16 +61,18 @@
 		"undici": "7.24.4"
 	},
 	"devDependencies": {
-		"@arethetypeswrong/core": "catalog:dev",
+		"@arethetypeswrong/core": "catalog:",
 		"@swrlab/storage": "workspace:*",
 		"@swrlab/utils": "workspace:*",
-		"@types/node": "catalog:dev",
-		"bumpp": "catalog:dev",
-		"publint": "catalog:dev",
-		"tsdown": "catalog:dev",
-		"typescript": "catalog:dev"
+		"@types/luxon": "^3.7.1",
+		"@types/node": "catalog:",
+		"bumpp": "catalog:",
+		"publint": "catalog:",
+		"typescript": "catalog:",
+		"vite-plus": "catalog:"
 	},
 	"engines": {
 		"node": "^20.20.1 || ^22.18.0 || >= 24.6.0"
-	}
+	},
+	"packageManager": "bun@1.3.9"
 }

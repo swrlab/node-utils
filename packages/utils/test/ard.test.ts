@@ -1,4 +1,4 @@
-import { afterEach, describe, expect, it, vi } from 'vitest'
+import { afterEach, describe, expect, it, vi } from 'vite-plus/test'
 import { coreId } from '../src/ard/coreId.ts'
 import { createHashedId } from '../src/ard/index.ts'
 

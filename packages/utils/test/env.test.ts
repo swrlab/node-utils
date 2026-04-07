@@ -1,5 +1,10 @@
-import { afterAll, assert, beforeAll, describe, it } from 'vitest'
+import { afterAll, assert, beforeAll, describe, it } from 'vite-plus/test'
 import { getEnv, getEnvBase64, getEnvBoolean, getEnvString, MissingEnvVarError } from './../src/env.ts'
+
+declare global {
+	/** `true` if the env is mocked in tests */
+	var __VitestMockEnv: Record<string, string> | undefined
+}
 
 describe('no env values available', () => {
 	it('should throw an error for missing required values', () => {
@@ -35,7 +40,7 @@ describe('no env values available', () => {
 })
 
 describe('mocked env values', () => {
-	const mocked: Record<PropertyKey, string> = {
+	const mocked: Record<string, string> = {
 		FOO: 'BAR',
 		BASE64: 'eyJkdHMiOnRydWV9',
 		BASE64_BROKEN: 'asdf',

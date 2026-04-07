@@ -5,7 +5,6 @@ import { getRelativeTime } from './getRelativeTime.ts'
  * Get iso date with relative years.
  *
  * @module dates
- * @category dates
  *
  * @param date - ISO date string
  *

@@ -4,7 +4,6 @@ import { type ISODateString, luxonFormat } from './utils.ts'
  * Get YYYYMMDD.
  *
  * @module dates
- * @category dates
  *
  * @param date - ISO date string
  *

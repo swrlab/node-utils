@@ -1,4 +1,4 @@
-import { assert, describe, it } from 'vitest'
+import { assert, describe, it } from 'vite-plus/test'
 import { parseBase64, toBase64 } from '../src/string/base64.ts'
 
 describe('toBase64', () => {

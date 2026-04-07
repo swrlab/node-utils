@@ -4,7 +4,6 @@ import { type ISODateString, parseDateWithLuxon } from './utils.ts'
  * Get relative years.
  *
  * @module dates
- * @category dates
  *
  * @param date - ISO date string
  *

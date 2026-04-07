@@ -1,4 +1,4 @@
-import { assert, describe, it } from 'vitest'
+import { assert, describe, it } from 'vite-plus/test'
 import * as number from '../src/number/index.ts'
 
 describe('number utils', () => {

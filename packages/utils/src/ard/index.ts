@@ -1,6 +1,5 @@
 /**
- * @fileoverview ARD utilitties.
- * @category ard
- * @module ard
+ * @module ARD utilitties.
+
  */
 export { createHashedId } from './createHashedId.ts'

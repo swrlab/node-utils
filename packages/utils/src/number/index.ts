@@ -1,7 +1,6 @@
 /**
- * @fileoverview Number utilities.
- * @category number
- * @module number
+ * @module Number utilities.
+
  */
 
 export { addLeadingZero } from './addLeadingZero.ts'

@@ -1,4 +1,4 @@
-import { assert, describe, it } from 'vitest'
+import { assert, describe, it } from 'vite-plus/test'
 import { capitalize, isEmptyString, isIncluded, pluralize, removeDoubleSpaces, toHex } from '../src/string/index.ts'
 
 describe('string utils', () => {

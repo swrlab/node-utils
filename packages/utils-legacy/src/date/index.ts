@@ -1,6 +1,5 @@
 /**
- * @fileoverview Date formatting utilities.
- * @module date
+ * @module Date formatting utilities.
  */
 
 export { getDateHourMinutes, getDateHourMinutesLegacy } from './getDateHourMinutes.ts'

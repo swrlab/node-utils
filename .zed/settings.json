@@ -1,52 +1,158 @@
 {
 	"languages": {
-		"JSONC": {
-			"formatter": {
-				"language_server": {
-					"name": "eslint"
-				}
-			},
-			"code_actions_on_format": {
-				"source.fixAll.eslint": true
-			},
-			"prettier": {
-				"allowed": true
-			},
-			"format_on_save": "on"
-		},
 		"JSON": {
-			"formatter": {
-				"language_server": {
-					"name": "eslint"
-				}
-			},
-			"code_actions_on_format": {
-				"source.fixAll.eslint": true
-			},
+			"format_on_save": "on",
 			"prettier": {
-				"allowed": true
+				"allowed": false
 			},
-			"format_on_save": "on"
+			"formatter": [
+				{
+					"language_server": {
+						"name": "oxfmt"
+					}
+				}
+			]
+		},
+		"JSONC": {
+			"format_on_save": "on",
+			"prettier": {
+				"allowed": false
+			},
+			"formatter": [
+				{
+					"language_server": {
+						"name": "oxfmt"
+					}
+				}
+			]
 		},
 		"JavaScript": {
-			"language_servers": ["eslint", "!deno", "!biome", "..."],
-			"code_actions_on_format": {
-				"source.fixAll.eslint": true
-			},
+			"format_on_save": "on",
 			"prettier": {
-				"allowed": true
+				"allowed": false
 			},
-			"format_on_save": "on"
+			"formatter": [
+				{
+					"language_server": {
+						"name": "oxfmt"
+					}
+				},
+				{
+					"code_action": "source.fixAll.oxc"
+				}
+			]
 		},
 		"TypeScript": {
-			"language_servers": ["eslint", "!deno", "biome", "..."],
-			"code_actions_on_format": {
-				"source.fixAll.eslint": true
-			},
+			"language_servers": ["tsgo", "vtsls", "oxfmt", "oxlint", "!eslint", "!deno", "..."],
+			"format_on_save": "on",
 			"prettier": {
-				"allowed": true
+				"allowed": false
 			},
-			"format_on_save": "on"
+			"formatter": [
+				{
+					"language_server": {
+						"name": "oxfmt"
+					}
+				}
+			]
+		},
+		"CSS": {
+			"format_on_save": "on",
+			"prettier": {
+				"allowed": false
+			},
+			"formatter": [
+				{
+					"language_server": {
+						"name": "oxfmt"
+					}
+				}
+			]
+		},
+		"HTML": {
+			"format_on_save": "on",
+			"prettier": {
+				"allowed": false
+			},
+			"formatter": [
+				{
+					"language_server": {
+						"name": "oxfmt"
+					}
+				}
+			]
+		},
+		"Markdown": {
+			"format_on_save": "on",
+			"prettier": {
+				"allowed": false
+			},
+			"formatter": [
+				{
+					"language_server": {
+						"name": "oxfmt"
+					}
+				}
+			]
+		},
+		"TSX": {
+			"format_on_save": "on",
+			"prettier": {
+				"allowed": false
+			},
+			"formatter": [
+				{
+					"language_server": {
+						"name": "oxfmt"
+					}
+				}
+			]
+		},
+		"Vue.js": {
+			"format_on_save": "on",
+			"prettier": {
+				"allowed": false
+			},
+			"formatter": [
+				{
+					"language_server": {
+						"name": "oxfmt"
+					}
+				}
+			]
+		},
+		"YAML": {
+			"format_on_save": "on",
+			"prettier": {
+				"allowed": false
+			},
+			"formatter": [
+				{
+					"language_server": {
+						"name": "oxfmt"
+					}
+				}
+			]
+		}
+	},
+	"lsp": {
+		"oxlint": {
+			"initialization_options": {
+				"settings": {
+					"run": "onType",
+					"fixKind": "safe_fix",
+					"typeAware": true,
+					"unusedDisableDirectives": "deny"
+				}
+			}
+		},
+		"oxfmt": {
+			"initialization_options": {
+				"settings": {
+					"configPath": "./vite.config.ts",
+					"run": "onSave"
+				}
+			}
 		}
 	}
 }

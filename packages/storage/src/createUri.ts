@@ -1,6 +1,6 @@
 /**
- * @fileoverview This module provides easy access to combine bucket + path to unique URIs.
- * @module storage
+ * @module
+ * This module provides easy access to combine bucket + path to unique URIs.
  */
 
 export type CloudStorageURI = {

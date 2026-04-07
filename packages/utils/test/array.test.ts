@@ -1,4 +1,4 @@
-import { assert, describe, test } from 'vitest'
+import { assert, describe, test } from 'vite-plus/test'
 import { arrayToObjectCount, isEmptyArray, notEmptyArray } from '../src/array/index.ts'
 
 describe('array utilities', () => {

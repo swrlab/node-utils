@@ -1,19 +1,18 @@
 {
 	"name": "@swrlab/date",
 	"version": "3.0.0-beta.3",
-	"packageManager": "bun@1.2.22",
 	"description": "SWR Audio Lab date utilities for Node.js.",
-	"type": "module",
 	"license": "ISC",
+	"author": "SWR Audio Lab <lab@swr.de>",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/swrlab/node-utils.git",
 		"directory": "packages/date"
 	},
-	"author": "SWR Audio Lab <lab@swr.de>",
 	"files": [
 		"dist"
 	],
+	"type": "module",
 	"main": "./dist/index.mjs",
 	"module": "./dist/index.mjs",
 	"types": "./dist/index.d.mts",
@@ -48,17 +47,18 @@
 		"typescript": "^5.9.2"
 	},
 	"devEngines": {
+		"packageManager": {
+			"name": "bun",
+			"onFail": "warn"
+		},
 		"runtime": {
 			"name": "node",
 			"version": "^22.18.0 || >= 24.6",
-			"onFail": "warn"
-		},
-		"packageManager": {
-			"name": "bun",
 			"onFail": "warn"
 		}
 	},
 	"engines": {
 		"node": "^22.18.0 || >= 24.6.0"
-	}
+	},
+	"packageManager": "bun@1.2.22"
 }

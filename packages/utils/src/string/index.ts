@@ -1,7 +1,6 @@
 /**
- * @fileoverview String utilities.
- * @category string
- * @module string
+ * @module String utilities.
+
  */
 
 export { parseBase64, toBase64 } from './base64.ts'

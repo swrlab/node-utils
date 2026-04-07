@@ -11,7 +11,7 @@ const { name, version } = pkg
 const userAgent: string = process.env.USER_AGENT || `${name.replace('@', '')}/${version}`
 
 const defaultOptions = {
-	keepAliveTimeout: 30e3,
+	keepAliveTimeout: 30_000,
 	headersTimeout: 0,
 	bodyTimeout: 0,
 	headers: {
@@ -41,31 +41,27 @@ const DEFAULT_TIMEOUT: number = 7e3
 type OptionsExtension = {
 	/**
 	 * (Optional) Request method.
-	 * @type {string}
-	 * @defaultValue `GET`
+	 * @default `GET`
 	 */
 	method?: RequestInit['method']
 
 	/**
 	 * (Otpional) Request Body.
-	 * @type {BodyInit}
-	 * @defaultValue `null`
+	 * @default `null`
 	 */
-	body?: BodyInit
+	body?: undici.Dispatcher.DispatchOptions['body']
 
 	/**
 	 * (Optional) Request Headers.
 	 * There is a default header containing the user agent.
-	 * @type {HeaderRecord}
-	 * @defaultValue `{ 'user-agent': 'from ENV or with packageName and packageVersion' }`
+	 * @default `{ 'user-agent': 'from ENV or with packageName and packageVersion' }`
 	 */
 	headers?: HeaderRecord
 
 	/**
 	 * (Optional) Timeout in milliseconds. Default is 7 seconds.
 	 * @deprecated Use `{ signal: AbortSignal.timeout(options?.timeout ?? 7000) }` as fetch options.
-	 * @type {number}
-	 * @defaultValue `7000`
+	 * @default `7000`
 	 */
 	timeout?: number
 
@@ -73,15 +69,13 @@ type OptionsExtension = {
 	 * Usually reserved for the signal of an AbortController.
 	 * Since we have `timeout`, this will always overwrite the `signal` here.
 	 * So don't set it
-	 * @type {never}
-	 * @defaultValue `AbortSignal.timeout(options?.timeout ?? 7000)`
+	 * @default `AbortSignal.timeout(options?.timeout ?? 7000)`
 	 */
 	signal?: never
 
 	/**
 	 * Set to `false`, if the request should not return a rejected Promise when the Response is not `ok`
 	 * @deprecated Use modern fetch `Response.ok` and then `throw new Error` or use `Promise.reject` or whatever.
-	 * @type {boolean}
 	 */
 	reject?: boolean
 }
@@ -103,7 +97,7 @@ const request = async (
 	url: string | URL,
 	options: Record<PropertyKey, any> & OptionsExtension
 ): Promise<Record<PropertyKey, any>> => {
-	const requestOptions = {
+	const requestOptions: Partial<undici.Dispatcher.RequestOptions> = {
 		...defaultOptions,
 		method: options?.method ?? 'GET',
 		body: options?.body ?? null,
@@ -111,6 +105,7 @@ const request = async (
 	}
 	if (options?.headers) {
 		requestOptions.headers = {
+			// oxlint-disable-next-line no-misused-spread: headers won't be any array
 			...requestOptions.headers,
 			...options.headers,
 		}
@@ -133,9 +128,9 @@ const request = async (
 	const contentType = headers['content-type']
 
 	// parse json if set
-	let json: object | undefined
+	let json: object | undefined | null
 	try {
-		json = contentType?.indexOf('application/json') !== -1 ? JSON.parse(string) : null
+		json = contentType?.includes('application/json') ? JSON.parse(string) : null
 	} catch {
 		json = null
 	}

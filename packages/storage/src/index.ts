@@ -1,5 +1,5 @@
 /**
- * @fileoverview API for Storage.
+ * @module API for Storage.
  */
 
 import type { Buffer } from 'node:buffer'
@@ -92,7 +92,8 @@ export const save = async (
 	if (isHttpUrl(uri)) {
 		return
 	}
-	localFs.writeFile(uri, contents.toString())
+	// oxlint-disable-next-line no-base-to-string: we are fine with all toString values.
+	return await localFs.writeFile(uri, contents.toString())
 }
 
 export const move = async (sourceUri: string, destinationUri: string, keepOriginal: boolean = false): Promise<void> => {

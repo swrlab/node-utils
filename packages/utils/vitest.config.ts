@@ -1,4 +1,4 @@
-import { coverageConfigDefaults, defineConfig } from 'vitest/config'
+import { coverageConfigDefaults, defineConfig } from 'vite-plus'
 
 export default defineConfig({
 	test: {

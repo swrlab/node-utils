@@ -1,5 +1,5 @@
 import { Buffer } from 'node:buffer'
-import { assert, describe, test } from 'vitest'
+import { assert, describe, test } from 'vite-plus/test'
 import { crc64, crc64String } from '../src/string/crc64.ts'
 
 // Standard check string for CRC algorithms

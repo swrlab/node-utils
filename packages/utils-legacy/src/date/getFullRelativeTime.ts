@@ -6,7 +6,6 @@ import { formatDateTimeString, type ISODateString } from './utils.ts'
  * Get full relative time.
  *
  * @module dates
- * @category dates
  *
  * @param date - ISO date string
  *
@@ -18,7 +17,6 @@ export const getFullRelativeTime = (date: ISODateString) => `${getDateHourMinute
  * Get full relative time.
  *
  * @module dates
- * @category dates
  *
  * @param date - ISO date string
  *

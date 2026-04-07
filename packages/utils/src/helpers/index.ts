@@ -1,7 +1,6 @@
 /**
- * @fileoverview General helper functions.
- * @category helpers
- * @module helpers
+ * @module General helper functions.
+
  */
 
 export { request } from './request.ts'

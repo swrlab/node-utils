@@ -1,20 +1,22 @@
 {
 	"name": "@swrlab/utils",
 	"version": "4.0.0-beta.4",
-	"packageManager": "bun@1.3.9",
 	"description": "SWR Audio Lab utilities for Node.js.",
-	"type": "module",
 	"license": "ISC",
+	"author": "SWR Audio Lab <lab@swr.de>",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/swrlab/node-utils.git",
 		"directory": "packages/utils"
 	},
-	"author": "SWR Audio Lab <lab@swr.de>",
+	"bin": {
+		"ard-coreId": "bin/ard-coreId.mjs"
+	},
 	"files": [
 		"bin",
 		"dist"
 	],
+	"type": "module",
 	"main": "./dist/index.mjs",
 	"module": "./dist/index.mjs",
 	"types": "./dist/index.d.mts",
@@ -56,36 +58,34 @@
 			"default": "./dist/string.mjs"
 		}
 	},
-	"bin": {
-		"ard-coreId": "bin/ard-coreId.mjs"
-	},
 	"publishConfig": {
 		"access": "public",
-		"tag": "latest",
-		"provenance": true
+		"provenance": true,
+		"tag": "latest"
 	},
 	"scripts": {
 		"ard:coreId": "bun ./bin/ard-coreId.mjs",
 		"attw": "bunx @arethetypeswrong/cli --pack . --profile node16",
-		"build": "tsdown",
+		"build": "vp pack",
 		"knip": "knip",
 		"release": "bumpp",
-		"test": "vitest run --coverage --typecheck",
+		"test": "vp test run --coverage --typecheck",
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"@arethetypeswrong/core": "catalog:dev",
-		"@types/node": "catalog:dev",
-		"@vitest/coverage-v8": "catalog:dev",
-		"bumpp": "catalog:dev",
-		"knip": "catalog:dev",
-		"publint": "catalog:dev",
-		"tsdown": "catalog:dev",
-		"typescript": "catalog:dev",
-		"vitest": "catalog:dev"
+		"@arethetypeswrong/core": "catalog:",
+		"@types/node": "catalog:",
+		"@vitest/coverage-v8": "catalog:",
+		"bumpp": "catalog:",
+		"knip": "catalog:",
+		"publint": "catalog:",
+		"typescript": "catalog:",
+		"vite-plus": "catalog:",
+		"vitest": "catalog:"
 	},
 	"engines": {
 		"node": "^22.18.0 || >= 24.6.0"
-	}
+	},
+	"packageManager": "bun@1.3.9"
 }

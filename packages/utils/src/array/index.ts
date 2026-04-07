@@ -1,10 +1,9 @@
 /**
- * @fileoverview Array utilities
+ * @module Array utilities
  */
 
 /**
  * Array utilities.
- * @category array
  * @module array
  */
 

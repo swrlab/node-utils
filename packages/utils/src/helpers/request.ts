@@ -45,6 +45,7 @@ export const request = async (
 		signal: options.signal ?? AbortSignal.timeout(options?.timeout ?? DEFAULT_TIMEOUT),
 		headers: {
 			'user-agent': userAgent,
+			// oxlint-disable-next-line typescript/no-misused-spread -- the headers are safe to use
 			...options.headers,
 		},
 	}

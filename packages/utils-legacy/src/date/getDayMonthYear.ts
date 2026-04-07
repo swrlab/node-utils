@@ -5,7 +5,6 @@ const luxonDateFormat = 'ccc, d. LLLL yyyy'
  * Get weekday, day, month and year in german locale.
  *
  * @module dates
- * @category dates
  *
  * @param date - input Date
  *
@@ -23,7 +22,6 @@ const options: Intl.DateTimeFormatOptions = {
  * Get weekday, day, month and year in german locale.
  *
  * @module dates
- * @category dates
  *
  * @param date - input Date
  *

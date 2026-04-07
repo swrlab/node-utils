@@ -1,7 +1,7 @@
 /**
- * @fileoverview
+ * @module
  * Object utilities.
- * @category object
+
  * @module object
  */
 

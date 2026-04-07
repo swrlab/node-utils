@@ -4,7 +4,6 @@ import { crc64String } from '../string/crc64.ts'
  * Create a a CRC64-ECMA182-compliant hash from given input.
  *
  * @module ard
- * @category ard
  *
  * @param {string} input - The utf-8 encoded input string.
  * @returns {string} - CRC64-ECMA182-compliant hashed input.

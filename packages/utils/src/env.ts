@@ -1,6 +1,5 @@
 /**
  * Environment variable utilities with TypeScript support
- * @fileoverview
  */
 
 import process from 'node:process'
@@ -79,7 +78,7 @@ export function getEnv<T = string>(key: string, config: EnvConfig<T> = {}): T {
 				const decoded = parseBase64(value)
 				return JSON.parse(decoded) as T
 			} catch (error) {
-				throw new Error(`Failed to parse environment variable ${key} as from base64 JSON: ${error}`, {
+				throw new Error(`Failed to parse environment variable ${key} as from base64 JSON: ${String(error)}`, {
 					cause: error,
 				})
 			}

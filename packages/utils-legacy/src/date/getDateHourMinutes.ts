@@ -6,7 +6,6 @@ const dayHourMinutesFormat = 'ccc, d. LLLL yyyy - HH:mm'
  * Get a date string with full date including weekday and hours with minutes.
  *
  * @module dates
- * @category dates
  *
  * @returns A string like 'Di, 19. Januar 2038 - 03:14 Uhr'.
  */
@@ -17,7 +16,6 @@ export const getDateHourMinutesLegacy = (date: ISODateString): string =>
  * Get a date string with full date including weekday and hours with minutes.
  *
  * @module dates
- * @category dates
  *
  * @param date
  *

@@ -1,4 +1,4 @@
-import { afterEach, assert, beforeEach, describe, expect, it, vi } from 'vitest'
+import { afterEach, assert, beforeEach, describe, expect, it, vi } from 'vite-plus/test'
 import packageJson from '../package.json'
 import { request, sleep } from '../src/helpers/index.ts'
 const { version } = packageJson
