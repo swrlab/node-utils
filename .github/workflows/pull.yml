@@ -29,6 +29,8 @@ jobs:
         with:
           node-version: '24'
           cache: true
+          run-install: true
+
       - run: vp install --frozen-lockfile
 
       - name: 🧪 Run Lint
