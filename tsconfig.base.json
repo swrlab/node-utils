@@ -5,6 +5,8 @@
 		"target": "esnext",
 		"module": "nodenext",
 
+		"noEmit": true,
+
 		"resolveJsonModule": true,
 
 		"allowImportingTsExtensions": true,
