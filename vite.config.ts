@@ -10,8 +10,8 @@ export default defineConfig({
 			correctness: 'warn',
 		},
 		options: {
-			// typeAware: true,
-			// typeCheck: true,
+			typeAware: true,
+			typeCheck: true,
 		},
 		env: {
 			builtin: true,
