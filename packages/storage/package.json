@@ -25,9 +25,10 @@
 	"scripts": {
 		"attw": "bunx @arethetypeswrong/cli --pack . --profile esm-only",
 		"build": "vp pack",
-		"test": "vp run test:bun && vp run test:node",
-		"test:bun": "bun --bun test",
-		"test:node": "node --test"
+		"test": "bun run typecheck && bun run test:bun && bun run test:node",
+		"test:bun": "bun test",
+		"test:node": "node --test",
+		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
 		"@google-cloud/storage": "^7.19.0"
