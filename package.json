@@ -26,15 +26,14 @@
 		"clear": "rm -rf ./node_modules ./packages/*/node_modules/ ./packages/*/dist/",
 		"format": "vp fmt .",
 		"format:check": "vp fmt --check .",
-		"format:check:beta": "vp fmt --config-path ./prettier.config.js --check .",
 		"knip": "knip",
 		"lint": "vp lint",
 		"lint:fix": "vp lint --fix",
 		"prepare": "vp config",
-		"test": "vp run --filter './packages/{utils,storage,utils-legacy,tests}' test",
-		"test:bun": "vp run --filter './packages/utils' test:bun",
-		"test:dist": "vp run --filter './packages/tests' test",
-		"test:node": "vp run --filter '*' test:node"
+		"test": "vp run --filter './packages/*' test",
+		"test:bun": "vp run --filter ./packages/utils test:bun",
+		"test:dist": "vp run --filter ./packages/tests test",
+		"test:node": "vp run --filter './packages/*' test:node"
 	},
 	"dependencies": {},
 	"devDependencies": {
