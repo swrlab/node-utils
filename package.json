@@ -57,16 +57,16 @@
 	"devDependencies": {
 		"@arethetypeswrong/cli": "^0.18.2",
 		"@arethetypeswrong/core": "^0.18.2",
-		"@biomejs/biome": "2.4.8",
+		"@biomejs/biome": "2.4.10",
 		"@swrlab/style-guide": "^2.1.10",
-		"@types/node": "^25.5.0",
+		"@types/node": "^25.5.2",
 		"biome": "^0.3.3",
-		"eslint": "^10.1.0",
-		"knip": "^6.0.1",
+		"eslint": "^10.2.0",
+		"knip": "^6.3.0",
 		"prettier": "^3.8.1",
 		"publint": "^0.3.18",
-		"typescript": "^5.9.3",
-		"vitest": "^4.1.0"
+		"typescript": "^6.0.2",
+		"vitest": "^4.1.2"
 	},
 	"devEngines": {
 		"runtime": {
