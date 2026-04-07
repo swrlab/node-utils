@@ -17,8 +17,7 @@ jobs:
         with:
           node-version: '24'
           cache: true
-          run-install: true
 
       - run: vp install --frozen-lockfile
-      - run: vp run build
+      - run: vp run --cache --filter '@swrlab/utils-legacy' build
       - run: vp check
