@@ -1,0 +1,30 @@
+{
+	"name": "utils-tests",
+	"version": "0.0.1",
+	"private": true,
+	"description": "Production tests for utils packages",
+	"license": "ISC",
+	"author": "SWR Audio Lab <lab@swr.de>",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/swrlab/node-utils.git",
+		"directory": "packages/tests"
+	},
+	"type": "module",
+	"scripts": {
+		"test": "bun run --sequential test:bun test:node",
+		"test:bun": "bun --bun test *test.mjs",
+		"test:node": "node --test *.test.mjs"
+	},
+	"devDependencies": {
+		"@swrlab/utils": "workspace:*",
+		"@swrlab/utils-legacy": "workspace:*",
+		"@types/node": "catalog:",
+		"typescript": "catalog:",
+		"vite-plus": "catalog:"
+	},
+	"engines": {
+		"node": "^20.20.1 || ^22.18.0 || >= 24.6.0"
+	},
+	"packageManager": "bun@1.3.9"
+}

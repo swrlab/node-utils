@@ -1,0 +1,77 @@
+{
+	"name": "@swrlab/utils-legacy",
+	"version": "3.0.1-beta.9",
+	"description": "Previous generation of SWR Audio Lab utilities for Node.js.",
+	"license": "ISC",
+	"author": "SWR Audio Lab <lab@swr.de>",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/swrlab/node-utils.git",
+		"directory": "packages/utils-legacy"
+	},
+	"files": [
+		"dist"
+	],
+	"type": "module",
+	"main": "./dist/index.mjs",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.mts",
+	"exports": {
+		".": {
+			"require": {
+				"types": "./dist/index.d.cts",
+				"default": "./dist/index.cjs"
+			},
+			"import": {
+				"types": "./dist/index.d.mts",
+				"default": "./dist/index.mjs"
+			}
+		},
+		"./packages/*": {
+			"require": {
+				"types": "./dist/packages/*.d.cts",
+				"default": "./dist/packages/*.cjs"
+			},
+			"import": {
+				"types": "./dist/packages/*.d.mts",
+				"default": "./dist/packages/*.mjs"
+			}
+		}
+	},
+	"publishConfig": {
+		"access": "public",
+		"name": "@swrlab/utils",
+		"provenance": true,
+		"tag": "legacy"
+	},
+	"scripts": {
+		"release": "bumpp",
+		"test": "vp run test:bun",
+		"test:bun": "bun --bun test date",
+		"test:dist": "bun --bun test ./test/dist/*.test.mjs",
+		"test:dist:node": "node --test ./test/*test.mjs",
+		"test:mjs": "bun test ./test/*test.mjs",
+		"test:node": "node --test ./test/*.test.ts"
+	},
+	"dependencies": {
+		"@google-cloud/storage": "^7.19.0",
+		"luxon": "3.7.2",
+		"node-crc": "https://github.com/swrlab/node-crc#v2.1.0",
+		"undici": "7.24.4"
+	},
+	"devDependencies": {
+		"@arethetypeswrong/core": "catalog:",
+		"@swrlab/storage": "workspace:*",
+		"@swrlab/utils": "workspace:*",
+		"@types/luxon": "^3.7.1",
+		"@types/node": "catalog:",
+		"bumpp": "catalog:",
+		"publint": "catalog:",
+		"typescript": "catalog:",
+		"vite-plus": "catalog:"
+	},
+	"engines": {
+		"node": "^20.20.1 || ^22.18.0 || >= 24.6.0"
+	},
+	"packageManager": "bun@1.3.9"
+}

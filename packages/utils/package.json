@@ -1,0 +1,89 @@
+{
+	"name": "@swrlab/utils",
+	"version": "4.0.0-beta.9",
+	"description": "SWR Audio Lab utilities for Node.js.",
+	"license": "ISC",
+	"author": "SWR Audio Lab <lab@swr.de>",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/swrlab/node-utils.git",
+		"directory": "packages/utils"
+	},
+	"bin": {
+		"ard-coreId": "bin/ard-coreId.mjs"
+	},
+	"files": [
+		"bin",
+		"dist"
+	],
+	"type": "module",
+	"main": "./dist/index.mjs",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.mts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.mts",
+			"default": "./dist/index.mjs"
+		},
+		"./ard": {
+			"types": "./dist/ard.d.mts",
+			"default": "./dist/ard.mjs"
+		},
+		"./array": {
+			"types": "./dist/array.d.mts",
+			"default": "./dist/array.mjs"
+		},
+		"./env": {
+			"types": "./dist/env.d.mts",
+			"default": "./dist/env.mjs"
+		},
+		"./helper": {
+			"types": "./dist/helper.d.mts",
+			"default": "./dist/helper.mjs"
+		},
+		"./number": {
+			"types": "./dist/number.d.mts",
+			"default": "./dist/number.mjs"
+		},
+		"./object": {
+			"types": "./dist/object.d.mts",
+			"default": "./dist/object.mjs"
+		},
+		"./predicate": {
+			"types": "./dist/predicate.d.mts",
+			"default": "./dist/predicate.mjs"
+		},
+		"./string": {
+			"types": "./dist/string.d.mts",
+			"default": "./dist/string.mjs"
+		}
+	},
+	"publishConfig": {
+		"access": "public",
+		"provenance": true,
+		"tag": "latest"
+	},
+	"scripts": {
+		"ard:coreId": "bun ./bin/ard-coreId.mjs",
+		"attw": "bunx @arethetypeswrong/cli --pack . --profile node16",
+		"build": "vp pack",
+		"knip": "knip",
+		"release": "bumpp",
+		"test": "vp test run --coverage --typecheck"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"@arethetypeswrong/core": "catalog:",
+		"@types/node": "catalog:",
+		"@vitest/coverage-v8": "catalog:",
+		"bumpp": "catalog:",
+		"knip": "catalog:",
+		"publint": "catalog:",
+		"typescript": "catalog:",
+		"vite-plus": "catalog:"
+	},
+	"engines": {
+		"node": "^22.18.0 || >= 24.6.0"
+	},
+	"packageManager": "bun@1.3.9"
+}

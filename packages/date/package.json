@@ -1,0 +1,64 @@
+{
+	"name": "@swrlab/date",
+	"version": "3.0.0-beta.3",
+	"description": "SWR Audio Lab date utilities for Node.js.",
+	"license": "ISC",
+	"author": "SWR Audio Lab <lab@swr.de>",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/swrlab/node-utils.git",
+		"directory": "packages/date"
+	},
+	"files": [
+		"dist"
+	],
+	"type": "module",
+	"main": "./dist/index.mjs",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.mts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.mts",
+			"default": "./dist/index.mjs"
+		}
+	},
+	"publishConfig": {
+		"access": "public",
+		"provenance": true
+	},
+	"scripts": {
+		"attw": "bunx @arethetypeswrong/cli --pack . --profile esm-only",
+		"build": "tsdown",
+		"release": "bunx bumpp",
+		"test": "bun run typecheck && bun run test:bun && bun run test:compare",
+		"test:bun": "bun test ./test/index.test.ts",
+		"test:compare": "bun test ./test/compare.test.ts",
+		"test:compare:node": "node --test ./test/compare.test.ts",
+		"test:node": "node --test ./test/*.test.ts",
+		"typecheck": "tsc --noEmit"
+	},
+	"dependencies": {
+		"luxon": "3.7.2"
+	},
+	"devDependencies": {
+		"@types/luxon": "^3.7.1",
+		"@types/node": "^24.3.1",
+		"tsdown": "^0.21.0-beta.2",
+		"typescript": "^5.9.2"
+	},
+	"devEngines": {
+		"packageManager": {
+			"name": "bun",
+			"onFail": "warn"
+		},
+		"runtime": {
+			"name": "node",
+			"version": "^22.18.0 || >= 24.6",
+			"onFail": "warn"
+		}
+	},
+	"engines": {
+		"node": "^22.18.0 || >= 24.6.0"
+	},
+	"packageManager": "bun@1.2.22"
+}

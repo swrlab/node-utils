@@ -1,0 +1,16 @@
+{
+	"extends": "./tsconfig.base.json",
+	"compilerOptions": {
+		"noEmit": true
+	},
+	"references": [
+		// { "path": "./packages/date/tsconfig.json" },
+		{ "path": "./packages/utils-legacy" },
+		{ "path": "./packages/storage" },
+		{ "path": "./packages/tests" },
+		{ "path": "./packages/utils" }
+	],
+	"include": []
+	// "include": ["**/*.ts"],
+	// "exclude": ["node_modules", "packages"]
+}

@@ -1,0 +1,10 @@
+{
+	"extends": "../../tsconfig.base.json",
+	"compilerOptions": {
+		"rootDir": ".",
+		"allowJs": true,
+		"isolatedDeclarations": false,
+		"noEmit": true
+	},
+	"include": ["*.mjs", "*.cjs"]
+}

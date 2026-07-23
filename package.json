@@ -1,36 +1,85 @@
 {
-	"name": "@swrlab/utils",
-	"version": "2.2.0",
-	"description": "Wrapping common SWR Audio Lab utils",
+	"name": "node-utils-workspace",
+	"version": "",
+	"private": true,
+	"description": "SWR Audio Lab utilities collection.",
+	"license": "ISC",
+	"author": "SWR Audio Lab <lab@swr.de>",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/swrlab/node-utils"
+		"url": "git+https://github.com/swrlab/node-utils.git"
 	},
-	"author": "SWR Audio Lab <lab@swr.de>",
-	"license": "MIT",
-	"main": "./index.js",
+	"workspaces": {
+		"packages": [
+			"packages/storage",
+			"packages/tests",
+			"packages/utils-legacy",
+			"packages/utils"
+		]
+	},
+	"type": "module",
 	"scripts": {
-		"ard:coreId": "node ./scripts/ard/coreId.js",
-		"lint": "eslint .",
-		"test": "bunx --bun mocha tests/**.mjs"
+		"ard:coreId": "bun ./packages/utils/src/ard/coreId.ts",
+		"attw": "attw --pack . --profile esm-only --no-summary",
+		"biome": "biome check",
+		"build": "vp run --filter ./packages/utils-legacy build",
+		"clear": "rm -rf ./node_modules ./packages/*/node_modules/ ./packages/*/dist/",
+		"format": "vp fmt .",
+		"format:check": "vp fmt --check .",
+		"knip": "knip",
+		"lint": "vp lint",
+		"lint:fix": "vp lint --fix",
+		"prepare": "vp config",
+		"test": "vp run --filter './packages/*' test",
+		"test:bun": "vp run --filter ./packages/utils test:bun",
+		"test:dist": "vp run --filter ./packages/tests test",
+		"test:node": "vp run --filter './packages/*' test:node"
 	},
-	"dependencies": {
-		"@google-cloud/storage": "^7.16.0",
-		"abort-controller": "^3.0.0",
-		"luxon": "3.7.1",
-		"node-crc": "https://github.com/swrlab/node-crc#v2.1.0",
-		"undici": "7.13.0"
-	},
+	"dependencies": {},
 	"devDependencies": {
-		"@swrlab/style-guide": "^1.0.3",
-		"chai": "5.1.2",
-		"eslint": "^9.33.0",
-		"eslint-plugin-json": "^4.0.1",
-		"mocha": "^11.7.1",
-		"prettier": "^3.6.2"
+		"@arethetypeswrong/cli": "^0.18.2",
+		"@arethetypeswrong/core": "^0.18.2",
+		"@biomejs/biome": "2.4.10",
+		"@swrlab/style-guide": "^2.1.10",
+		"@types/node": "^25.5.2",
+		"biome": "^0.3.3",
+		"knip": "^6.3.0",
+		"publint": "^0.3.18",
+		"typescript": "^6.0.2",
+		"vite-plus": "catalog:",
+		"vitest": "catalog:"
+	},
+	"overrides": {
+		"vite": "catalog:",
+		"vitest": "catalog:"
+	},
+	"devEngines": {
+		"packageManager": {
+			"name": "bun",
+			"onFail": "warn"
+		},
+		"runtime": {
+			"name": "node",
+			"version": "^22.18.0 || >= 24.6",
+			"onFail": "warn"
+		}
 	},
 	"engines": {
-		"node": ">=20"
+		"node": "^22.18.0 || >= 24.6.0"
 	},
-	"prettier": "@swrlab/style-guide/prettier"
+	"packageManager": "bun@1.3.9",
+	"catalog": {
+		"@arethetypeswrong/cli": "^0.18.2",
+		"@arethetypeswrong/core": "^0.18.2",
+		"@types/node": "^25.5.0",
+		"@vitest/coverage-v8": "4.1.0",
+		"bumpp": "^11.0.1",
+		"knip": "^6.0.1",
+		"publint": "^0.3.18",
+		"tsdown": "^0.21.4",
+		"typescript": "^5.9.3",
+		"vite": "npm:@voidzero-dev/vite-plus-core@latest",
+		"vitest": "npm:@voidzero-dev/vite-plus-test@latest",
+		"vite-plus": "latest"
+	}
 }
